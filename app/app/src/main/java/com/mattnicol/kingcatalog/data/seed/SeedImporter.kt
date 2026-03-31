@@ -42,6 +42,11 @@ object SeedImporter {
         val keywords = obj.getAsJsonArray("keywords")
             ?.mapNotNull { it.asString } ?: emptyList()
 
+        val genres = obj.getAsJsonArray("genres")
+            ?.mapNotNull { it.asString } ?: emptyList()
+
+        val asBachman = obj.get("as_bachman")?.asBoolean ?: false
+
         val childIds = obj.getAsJsonArray("child_ids")
             ?.mapNotNull { it.asInt } ?: emptyList()
 
@@ -49,6 +54,7 @@ object SeedImporter {
             id = obj.get("id").asInt,
             title = obj.get("title").asString,
             author = "Stephen King",
+            asBachman = asBachman,
             year = year,
             decade = decade,
             wordCount = obj.getIntOrNull("word_count"),
@@ -56,7 +62,7 @@ object SeedImporter {
                 ?.takeIf { !it.isJsonNull }?.asDouble?.toInt(),
             storyType = obj.getStringOrNull("story_type") ?: "unknown",
             keywords = keywords,
-            genres = emptyList(),
+            genres = genres,
             isCollectionParent = obj.get("is_collection_parent")?.asBoolean ?: false,
             collection = obj.getStringOrNull("collection"),
             collectionId = obj.getIntOrNull("collection_id"),

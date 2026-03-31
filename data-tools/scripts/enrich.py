@@ -45,17 +45,19 @@ CSV_FIELDS = [
 # Open Library helpers
 # ---------------------------------------------------------------------------
 
-def ol_search(title: str, year: int | None) -> dict | None:
+def ol_search(title: str, year: int | None, author_only: bool = True) -> dict | None:
     """
     Search Open Library for a Stephen King title.
     Returns the best-matching document dict or None.
     """
-    params = urllib.parse.urlencode({
+    params_dict = {
         "title": title,
-        "author": "stephen king",
         "fields": "key,title,first_publish_year,cover_i,number_of_pages_median",
         "limit": 5,
-    })
+    }
+    if author_only:
+        params_dict["author"] = "stephen king"
+    params = urllib.parse.urlencode(params_dict)
     try:
         with urllib.request.urlopen(f"{OL_SEARCH}?{params}", timeout=12) as resp:
             data = json.loads(resp.read().decode("utf-8"))
@@ -138,12 +140,9 @@ def enrich_entry(entry: dict) -> dict:
     """
     stats = {"cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0, "wc_filled": 0}
 
-    # Collection parent entries don't have standalone covers
-    if entry.get("is_collection_parent"):
-        return stats
-
     title: str = entry.get("title") or ""
     year: int | None = entry.get("year")
+    is_parent = entry.get("is_collection_parent", False)
 
     if not title:
         return stats
@@ -154,7 +153,8 @@ def enrich_entry(entry: dict) -> dict:
         return stats
 
     # --- Query Open Library ---
-    doc = ol_search(title, year)
+    # Collection parents: use title-only search (no author filter, works better for anthologies)
+    doc = ol_search(title, year, author_only=(not is_parent))
     time.sleep(REQUEST_DELAY)
 
     if not doc:
@@ -212,6 +212,25 @@ def write_csv(all_entries: list[dict]) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Repair pass
+# ---------------------------------------------------------------------------
+
+def repair_missing_cover_paths(entries: list[dict]) -> int:
+    """Set cover_local_path for entries with matching file in covers/ but null path."""
+    repaired = 0
+    for entry in entries:
+        if entry.get("cover_local_path"):
+            continue
+        fname = safe_filename(entry.get("title") or "")
+        dest = COVERS_DIR / fname
+        if dest.exists() and dest.stat().st_size >= 1000:
+            entry["cover_local_path"] = f"data-tools/enriched/covers/{fname}"
+            entry["cover_source"] = entry.get("cover_source") or "local_file"
+            repaired += 1
+    return repaired
+
+
+# ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
 
@@ -222,18 +241,16 @@ def main() -> int:
     total = len(entries)
     print(f"Loaded {total} entries from {JSON_PATH}")
     print(f"Covers dir: {COVERS_DIR}")
+
+    repaired = repair_missing_cover_paths(entries)
+    print(f"Repaired {repaired} missing cover paths from existing files")
     print()
 
     totals = {"cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0, "wc_filled": 0}
 
     for i, entry in enumerate(entries, 1):
         title = entry.get("title", "?")
-        is_parent = entry.get("is_collection_parent", False)
         prefix = f"[{i:>3}/{total}]"
-
-        if is_parent:
-            print(f"{prefix} {title} [collection parent - skipped]")
-            continue
 
         print(f"{prefix} {title}", end=" ... ", flush=True)
         stats = enrich_entry(entry)

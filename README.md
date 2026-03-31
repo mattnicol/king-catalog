@@ -56,6 +56,8 @@ app/                        Android project root
 │           │   └── other/          Other authors (extensible)
 │           └── theme/              Material 3 colour scheme
 data-tools/                 Python scripts used to build the seed JSON
+├── scripts/parse.py        Parse source TSV → king_catalog.json
+└── scripts/enrich.py       Enrich JSON with covers (Open Library) and word counts
 ```
 
 ## Seed import
@@ -67,6 +69,26 @@ On first launch `KingCatalogApp` checks DataStore for a `seed_imported` flag. If
 1. Produce a JSON file in the same schema as `king_catalog.json` but with a different `author` field on each entry.
 2. Place the file in `assets/` and extend `SeedImporter` to load it.
 3. The `observeOtherAuthors()` DAO query will pick up any rows where `author != 'Stephen King'`.
+
+## Data pipeline
+
+The enriched seed data lives at `data-tools/enriched/king_catalog.json`. To refresh it:
+
+```bash
+# requires Python 3.11+ and internet access
+source .venv/bin/activate          # or: python3 -m venv .venv && pip install -r requirements.txt
+python3 data-tools/scripts/parse.py    # re-parse source TSV (only needed if source changes)
+python3 data-tools/scripts/enrich.py   # fetch Open Library covers + estimate missing word counts
+```
+
+After running, sync enriched outputs to app assets:
+
+```bash
+cp data-tools/enriched/covers/*.jpg app/app/src/main/assets/covers/
+cp data-tools/enriched/king_catalog.json app/app/src/main/assets/king_catalog.json
+```
+
+Audible lengths are populated from the source TSV where present. Entries without audible data are left null (no reliable free API exists for bulk Audible metadata). Covers for short stories inside collections are typically unavailable on Open Library; those entries are flagged `needs_review` in `data-tools/enriched/king_catalog_review.csv`.
 
 ## Tech stack
 

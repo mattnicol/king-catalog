@@ -24,6 +24,45 @@ ENRICHED.mkdir(exist_ok=True)
 # ---------------------------------------------------------------------------
 STORY_TYPE_TOKENS = {"novel", "novella", "short-story", "collection"}
 
+# Map raw keyword tokens → broad genre bucket (None = discard)
+GENRE_VOCAB: dict[str, str | None] = {
+    "horror": "Horror",
+    "scifi": "Sci-Fi",
+    "science": "Sci-Fi",
+    "fantasy": "Fantasy",
+    "dark-fantasy": "Dark Fantasy",
+    "crime": "Crime",
+    "thriller": "Thriller",
+    "psychological-thriller": "Thriller",
+    "psychological": "Thriller",
+    "pyschological": "Thriller",
+    "suspense": "Thriller",
+    "mystery": "Mystery",
+    "western": "Western",
+    "drama": "Drama",
+    "dystopian": "Sci-Fi",
+    "fiction": None,
+    "fiction,": None,
+    "narrative": None,
+}
+
+# Known collection release years (hardcoded - Wikipedia confirmed)
+COLLECTION_YEARS: dict[str, int] = {
+    "Night Shift": 1978,
+    "Different Seasons": 1982,
+    "The Bachman Books": 1985,
+    "Skeleton Crew": 1985,
+    "Four Past Midnight": 1990,
+    "Nightmares & Dreamscapes": 1993,
+    "Hearts in Atlantis": 1999,
+    "Everything's Eventual": 2002,
+    "Just After Sunset": 2008,
+    "Full Dark, No Stars": 2010,
+    "The Bazaar of Bad Dreams": 2015,
+    "If It Bleeds": 2020,
+    "You Like It Darker": 2024,
+}
+
 # Section / column header patterns to skip
 SECTION_NAMES = {
     "Alcohol and Cocaine Period",
@@ -113,22 +152,28 @@ def audible_to_minutes(
         return None, [f"unparseable_audible:{raw}"]
 
 
-def parse_genres(raw: str) -> tuple[str | None, list[str]]:
-    """Return (story_type, keywords)."""
+def parse_genres(raw: str) -> tuple[str | None, list[str], list[str]]:
+    """Return (story_type, genres, keywords)."""
     if not raw or not raw.strip():
-        return None, []
+        return None, [], []
     tokens = raw.strip().split()
     story_type = None
-    keywords = []
+    genres: list[str] = []
+    keywords: list[str] = []
+    seen_genres: set[str] = set()
     for tok in tokens:
         tl = tok.lower()
         if tl in STORY_TYPE_TOKENS:
             if story_type is None:
                 story_type = tl
-            # don't add to keywords
+        elif tl in GENRE_VOCAB:
+            mapped = GENRE_VOCAB[tl]
+            if mapped and mapped not in seen_genres:
+                genres.append(mapped)
+                seen_genres.add(mapped)
         else:
             keywords.append(tl)
-    return story_type, keywords
+    return story_type, genres, keywords
 
 
 def normalize_story_type(raw_type: str | None) -> str | None:
@@ -345,7 +390,7 @@ def normalize_entries(
         word_count, wc_flags = parse_word_count(raw["word_count_raw"])
         flags.extend(wc_flags)
 
-        raw_type, keywords = parse_genres(raw["genres_raw"])
+        raw_type, genres, keywords = parse_genres(raw["genres_raw"])
         story_type = normalize_story_type(raw_type)
         if story_type is None:
             flags.append("missing_story_type")
@@ -373,10 +418,13 @@ def normalize_entries(
             "id": raw["no"],
             "title": raw["name"],
             "year": year,
+            "decade": (year // 10) * 10 if year is not None else None,
             "word_count": word_count,
             "audible_minutes": round(audible_minutes, 1) if audible_minutes is not None else None,
             "story_type": story_type,
+            "genres": genres,
             "keywords": keywords,
+            "as_bachman": raw["name"].lower().endswith("(bachman)"),
             "has_adaptation": has_adaptation,
             "adaptations": adaptations,
             "collection": collection_name,
@@ -408,14 +456,18 @@ def build_collection_entries(
     entries: list[dict] = []
     name_to_id: dict[str, int] = {}
     for name, child_ids in collections.items():
+        coll_year = COLLECTION_YEARS.get(name)
         entry: dict = {
             "id": next_id,
             "title": name,
-            "year": None,
+            "year": coll_year,
+            "decade": (coll_year // 10) * 10 if coll_year is not None else None,
             "word_count": None,
             "audible_minutes": None,
             "story_type": "collection",
+            "genres": [],
             "keywords": [],
+            "as_bachman": False,
             "has_adaptation": False,
             "adaptations": [],
             "collection": None,

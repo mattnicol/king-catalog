@@ -5,6 +5,7 @@ import com.mattnicol.kingcatalog.data.db.entity.BookEntity
 import com.mattnicol.kingcatalog.data.db.entity.toDomain
 import com.mattnicol.kingcatalog.data.model.Book
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.map
 
 class BookRepository(private val dao: BookDao) {
@@ -30,6 +31,13 @@ class BookRepository(private val dao: BookDao) {
     fun observeStoryTypes(): Flow<List<String>> = dao.observeStoryTypes()
 
     fun observeDecades(): Flow<List<Int>> = dao.observeDecades()
+
+    fun observeById(id: Int): Flow<Book?> =
+        dao.observeById(id).map { it?.toDomain() }
+
+    fun observeChildren(ids: List<Int>): Flow<List<Book>> =
+        if (ids.isEmpty()) flowOf(emptyList())
+        else dao.observeByIds(ids).map { list -> list.map { it.toDomain() } }
 
     suspend fun count(): Int = dao.count()
 
