@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Open book icon centered in safe zone (28dp inset) -->
+    <path
+        android:fillColor="#E8DEF8"
+        android:pathData="M54,32 C44,32 36,36 36,36 L36,76 C36,76 44,72 54,72 C64,72 72,76 72,76 L72,36 C72,36 64,32 54,32 Z" />
+    <path
+        android:fillColor="#49454F"
+        android:pathData="M54,32 L54,72"
+        android:strokeWidth="2"
+        android:strokeColor="#1B1B1F" />
+</vector>

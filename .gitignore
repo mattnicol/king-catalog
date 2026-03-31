@@ -6,8 +6,8 @@ __pycache__/
 
 # Android
 app/.gradle/
-app/build/
-app/app/build/
+#app/build/
+#app/app/build/
 app/local.properties
 *.jks
 *.keystore
