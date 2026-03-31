@@ -3,13 +3,17 @@
     "id": 1,
     "title": "Carrie",
     "year": 1974,
+    "decade": 1970,
     "word_count": 60581,
     "audible_minutes": 444.0,
     "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
     "keywords": [
-      "horror",
       "telekinesis"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -68,9 +72,9 @@
     "is_collection_parent": false,
     "notes": "Mind powers",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Carrie.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -78,13 +82,17 @@
     "id": 2,
     "title": "'Salem's Lot",
     "year": 1975,
+    "decade": 1970,
     "word_count": 157607,
     "audible_minutes": 1056.0,
     "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
     "keywords": [
-      "horror",
       "vampires"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -133,9 +141,9 @@
     "is_collection_parent": false,
     "notes": "Vampires",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/_Salem_s_Lot.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -143,17 +151,21 @@
     "id": 3,
     "title": "The Shining",
     "year": 1977,
+    "decade": 1970,
     "word_count": 161321,
     "audible_minutes": 950.0,
     "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
     "keywords": [
       "gothic",
-      "horror",
       "supernatural",
       "psychic-abilities",
       "ghosts",
       "shine"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -182,9 +194,9 @@
     "is_collection_parent": false,
     "notes": "Mind powers and ghosts. Sequel: Doctor Sleep",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Shining.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -192,13 +204,17 @@
     "id": 4,
     "title": "Rage (Bachman)",
     "year": 1977,
+    "decade": 1970,
     "word_count": 53994,
     "audible_minutes": null,
     "story_type": "novel",
+    "genres": [
+      "Thriller"
+    ],
     "keywords": [
-      "psychological-thriller",
       "school-shooting"
     ],
+    "as_bachman": true,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bachman Books",
@@ -206,9 +222,9 @@
     "is_collection_parent": false,
     "notes": "Was taken out of the collection and is no longer being published. Based on the real world. Boring description: Student goes cuckoo, gun goes pew pew",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Rage__Bachman_.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -216,13 +232,16 @@
     "id": 5,
     "title": "The Stand",
     "year": 1978,
+    "decade": 1970,
     "word_count": null,
     "audible_minutes": 2867.0,
     "story_type": "novel",
+    "genres": [],
     "keywords": [
       "post",
       "apocalyptic"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -251,9 +270,9 @@
     "is_collection_parent": false,
     "notes": "Mind powers and alternate universes. Cut Version. The other 8 books that use it only have it once",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Stand.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
       "missing_word_count"
@@ -263,12 +282,15 @@
     "id": 6,
     "title": "Battleground",
     "year": 1978,
+    "decade": 1970,
     "word_count": 3595,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -297,12 +319,15 @@
     "id": 7,
     "title": "Children of the Corn",
     "year": 1978,
+    "decade": 1970,
     "word_count": 10964,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -431,9 +456,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Child",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Children_of_the_Corn.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -441,12 +466,15 @@
     "id": 8,
     "title": "Graveyard Shift",
     "year": 1978,
+    "decade": 1970,
     "word_count": 6106,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -465,9 +493,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Roden",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Graveyard_Shift.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -475,12 +503,15 @@
     "id": 9,
     "title": "Gray Matter",
     "year": 1978,
+    "decade": 1970,
     "word_count": 4726,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -499,9 +530,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (plea",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Gray_Matter.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -509,13 +540,16 @@
     "id": 10,
     "title": "I Am the Doorway",
     "year": 1978,
+    "decade": 1970,
     "word_count": 4881,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "scifi",
-      "horror"
+    "genres": [
+      "Sci-Fi",
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -534,9 +568,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (plea",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/I_Am_the_Doorway.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -544,12 +578,15 @@
     "id": 11,
     "title": "I Know What You Need",
     "year": 1978,
+    "decade": 1970,
     "word_count": 8173,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -578,12 +615,15 @@
     "id": 12,
     "title": "Jerusalem's Lot",
     "year": 1978,
+    "decade": 1970,
     "word_count": 12799,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -612,12 +652,15 @@
     "id": 13,
     "title": "Night Surf",
     "year": 1978,
+    "decade": 1970,
     "word_count": 3249,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Night Shift",
@@ -625,9 +668,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (plea",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Night_Surf.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -635,12 +678,15 @@
     "id": 14,
     "title": "One for the Road",
     "year": 1978,
+    "decade": 1970,
     "word_count": 6257,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Night Shift",
@@ -648,9 +694,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (plea",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/One_for_the_Road.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -658,12 +704,15 @@
     "id": 15,
     "title": "Quitters, Inc.",
     "year": 1978,
+    "decade": 1970,
     "word_count": 6609,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -702,9 +751,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: A man",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Quitters__Inc_.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -712,12 +761,15 @@
     "id": 16,
     "title": "Sometimes They Come Back",
     "year": 1978,
+    "decade": 1970,
     "word_count": 9657,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -756,9 +808,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Peopl",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Sometimes_They_Come_Back.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -766,12 +818,15 @@
     "id": 17,
     "title": "Strawberry Spring",
     "year": 1978,
+    "decade": 1970,
     "word_count": 3704,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -800,12 +855,15 @@
     "id": 18,
     "title": "The Boogeyman",
     "year": 1978,
+    "decade": 1970,
     "word_count": 4804,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -854,12 +912,15 @@
     "id": 19,
     "title": "The Last Rung on the Ladder",
     "year": 1978,
+    "decade": 1970,
     "word_count": 4768,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -888,12 +949,15 @@
     "id": 20,
     "title": "The Lawnmower Man",
     "year": 1978,
+    "decade": 1970,
     "word_count": 3428,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -922,9 +986,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: A man",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Lawnmower_Man.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -932,12 +996,15 @@
     "id": 21,
     "title": "The Ledge",
     "year": 1978,
+    "decade": 1970,
     "word_count": 6660,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -956,9 +1023,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Man w",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Ledge.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -966,12 +1033,15 @@
     "id": 22,
     "title": "The Man Who Loved Flowers",
     "year": 1978,
+    "decade": 1970,
     "word_count": 2264,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1000,12 +1070,15 @@
     "id": 23,
     "title": "The Mangler",
     "year": 1978,
+    "decade": 1970,
     "word_count": 6945,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1044,9 +1117,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (plea",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Mangler.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1054,12 +1127,15 @@
     "id": 24,
     "title": "The Woman in the Room",
     "year": 1978,
+    "decade": 1970,
     "word_count": 5296,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1108,12 +1184,15 @@
     "id": 25,
     "title": "Trucks",
     "year": 1978,
+    "decade": 1970,
     "word_count": 6148,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1142,9 +1221,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Guys",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Trucks.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1152,14 +1231,18 @@
     "id": 26,
     "title": "The Long Walk (Bachman)",
     "year": 1979,
+    "decade": 1970,
     "word_count": 83736,
     "audible_minutes": 644.0,
     "story_type": "novel",
+    "genres": [
+      "Sci-Fi"
+    ],
     "keywords": [
-      "dystopian",
       "alternate-history",
       "alternate-reality"
     ],
+    "as_bachman": true,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1178,9 +1261,9 @@
     "is_collection_parent": false,
     "notes": "Set in the real world except that Stebbins is hinted as having the ability to read minds. First book completed. Many synopses say it's set in the near future but it's more likely set in 1979. Boring description: The real prize was the friends he mad",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Long_Walk__Bachman_.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1188,14 +1271,18 @@
     "id": 27,
     "title": "The Dead Zone",
     "year": 1979,
+    "decade": 1970,
     "word_count": 150623,
     "audible_minutes": 972.0,
     "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
     "keywords": [
-      "horror",
       "clairvoyance",
       "precognition"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1234,9 +1321,9 @@
     "is_collection_parent": false,
     "notes": "Mind powers",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Dead_Zone.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1244,16 +1331,20 @@
     "id": 28,
     "title": "Firestarter",
     "year": 1980,
+    "decade": 1980,
     "word_count": 150863,
     "audible_minutes": 893.0,
     "story_type": "novel",
+    "genres": [
+      "Sci-Fi",
+      "Horror",
+      "Thriller"
+    ],
     "keywords": [
-      "scifi",
-      "horror",
-      "thriller",
       "telekinesis",
       "pyrokinesis"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1292,9 +1383,9 @@
     "is_collection_parent": false,
     "notes": "Mind powers",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Firestarter.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1302,13 +1393,15 @@
     "id": 29,
     "title": "Roadwork (Bachman)",
     "year": 1981,
+    "decade": 1980,
     "word_count": 89804,
     "audible_minutes": 577.0,
     "story_type": "novel",
-    "keywords": [
-      "psychological",
-      "thriller"
+    "genres": [
+      "Thriller"
     ],
+    "keywords": [],
+    "as_bachman": true,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1327,9 +1420,9 @@
     "is_collection_parent": false,
     "notes": "Based on the real world. Boring description: Man fights a freeway",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Roadwork__Bachman_.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1337,13 +1430,16 @@
     "id": 30,
     "title": "Cujo",
     "year": 1981,
+    "decade": 1980,
     "word_count": 118867,
     "audible_minutes": 847.0,
     "story_type": "novel",
-    "keywords": [
-      "pyschological",
-      "horror"
+    "genres": [
+      "Thriller",
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1362,9 +1458,9 @@
     "is_collection_parent": false,
     "notes": "Based on the real world",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Cujo.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1372,13 +1468,15 @@
     "id": 31,
     "title": "The Running Man (Bachman)",
     "year": 1982,
+    "decade": 1980,
     "word_count": 65812,
     "audible_minutes": 462.0,
     "story_type": "novel",
-    "keywords": [
-      "scifi",
-      "dystopian"
+    "genres": [
+      "Sci-Fi"
     ],
+    "keywords": [],
+    "as_bachman": true,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1407,9 +1505,9 @@
     "is_collection_parent": false,
     "notes": "Based in the real world (SciFi, but no mind powers, no monsters, no alternate univeses, etc). Boring description: Man runs for money",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Running_Man__Bachman_.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1417,16 +1515,20 @@
     "id": 32,
     "title": "The Dark Tower: The Gunslinger",
     "year": 1982,
+    "decade": 1980,
     "word_count": 62546,
     "audible_minutes": 440.0,
     "story_type": "novel",
+    "genres": [
+      "Sci-Fi",
+      "Horror",
+      "Fantasy",
+      "Western"
+    ],
     "keywords": [
-      "scifi",
-      "horror",
-      "fantasy",
-      "western",
       "gunslinger"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1445,9 +1547,9 @@
     "is_collection_parent": false,
     "notes": "Alternate universes",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__The_Gunslinger.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1455,13 +1557,16 @@
     "id": 33,
     "title": "The Plant: Zenith Rising",
     "year": 1982,
+    "decade": 1980,
     "word_count": 30000,
     "audible_minutes": null,
     "story_type": "short_story",
+    "genres": [],
     "keywords": [
       "monster",
       "plant"
     ],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -1481,13 +1586,17 @@
     "id": 34,
     "title": "Rita Hayworth and Shawshank Redemption",
     "year": 1982,
+    "decade": 1980,
     "word_count": 40535,
     "audible_minutes": null,
     "story_type": "novel",
+    "genres": [
+      "Drama"
+    ],
     "keywords": [
-      "drama",
       "prison"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1506,9 +1615,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Man escapes",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Rita_Hayworth_and_Shawshank_Redemption.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1516,12 +1625,15 @@
     "id": 35,
     "title": "Apt Pupil",
     "year": 1982,
+    "decade": 1980,
     "word_count": 72864,
     "audible_minutes": null,
     "story_type": "novel",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1540,9 +1652,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Teen chats",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Apt_Pupil.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1550,13 +1662,17 @@
     "id": 36,
     "title": "The Body",
     "year": 1982,
+    "decade": 1980,
     "word_count": 59274,
     "audible_minutes": null,
     "story_type": "novel",
+    "genres": [
+      "Drama"
+    ],
     "keywords": [
-      "drama",
       "coming-of-age"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1575,9 +1691,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Kids walk t",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Body.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1585,12 +1701,15 @@
     "id": 37,
     "title": "The Breathing Method",
     "year": 1982,
+    "decade": 1980,
     "word_count": 25038,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1609,9 +1728,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please sug",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Breathing_Method.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1619,13 +1738,17 @@
     "id": 38,
     "title": "Christine",
     "year": 1983,
+    "decade": 1980,
     "word_count": 189905,
     "audible_minutes": 1175.0,
     "story_type": "novel",
-    "keywords": [
-      "supernatural",
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [
+      "supernatural"
+    ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1654,9 +1777,9 @@
     "is_collection_parent": false,
     "notes": "Supernatural. It's the only King book with the sound effect \"Punk! Punk! Punk!\". This King novel with the word shitter or shitters 67 times",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Christine.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1664,13 +1787,16 @@
     "id": 39,
     "title": "Beachworld",
     "year": 1985,
+    "decade": 1980,
     "word_count": 6302,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "scifi",
-      "horror"
+    "genres": [
+      "Sci-Fi",
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1719,12 +1845,15 @@
     "id": 40,
     "title": "Big Wheels",
     "year": 1985,
+    "decade": 1980,
     "word_count": 5124,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Skeleton Crew",
@@ -1742,12 +1871,15 @@
     "id": 41,
     "title": "Cain Rose Up",
     "year": 1985,
+    "decade": 1980,
     "word_count": 2114,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1826,12 +1958,15 @@
     "id": 42,
     "title": "For Owen",
     "year": 1985,
+    "decade": 1980,
     "word_count": 250,
     "audible_minutes": null,
     "story_type": "collection_piece",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Skeleton Crew",
@@ -1849,13 +1984,16 @@
     "id": 43,
     "title": "Gramma",
     "year": 1985,
+    "decade": 1980,
     "word_count": 11811,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror",
-      "fantasy"
+    "genres": [
+      "Horror",
+      "Fantasy"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1884,9 +2022,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Gramma.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1894,12 +2032,15 @@
     "id": 44,
     "title": "Here there be Tygers",
     "year": 1985,
+    "decade": 1980,
     "word_count": 1506,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -1948,9 +2089,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: A stude",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Here_there_be_Tygers.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1958,12 +2099,15 @@
     "id": 45,
     "title": "Morning Deliveries",
     "year": 1985,
+    "decade": 1980,
     "word_count": 1652,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Skeleton Crew",
@@ -1971,9 +2115,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Milkman",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Morning_Deliveries.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -1981,12 +2125,15 @@
     "id": 46,
     "title": "Mrs. Todd's Shortcut",
     "year": 1985,
+    "decade": 1980,
     "word_count": 11166,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "fantasy"
+    "genres": [
+      "Fantasy"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Skeleton Crew",
@@ -1994,9 +2141,9 @@
     "is_collection_parent": false,
     "notes": "References The Dark Tower III: The Waste Lands. Boring description: Woman r",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Mrs__Todd_s_Shortcut.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2004,12 +2151,15 @@
     "id": 47,
     "title": "Nona",
     "year": 1985,
+    "decade": 1980,
     "word_count": 13812,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Skeleton Crew",
@@ -2017,9 +2167,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Nona.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2027,12 +2177,15 @@
     "id": 48,
     "title": "Paranoid: A Chant",
     "year": 1985,
+    "decade": 1980,
     "word_count": 603,
     "audible_minutes": null,
     "story_type": "collection_piece",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Skeleton Crew",
@@ -2050,12 +2203,15 @@
     "id": 49,
     "title": "Survivor Type",
     "year": 1985,
+    "decade": 1980,
     "word_count": 7831,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2124,12 +2280,15 @@
     "id": 50,
     "title": "The Ballad of the Flexible Bullet",
     "year": 1985,
+    "decade": 1980,
     "word_count": 20808,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "fantasy"
+    "genres": [
+      "Fantasy"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Skeleton Crew",
@@ -2137,9 +2296,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Ballad_of_the_Flexible_Bullet.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2147,12 +2306,15 @@
     "id": 51,
     "title": "The Jaunt",
     "year": 1985,
+    "decade": 1980,
     "word_count": 9821,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2171,9 +2333,9 @@
     "is_collection_parent": false,
     "notes": "The episode White Christmas from the series Black Mirror takes inspiration from The Jaunt. There is no bodily transporation (jaunting) but digital copies of people are forced to spend long periods of time with nothing to do. Boring description: Kid goes crazy",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Jaunt.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2181,12 +2343,15 @@
     "id": 52,
     "title": "The Man Who Would Not Shake Hands",
     "year": 1985,
+    "decade": 1980,
     "word_count": 7556,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "fantasy"
+    "genres": [
+      "Fantasy"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2215,9 +2380,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Man_Who_Would_Not_Shake_Hands.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2225,12 +2390,15 @@
     "id": 53,
     "title": "The Mist",
     "year": 1985,
+    "decade": 1980,
     "word_count": 50350,
     "audible_minutes": 319.0,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2259,9 +2427,9 @@
     "is_collection_parent": false,
     "notes": "Originally published 1980. Boring description: Bad weather forces grocery store shutdo",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Mist.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2269,12 +2437,15 @@
     "id": 54,
     "title": "The Monkey",
     "year": 1985,
+    "decade": 1980,
     "word_count": 14951,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2303,12 +2474,15 @@
     "id": 55,
     "title": "The Raft",
     "year": 1985,
+    "decade": 1980,
     "word_count": 10945,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2337,12 +2511,15 @@
     "id": 56,
     "title": "The Reach",
     "year": 1985,
+    "decade": 1980,
     "word_count": 8703,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2371,12 +2548,15 @@
     "id": 57,
     "title": "The Reaper's Image",
     "year": 1985,
+    "decade": 1980,
     "word_count": 2647,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2405,12 +2585,15 @@
     "id": 58,
     "title": "The Wedding Gig",
     "year": 1985,
+    "decade": 1980,
     "word_count": 5982,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Skeleton Crew",
@@ -2428,12 +2611,15 @@
     "id": 59,
     "title": "Uncle Otto's Truck",
     "year": 1985,
+    "decade": 1980,
     "word_count": 6988,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2462,12 +2648,15 @@
     "id": 60,
     "title": "Word Processor of the Gods",
     "year": 1985,
+    "decade": 1980,
     "word_count": 7085,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2486,9 +2675,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Man bre",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Word_Processor_of_the_Gods.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2496,13 +2685,17 @@
     "id": 61,
     "title": "Pet Sematary",
     "year": 1983,
+    "decade": 1980,
     "word_count": 143094,
     "audible_minutes": 941.0,
     "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
     "keywords": [
-      "horror",
       "resurrection"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2541,9 +2734,9 @@
     "is_collection_parent": false,
     "notes": "Supernatural - raise the dead",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Pet_Sematary.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2551,14 +2744,18 @@
     "id": 62,
     "title": "Cycle of the Werewolf",
     "year": 1983,
+    "decade": 1980,
     "word_count": 15904,
     "audible_minutes": null,
     "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
     "keywords": [
       "gothic",
-      "horror",
       "werewolf"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2587,9 +2784,9 @@
     "is_collection_parent": false,
     "notes": "Werewolf. There is also a picture book",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Cycle_of_the_Werewolf.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2597,15 +2794,19 @@
     "id": 63,
     "title": "The Talisman",
     "year": 1984,
+    "decade": 1980,
     "word_count": 261841,
     "audible_minutes": 1680.0,
     "story_type": "novel",
+    "genres": [
+      "Fantasy"
+    ],
     "keywords": [
       "dark",
-      "fantasy",
       "werewolves",
       "gunslinger"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2624,9 +2825,9 @@
     "is_collection_parent": false,
     "notes": "Parallel universes and werewolves. Sequel: Black House. Has the most occurrences of the word axiomatic with 12 times",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Talisman.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2634,13 +2835,17 @@
     "id": 64,
     "title": "Thinner (Bachman)",
     "year": 1984,
+    "decade": 1980,
     "word_count": 95716,
     "audible_minutes": 607.0,
     "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
     "keywords": [
-      "horror",
       "curses"
     ],
+    "as_bachman": true,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2659,9 +2864,9 @@
     "is_collection_parent": false,
     "notes": "Gypsy Magic",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Thinner__Bachman_.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2669,16 +2874,20 @@
     "id": 65,
     "title": "IT",
     "year": 1986,
+    "decade": 1980,
     "word_count": 441156,
     "audible_minutes": 2686.0,
     "story_type": "novel",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
     "keywords": [
-      "horror",
-      "thriller",
       "coming-of-age",
       "creature",
       "mind-control"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2727,9 +2936,9 @@
     "is_collection_parent": false,
     "notes": "Mind powers, monster and alternate universe",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/IT.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2737,13 +2946,17 @@
     "id": 66,
     "title": "The Eyes of the Dragon",
     "year": 1987,
+    "decade": 1980,
     "word_count": 103523,
     "audible_minutes": 623.0,
     "story_type": "novel",
+    "genres": [
+      "Fantasy"
+    ],
     "keywords": [
-      "fantasy",
       "quasi-medieval"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2762,9 +2975,9 @@
     "is_collection_parent": false,
     "notes": "Alternate universe",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Eyes_of_the_Dragon.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2772,16 +2985,20 @@
     "id": 67,
     "title": "The Dark Tower: The Drawing of the Three",
     "year": 1987,
+    "decade": 1980,
     "word_count": 125544,
     "audible_minutes": 767.0,
     "story_type": "novel",
+    "genres": [
+      "Sci-Fi",
+      "Horror",
+      "Fantasy",
+      "Western"
+    ],
     "keywords": [
-      "scifi",
-      "horror",
-      "fantasy",
-      "western",
       "gunslinger"
     ],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -2789,9 +3006,9 @@
     "is_collection_parent": false,
     "notes": "Part II. Alternate universes",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__The_Drawing_of_the_Three.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2799,13 +3016,16 @@
     "id": 68,
     "title": "Misery",
     "year": 1987,
+    "decade": 1980,
     "word_count": 112409,
     "audible_minutes": 732.0,
     "story_type": "novel",
-    "keywords": [
-      "psychological",
-      "horror"
+    "genres": [
+      "Thriller",
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2824,9 +3044,9 @@
     "is_collection_parent": false,
     "notes": "Based in reality",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Misery.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2834,12 +3054,15 @@
     "id": 69,
     "title": "The Tommyknockers",
     "year": 1987,
+    "decade": 1980,
     "word_count": 256253,
     "audible_minutes": 1663.0,
     "story_type": "novel",
-    "keywords": [
-      "scifi"
+    "genres": [
+      "Sci-Fi"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2868,9 +3091,9 @@
     "is_collection_parent": false,
     "notes": "Aliens and Mind powers. The only King novel to feature vagina tentacles",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Tommyknockers.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2878,13 +3101,16 @@
     "id": 70,
     "title": "The Dark Half",
     "year": 1989,
+    "decade": 1980,
     "word_count": 153897,
     "audible_minutes": 914.0,
     "story_type": "novel",
-    "keywords": [
-      "psychological",
-      "horror"
+    "genres": [
+      "Thriller",
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2903,9 +3129,9 @@
     "is_collection_parent": false,
     "notes": "Possibly a malevolent spirit, or could be based in the real world as an alternate personality",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Dark_Half.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2913,13 +3139,16 @@
     "id": 71,
     "title": "The Stand: The Complete & Uncut Edition",
     "year": 1990,
+    "decade": 1990,
     "word_count": 467812,
     "audible_minutes": 2867.0,
     "story_type": "novel",
+    "genres": [],
     "keywords": [
       "post",
       "apocalyptic"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -2958,12 +3187,15 @@
     "id": 72,
     "title": "Brooklyn August",
     "year": 1993,
+    "decade": 1990,
     "word_count": 308,
     "audible_minutes": null,
     "story_type": "collection_piece",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Nightmares & Dreamscapes",
@@ -2971,9 +3203,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Baseball poetry",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Brooklyn_August.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -2981,12 +3213,15 @@
     "id": 73,
     "title": "Chattery Teeth",
     "year": 1993,
+    "decade": 1990,
     "word_count": 12647,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Nightmares & Dreamscapes",
@@ -2994,9 +3229,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Man saved by teeth",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Chattery_Teeth.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3004,12 +3239,15 @@
     "id": 74,
     "title": "Crouch End",
     "year": 1993,
+    "decade": 1990,
     "word_count": 10574,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3028,9 +3266,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: A couple goes for",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Crouch_End.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3038,12 +3276,15 @@
     "id": 75,
     "title": "Dedication",
     "year": 1993,
+    "decade": 1990,
     "word_count": 17446,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3062,9 +3303,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Maid cleans author",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Dedication.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3072,12 +3313,15 @@
     "id": 76,
     "title": "Dolan's Cadillac",
     "year": 1993,
+    "decade": 1990,
     "word_count": 19303,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3096,9 +3340,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Man buries car",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Dolan_s_Cadillac.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3106,12 +3350,15 @@
     "id": 77,
     "title": "Head Down",
     "year": 1993,
+    "decade": 1990,
     "word_count": 19541,
     "audible_minutes": null,
     "story_type": "collection_piece",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Nightmares & Dreamscapes",
@@ -3119,9 +3366,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Stephen King's son",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Head_Down.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3129,12 +3376,15 @@
     "id": 78,
     "title": "Home Delivery",
     "year": 1993,
+    "decade": 1990,
     "word_count": 10830,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3153,9 +3403,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Woman must deliver",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Home_Delivery.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3163,13 +3413,16 @@
     "id": 79,
     "title": "It Grows on You",
     "year": 1993,
+    "decade": 1990,
     "word_count": 6479,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror",
-      "fantasy"
+    "genres": [
+      "Horror",
+      "Fantasy"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Nightmares & Dreamscapes",
@@ -3177,9 +3430,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please suggest)",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/It_Grows_on_You.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3187,12 +3440,15 @@
     "id": 80,
     "title": "My Pretty Pony",
     "year": 1993,
+    "decade": 1990,
     "word_count": 10259,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3231,9 +3487,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Old man gives gran",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/My_Pretty_Pony.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3241,12 +3497,15 @@
     "id": 81,
     "title": "Popsy",
     "year": 1993,
+    "decade": 1990,
     "word_count": 4789,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3265,9 +3524,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Kidnapped boy bite",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Popsy.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3275,12 +3534,15 @@
     "id": 82,
     "title": "Rainy Season",
     "year": 1993,
+    "decade": 1990,
     "word_count": 8129,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3299,9 +3561,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: It rains frogs",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Rainy_Season.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3309,12 +3571,15 @@
     "id": 83,
     "title": "Sneakers",
     "year": 1993,
+    "decade": 1990,
     "word_count": 9792,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Nightmares & Dreamscapes",
@@ -3322,9 +3587,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Man notices sneake",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Sneakers.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3332,13 +3597,16 @@
     "id": 84,
     "title": "Sorry, Right Number",
     "year": 1993,
+    "decade": 1990,
     "word_count": 5704,
     "audible_minutes": null,
     "story_type": "collection_piece",
-    "keywords": [
-      "scifi",
-      "drama"
+    "genres": [
+      "Sci-Fi",
+      "Drama"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3357,9 +3625,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Woman tries to fig",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Sorry__Right_Number.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3367,12 +3635,15 @@
     "id": 85,
     "title": "Suffer the Little Children",
     "year": 1993,
+    "decade": 1990,
     "word_count": 4227,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3391,9 +3662,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Kids stare at thei",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Suffer_the_Little_Children.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3401,12 +3672,15 @@
     "id": 86,
     "title": "The Beggar and the Diamond",
     "year": 1993,
+    "decade": 1990,
     "word_count": 1309,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Nightmares & Dreamscapes",
@@ -3414,9 +3688,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Unhappy man decide",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Beggar_and_the_Diamond.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3424,12 +3698,15 @@
     "id": 87,
     "title": "The Doctor's Case",
     "year": 1993,
+    "decade": 1990,
     "word_count": 12692,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3468,9 +3745,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: A dying rich man c",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Doctor_s_Case.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3478,13 +3755,16 @@
     "id": 88,
     "title": "The End of the Whole Mess",
     "year": 1993,
+    "decade": 1990,
     "word_count": 9552,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "fantasy",
-      "drama"
+    "genres": [
+      "Fantasy",
+      "Drama"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3503,9 +3783,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Converting the wor",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_End_of_the_Whole_Mess.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3513,12 +3793,15 @@
     "id": 89,
     "title": "The Fifth Quarter",
     "year": 1993,
+    "decade": 1990,
     "word_count": 5674,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3537,9 +3820,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Man tries to get m",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Fifth_Quarter.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3547,12 +3830,15 @@
     "id": 90,
     "title": "The House on Maple Street",
     "year": 1993,
+    "decade": 1990,
     "word_count": 12786,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "scifi"
+    "genres": [
+      "Sci-Fi"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Nightmares & Dreamscapes",
@@ -3560,9 +3846,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Kids figure out wa",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_House_on_Maple_Street.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3570,12 +3856,15 @@
     "id": 91,
     "title": "The Moving Finger",
     "year": 1993,
+    "decade": 1990,
     "word_count": 13322,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Nightmares & Dreamscapes",
@@ -3583,9 +3872,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Man fights with fi",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Moving_Finger.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3593,12 +3882,15 @@
     "id": 92,
     "title": "The Night Flier",
     "year": 1993,
+    "decade": 1990,
     "word_count": 13307,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3617,9 +3909,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Vampires flies a p",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Night_Flier.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3627,12 +3919,15 @@
     "id": 93,
     "title": "The Ten O'Clock People",
     "year": 1993,
+    "decade": 1990,
     "word_count": 19262,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3651,9 +3946,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: If you reduce how",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Ten_O_Clock_People.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3661,14 +3956,18 @@
     "id": 94,
     "title": "Umney's Last Case",
     "year": 1993,
+    "decade": 1990,
     "word_count": 19243,
     "audible_minutes": null,
     "story_type": "short_story",
+    "genres": [
+      "Sci-Fi",
+      "Mystery"
+    ],
     "keywords": [
-      "scifi",
-      "mystery",
       "time-travel"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3697,9 +3996,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Writer and his cha",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Umney_s_Last_Case.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3707,12 +4006,15 @@
     "id": 95,
     "title": "You Know They Got a Hell of a Band",
     "year": 1993,
+    "decade": 1990,
     "word_count": 16180,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3731,9 +4033,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: A couple find the",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/You_Know_They_Got_a_Hell_of_a_Band.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3741,13 +4043,16 @@
     "id": 96,
     "title": "The Langoliers",
     "year": 1990,
+    "decade": 1990,
     "word_count": 88399,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "scifi",
-      "horror"
+    "genres": [
+      "Sci-Fi",
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3766,9 +4071,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Plane lands",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Langoliers.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3776,12 +4081,15 @@
     "id": 97,
     "title": "Secret Window, Secret Garden",
     "year": 1990,
+    "decade": 1990,
     "word_count": 58361,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3800,9 +4108,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Author plagi",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Secret_Window__Secret_Garden.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3810,12 +4118,15 @@
     "id": 98,
     "title": "The Library Policeman",
     "year": 1990,
+    "decade": 1990,
     "word_count": 78327,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Four Past Midnight",
@@ -3823,9 +4134,9 @@
     "is_collection_parent": false,
     "notes": "The only King novel with the word Thdeady. Boring description: (please sugg",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Library_Policeman.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3833,12 +4144,15 @@
     "id": 99,
     "title": "The Sun Dog",
     "year": 1990,
+    "decade": 1990,
     "word_count": 61654,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Four Past Midnight",
@@ -3846,9 +4160,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Kid gets a c",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Sun_Dog.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3856,16 +4170,20 @@
     "id": 100,
     "title": "The Dark Tower: The Waste Lands",
     "year": 1991,
+    "decade": 1990,
     "word_count": 171879,
     "audible_minutes": 1094.0,
     "story_type": "novel",
+    "genres": [
+      "Sci-Fi",
+      "Horror",
+      "Fantasy",
+      "Western"
+    ],
     "keywords": [
-      "scifi",
-      "horror",
-      "fantasy",
-      "western",
       "gunslinger"
     ],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -3873,9 +4191,9 @@
     "is_collection_parent": false,
     "notes": "Part III. Alternate worlds. Referenced in Mrs. Todd's Shortcut",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__The_Waste_Lands.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3883,14 +4201,18 @@
     "id": 101,
     "title": "Needful Things",
     "year": 1991,
+    "decade": 1990,
     "word_count": 251219,
     "audible_minutes": 1511.0,
     "story_type": "novel",
+    "genres": [
+      "Horror",
+      "Crime"
+    ],
     "keywords": [
-      "horror",
-      "crime",
       "magic"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3909,9 +4231,9 @@
     "is_collection_parent": false,
     "notes": "Magic",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Needful_Things.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3919,15 +4241,18 @@
     "id": 102,
     "title": "Gerald's Game",
     "year": 1992,
+    "decade": 1990,
     "word_count": 124349,
     "audible_minutes": 814.0,
     "story_type": "novel",
+    "genres": [
+      "Thriller",
+      "Horror"
+    ],
     "keywords": [
-      "suspense",
-      "psychological",
-      "horror",
       "bondage"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3946,9 +4271,9 @@
     "is_collection_parent": false,
     "notes": "Mind powers (twinner novel: psychic connection with Dolores Claiborne (novel of same name) during eclipse). The Netflix movie was much better than I anticipated. There is so much more to it than we see in the trailer",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Gerald_s_Game.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3956,13 +4281,15 @@
     "id": 103,
     "title": "Dolores Claiborne",
     "year": 1992,
+    "decade": 1990,
     "word_count": 94342,
     "audible_minutes": 555.0,
     "story_type": "novel",
-    "keywords": [
-      "psychological",
-      "thriller"
+    "genres": [
+      "Thriller"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -3981,9 +4308,9 @@
     "is_collection_parent": false,
     "notes": "Mind powers (twinner novel: psychic connection with the little girl in Gerald's Game during the eclipse). No chapters. No sections. All one unbroken narritive",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Dolores_Claiborne.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -3991,14 +4318,18 @@
     "id": 104,
     "title": "Insomnia",
     "year": 1994,
+    "decade": 1990,
     "word_count": 238334,
     "audible_minutes": 1539.0,
     "story_type": "novel",
+    "genres": [
+      "Horror",
+      "Fantasy"
+    ],
     "keywords": [
-      "horror",
-      "fantasy",
       "multiverse"
     ],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -4006,9 +4337,9 @@
     "is_collection_parent": false,
     "notes": "Mind powers and Alternate realities",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Insomnia.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4016,13 +4347,16 @@
     "id": 105,
     "title": "Rose Madder",
     "year": 1995,
+    "decade": 1990,
     "word_count": 173477,
     "audible_minutes": 1042.0,
     "story_type": "novel",
-    "keywords": [
-      "fantasy",
-      "thriller"
+    "genres": [
+      "Fantasy",
+      "Thriller"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4041,9 +4375,9 @@
     "is_collection_parent": false,
     "notes": "Alternate realities",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Rose_Madder.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4051,14 +4385,18 @@
     "id": 106,
     "title": "The Green Mile",
     "year": 1996,
+    "decade": 1990,
     "word_count": 130364,
     "audible_minutes": 833.0,
     "story_type": "novel",
+    "genres": [
+      "Dark Fantasy"
+    ],
     "keywords": [
-      "dark-fantasy",
       "southern-gothic",
       "magic-realism"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4077,9 +4415,9 @@
     "is_collection_parent": false,
     "notes": "Mind powers. Originally published as 6 books, one book per chapter",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Green_Mile.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4087,12 +4425,15 @@
     "id": 107,
     "title": "Desperation",
     "year": 1996,
+    "decade": 1990,
     "word_count": 191846,
     "audible_minutes": 1275.0,
     "story_type": "novel",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4111,9 +4452,9 @@
     "is_collection_parent": false,
     "notes": "Parallel universe with The Regulators. Published at the same time as twinner novel of The Regulators",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Desperation.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4121,14 +4462,18 @@
     "id": 108,
     "title": "The Regulators (Bachman)",
     "year": 1996,
+    "decade": 1990,
     "word_count": 116012,
     "audible_minutes": 731.0,
     "story_type": "novel",
+    "genres": [
+      "Sci-Fi",
+      "Horror"
+    ],
     "keywords": [
-      "scifi",
-      "horror",
       "mystical-powers"
     ],
+    "as_bachman": true,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4157,16 +4502,20 @@
     "id": 109,
     "title": "The Dark Tower: Wizard and Glass",
     "year": 1997,
+    "decade": 1990,
     "word_count": 254432,
     "audible_minutes": 1655.0,
     "story_type": "novel",
+    "genres": [
+      "Sci-Fi",
+      "Horror",
+      "Fantasy",
+      "Western"
+    ],
     "keywords": [
-      "scifi",
-      "horror",
-      "fantasy",
-      "western",
       "gunslinger"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4185,9 +4534,9 @@
     "is_collection_parent": false,
     "notes": "Part IV. Alternate worlds",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__Wizard_and_Glass.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4195,15 +4544,19 @@
     "id": 110,
     "title": "Bag of Bones",
     "year": 1998,
+    "decade": 1990,
     "word_count": 200340,
     "audible_minutes": 1282.0,
     "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
     "keywords": [
       "gothic",
-      "horror",
       "psychic-powers",
       "ghosts"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4222,9 +4575,9 @@
     "is_collection_parent": false,
     "notes": "Psychic connection",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Bag_of_Bones.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4232,14 +4585,18 @@
     "id": 111,
     "title": "The Girl Who Loved Tom Gordon",
     "year": 1999,
+    "decade": 1990,
     "word_count": 61413,
     "audible_minutes": 389.0,
     "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
     "keywords": [
-      "horror",
       "hallucination",
       "supernatural"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4258,9 +4615,9 @@
     "is_collection_parent": false,
     "notes": "Supernatural or hallucinations. I read the pop-up book 1 time",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Girl_Who_Loved_Tom_Gordon.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4268,12 +4625,15 @@
     "id": 112,
     "title": "Blind Willie",
     "year": 1999,
+    "decade": 1990,
     "word_count": 16858,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Hearts in Atlantis",
@@ -4291,12 +4651,15 @@
     "id": 113,
     "title": "Hearts in Atlantis",
     "year": 1999,
+    "decade": 1990,
     "word_count": 55568,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Hearts in Atlantis",
@@ -4304,9 +4667,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please sugg",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Hearts_in_Atlantis.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4314,12 +4677,15 @@
     "id": 114,
     "title": "Heavenly Shades of Night Are Falling",
     "year": 1999,
+    "decade": 1990,
     "word_count": 5037,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Hearts in Atlantis",
@@ -4337,12 +4703,15 @@
     "id": 115,
     "title": "Low Men in Yellow Coats",
     "year": 1999,
+    "decade": 1990,
     "word_count": 89400,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4371,12 +4740,15 @@
     "id": 116,
     "title": "Why We're in Vietnam",
     "year": 1999,
+    "decade": 1990,
     "word_count": 17034,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Hearts in Atlantis",
@@ -4394,16 +4766,20 @@
     "id": 117,
     "title": "Dreamcatcher",
     "year": 2001,
+    "decade": 2000,
     "word_count": 216342,
     "audible_minutes": 1367.0,
     "story_type": "novel",
+    "genres": [
+      "Sci-Fi",
+      "Horror",
+      "Thriller"
+    ],
     "keywords": [
-      "scifi",
       "body",
-      "horror",
-      "suspense",
       "alien-invasion"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4422,9 +4798,9 @@
     "is_collection_parent": false,
     "notes": "Mind powers and aliens",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Dreamcatcher.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4432,14 +4808,18 @@
     "id": 118,
     "title": "Black House",
     "year": 2001,
+    "decade": 2000,
     "word_count": 244182,
     "audible_minutes": null,
     "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
     "keywords": [
-      "horror",
       "cannibalism",
       "dark-tower"
     ],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -4447,9 +4827,9 @@
     "is_collection_parent": false,
     "notes": "Alternate worlds (Dark Tower). Sequel to The Talisman",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Black_House.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4457,13 +4837,17 @@
     "id": 119,
     "title": "From A Buick 8",
     "year": 2002,
+    "decade": 2000,
     "word_count": 123912,
     "audible_minutes": 801.0,
     "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
     "keywords": [
-      "horror",
       "supernatural-car"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4482,9 +4866,9 @@
     "is_collection_parent": false,
     "notes": "Alternate world. Mystery car never moves. Car is portal to another world deadly to us. Things come of trunk but soon die. Switches between different characters and Now and Then",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/From_A_Buick_8.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4492,12 +4876,15 @@
     "id": 120,
     "title": "1408",
     "year": 2002,
+    "decade": 2000,
     "word_count": 14742,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4516,9 +4903,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Man stays in ho",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/1408.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4526,12 +4913,15 @@
     "id": 121,
     "title": "All That You Love Will Be Carried Away",
     "year": 2002,
+    "decade": 2000,
     "word_count": 5770,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4550,9 +4940,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please suggest",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/All_That_You_Love_Will_Be_Carried_Away.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4560,12 +4950,15 @@
     "id": 122,
     "title": "Autopsy Room Four",
     "year": 2002,
+    "decade": 2000,
     "word_count": 8883,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4594,9 +4987,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please suggest",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Autopsy_Room_Four.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4604,12 +4997,15 @@
     "id": 123,
     "title": "Everything's Eventual",
     "year": 2002,
+    "decade": 2000,
     "word_count": 19552,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "fantasy"
+    "genres": [
+      "Fantasy"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Everything's Eventual",
@@ -4617,9 +5013,9 @@
     "is_collection_parent": false,
     "notes": "Mental powers. Boring description: (please suggest",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Everything_s_Eventual.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4627,12 +5023,15 @@
     "id": 124,
     "title": "In the Deathroom",
     "year": 2002,
+    "decade": 2000,
     "word_count": 9925,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4651,9 +5050,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please suggest",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/In_the_Deathroom.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4661,12 +5060,15 @@
     "id": 125,
     "title": "L.T.'s Theory of Pets",
     "year": 2002,
+    "decade": 2000,
     "word_count": 9154,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Everything's Eventual",
@@ -4674,9 +5076,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please suggest",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/L_T__s_Theory_of_Pets.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4684,12 +5086,15 @@
     "id": 126,
     "title": "Luckey Quarter",
     "year": 2002,
+    "decade": 2000,
     "word_count": 4253,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4718,12 +5123,15 @@
     "id": 127,
     "title": "Lunch at the Gotham Café",
     "year": 2002,
+    "decade": 2000,
     "word_count": 13115,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4742,9 +5150,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please suggest",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Lunch_at_the_Gotham_Café.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4752,12 +5160,15 @@
     "id": 128,
     "title": "Riding the Bullet",
     "year": 2002,
+    "decade": 2000,
     "word_count": 16082,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4776,9 +5187,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please suggest",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Riding_the_Bullet.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4786,12 +5197,15 @@
     "id": 129,
     "title": "That Feeling, You Can Only Say What It Is in French",
     "year": 2002,
+    "decade": 2000,
     "word_count": 6457,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4820,12 +5234,15 @@
     "id": 130,
     "title": "The Death of Jack Hamilton",
     "year": 2002,
+    "decade": 2000,
     "word_count": 11773,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4854,12 +5271,15 @@
     "id": 131,
     "title": "The Little Sisters of Eluria",
     "year": 2002,
+    "decade": 2000,
     "word_count": 23571,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "fantasy"
+    "genres": [
+      "Fantasy"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4878,9 +5298,9 @@
     "is_collection_parent": false,
     "notes": "Part of The Dark Tower. Boring description: (please suggest",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Little_Sisters_of_Eluria.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4888,12 +5308,15 @@
     "id": 132,
     "title": "The Man in the Black Suit",
     "year": 2002,
+    "decade": 2000,
     "word_count": 10376,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4922,9 +5345,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please suggest",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Man_in_the_Black_Suit.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4932,12 +5355,15 @@
     "id": 133,
     "title": "The Road Virus Heads North",
     "year": 2002,
+    "decade": 2000,
     "word_count": 9244,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -4966,9 +5392,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please suggest",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Road_Virus_Heads_North.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -4976,16 +5402,20 @@
     "id": 134,
     "title": "The Dark Tower: Wolves of the Calla",
     "year": 2003,
+    "decade": 2000,
     "word_count": 241435,
     "audible_minutes": 1580.0,
     "story_type": "novel",
+    "genres": [
+      "Sci-Fi",
+      "Horror",
+      "Fantasy",
+      "Western"
+    ],
     "keywords": [
-      "scifi",
-      "horror",
-      "fantasy",
-      "western",
       "gunslinger"
     ],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -5003,14 +5433,17 @@
     "id": 135,
     "title": "The Dark Tower: Song of Susannah",
     "year": 2004,
+    "decade": 2000,
     "word_count": 126253,
     "audible_minutes": 849.0,
     "story_type": "novel",
-    "keywords": [
-      "scifi",
-      "horror",
-      "fantasy"
+    "genres": [
+      "Sci-Fi",
+      "Horror",
+      "Fantasy"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -5028,14 +5461,17 @@
     "id": 136,
     "title": "The Dark Tower",
     "year": 2004,
+    "decade": 2000,
     "word_count": 272350,
     "audible_minutes": 1730.0,
     "story_type": "novel",
-    "keywords": [
-      "scifi",
-      "horror",
-      "fantasy"
+    "genres": [
+      "Sci-Fi",
+      "Horror",
+      "Fantasy"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -5043,9 +5479,9 @@
     "is_collection_parent": false,
     "notes": "Part VII. Alternate worlds",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5053,13 +5489,16 @@
     "id": 137,
     "title": "The Colorado Kid",
     "year": 2005,
+    "decade": 2000,
     "word_count": 33859,
     "audible_minutes": 218.0,
     "story_type": "novel",
-    "keywords": [
-      "mystery",
-      "crime"
+    "genres": [
+      "Mystery",
+      "Crime"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5078,9 +5517,9 @@
     "is_collection_parent": false,
     "notes": "Based on the real world",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Colorado_Kid.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5088,16 +5527,20 @@
     "id": 138,
     "title": "Cell",
     "year": 2006,
+    "decade": 2000,
     "word_count": 121706,
     "audible_minutes": 756.0,
     "story_type": "novel",
+    "genres": [
+      "Sci-Fi",
+      "Horror"
+    ],
     "keywords": [
-      "scifi",
-      "horror",
       "zombie",
       "telepath",
       "telekinesis"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5116,9 +5559,9 @@
     "is_collection_parent": false,
     "notes": "Mind powers. The only King novel to have the words \"Kashwak-No-Fo\"",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Cell.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5126,13 +5569,17 @@
     "id": 139,
     "title": "Lisey's Story",
     "year": 2006,
+    "decade": 2000,
     "word_count": 183659,
     "audible_minutes": 1132.0,
     "story_type": "novel",
-    "keywords": [
-      "gothic",
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [
+      "gothic"
+    ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5151,9 +5598,9 @@
     "is_collection_parent": false,
     "notes": "Alternate world. Has the word \"bool\" 151 times and is the only King novel with the word smucking (87 times)",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Lisey_s_Story.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5161,13 +5608,17 @@
     "id": 140,
     "title": "Blaze (Bachman)",
     "year": 2007,
+    "decade": 2000,
     "word_count": 72264,
     "audible_minutes": 493.0,
     "story_type": "novel",
+    "genres": [
+      "Crime"
+    ],
     "keywords": [
-      "crime",
       "ghost"
     ],
+    "as_bachman": true,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -5185,13 +5636,16 @@
     "id": 141,
     "title": "Duma Key",
     "year": 2008,
+    "decade": 2000,
     "word_count": 204382,
     "audible_minutes": 1260.0,
     "story_type": "novel",
-    "keywords": [
-      "psychological",
-      "horror"
+    "genres": [
+      "Thriller",
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5210,9 +5664,9 @@
     "is_collection_parent": false,
     "notes": "Supernatural. Has the second most occurrences of the word \"twins\" with 43 instances behind Wolves of the Calla with 59. Has the most NASA talk of any King book. \"Houston, this is Freemantle, do you copy, Houston?\"",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Duma_Key.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5220,12 +5674,15 @@
     "id": 142,
     "title": "A Very Tight Place",
     "year": 2008,
+    "decade": 2000,
     "word_count": 20358,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5264,12 +5721,15 @@
     "id": 143,
     "title": "Ayana",
     "year": 2008,
+    "decade": 2000,
     "word_count": 6235,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5298,12 +5758,15 @@
     "id": 144,
     "title": "Graduation Afternoon",
     "year": 2008,
+    "decade": 2000,
     "word_count": 2406,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5362,12 +5825,15 @@
     "id": 145,
     "title": "Harvey's Dream",
     "year": 2008,
+    "decade": 2000,
     "word_count": 3936,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5416,12 +5882,15 @@
     "id": 146,
     "title": "Mute",
     "year": 2008,
+    "decade": 2000,
     "word_count": 8245,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5450,12 +5919,15 @@
     "id": 147,
     "title": "N.",
     "year": 2008,
+    "decade": 2000,
     "word_count": 20176,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5474,9 +5946,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please sug",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/N_.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5484,12 +5956,15 @@
     "id": 148,
     "title": "Rest Stop",
     "year": 2008,
+    "decade": 2000,
     "word_count": 6412,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5528,12 +6003,15 @@
     "id": 149,
     "title": "Stationary Bike",
     "year": 2008,
+    "decade": 2000,
     "word_count": 13124,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Just After Sunset",
@@ -5541,9 +6019,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please sug",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Stationary_Bike.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5551,12 +6029,15 @@
     "id": 150,
     "title": "The Cat from Hell",
     "year": 2008,
+    "decade": 2000,
     "word_count": 5717,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5585,12 +6066,15 @@
     "id": 151,
     "title": "The Gingerbread Girl",
     "year": 2008,
+    "decade": 2000,
     "word_count": 21292,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5609,9 +6093,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please sug",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Gingerbread_Girl.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5619,12 +6103,15 @@
     "id": 152,
     "title": "The New York Times at Special Bargain Rates",
     "year": 2008,
+    "decade": 2000,
     "word_count": 3127,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Just After Sunset",
@@ -5642,12 +6129,15 @@
     "id": 153,
     "title": "The Things They Left Behind",
     "year": 2008,
+    "decade": 2000,
     "word_count": 11571,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5686,9 +6176,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please sug",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Things_They_Left_Behind.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5696,12 +6186,15 @@
     "id": 154,
     "title": "Willa",
     "year": 2008,
+    "decade": 2000,
     "word_count": 8520,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5740,12 +6233,15 @@
     "id": 155,
     "title": "1922",
     "year": 2010,
+    "decade": 2010,
     "word_count": 51282,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5764,9 +6260,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please sugge",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/1922.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5774,12 +6270,15 @@
     "id": 156,
     "title": "A Good Marriage",
     "year": 2010,
+    "decade": 2010,
     "word_count": 31955,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5798,9 +6297,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Woman decides",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/A_Good_Marriage.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5808,12 +6307,15 @@
     "id": 157,
     "title": "Big Driver",
     "year": 2010,
+    "decade": 2010,
     "word_count": 40150,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5832,9 +6334,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please sugge",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Big_Driver.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5842,12 +6344,15 @@
     "id": 158,
     "title": "Fair Extension",
     "year": 2010,
+    "decade": 2010,
     "word_count": 10843,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "Full Dark, No Stars",
@@ -5865,13 +6370,16 @@
     "id": 159,
     "title": "Under the Dome",
     "year": 2009,
+    "decade": 2000,
     "word_count": 331018,
     "audible_minutes": 2064.0,
     "story_type": "novel",
-    "keywords": [
-      "scifi",
-      "mystery"
+    "genres": [
+      "Sci-Fi",
+      "Mystery"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5890,9 +6398,9 @@
     "is_collection_parent": false,
     "notes": "Aliens",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Under_the_Dome.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5900,14 +6408,18 @@
     "id": 160,
     "title": "11-22-63",
     "year": 2011,
+    "decade": 2010,
     "word_count": 269543,
     "audible_minutes": 1840.0,
     "story_type": "novel",
+    "genres": [
+      "Sci-Fi"
+    ],
     "keywords": [
-      "scifi",
       "time-travel",
       "alternate-history"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5926,9 +6438,9 @@
     "is_collection_parent": false,
     "notes": "Time travel. Title also written 11.22.63 and 11/22/63. Ending changed after suggestion from son Joe Hill. Uses the word \"obdurate\" more than any other King novel",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/11-22-63.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5936,16 +6448,20 @@
     "id": 161,
     "title": "The Dark Tower: The Wind Through the Keyhole",
     "year": 2012,
+    "decade": 2010,
     "word_count": 91598,
     "audible_minutes": 626.0,
     "story_type": "novel",
+    "genres": [
+      "Sci-Fi",
+      "Horror",
+      "Fantasy",
+      "Western"
+    ],
     "keywords": [
-      "scifi",
-      "horror",
-      "fantasy",
-      "western",
       "gunslinger"
     ],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -5963,14 +6479,18 @@
     "id": 162,
     "title": "Joyland",
     "year": 2013,
+    "decade": 2010,
     "word_count": 80001,
     "audible_minutes": 453.0,
     "story_type": "novel",
+    "genres": [
+      "Crime",
+      "Mystery"
+    ],
     "keywords": [
-      "crime",
-      "mystery",
       "supernatural"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -5989,9 +6509,9 @@
     "is_collection_parent": false,
     "notes": "Supernatural. Only King book with the word \"Absoloodle\"",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Joyland.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5999,14 +6519,18 @@
     "id": 163,
     "title": "Doctor Sleep",
     "year": 2013,
+    "decade": 2010,
     "word_count": 161622,
     "audible_minutes": 950.0,
     "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
     "keywords": [
-      "horror",
       "psychic-abilities",
       "shine"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -6025,9 +6549,9 @@
     "is_collection_parent": false,
     "notes": "Mind powers. Sequel to The Shining. The name rube or rubes is used 67 times, by far more than in any other King book. Seen original 2 times and director's cut 1 time",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Doctor_Sleep.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6035,16 +6559,20 @@
     "id": 164,
     "title": "Mr. Mercedes",
     "year": 2014,
+    "decade": 2010,
     "word_count": 136387,
     "audible_minutes": 862.0,
     "story_type": "novel",
+    "genres": [
+      "Crime",
+      "Thriller",
+      "Mystery"
+    ],
     "keywords": [
-      "crime",
-      "suspense",
-      "mystery",
       "murder",
       "psychopath"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -6063,9 +6591,9 @@
     "is_collection_parent": false,
     "notes": "Based in the real world. Sequel is Finders Keepers. Mr. Mercedes Seasons 1-3 are Books 1,3,2 in Bill Hodges trilogy. Part 1 of 7 in the Holly Gibney series",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Mr__Mercedes.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6073,14 +6601,18 @@
     "id": 165,
     "title": "Revival",
     "year": 2014,
+    "decade": 2010,
     "word_count": 120417,
     "audible_minutes": 805.0,
     "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
     "keywords": [
-      "horror",
       "micracle",
       "healing"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -6099,9 +6631,9 @@
     "is_collection_parent": false,
     "notes": "Mind powers",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Revival.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6109,19 +6641,23 @@
     "id": 166,
     "title": "Finders Keepers",
     "year": 2015,
+    "decade": 2010,
     "word_count": 123477,
     "audible_minutes": 785.0,
     "story_type": "novel",
+    "genres": [
+      "Crime",
+      "Thriller",
+      "Mystery"
+    ],
     "keywords": [
-      "crime",
-      "suspense",
-      "mystery",
       "murder",
       "psychopath",
       "telekinesis",
       "mind-control",
       "suicide"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -6140,9 +6676,9 @@
     "is_collection_parent": false,
     "notes": "Sequel is End of Game. Based in the real world except for last paragraph where Brady demonstrates mind powers. Part 2 in Mr. Mercedes: Bill Hodges triliogy, skipped for streaming show Mr. Mercedes. Part 2 of 7 in the Holly Gibney series",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Finders_Keepers.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6150,13 +6686,17 @@
     "id": 167,
     "title": "A Death",
     "year": 2015,
+    "decade": 2010,
     "word_count": 4781,
     "audible_minutes": 32.8,
     "story_type": "short_story",
+    "genres": [
+      "Crime"
+    ],
     "keywords": [
-      "crime",
       "historical"
     ],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6176,14 +6716,17 @@
     "id": 168,
     "title": "Afterlife",
     "year": 2015,
+    "decade": 2010,
     "word_count": 4336,
     "audible_minutes": 37.9,
     "story_type": "short_story",
-    "keywords": [
-      "fantasy",
-      "psychological",
-      "horror"
+    "genres": [
+      "Fantasy",
+      "Thriller",
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6203,12 +6746,15 @@
     "id": 169,
     "title": "Bad Little Kid",
     "year": 2015,
+    "decade": 2010,
     "word_count": 14650,
     "audible_minutes": 106.8,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -6237,12 +6783,15 @@
     "id": 170,
     "title": "Batman and Robin Have an Altercation",
     "year": 2015,
+    "decade": 2010,
     "word_count": 4784,
     "audible_minutes": 32.9,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6262,13 +6811,15 @@
     "id": 171,
     "title": "Blockade Billy",
     "year": 2015,
+    "decade": 2010,
     "word_count": 15578,
     "audible_minutes": 101.2,
     "story_type": "novella",
-    "keywords": [
-      "suspense",
-      "fiction"
+    "genres": [
+      "Thriller"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6276,9 +6827,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Dumb guy is good a",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Blockade_Billy.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6286,12 +6837,15 @@
     "id": 172,
     "title": "Drunken Fireworks",
     "year": 2015,
+    "decade": 2010,
     "word_count": 11842,
     "audible_minutes": 80.5,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -6310,9 +6864,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Fireworks are dang",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Drunken_Fireworks.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6320,12 +6874,15 @@
     "id": 173,
     "title": "Herman Wouk Is Still Alive",
     "year": 2015,
+    "decade": 2010,
     "word_count": 6486,
     "audible_minutes": 45.6,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6345,13 +6902,16 @@
     "id": 174,
     "title": "Mile 81",
     "year": 2015,
+    "decade": 2010,
     "word_count": 17418,
     "audible_minutes": 109.2,
     "story_type": "novella",
-    "keywords": [
-      "scifi",
-      "horror"
+    "genres": [
+      "Sci-Fi",
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -6370,9 +6930,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Car from space eat",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Mile_81.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6380,12 +6940,15 @@
     "id": 175,
     "title": "Mister Yummy",
     "year": 2015,
+    "decade": 2010,
     "word_count": 5876,
     "audible_minutes": 36.9,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6405,14 +6968,16 @@
     "id": 176,
     "title": "Morality",
     "year": 2015,
+    "decade": 2010,
     "word_count": 10286,
     "audible_minutes": 61.5,
     "story_type": "novella",
-    "keywords": [
-      "psychological",
-      "thriller",
-      "crime"
+    "genres": [
+      "Thriller",
+      "Crime"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6420,9 +6985,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Woman punches kid",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Morality.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6430,12 +6995,15 @@
     "id": 177,
     "title": "Obits",
     "year": 2015,
+    "decade": 2010,
     "word_count": 14229,
     "audible_minutes": 99.9,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6453,12 +7021,15 @@
     "id": 178,
     "title": "Premium Harmony",
     "year": 2015,
+    "decade": 2010,
     "word_count": 3833,
     "audible_minutes": 26.8,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6478,12 +7049,15 @@
     "id": 179,
     "title": "Summer Thunder",
     "year": 2015,
+    "decade": 2010,
     "word_count": 5448,
     "audible_minutes": 36.0,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6503,12 +7077,15 @@
     "id": 180,
     "title": "That Bus Is Another World",
     "year": 2015,
+    "decade": 2010,
     "word_count": 3023,
     "audible_minutes": 26.0,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6528,15 +7105,18 @@
     "id": 181,
     "title": "The Bone Church",
     "year": 2015,
+    "decade": 2010,
     "word_count": 2108,
     "audible_minutes": 1045.0,
     "story_type": "collection_piece",
+    "genres": [
+      "Horror",
+      "Fantasy"
+    ],
     "keywords": [
-      "horror",
-      "fantasy",
-      "narrative",
       "poetry"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -6565,12 +7145,15 @@
     "id": 182,
     "title": "The Dune",
     "year": 2015,
+    "decade": 2010,
     "word_count": 4869,
     "audible_minutes": 34.9,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6590,12 +7173,15 @@
     "id": 183,
     "title": "The Little Green God of Agony",
     "year": 2015,
+    "decade": 2010,
     "word_count": null,
     "audible_minutes": 58.5,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6616,12 +7202,15 @@
     "id": 184,
     "title": "Cookie Jar",
     "year": 2015,
+    "decade": 2010,
     "word_count": null,
     "audible_minutes": 58.5,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6642,13 +7231,16 @@
     "id": 185,
     "title": "Tommy",
     "year": 2015,
+    "decade": 2010,
     "word_count": 855,
     "audible_minutes": 490.0,
     "story_type": "collection_piece",
+    "genres": [],
     "keywords": [
       "confessional",
       "poetry"
     ],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6666,12 +7258,15 @@
     "id": 186,
     "title": "Under the Weather",
     "year": 2015,
+    "decade": 2010,
     "word_count": 6077,
     "audible_minutes": 36.8,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6691,15 +7286,18 @@
     "id": 187,
     "title": "Ur",
     "year": 2015,
+    "decade": 2010,
     "word_count": 20448,
     "audible_minutes": 142.1,
     "story_type": "novella",
+    "genres": [
+      "Sci-Fi"
+    ],
     "keywords": [
-      "science",
-      "fiction,",
       "alternate",
       "realities"
     ],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "The Bazaar of Bad Dreams",
@@ -6707,9 +7305,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Guy buys pink Kind",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Ur.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6717,19 +7315,23 @@
     "id": 188,
     "title": "End of Watch",
     "year": 2016,
+    "decade": 2010,
     "word_count": 118741,
     "audible_minutes": 773.0,
     "story_type": "novel",
+    "genres": [
+      "Crime",
+      "Thriller",
+      "Mystery"
+    ],
     "keywords": [
-      "crime",
-      "suspense",
-      "mystery",
       "murder",
       "psychopath",
       "telekinesis",
       "mind-control",
       "suicide"
     ],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -6748,9 +7350,9 @@
     "is_collection_parent": false,
     "notes": "Sequel is The Outsider. Mind powers. Part 3 of 3 in the Mr. Mercedes trilogy. Part 3 of 7 in the Holly Gibney series",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/End_of_Watch.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6758,12 +7360,15 @@
     "id": 189,
     "title": "Gwendy's Button Box",
     "year": 2017,
+    "decade": 2010,
     "word_count": 22713,
     "audible_minutes": 162.0,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -6771,9 +7376,9 @@
     "is_collection_parent": false,
     "notes": "Box with special powers. Published May 2017. Sequels: Gwendy's Magic Feather and Gwendy's Final Task. Co-written with Richard Chizmar. Although sold as a novel, it's actually a novella",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Gwendy_s_Button_Box.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6781,15 +7386,18 @@
     "id": 190,
     "title": "Sleeping Beauties",
     "year": 2017,
+    "decade": 2010,
     "word_count": 234642,
     "audible_minutes": 1523.0,
     "story_type": "novel",
-    "keywords": [
-      "scifi",
-      "horror",
-      "suspense",
-      "fantasy"
+    "genres": [
+      "Sci-Fi",
+      "Horror",
+      "Thriller",
+      "Fantasy"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -6808,9 +7416,9 @@
     "is_collection_parent": false,
     "notes": "Alternate dimension. Co-written with son Owen King",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Sleeping_Beauties.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6818,13 +7426,16 @@
     "id": 191,
     "title": "The Outsider",
     "year": 2018,
+    "decade": 2010,
     "word_count": 165444,
     "audible_minutes": 1121.0,
     "story_type": "novel",
-    "keywords": [
-      "crime",
-      "horror"
+    "genres": [
+      "Crime",
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -6843,9 +7454,9 @@
     "is_collection_parent": false,
     "notes": "Sequel is If It Bleeds (novella). Part 4 in the Holly Gibney series",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Outsider.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6853,12 +7464,15 @@
     "id": 192,
     "title": "Elevation",
     "year": 2018,
+    "decade": 2010,
     "word_count": 27143,
     "audible_minutes": 227.0,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -6866,9 +7480,9 @@
     "is_collection_parent": false,
     "notes": "Alternate physics. The cover says \"A Novel\", but it's really a novella",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Elevation.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6876,12 +7490,15 @@
     "id": 193,
     "title": "Laurie",
     "year": 2018,
+    "decade": 2010,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -6889,9 +7506,9 @@
     "is_collection_parent": false,
     "notes": "Bonus short-story with Elevation with audio book. It's also a free audio download on stephenking.com",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Laurie.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
       "missing_word_count"
@@ -6901,13 +7518,16 @@
     "id": 194,
     "title": "The Institute",
     "year": 2019,
+    "decade": 2010,
     "word_count": 177976,
     "audible_minutes": 1139.0,
     "story_type": "novel",
-    "keywords": [
-      "horror",
-      "scifi"
+    "genres": [
+      "Horror",
+      "Sci-Fi"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -6926,9 +7546,9 @@
     "is_collection_parent": false,
     "notes": "kidnapping children with special talents. Shots for Dots!",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Institute.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6936,13 +7556,16 @@
     "id": 195,
     "title": "In the Tall Grass",
     "year": 2019,
+    "decade": 2010,
     "word_count": null,
     "audible_minutes": 105.0,
     "story_type": "novella",
-    "keywords": [
-      "horror",
-      "scifi"
+    "genres": [
+      "Horror",
+      "Sci-Fi"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -6961,9 +7584,9 @@
     "is_collection_parent": false,
     "notes": "cowritten with son Joe Hill",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/In_the_Tall_Grass.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
       "missing_word_count"
@@ -6973,12 +7596,15 @@
     "id": 196,
     "title": "Gwendy's Magic Feather",
     "year": 2019,
+    "decade": 2010,
     "word_count": null,
     "audible_minutes": 277.0,
     "story_type": "novel",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -6986,9 +7612,9 @@
     "is_collection_parent": false,
     "notes": "Written by Richard Chizmar in the style of Stephen King. Publish date Nov 19, 2019. Sequel to Gwendy's Button Box and followed by Gwendy's Final Task",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Gwendy_s_Magic_Feather.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
       "missing_word_count"
@@ -6998,12 +7624,15 @@
     "id": 197,
     "title": "Mr. Harrigan's Phone",
     "year": 2020,
+    "decade": 2020,
     "word_count": 29775,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -7032,12 +7661,15 @@
     "id": 198,
     "title": "The Life of Chuck",
     "year": 2020,
+    "decade": 2020,
     "word_count": 19054,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -7056,9 +7688,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: Man ge",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Life_of_Chuck.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -7066,12 +7698,15 @@
     "id": 199,
     "title": "If It Bleeds",
     "year": 2020,
+    "decade": 2020,
     "word_count": 57024,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "If It Bleeds",
@@ -7079,9 +7714,9 @@
     "is_collection_parent": false,
     "notes": "Part 5 of 7 in the Holly Gibney series. Boring description: (pleas",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/If_It_Bleeds.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -7089,12 +7724,15 @@
     "id": 200,
     "title": "Rat",
     "year": 2020,
+    "decade": 2020,
     "word_count": 28668,
     "audible_minutes": null,
     "story_type": "novella",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -7123,12 +7761,15 @@
     "id": 201,
     "title": "Later",
     "year": 2021,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": 392.0,
     "story_type": "novel",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7136,9 +7777,9 @@
     "is_collection_parent": false,
     "notes": "Boy talks to dead people who can't lie",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Later.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
       "missing_word_count"
@@ -7148,12 +7789,15 @@
     "id": 202,
     "title": "Billy Summers",
     "year": 2021,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": 1017.0,
     "story_type": "novel",
-    "keywords": [
-      "crime"
+    "genres": [
+      "Crime"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
       {
@@ -7172,9 +7816,9 @@
     "is_collection_parent": false,
     "notes": "Publish date Aug 3, 2021",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Billy_Summers.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
       "missing_word_count"
@@ -7184,12 +7828,15 @@
     "id": 203,
     "title": "Gwendy's Final Task",
     "year": 2022,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": 444.0,
     "story_type": "novel",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7197,9 +7844,9 @@
     "is_collection_parent": false,
     "notes": "Cowritten with Richard Chizmar. Publish date Feb 15, 2022. Sequel to Gwendy's Magic feather which is a sequel to Gwendy's Button Box",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Gwendy_s_Final_Task.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
       "missing_word_count"
@@ -7209,13 +7856,17 @@
     "id": 204,
     "title": "Fairy Tale",
     "year": 2022,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": 1446.0,
     "story_type": "novel",
-    "keywords": [
-      "dark",
-      "fantasy"
+    "genres": [
+      "Fantasy"
     ],
+    "keywords": [
+      "dark"
+    ],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7223,9 +7874,9 @@
     "is_collection_parent": false,
     "notes": "Publish date Sep 6, 2022",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Fairy_Tale.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
       "missing_word_count"
@@ -7235,12 +7886,15 @@
     "id": 205,
     "title": "Holly",
     "year": 2023,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "novel",
-    "keywords": [
-      "crime"
+    "genres": [
+      "Crime"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7248,9 +7902,9 @@
     "is_collection_parent": false,
     "notes": null,
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Holly.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
       "missing_word_count"
@@ -7260,12 +7914,15 @@
     "id": 206,
     "title": "Two Talented Bastids",
     "year": 2024,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "You Like It Darker",
@@ -7285,12 +7942,15 @@
     "id": 207,
     "title": "The Fifth Step",
     "year": 2024,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "You Like It Darker",
@@ -7310,12 +7970,15 @@
     "id": 208,
     "title": "Willie the Weirdo",
     "year": 2024,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "You Like It Darker",
@@ -7335,12 +7998,15 @@
     "id": 209,
     "title": "Danny Coughlin's Bad Dream",
     "year": 2024,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "You Like It Darker",
@@ -7360,12 +8026,15 @@
     "id": 210,
     "title": "Finn",
     "year": 2024,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "You Like It Darker",
@@ -7385,12 +8054,15 @@
     "id": 211,
     "title": "On Slide Inn Road",
     "year": 2024,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "You Like It Darker",
@@ -7410,12 +8082,15 @@
     "id": 212,
     "title": "Red Screen",
     "year": 2024,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "You Like It Darker",
@@ -7435,12 +8110,15 @@
     "id": 213,
     "title": "The Turbulence Expert",
     "year": 2024,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "You Like It Darker",
@@ -7460,12 +8138,15 @@
     "id": 214,
     "title": "Laurie",
     "year": 2024,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "You Like It Darker",
@@ -7473,9 +8154,9 @@
     "is_collection_parent": false,
     "notes": "Boring description: (please sugg",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Laurie.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
       "missing_word_count"
@@ -7485,12 +8166,15 @@
     "id": 215,
     "title": "Rattlesnakes",
     "year": 2024,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "You Like It Darker",
@@ -7510,12 +8194,15 @@
     "id": 216,
     "title": "The Dreamers",
     "year": 2024,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "You Like It Darker",
@@ -7535,12 +8222,15 @@
     "id": 217,
     "title": "The Answer Man",
     "year": 2024,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "short_story",
-    "keywords": [
-      "horror"
+    "genres": [
+      "Horror"
     ],
+    "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": "You Like It Darker",
@@ -7559,11 +8249,14 @@
   {
     "id": 218,
     "title": "The Bachman Books",
-    "year": null,
-    "word_count": null,
+    "year": 1985,
+    "decade": 1980,
+    "word_count": 248050,
     "audible_minutes": null,
     "story_type": "collection",
+    "genres": [],
     "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7577,21 +8270,26 @@
     ],
     "boring_description": null,
     "notes": "Collection of 4 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8565607-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/The_Bachman_Books.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
   },
   {
     "id": 219,
     "title": "Night Shift",
-    "year": null,
-    "word_count": null,
+    "year": 1978,
+    "decade": 1970,
+    "word_count": 272800,
     "audible_minutes": null,
     "story_type": "collection",
+    "genres": [],
     "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7621,21 +8319,26 @@
     ],
     "boring_description": null,
     "notes": "Collection of 20 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/12015639-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Night_Shift.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
   },
   {
     "id": 220,
     "title": "Different Seasons",
-    "year": null,
-    "word_count": null,
+    "year": 1982,
+    "decade": 1980,
+    "word_count": 145475,
     "audible_minutes": null,
     "story_type": "collection",
+    "genres": [],
     "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7649,21 +8352,26 @@
     ],
     "boring_description": null,
     "notes": "Collection of 4 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14655761-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Different_Seasons.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
   },
   {
     "id": 221,
     "title": "Skeleton Crew",
-    "year": null,
-    "word_count": null,
+    "year": 1985,
+    "decade": 1980,
+    "word_count": 157575,
     "audible_minutes": null,
     "story_type": "collection",
+    "genres": [],
     "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7695,21 +8403,26 @@
     ],
     "boring_description": null,
     "notes": "Collection of 22 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14657166-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Skeleton_Crew.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
   },
   {
     "id": 222,
     "title": "Nightmares & Dreamscapes",
-    "year": null,
-    "word_count": null,
+    "year": 1993,
+    "decade": 1990,
+    "word_count": 193050,
     "audible_minutes": null,
     "story_type": "collection",
+    "genres": [],
     "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7743,21 +8456,26 @@
     ],
     "boring_description": null,
     "notes": "Collection of 24 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14654718-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Nightmares___Dreamscapes.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
   },
   {
     "id": 223,
     "title": "Four Past Midnight",
-    "year": null,
+    "year": 1990,
+    "decade": 1990,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
+    "genres": [],
     "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7772,20 +8490,23 @@
     "boring_description": null,
     "notes": "Collection of 4 stories/pieces",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Four_Past_Midnight.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
   {
     "id": 224,
     "title": "Hearts in Atlantis",
-    "year": null,
+    "year": 1999,
+    "decade": 1990,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
+    "genres": [],
     "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7801,20 +8522,23 @@
     "boring_description": null,
     "notes": "Collection of 5 stories/pieces",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Hearts_in_Atlantis.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
   {
     "id": 225,
     "title": "Everything's Eventual",
-    "year": null,
+    "year": 2002,
+    "decade": 2000,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
+    "genres": [],
     "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7839,20 +8563,23 @@
     "boring_description": null,
     "notes": "Collection of 14 stories/pieces",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Everything_s_Eventual.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
   {
     "id": 226,
     "title": "Just After Sunset",
-    "year": null,
-    "word_count": null,
+    "year": 2008,
+    "decade": 2000,
+    "word_count": 123200,
     "audible_minutes": null,
     "story_type": "collection",
+    "genres": [],
     "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7875,21 +8602,26 @@
     ],
     "boring_description": null,
     "notes": "Collection of 13 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8494916-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Just_After_Sunset.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
   },
   {
     "id": 227,
     "title": "Full Dark, No Stars",
-    "year": null,
-    "word_count": null,
+    "year": 2010,
+    "decade": 2010,
+    "word_count": 123200,
     "audible_minutes": null,
     "story_type": "collection",
+    "genres": [],
     "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7903,21 +8635,26 @@
     ],
     "boring_description": null,
     "notes": "Collection of 4 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/12018685-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Full_Dark__No_Stars.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
   },
   {
     "id": 228,
     "title": "The Bazaar of Bad Dreams",
-    "year": null,
+    "year": 2015,
+    "decade": 2010,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
+    "genres": [],
     "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7949,20 +8686,23 @@
     "boring_description": null,
     "notes": "Collection of 21 stories/pieces",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Bazaar_of_Bad_Dreams.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
   {
     "id": 229,
     "title": "If It Bleeds",
-    "year": null,
+    "year": 2020,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
+    "genres": [],
     "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -7977,20 +8717,23 @@
     "boring_description": null,
     "notes": "Collection of 4 stories/pieces",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/If_It_Bleeds.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
   {
     "id": 230,
     "title": "You Like It Darker",
-    "year": null,
+    "year": 2024,
+    "decade": 2020,
     "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
+    "genres": [],
     "keywords": [],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
@@ -8013,9 +8756,9 @@
     "boring_description": null,
     "notes": "Collection of 12 stories/pieces",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/You_Like_It_Darker.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   }

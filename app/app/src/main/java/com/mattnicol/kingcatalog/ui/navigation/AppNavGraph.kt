@@ -18,11 +18,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.mattnicol.kingcatalog.ui.screens.books.BooksScreen
+import com.mattnicol.kingcatalog.ui.screens.detail.BookDetailScreen
 import com.mattnicol.kingcatalog.ui.screens.home.HomeScreen
 import com.mattnicol.kingcatalog.ui.screens.library.LibraryScreen
 import com.mattnicol.kingcatalog.ui.screens.other.OtherAuthorsScreen
@@ -30,7 +33,7 @@ import com.mattnicol.kingcatalog.ui.screens.other.OtherAuthorsScreen
 sealed class NavRoute(val route: String, val label: String, val icon: ImageVector) {
     data object Home : NavRoute("home", "Home", Icons.Filled.Home)
     data object Books : NavRoute("books", "Books", Icons.Filled.MenuBook)
-    data object Library : NavRoute("library", "Library", Icons.Filled.LibraryBooks)
+    data object Library : NavRoute("library", "My Library", Icons.Filled.LibraryBooks)
     data object OtherAuthors : NavRoute("other_authors", "Other Authors", Icons.Filled.People)
 }
 
@@ -78,9 +81,20 @@ fun AppNavGraph() {
             modifier = Modifier.padding(innerPadding),
         ) {
             composable(NavRoute.Home.route) { HomeScreen() }
-            composable(NavRoute.Books.route) { BooksScreen() }
-            composable(NavRoute.Library.route) { LibraryScreen() }
+            composable(NavRoute.Books.route) {
+                BooksScreen(onBookClick = { id -> navController.navigate("book_detail/$id") })
+            }
+            composable(NavRoute.Library.route) {
+                LibraryScreen(onBookClick = { id -> navController.navigate("book_detail/$id") })
+            }
             composable(NavRoute.OtherAuthors.route) { OtherAuthorsScreen() }
+            composable(
+                route = "book_detail/{bookId}",
+                arguments = listOf(navArgument("bookId") { type = NavType.IntType }),
+            ) { backStackEntry ->
+                val bookId = backStackEntry.arguments!!.getInt("bookId")
+                BookDetailScreen(bookId = bookId, onBack = { navController.popBackStack() })
+            }
         }
     }
 }

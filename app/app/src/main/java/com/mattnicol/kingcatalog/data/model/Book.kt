@@ -4,6 +4,7 @@ data class Book(
     val id: Int,
     val title: String,
     val author: String,
+    val asBachman: Boolean = false,
     val year: Int?,
     val decade: Int?,
     val wordCount: Int?,
@@ -32,13 +33,17 @@ fun Book.matchesFilter(
     query: String,
     storyTypeFilter: Set<String>,
     genreFilter: Set<String>,
+    keywordFilter: Set<String>,
     decadeFilter: Set<Int>,
+    bachamanFilter: Boolean?,
     readFilter: Boolean?,
 ): Boolean {
     if (query.isNotBlank() && !title.contains(query, ignoreCase = true)) return false
     if (storyTypeFilter.isNotEmpty() && storyType !in storyTypeFilter) return false
-    if (genreFilter.isNotEmpty() && !keywords.any { it in genreFilter }) return false
+    if (genreFilter.isNotEmpty() && genres.none { it in genreFilter }) return false
+    if (keywordFilter.isNotEmpty() && !keywords.any { it in keywordFilter }) return false
     if (decadeFilter.isNotEmpty() && decade !in decadeFilter) return false
+    if (bachamanFilter != null && asBachman != bachamanFilter) return false
     if (readFilter != null && isRead != readFilter) return false
     return true
 }

@@ -33,12 +33,12 @@ public final class KingCatalogDatabase_Impl extends KingCatalogDatabase {
   @Override
   @NonNull
   protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(1) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(2) {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS `books` (`id` INTEGER NOT NULL, `title` TEXT NOT NULL, `author` TEXT NOT NULL, `year` INTEGER, `decade` INTEGER, `word_count` INTEGER, `audible_minutes` INTEGER, `story_type` TEXT NOT NULL, `keywords` TEXT NOT NULL, `genres` TEXT NOT NULL, `is_collection_parent` INTEGER NOT NULL, `collection` TEXT, `collection_id` INTEGER, `child_ids` TEXT NOT NULL, `has_adaptation` INTEGER NOT NULL, `adaptations` TEXT NOT NULL, `imdb_url` TEXT, `cover_local_path` TEXT, `cover_candidate_url` TEXT, `is_owned` INTEGER NOT NULL, `is_read` INTEGER NOT NULL, `is_reading_now` INTEGER NOT NULL, `is_on_reading_list` INTEGER NOT NULL, `last_status_changed` INTEGER, `notes` TEXT, PRIMARY KEY(`id`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `books` (`id` INTEGER NOT NULL, `title` TEXT NOT NULL, `author` TEXT NOT NULL, `as_bachman` INTEGER NOT NULL, `year` INTEGER, `decade` INTEGER, `word_count` INTEGER, `audible_minutes` INTEGER, `story_type` TEXT NOT NULL, `keywords` TEXT NOT NULL, `genres` TEXT NOT NULL, `is_collection_parent` INTEGER NOT NULL, `collection` TEXT, `collection_id` INTEGER, `child_ids` TEXT NOT NULL, `has_adaptation` INTEGER NOT NULL, `adaptations` TEXT NOT NULL, `imdb_url` TEXT, `cover_local_path` TEXT, `cover_candidate_url` TEXT, `is_owned` INTEGER NOT NULL, `is_read` INTEGER NOT NULL, `is_reading_now` INTEGER NOT NULL, `is_on_reading_list` INTEGER NOT NULL, `last_status_changed` INTEGER, `notes` TEXT, PRIMARY KEY(`id`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7cd8149b51d6b9d7880d2a6b4938fa56')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd8967728827618f743c425e115c1e125')");
       }
 
       @Override
@@ -87,10 +87,11 @@ public final class KingCatalogDatabase_Impl extends KingCatalogDatabase {
       @NonNull
       public RoomOpenHelper.ValidationResult onValidateSchema(
           @NonNull final SupportSQLiteDatabase db) {
-        final HashMap<String, TableInfo.Column> _columnsBooks = new HashMap<String, TableInfo.Column>(25);
+        final HashMap<String, TableInfo.Column> _columnsBooks = new HashMap<String, TableInfo.Column>(26);
         _columnsBooks.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsBooks.put("title", new TableInfo.Column("title", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsBooks.put("author", new TableInfo.Column("author", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsBooks.put("as_bachman", new TableInfo.Column("as_bachman", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsBooks.put("year", new TableInfo.Column("year", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsBooks.put("decade", new TableInfo.Column("decade", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsBooks.put("word_count", new TableInfo.Column("word_count", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -124,7 +125,7 @@ public final class KingCatalogDatabase_Impl extends KingCatalogDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "7cd8149b51d6b9d7880d2a6b4938fa56", "e557bcf4009735a640bdfbfa66f519f4");
+    }, "d8967728827618f743c425e115c1e125", "655dddc37e1987aa7e8d1f35a49c53ea");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;

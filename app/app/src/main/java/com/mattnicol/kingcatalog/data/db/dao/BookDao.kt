@@ -60,4 +60,10 @@ interface BookDao {
 
     @Query("SELECT DISTINCT decade FROM books WHERE author = 'Stephen King' AND decade IS NOT NULL ORDER BY decade ASC")
     fun observeDecades(): Flow<List<Int>>
+
+    @Query("SELECT * FROM books WHERE id = :id")
+    fun observeById(id: Int): Flow<BookEntity?>
+
+    @Query("SELECT * FROM books WHERE id IN (:ids) ORDER BY year ASC, title ASC")
+    fun observeByIds(ids: List<Int>): Flow<List<BookEntity>>
 }

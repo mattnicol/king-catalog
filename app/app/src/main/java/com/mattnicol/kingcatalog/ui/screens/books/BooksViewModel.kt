@@ -20,7 +20,9 @@ enum class SortOrder { RELEASE_DATE, WORD_COUNT, AUDIBLE_LENGTH }
 data class FilterState(
     val storyTypes: Set<String> = emptySet(),
     val genres: Set<String> = emptySet(),
+    val keywords: Set<String> = emptySet(),
     val decades: Set<Int> = emptySet(),
+    val bachman: Boolean? = null,
     val isRead: Boolean? = null,
 )
 
@@ -39,6 +41,10 @@ class BooksViewModel(application: Application) : AndroidViewModel(application) {
         .stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
 
     val genres: StateFlow<List<String>> = repo.observeBrowseable()
+        .map { books -> books.flatMap { it.genres }.distinct().sorted() }
+        .stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
+
+    val keywords: StateFlow<List<String>> = repo.observeBrowseable()
         .map { books -> books.flatMap { it.keywords }.distinct().sorted() }
         .stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
 
@@ -54,7 +60,9 @@ class BooksViewModel(application: Application) : AndroidViewModel(application) {
                     query = query,
                     storyTypeFilter = filter.storyTypes,
                     genreFilter = filter.genres,
+                    keywordFilter = filter.keywords,
                     decadeFilter = filter.decades,
+                    bachamanFilter = filter.bachman,
                     readFilter = filter.isRead,
                 )
             }
