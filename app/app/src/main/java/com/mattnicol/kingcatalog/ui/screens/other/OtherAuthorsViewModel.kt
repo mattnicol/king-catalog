@@ -21,7 +21,7 @@ class OtherAuthorsViewModel(application: Application) : AndroidViewModel(applica
         repo.observeOtherAuthors(),
         searchQuery,
     ) { all, query ->
-        all.filter { it.matchesFilter(query, null, null, null, null) }
+        all.filter { it.matchesFilter(query, emptySet(), emptySet(), emptySet(), null) }
     }.stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
 
     fun onQueryChange(q: String) { searchQuery.value = q }

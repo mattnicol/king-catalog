@@ -6770,10 +6770,10 @@
     "collection_id": null,
     "is_collection_parent": false,
     "notes": "Box with special powers. Published May 2017. Sequels: Gwendy's Magic Feather and Gwendy's Final Task. Co-written with Richard Chizmar. Although sold as a novel, it's actually a novella",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/9325640-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Gwendy_s_Button_Box.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6842,10 +6842,10 @@
     "collection_id": null,
     "is_collection_parent": false,
     "notes": "Sequel is If It Bleeds (novella). Part 4 in the Holly Gibney series",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/11412999-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/The_Outsider.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6865,10 +6865,10 @@
     "collection_id": null,
     "is_collection_parent": false,
     "notes": "Alternate physics. The cover says \"A Novel\", but it's really a novella",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/12376066-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Elevation.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6888,10 +6888,10 @@
     "collection_id": null,
     "is_collection_parent": false,
     "notes": "Bonus short-story with Elevation with audio book. It's also a free audio download on stephenking.com",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/15135339-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Laurie.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "needs_review",
     "review_flags": [
       "missing_word_count"
@@ -6925,10 +6925,10 @@
     "collection_id": null,
     "is_collection_parent": false,
     "notes": "kidnapping children with special talents. Shots for Dots!",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/10712767-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/The_Institute.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "ok",
     "review_flags": []
   },
@@ -7148,7 +7148,7 @@
     "id": 202,
     "title": "Billy Summers",
     "year": 2021,
-    "word_count": null,
+    "word_count": 167200,
     "audible_minutes": 1017.0,
     "story_type": "novel",
     "keywords": [
@@ -7171,13 +7171,13 @@
     "collection_id": null,
     "is_collection_parent": false,
     "notes": "Publish date Aug 3, 2021",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14654070-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Billy_Summers.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "needs_review",
     "review_flags": [
-      "missing_word_count"
+      "estimated_from_page_count"
     ]
   },
   {

@@ -18,9 +18,9 @@ import kotlinx.coroutines.launch
 enum class SortOrder { RELEASE_DATE, WORD_COUNT, AUDIBLE_LENGTH }
 
 data class FilterState(
-    val storyType: String? = null,
-    val genre: String? = null,
-    val decade: Int? = null,
+    val storyTypes: Set<String> = emptySet(),
+    val genres: Set<String> = emptySet(),
+    val decades: Set<Int> = emptySet(),
     val isRead: Boolean? = null,
 )
 
@@ -52,9 +52,9 @@ class BooksViewModel(application: Application) : AndroidViewModel(application) {
             .filter {
                 it.matchesFilter(
                     query = query,
-                    storyTypeFilter = filter.storyType,
-                    genreFilter = filter.genre,
-                    decadeFilter = filter.decade,
+                    storyTypeFilter = filter.storyTypes,
+                    genreFilter = filter.genres,
+                    decadeFilter = filter.decades,
                     readFilter = filter.isRead,
                 )
             }

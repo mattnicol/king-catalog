@@ -30,15 +30,15 @@ data class Book(
 
 fun Book.matchesFilter(
     query: String,
-    storyTypeFilter: String?,
-    genreFilter: String?,
-    decadeFilter: Int?,
+    storyTypeFilter: Set<String>,
+    genreFilter: Set<String>,
+    decadeFilter: Set<Int>,
     readFilter: Boolean?,
 ): Boolean {
     if (query.isNotBlank() && !title.contains(query, ignoreCase = true)) return false
-    if (storyTypeFilter != null && storyType != storyTypeFilter) return false
-    if (genreFilter != null && !keywords.any { it.equals(genreFilter, ignoreCase = true) }) return false
-    if (decadeFilter != null && decade != decadeFilter) return false
+    if (storyTypeFilter.isNotEmpty() && storyType !in storyTypeFilter) return false
+    if (genreFilter.isNotEmpty() && !keywords.any { it in genreFilter }) return false
+    if (decadeFilter.isNotEmpty() && decade !in decadeFilter) return false
     if (readFilter != null && isRead != readFilter) return false
     return true
 }
