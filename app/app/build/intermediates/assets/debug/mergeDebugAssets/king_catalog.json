@@ -8251,7 +8251,7 @@
     "title": "The Bachman Books",
     "year": 1985,
     "decade": 1980,
-    "word_count": null,
+    "word_count": 248050,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8270,19 +8270,21 @@
     ],
     "boring_description": null,
     "notes": "Collection of 4 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8565607-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/The_Bachman_Books.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
   },
   {
     "id": 219,
     "title": "Night Shift",
     "year": 1978,
     "decade": 1970,
-    "word_count": null,
+    "word_count": 272800,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8317,19 +8319,21 @@
     ],
     "boring_description": null,
     "notes": "Collection of 20 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/12015639-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Night_Shift.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
   },
   {
     "id": 220,
     "title": "Different Seasons",
     "year": 1982,
     "decade": 1980,
-    "word_count": null,
+    "word_count": 145475,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8348,19 +8352,21 @@
     ],
     "boring_description": null,
     "notes": "Collection of 4 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14655761-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Different_Seasons.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
   },
   {
     "id": 221,
     "title": "Skeleton Crew",
     "year": 1985,
     "decade": 1980,
-    "word_count": null,
+    "word_count": 157575,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8397,19 +8403,21 @@
     ],
     "boring_description": null,
     "notes": "Collection of 22 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14657166-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Skeleton_Crew.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
   },
   {
     "id": 222,
     "title": "Nightmares & Dreamscapes",
     "year": 1993,
     "decade": 1990,
-    "word_count": null,
+    "word_count": 193050,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8448,19 +8456,21 @@
     ],
     "boring_description": null,
     "notes": "Collection of 24 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14654718-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Nightmares___Dreamscapes.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
   },
   {
     "id": 223,
     "title": "Four Past Midnight",
     "year": 1990,
     "decade": 1990,
-    "word_count": 211200,
+    "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8479,14 +8489,12 @@
     ],
     "boring_description": null,
     "notes": "Collection of 4 stories/pieces",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8413143-L.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/Four_Past_Midnight.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
   },
   {
     "id": 224,
@@ -8566,7 +8574,7 @@
     "title": "Just After Sunset",
     "year": 2008,
     "decade": 2000,
-    "word_count": null,
+    "word_count": 123200,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8594,19 +8602,21 @@
     ],
     "boring_description": null,
     "notes": "Collection of 13 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8494916-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Just_After_Sunset.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
   },
   {
     "id": 227,
     "title": "Full Dark, No Stars",
     "year": 2010,
     "decade": 2010,
-    "word_count": null,
+    "word_count": 123200,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8625,19 +8635,21 @@
     ],
     "boring_description": null,
     "notes": "Collection of 4 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/12018685-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Full_Dark__No_Stars.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
   },
   {
     "id": 228,
     "title": "The Bazaar of Bad Dreams",
     "year": 2015,
     "decade": 2010,
-    "word_count": 165000,
+    "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8673,14 +8685,12 @@
     ],
     "boring_description": null,
     "notes": "Collection of 21 stories/pieces",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/12018432-L.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/The_Bazaar_of_Bad_Dreams.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
   },
   {
     "id": 229,
@@ -8718,7 +8728,7 @@
     "title": "You Like It Darker",
     "year": 2024,
     "decade": 2020,
-    "word_count": 138600,
+    "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8745,13 +8755,11 @@
     ],
     "boring_description": null,
     "notes": "Collection of 12 stories/pieces",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14544172-L.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/You_Like_It_Darker.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
   }
 ]
