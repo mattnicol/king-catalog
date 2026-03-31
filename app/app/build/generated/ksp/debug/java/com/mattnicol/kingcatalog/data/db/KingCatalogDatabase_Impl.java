@@ -33,7 +33,7 @@ public final class KingCatalogDatabase_Impl extends KingCatalogDatabase {
   @Override
   @NonNull
   protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(2) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(3) {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS `books` (`id` INTEGER NOT NULL, `title` TEXT NOT NULL, `author` TEXT NOT NULL, `as_bachman` INTEGER NOT NULL, `year` INTEGER, `decade` INTEGER, `word_count` INTEGER, `audible_minutes` INTEGER, `story_type` TEXT NOT NULL, `keywords` TEXT NOT NULL, `genres` TEXT NOT NULL, `is_collection_parent` INTEGER NOT NULL, `collection` TEXT, `collection_id` INTEGER, `child_ids` TEXT NOT NULL, `has_adaptation` INTEGER NOT NULL, `adaptations` TEXT NOT NULL, `imdb_url` TEXT, `cover_local_path` TEXT, `cover_candidate_url` TEXT, `is_owned` INTEGER NOT NULL, `is_read` INTEGER NOT NULL, `is_reading_now` INTEGER NOT NULL, `is_on_reading_list` INTEGER NOT NULL, `last_status_changed` INTEGER, `notes` TEXT, PRIMARY KEY(`id`))");

@@ -1,20 +1,27 @@
 #!/usr/bin/env python3
 """
-Enrich king_catalog.json (produced by parse.py) with:
-  - Cover image candidates from Open Library (US first edition preferred)
+Enrich all author catalog files with:
+  - Cover image candidates from Open Library (preferred edition closest to known year)
   - Word count estimates from page count where the field is missing
+
+Files enriched (all in-place):
+  data-tools/enriched/king_catalog.json   (Stephen King, produced by parse.py)
+  data-tools/raw/*-source.json            (other authors: Malerman, Hill, Hendrix, …)
+
+After enrichment, rebuild_catalog.py is called to regenerate the combined
+app seed file at app/app/src/main/assets/king_catalog.json.
 
 Idempotent: entries whose cover_local_path already points to an existing file
 are skipped. Safe to rerun.
 
-Outputs:
-  data-tools/enriched/king_catalog.json   (updated in-place)
-  data-tools/enriched/king_catalog_review.csv  (updated)
-  data-tools/enriched/covers/             (downloaded images)
+Outputs per run:
+  data-tools/enriched/covers/                  downloaded images (all authors)
+  data-tools/enriched/all_catalog_review.csv   review flags across all authors
 """
 
 import csv
 import json
+import subprocess
 import sys
 import time
 import urllib.error
@@ -22,21 +29,27 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-ROOT = Path(__file__).parent.parent          # data-tools/
-PROJECT_ROOT = ROOT.parent                   # king-catalog/
-ENRICHED = ROOT / "enriched"
-JSON_PATH = ENRICHED / "king_catalog.json"
-CSV_PATH = ENRICHED / "king_catalog_review.csv"
-COVERS_DIR = ENRICHED / "covers"
+ROOT         = Path(__file__).parent.parent       # data-tools/
+PROJECT_ROOT = ROOT.parent                         # king-catalog/
+ENRICHED     = ROOT / "enriched"
+RAW          = ROOT / "raw"
+COVERS_DIR   = ENRICHED / "covers"
+CSV_PATH     = ENRICHED / "all_catalog_review.csv"
+
+# Stephen King source (Stage 1 output from parse.py)
+SK_JSON = ENRICHED / "king_catalog.json"
+
+# Pattern for other-author raw source files
+OTHER_AUTHOR_GLOB = "*-source.json"
 
 OL_SEARCH = "https://openlibrary.org/search.json"
-OL_COVER = "https://covers.openlibrary.org/b/id/{cover_id}-L.jpg"
+OL_COVER  = "https://covers.openlibrary.org/b/id/{cover_id}-L.jpg"
 
 WORDS_PER_PAGE = 275   # conservative estimate for page-count → word-count fills
-REQUEST_DELAY = 0.5    # seconds between Open Library API calls (be polite)
+REQUEST_DELAY  = 0.5   # seconds between Open Library API calls (be polite)
 
 CSV_FIELDS = [
-    "id", "title", "year", "word_count", "audible_minutes",
+    "id", "author", "title", "year", "word_count", "audible_minutes",
     "story_type", "collection", "review_flags",
 ]
 
@@ -45,9 +58,9 @@ CSV_FIELDS = [
 # Open Library helpers
 # ---------------------------------------------------------------------------
 
-def ol_search(title: str, year: int | None, author_only: bool = True) -> dict | None:
+def ol_search(title: str, year: int | None, author: str, use_author_filter: bool = True) -> dict | None:
     """
-    Search Open Library for a Stephen King title.
+    Search Open Library for a title by a given author.
     Returns the best-matching document dict or None.
     """
     params_dict = {
@@ -55,8 +68,8 @@ def ol_search(title: str, year: int | None, author_only: bool = True) -> dict | 
         "fields": "key,title,first_publish_year,cover_i,number_of_pages_median",
         "limit": 5,
     }
-    if author_only:
-        params_dict["author"] = "stephen king"
+    if use_author_filter:
+        params_dict["author"] = author.lower()
     params = urllib.parse.urlencode(params_dict)
     try:
         with urllib.request.urlopen(f"{OL_SEARCH}?{params}", timeout=12) as resp:
@@ -81,9 +94,8 @@ def ol_search(title: str, year: int | None, author_only: bool = True) -> dict | 
 def download_cover(cover_id: int, dest: Path) -> bool:
     """
     Download a cover image to dest.
-    Returns True on success, False if the image is missing or download fails.
-    Open Library serves a tiny 1x1 GIF placeholder for missing covers;
-    we treat files under 1 000 bytes as failures.
+    Returns True on success. Open Library serves a 1×1 GIF placeholder for
+    missing covers; treat files under 1 000 bytes as failures.
     """
     url = OL_COVER.format(cover_id=cover_id)
     try:
@@ -140,21 +152,20 @@ def enrich_entry(entry: dict) -> dict:
     """
     stats = {"cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0, "wc_filled": 0}
 
-    title: str = entry.get("title") or ""
-    year: int | None = entry.get("year")
+    title:  str       = entry.get("title") or ""
+    year:   int | None = entry.get("year")
+    author: str       = entry.get("author") or "Stephen King"
     is_parent = entry.get("is_collection_parent", False)
 
     if not title:
         return stats
 
-    # --- Already done? ---
     if cover_already_done(entry):
         stats["cover_skipped"] = 1
         return stats
 
-    # --- Query Open Library ---
-    # Collection parents: use title-only search (no author filter, works better for anthologies)
-    doc = ol_search(title, year, author_only=(not is_parent))
+    # Collection parents: skip author filter — works better for anthologies
+    doc = ol_search(title, year, author=author, use_author_filter=(not is_parent))
     time.sleep(REQUEST_DELAY)
 
     if not doc:
@@ -164,14 +175,13 @@ def enrich_entry(entry: dict) -> dict:
     cover_id: int | None = doc.get("cover_i")
     ol_pages: int | None = doc.get("number_of_pages_median")
 
-    # --- Word count fill (only if currently missing) ---
+    # Word count fill (only if currently missing)
     if ol_pages and entry.get("word_count") is None:
         entry["word_count"] = round(ol_pages * WORDS_PER_PAGE)
         remove_flag(entry, "missing_word_count")
         add_flag(entry, "estimated_from_page_count")
         stats["wc_filled"] = 1
 
-    # --- Cover ---
     if not cover_id:
         stats["cover_failed"] = 1
         recalculate_review_status(entry)
@@ -180,16 +190,14 @@ def enrich_entry(entry: dict) -> dict:
     cover_url = OL_COVER.format(cover_id=cover_id)
     entry["cover_candidate_url"] = cover_url
     entry["cover_source"] = "open_library"
-    entry["cover_verified"] = False  # candidate only — requires human verification
+    entry["cover_verified"] = False   # candidate only — requires human verification
 
     fname = safe_filename(title)
-    dest = COVERS_DIR / fname
+    dest  = COVERS_DIR / fname
     if download_cover(cover_id, dest):
-        # Store path relative to project root for app consumption
         entry["cover_local_path"] = f"data-tools/enriched/covers/{fname}"
         stats["cover_resolved"] = 1
     else:
-        # URL is set even if download failed — can retry later
         stats["cover_failed"] = 1
 
     recalculate_review_status(entry)
@@ -197,7 +205,26 @@ def enrich_entry(entry: dict) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# CSV output
+# Repair pass
+# ---------------------------------------------------------------------------
+
+def repair_missing_cover_paths(entries: list[dict]) -> int:
+    """Set cover_local_path for entries with a matching file in covers/ but no path recorded."""
+    repaired = 0
+    for entry in entries:
+        if entry.get("cover_local_path"):
+            continue
+        fname = safe_filename(entry.get("title") or "")
+        dest  = COVERS_DIR / fname
+        if dest.exists() and dest.stat().st_size >= 1000:
+            entry["cover_local_path"] = f"data-tools/enriched/covers/{fname}"
+            entry["cover_source"]     = entry.get("cover_source") or "local_file"
+            repaired += 1
+    return repaired
+
+
+# ---------------------------------------------------------------------------
+# CSV output (combined across all authors)
 # ---------------------------------------------------------------------------
 
 def write_csv(all_entries: list[dict]) -> None:
@@ -212,47 +239,25 @@ def write_csv(all_entries: list[dict]) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Repair pass
+# Per-file enrichment
 # ---------------------------------------------------------------------------
 
-def repair_missing_cover_paths(entries: list[dict]) -> int:
-    """Set cover_local_path for entries with matching file in covers/ but null path."""
-    repaired = 0
-    for entry in entries:
-        if entry.get("cover_local_path"):
-            continue
-        fname = safe_filename(entry.get("title") or "")
-        dest = COVERS_DIR / fname
-        if dest.exists() and dest.stat().st_size >= 1000:
-            entry["cover_local_path"] = f"data-tools/enriched/covers/{fname}"
-            entry["cover_source"] = entry.get("cover_source") or "local_file"
-            repaired += 1
-    return repaired
-
-
-# ---------------------------------------------------------------------------
-# Entry point
-# ---------------------------------------------------------------------------
-
-def main() -> int:
-    COVERS_DIR.mkdir(parents=True, exist_ok=True)
-
-    entries: list[dict] = json.loads(JSON_PATH.read_text(encoding="utf-8"))
-    total = len(entries)
-    print(f"Loaded {total} entries from {JSON_PATH}")
-    print(f"Covers dir: {COVERS_DIR}")
+def enrich_file(path: Path, label: str) -> tuple[list[dict], dict]:
+    """Load, enrich, and write back a single JSON catalog file. Returns (entries, totals)."""
+    entries: list[dict] = json.loads(path.read_text(encoding="utf-8"))
+    count = len(entries)
 
     repaired = repair_missing_cover_paths(entries)
-    print(f"Repaired {repaired} missing cover paths from existing files")
-    print()
+    if repaired:
+        print(f"  Repaired {repaired} missing cover paths from existing files")
 
     totals = {"cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0, "wc_filled": 0}
 
     for i, entry in enumerate(entries, 1):
-        title = entry.get("title", "?")
-        prefix = f"[{i:>3}/{total}]"
-
+        title  = entry.get("title", "?")
+        prefix = f"  [{i:>3}/{count}]"
         print(f"{prefix} {title}", end=" ... ", flush=True)
+
         stats = enrich_entry(entry)
         for k, v in stats.items():
             totals[k] += v
@@ -267,26 +272,63 @@ def main() -> int:
             status += ", wc estimated"
         print(status)
 
-    # Write outputs
-    print()
-    print(f"Writing {JSON_PATH} ...")
-    JSON_PATH.write_text(json.dumps(entries, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"Writing {CSV_PATH} ...")
-    write_csv(entries)
+    path.write_text(json.dumps(entries, indent=2, ensure_ascii=False), encoding="utf-8")
+    return entries, totals
 
-    needs_review_count = sum(1 for e in entries if e.get("review_status") == "needs_review")
+
+# ---------------------------------------------------------------------------
+# Entry point
+# ---------------------------------------------------------------------------
+
+def main() -> int:
+    COVERS_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Collect all source files: SK catalog + other-author raw files
+    source_files: list[tuple[Path, str]] = [(SK_JSON, "Stephen King")]
+    for p in sorted(RAW.glob(OTHER_AUTHOR_GLOB)):
+        # Derive a display label from filename, e.g. "josh-malerman-source.json" → "Josh Malerman"
+        stem = p.stem.replace("-source", "").replace("-", " ").title()
+        source_files.append((p, stem))
+
+    all_entries: list[dict] = []
+    grand_totals = {"cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0, "wc_filled": 0}
+
+    for path, label in source_files:
+        if not path.exists():
+            print(f"[SKIP] {path} not found")
+            continue
+        print(f"\n── {label} ({path.name}) ──")
+        entries, totals = enrich_file(path, label)
+        all_entries.extend(entries)
+        for k, v in totals.items():
+            grand_totals[k] += v
+
+    # Combined review CSV
+    print(f"\nWriting {CSV_PATH} ...")
+    write_csv(all_entries)
+
+    needs_review_count = sum(1 for e in all_entries if e.get("review_status") == "needs_review")
 
     print()
-    print("=== Enrichment Summary ===")
-    print(f"  Covers resolved:    {totals['cover_resolved']}")
-    print(f"  Covers skipped:     {totals['cover_skipped']}  (already done)")
-    print(f"  Covers failed:      {totals['cover_failed']}  (no OL result or no cover ID)")
-    print(f"  Word count fills:   {totals['wc_filled']}  (estimated from page count)")
+    print("=== Enrichment Summary (all authors) ===")
+    print(f"  Entries processed:  {len(all_entries)}")
+    print(f"  Covers resolved:    {grand_totals['cover_resolved']}")
+    print(f"  Covers skipped:     {grand_totals['cover_skipped']}  (already done)")
+    print(f"  Covers failed:      {grand_totals['cover_failed']}  (no OL result or no cover ID)")
+    print(f"  Word count fills:   {grand_totals['wc_filled']}  (estimated from page count)")
     print(f"  Still needs review: {needs_review_count}")
     print()
-    print(f"  Output JSON:  {JSON_PATH}")
-    print(f"  Output CSV:   {CSV_PATH}")
-    print(f"  Covers dir:   {COVERS_DIR}")
+
+    # Rebuild combined catalog so assets stay in sync
+    build_script = Path(__file__).parent / "build_catalog.py"
+    if build_script.exists():
+        print("Rebuilding combined catalog ...")
+        result = subprocess.run([sys.executable, str(build_script)], check=False)
+        if result.returncode != 0:
+            print("  WARNING: build_catalog.py exited with errors.")
+    else:
+        print(f"WARNING: {build_script} not found — run it manually to refresh assets.")
+
     return 0
 
 

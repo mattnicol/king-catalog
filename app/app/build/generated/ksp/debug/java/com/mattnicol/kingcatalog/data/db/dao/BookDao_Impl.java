@@ -977,8 +977,186 @@ public final class BookDao_Impl implements BookDao {
   }
 
   @Override
-  public Flow<List<BookEntity>> observeOwned(final String author) {
-    final String _sql = "SELECT * FROM books WHERE is_owned = 1 AND author = ? ORDER BY title ASC";
+  public Flow<List<BookEntity>> observeOwned() {
+    final String _sql = "SELECT * FROM books WHERE is_owned = 1 ORDER BY author ASC, title ASC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    return CoroutinesRoom.createFlow(__db, false, new String[] {"books"}, new Callable<List<BookEntity>>() {
+      @Override
+      @NonNull
+      public List<BookEntity> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfTitle = CursorUtil.getColumnIndexOrThrow(_cursor, "title");
+          final int _cursorIndexOfAuthor = CursorUtil.getColumnIndexOrThrow(_cursor, "author");
+          final int _cursorIndexOfAsBachman = CursorUtil.getColumnIndexOrThrow(_cursor, "as_bachman");
+          final int _cursorIndexOfYear = CursorUtil.getColumnIndexOrThrow(_cursor, "year");
+          final int _cursorIndexOfDecade = CursorUtil.getColumnIndexOrThrow(_cursor, "decade");
+          final int _cursorIndexOfWordCount = CursorUtil.getColumnIndexOrThrow(_cursor, "word_count");
+          final int _cursorIndexOfAudibleMinutes = CursorUtil.getColumnIndexOrThrow(_cursor, "audible_minutes");
+          final int _cursorIndexOfStoryType = CursorUtil.getColumnIndexOrThrow(_cursor, "story_type");
+          final int _cursorIndexOfKeywords = CursorUtil.getColumnIndexOrThrow(_cursor, "keywords");
+          final int _cursorIndexOfGenres = CursorUtil.getColumnIndexOrThrow(_cursor, "genres");
+          final int _cursorIndexOfIsCollectionParent = CursorUtil.getColumnIndexOrThrow(_cursor, "is_collection_parent");
+          final int _cursorIndexOfCollection = CursorUtil.getColumnIndexOrThrow(_cursor, "collection");
+          final int _cursorIndexOfCollectionId = CursorUtil.getColumnIndexOrThrow(_cursor, "collection_id");
+          final int _cursorIndexOfChildIds = CursorUtil.getColumnIndexOrThrow(_cursor, "child_ids");
+          final int _cursorIndexOfHasAdaptation = CursorUtil.getColumnIndexOrThrow(_cursor, "has_adaptation");
+          final int _cursorIndexOfAdaptations = CursorUtil.getColumnIndexOrThrow(_cursor, "adaptations");
+          final int _cursorIndexOfImdbUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "imdb_url");
+          final int _cursorIndexOfCoverLocalPath = CursorUtil.getColumnIndexOrThrow(_cursor, "cover_local_path");
+          final int _cursorIndexOfCoverCandidateUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "cover_candidate_url");
+          final int _cursorIndexOfIsOwned = CursorUtil.getColumnIndexOrThrow(_cursor, "is_owned");
+          final int _cursorIndexOfIsRead = CursorUtil.getColumnIndexOrThrow(_cursor, "is_read");
+          final int _cursorIndexOfIsReadingNow = CursorUtil.getColumnIndexOrThrow(_cursor, "is_reading_now");
+          final int _cursorIndexOfIsOnReadingList = CursorUtil.getColumnIndexOrThrow(_cursor, "is_on_reading_list");
+          final int _cursorIndexOfLastStatusChanged = CursorUtil.getColumnIndexOrThrow(_cursor, "last_status_changed");
+          final int _cursorIndexOfNotes = CursorUtil.getColumnIndexOrThrow(_cursor, "notes");
+          final List<BookEntity> _result = new ArrayList<BookEntity>(_cursor.getCount());
+          while (_cursor.moveToNext()) {
+            final BookEntity _item;
+            final int _tmpId;
+            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final String _tmpTitle;
+            _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
+            final String _tmpAuthor;
+            _tmpAuthor = _cursor.getString(_cursorIndexOfAuthor);
+            final boolean _tmpAsBachman;
+            final int _tmp;
+            _tmp = _cursor.getInt(_cursorIndexOfAsBachman);
+            _tmpAsBachman = _tmp != 0;
+            final Integer _tmpYear;
+            if (_cursor.isNull(_cursorIndexOfYear)) {
+              _tmpYear = null;
+            } else {
+              _tmpYear = _cursor.getInt(_cursorIndexOfYear);
+            }
+            final Integer _tmpDecade;
+            if (_cursor.isNull(_cursorIndexOfDecade)) {
+              _tmpDecade = null;
+            } else {
+              _tmpDecade = _cursor.getInt(_cursorIndexOfDecade);
+            }
+            final Integer _tmpWordCount;
+            if (_cursor.isNull(_cursorIndexOfWordCount)) {
+              _tmpWordCount = null;
+            } else {
+              _tmpWordCount = _cursor.getInt(_cursorIndexOfWordCount);
+            }
+            final Integer _tmpAudibleMinutes;
+            if (_cursor.isNull(_cursorIndexOfAudibleMinutes)) {
+              _tmpAudibleMinutes = null;
+            } else {
+              _tmpAudibleMinutes = _cursor.getInt(_cursorIndexOfAudibleMinutes);
+            }
+            final String _tmpStoryType;
+            _tmpStoryType = _cursor.getString(_cursorIndexOfStoryType);
+            final List<String> _tmpKeywords;
+            final String _tmp_1;
+            _tmp_1 = _cursor.getString(_cursorIndexOfKeywords);
+            _tmpKeywords = __converters.fromStringList(_tmp_1);
+            final List<String> _tmpGenres;
+            final String _tmp_2;
+            _tmp_2 = _cursor.getString(_cursorIndexOfGenres);
+            _tmpGenres = __converters.fromStringList(_tmp_2);
+            final boolean _tmpIsCollectionParent;
+            final int _tmp_3;
+            _tmp_3 = _cursor.getInt(_cursorIndexOfIsCollectionParent);
+            _tmpIsCollectionParent = _tmp_3 != 0;
+            final String _tmpCollection;
+            if (_cursor.isNull(_cursorIndexOfCollection)) {
+              _tmpCollection = null;
+            } else {
+              _tmpCollection = _cursor.getString(_cursorIndexOfCollection);
+            }
+            final Integer _tmpCollectionId;
+            if (_cursor.isNull(_cursorIndexOfCollectionId)) {
+              _tmpCollectionId = null;
+            } else {
+              _tmpCollectionId = _cursor.getInt(_cursorIndexOfCollectionId);
+            }
+            final List<Integer> _tmpChildIds;
+            final String _tmp_4;
+            _tmp_4 = _cursor.getString(_cursorIndexOfChildIds);
+            _tmpChildIds = __converters.fromIntList(_tmp_4);
+            final boolean _tmpHasAdaptation;
+            final int _tmp_5;
+            _tmp_5 = _cursor.getInt(_cursorIndexOfHasAdaptation);
+            _tmpHasAdaptation = _tmp_5 != 0;
+            final List<Adaptation> _tmpAdaptations;
+            final String _tmp_6;
+            _tmp_6 = _cursor.getString(_cursorIndexOfAdaptations);
+            _tmpAdaptations = __converters.fromAdaptationList(_tmp_6);
+            final String _tmpImdbUrl;
+            if (_cursor.isNull(_cursorIndexOfImdbUrl)) {
+              _tmpImdbUrl = null;
+            } else {
+              _tmpImdbUrl = _cursor.getString(_cursorIndexOfImdbUrl);
+            }
+            final String _tmpCoverLocalPath;
+            if (_cursor.isNull(_cursorIndexOfCoverLocalPath)) {
+              _tmpCoverLocalPath = null;
+            } else {
+              _tmpCoverLocalPath = _cursor.getString(_cursorIndexOfCoverLocalPath);
+            }
+            final String _tmpCoverCandidateUrl;
+            if (_cursor.isNull(_cursorIndexOfCoverCandidateUrl)) {
+              _tmpCoverCandidateUrl = null;
+            } else {
+              _tmpCoverCandidateUrl = _cursor.getString(_cursorIndexOfCoverCandidateUrl);
+            }
+            final boolean _tmpIsOwned;
+            final int _tmp_7;
+            _tmp_7 = _cursor.getInt(_cursorIndexOfIsOwned);
+            _tmpIsOwned = _tmp_7 != 0;
+            final boolean _tmpIsRead;
+            final int _tmp_8;
+            _tmp_8 = _cursor.getInt(_cursorIndexOfIsRead);
+            _tmpIsRead = _tmp_8 != 0;
+            final boolean _tmpIsReadingNow;
+            final int _tmp_9;
+            _tmp_9 = _cursor.getInt(_cursorIndexOfIsReadingNow);
+            _tmpIsReadingNow = _tmp_9 != 0;
+            final boolean _tmpIsOnReadingList;
+            final int _tmp_10;
+            _tmp_10 = _cursor.getInt(_cursorIndexOfIsOnReadingList);
+            _tmpIsOnReadingList = _tmp_10 != 0;
+            final Long _tmpLastStatusChanged;
+            if (_cursor.isNull(_cursorIndexOfLastStatusChanged)) {
+              _tmpLastStatusChanged = null;
+            } else {
+              _tmpLastStatusChanged = _cursor.getLong(_cursorIndexOfLastStatusChanged);
+            }
+            final String _tmpNotes;
+            if (_cursor.isNull(_cursorIndexOfNotes)) {
+              _tmpNotes = null;
+            } else {
+              _tmpNotes = _cursor.getString(_cursorIndexOfNotes);
+            }
+            _item = new BookEntity(_tmpId,_tmpTitle,_tmpAuthor,_tmpAsBachman,_tmpYear,_tmpDecade,_tmpWordCount,_tmpAudibleMinutes,_tmpStoryType,_tmpKeywords,_tmpGenres,_tmpIsCollectionParent,_tmpCollection,_tmpCollectionId,_tmpChildIds,_tmpHasAdaptation,_tmpAdaptations,_tmpImdbUrl,_tmpCoverLocalPath,_tmpCoverCandidateUrl,_tmpIsOwned,_tmpIsRead,_tmpIsReadingNow,_tmpIsOnReadingList,_tmpLastStatusChanged,_tmpNotes);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
+  }
+
+  @Override
+  public Flow<List<BookEntity>> observeByAuthor(final String author) {
+    final String _sql = "\n"
+            + "        SELECT * FROM books\n"
+            + "        WHERE author = ?\n"
+            + "          AND (is_collection_parent = 1 OR collection_id IS NULL)\n"
+            + "        ORDER BY year ASC\n"
+            + "    ";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     _statement.bindString(_argIndex, author);

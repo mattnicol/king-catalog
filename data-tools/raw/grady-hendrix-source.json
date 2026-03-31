@@ -1,0 +1,264 @@
+[
+  {
+    "id": 3001,
+    "title": "Horrorstör",
+    "author": "Grady Hendrix",
+    "year": 2014,
+    "decade": 2010,
+    "word_count": 66275,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror",
+      "Comedy"
+    ],
+    "keywords": [
+      "IKEA",
+      "retail",
+      "haunted store",
+      "furniture catalog"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Designed to look like an IKEA catalog. A haunted furniture store.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8773505-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Horrorstör.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 3002,
+    "title": "My Best Friend's Exorcism",
+    "author": "Grady Hendrix",
+    "year": 2016,
+    "decade": 2010,
+    "word_count": 92400,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror",
+      "Comedy"
+    ],
+    "keywords": [
+      "exorcism",
+      "friendship",
+      "possession",
+      "1980s",
+      "high school"
+    ],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 2022,
+        "year_end": null,
+        "title": "My Best Friend's Exorcism",
+        "format": "film",
+        "times_seen": null,
+        "status": null,
+        "want": false,
+        "raw": "2022 Amazon Prime film"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Set in the 1980s, structured like a mixtape with chapter titles as song names.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8850626-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/My_Best_Friend_s_Exorcism.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 3003,
+    "title": "Paperbacks from Hell",
+    "author": "Grady Hendrix",
+    "year": 2017,
+    "decade": 2010,
+    "word_count": 35200,
+    "audible_minutes": null,
+    "story_type": "non_fiction",
+    "genres": [
+      "Non-Fiction"
+    ],
+    "keywords": [
+      "horror history",
+      "paperbacks",
+      "1970s",
+      "1980s",
+      "publishing"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Non-fiction survey of horror paperbacks from the 1970s-80s. Co-authored with Will Errickson.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/10482787-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Paperbacks_from_Hell.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 3004,
+    "title": "We Sold Our Souls",
+    "author": "Grady Hendrix",
+    "year": 2018,
+    "decade": 2010,
+    "word_count": 92400,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "rock music",
+      "metal",
+      "sold soul",
+      "road trip",
+      "betrayal"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "A former metal guitarist discovers her bandmate sold their souls for fame.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/9248396-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/We_Sold_Our_Souls.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 3005,
+    "title": "The Southern Book Club's Guide to Slaying Vampires",
+    "author": "Grady Hendrix",
+    "year": 2020,
+    "decade": 2020,
+    "word_count": 112200,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "vampire",
+      "book club",
+      "southern Gothic",
+      "suburbia",
+      "1990s"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Set in the 1990s South, a book club of women battles a charming vampire.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/9335125-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/The_Southern_Book_Club_s_Guide_to_Slaying_Vampires.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 3006,
+    "title": "The Final Girl Support Group",
+    "author": "Grady Hendrix",
+    "year": 2021,
+    "decade": 2020,
+    "word_count": 96800,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "slasher",
+      "final girls",
+      "survival",
+      "therapy",
+      "meta-horror"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Six women who survived slasher attacks meet in a support group—then someone targets them.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/10653604-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/The_Final_Girl_Support_Group.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 3007,
+    "title": "How to Sell a Haunted House",
+    "author": "Grady Hendrix",
+    "year": 2023,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "haunted house",
+      "family",
+      "puppets",
+      "inheritance",
+      "siblings"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Siblings must clean out and sell their deceased parents' haunted house.",
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "ok",
+    "review_flags": []
+  }
+]

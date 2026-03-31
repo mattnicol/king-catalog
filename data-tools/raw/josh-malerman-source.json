@@ -1,0 +1,436 @@
+[
+  {
+    "id": 1001,
+    "title": "Bird Box",
+    "author": "Josh Malerman",
+    "year": 2014,
+    "decade": 2010,
+    "word_count": 84975,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "blindness",
+      "monsters",
+      "post-apocalyptic",
+      "survival",
+      "creatures"
+    ],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 2018,
+        "year_end": null,
+        "title": "Bird Box",
+        "format": "film",
+        "times_seen": null,
+        "status": null,
+        "want": false,
+        "raw": "2018 Netflix film"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Debut novel. Creatures whose appearance drives viewers insane.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8159409-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Bird_Box.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 1002,
+    "title": "Black Mad Wheel",
+    "author": "Josh Malerman",
+    "year": 2016,
+    "decade": 2010,
+    "word_count": 83600,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "music",
+      "sound",
+      "military",
+      "desert",
+      "mystery"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "A band investigates a mysterious sound in the African desert.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8845966-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Black_Mad_Wheel.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 1003,
+    "title": "A House at the Bottom of a Lake",
+    "author": "Josh Malerman",
+    "year": 2016,
+    "decade": 2010,
+    "word_count": 42625,
+    "audible_minutes": null,
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "lake",
+      "underwater house",
+      "mystery",
+      "romance"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Two teenagers discover a house at the bottom of a lake while canoeing.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/10085196-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/A_House_at_the_Bottom_of_a_Lake.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 1004,
+    "title": "Goblin",
+    "author": "Josh Malerman",
+    "year": 2016,
+    "decade": 2010,
+    "word_count": 116600,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "linked stories",
+      "small town",
+      "rain",
+      "supernatural"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Six linked novellas set in the fictional town of Goblin.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/11205377-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Goblin.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "year_uncertain: limited ed 2016, trade 2020",
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 1005,
+    "title": "Unbury Carol",
+    "author": "Josh Malerman",
+    "year": 2019,
+    "decade": 2010,
+    "word_count": 105600,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror",
+      "Western"
+    ],
+    "keywords": [
+      "buried alive",
+      "outlaws",
+      "frontier",
+      "coma"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "A woman who periodically falls into a death-like coma is buried alive.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8808799-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Unbury_Carol.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 1006,
+    "title": "Inspection",
+    "author": "Josh Malerman",
+    "year": 2019,
+    "decade": 2010,
+    "word_count": 110000,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror",
+      "Dystopian"
+    ],
+    "keywords": [
+      "boys school",
+      "isolation",
+      "girls",
+      "conspiracy",
+      "coming of age"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Boys raised in a tower school, unaware that girls exist.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8650336-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Inspection.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 1007,
+    "title": "Malorie",
+    "author": "Josh Malerman",
+    "year": 2020,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "blindness",
+      "monsters",
+      "post-apocalyptic",
+      "survival",
+      "sequel"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Sequel to Bird Box, set twelve years later.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/10540711-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Malorie.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 1008,
+    "title": "Pearl",
+    "author": "Josh Malerman",
+    "year": 2021,
+    "decade": 2020,
+    "word_count": 88000,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "barn",
+      "farm",
+      "creature",
+      "young woman",
+      "supernatural"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "A young woman discovers a creature in her barn.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/12217342-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Pearl.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "plot_summary_uncertain",
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 1009,
+    "title": "On This, the Day of the Pig",
+    "author": "Josh Malerman",
+    "year": 2021,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "pig",
+      "farm",
+      "supernatural"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": null,
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "needs_review",
+    "review_flags": [
+      "year_uncertain",
+      "story_type_uncertain"
+    ]
+  },
+  {
+    "id": 1010,
+    "title": "Daphne",
+    "author": "Josh Malerman",
+    "year": 2022,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "urban legend",
+      "basketball",
+      "teen",
+      "supernatural stalker"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "A teen basketball player is stalked by a figure from urban legend.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/12903091-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Daphne.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 1011,
+    "title": "The Pallbearers Club",
+    "author": "Josh Malerman",
+    "year": 2022,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "friendship",
+      "vampire",
+      "memoir",
+      "unreliable narrator"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Told as a memoir with handwritten annotations challenging the narrator.",
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 1012,
+    "title": "Incidents Around the House",
+    "author": "Josh Malerman",
+    "year": 2024,
+    "decade": 2020,
+    "word_count": 105600,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "haunted house",
+      "child narrator",
+      "paranormal",
+      "family"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Told from the perspective of a young child experiencing supernatural events.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14641706-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Incidents_Around_the_House.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  }
+]

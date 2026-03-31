@@ -87,7 +87,9 @@ fun AppNavGraph() {
             composable(NavRoute.Library.route) {
                 LibraryScreen(onBookClick = { id -> navController.navigate("book_detail/$id") })
             }
-            composable(NavRoute.OtherAuthors.route) { OtherAuthorsScreen() }
+            composable(NavRoute.OtherAuthors.route) {
+                OtherAuthorsScreen(onBookClick = { id -> navController.navigate("book_detail/$id") })
+            }
             composable(
                 route = "book_detail/{bookId}",
                 arguments = listOf(navArgument("bookId") { type = NavType.IntType }),

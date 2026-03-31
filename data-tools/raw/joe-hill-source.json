@@ -1,0 +1,276 @@
+[
+  {
+    "id": 2001,
+    "title": "20th Century Ghosts",
+    "author": "Joe Hill",
+    "year": 2005,
+    "decade": 2000,
+    "word_count": 92400,
+    "audible_minutes": null,
+    "story_type": "collection",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "short stories",
+      "ghosts",
+      "pop culture",
+      "dark fantasy"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": true,
+    "child_ids": [],
+    "notes": "Debut collection. Originally published in UK 2005, US 2007.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/4942829-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/20th_Century_Ghosts.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "year_is_uk_edition: US edition 2007",
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 2002,
+    "title": "Heart-Shaped Box",
+    "author": "Joe Hill",
+    "year": 2007,
+    "decade": 2000,
+    "word_count": 111100,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "ghost",
+      "rock musician",
+      "haunting",
+      "online auction",
+      "suit"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Debut novel. Aging rock star buys a ghost online.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/46671-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Heart-Shaped_Box.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 2003,
+    "title": "Horns",
+    "author": "Joe Hill",
+    "year": 2010,
+    "decade": 2010,
+    "word_count": 119900,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror",
+      "Dark Fantasy"
+    ],
+    "keywords": [
+      "devil",
+      "horns",
+      "revenge",
+      "murder",
+      "supernatural"
+    ],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 2013,
+        "year_end": null,
+        "title": "Horns",
+        "format": "film",
+        "times_seen": null,
+        "status": null,
+        "want": false,
+        "raw": "2013 film dir. Alexandre Aja, starring Daniel Radcliffe"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "A young man wakes up with devil horns after his girlfriend is murdered.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/6303181-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Horns.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 2004,
+    "title": "NOS4A2",
+    "author": "Joe Hill",
+    "year": 2013,
+    "decade": 2010,
+    "word_count": 191675,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "vampire",
+      "Christmasland",
+      "children",
+      "supernatural",
+      "road trip"
+    ],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 2019,
+        "year_end": 2020,
+        "title": "NOS4A2",
+        "format": "tv series",
+        "times_seen": null,
+        "status": null,
+        "want": false,
+        "raw": "2019-2020 AMC TV series"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Published as NOS4R2 in the UK. A woman with a supernatural ability battles a vampire.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/7254564-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/NOS4A2.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 2005,
+    "title": "The Fireman",
+    "author": "Joe Hill",
+    "year": 2016,
+    "decade": 2010,
+    "word_count": 211200,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror",
+      "Sci-Fi"
+    ],
+    "keywords": [
+      "plague",
+      "spontaneous combustion",
+      "post-apocalyptic",
+      "survival",
+      "mystery"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "A plague causes people to spontaneously combust. A nurse tries to survive.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/12920965-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/The_Fireman.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 2006,
+    "title": "Strange Weather",
+    "author": "Joe Hill",
+    "year": 2017,
+    "decade": 2010,
+    "word_count": 123200,
+    "audible_minutes": null,
+    "story_type": "collection",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "novellas",
+      "weather",
+      "guns",
+      "cloud",
+      "altitude"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": true,
+    "child_ids": [],
+    "notes": "Four short novels: Snapshot, Loaded, Aloft, Rain.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8367914-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Strange_Weather.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 2007,
+    "title": "Full Throttle",
+    "author": "Joe Hill",
+    "year": 2019,
+    "decade": 2010,
+    "word_count": 136400,
+    "audible_minutes": null,
+    "story_type": "collection",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "short stories",
+      "trucks",
+      "dark fiction"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": true,
+    "child_ids": [],
+    "notes": "Short story collection including a collaboration with Stephen King.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8790622-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Full_Throttle.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  }
+]

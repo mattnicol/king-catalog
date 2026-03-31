@@ -11,7 +11,7 @@ import com.mattnicol.kingcatalog.data.db.entity.BookEntity
 
 @Database(
     entities = [BookEntity::class],
-    version = 2,
+    version = 3,
     exportSchema = true,
 )
 @TypeConverters(Converters::class)

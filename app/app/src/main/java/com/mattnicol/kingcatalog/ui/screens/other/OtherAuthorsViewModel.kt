@@ -11,17 +11,22 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
+
+// Authors displayed as collapsible sections in Other Authors tab (ordered for display)
+val OTHER_AUTHORS = listOf("Josh Malerman", "Joe Hill", "Grady Hendrix")
 
 class OtherAuthorsViewModel(application: Application) : AndroidViewModel(application) {
     private val repo = (application as KingCatalogApp).bookRepository
 
     val searchQuery = MutableStateFlow("")
 
-    val books: StateFlow<List<Book>> = combine(
+    // Books grouped by author, filtered by search query
+    val booksByAuthor: StateFlow<Map<String, List<Book>>> = combine(
         repo.observeOtherAuthors(),
         searchQuery,
     ) { all, query ->
-        all.filter {
+        val filtered = all.filter {
             it.matchesFilter(
                 query = query,
                 storyTypeFilter = emptySet(),
@@ -32,7 +37,31 @@ class OtherAuthorsViewModel(application: Application) : AndroidViewModel(applica
                 readFilter = null,
             )
         }
-    }.stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
+        // Group preserving OTHER_AUTHORS display order; unknown authors appended alphabetically
+        val known = OTHER_AUTHORS.associateWith { author ->
+            filtered.filter { it.author == author }
+        }.filterValues { it.isNotEmpty() }
+        val unknown = filtered.filter { it.author !in OTHER_AUTHORS }
+            .groupBy { it.author }
+            .toSortedMap()
+        known + unknown
+    }.stateIn(viewModelScope, SharingStarted.Lazily, emptyMap())
 
     fun onQueryChange(q: String) { searchQuery.value = q }
+
+    fun onReadingNow(book: Book) = viewModelScope.launch {
+        repo.setReadingNow(book, !book.isReadingNow)
+    }
+
+    fun onMarkRead(book: Book) = viewModelScope.launch {
+        repo.setRead(book, !book.isRead)
+    }
+
+    fun onToggleOwned(book: Book) = viewModelScope.launch {
+        repo.setOwned(book, !book.isOwned)
+    }
+
+    fun onToggleReadingList(book: Book) = viewModelScope.launch {
+        repo.setOnReadingList(book, !book.isOnReadingList)
+    }
 }

@@ -53,7 +53,7 @@ object SeedImporter {
         return BookEntity(
             id = obj.get("id").asInt,
             title = obj.get("title").asString,
-            author = "Stephen King",
+            author = obj.getStringOrNull("author") ?: "Stephen King",
             asBachman = asBachman,
             year = year,
             decade = decade,

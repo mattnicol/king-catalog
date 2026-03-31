@@ -19,6 +19,9 @@ class BookRepository(private val dao: BookDao) {
     fun observeOwned(): Flow<List<Book>> =
         dao.observeOwned().map { list -> list.map { it.toDomain() } }
 
+    fun observeByAuthor(author: String): Flow<List<Book>> =
+        dao.observeByAuthor(author).map { list -> list.map { it.toDomain() } }
+
     fun observeReadingNow(): Flow<List<Book>> =
         dao.observeReadingNow().map { list -> list.map { it.toDomain() } }
 

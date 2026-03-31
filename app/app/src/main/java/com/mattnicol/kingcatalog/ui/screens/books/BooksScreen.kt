@@ -10,11 +10,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
@@ -23,12 +26,14 @@ import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -54,6 +59,7 @@ fun BooksScreen(vm: BooksViewModel = viewModel(), onBookClick: (Int) -> Unit = {
     var selectedBook by remember { mutableStateOf<Book?>(null) }
     var showSortSheet by remember { mutableStateOf(false) }
     var showFilterSheet by remember { mutableStateOf(false) }
+    var skExpanded by rememberSaveable { mutableStateOf(true) }
     val sheetState = rememberModalBottomSheetState()
 
     val activeFilterCount = filter.storyTypes.size + filter.genres.size + filter.keywords.size +
@@ -111,12 +117,35 @@ fun BooksScreen(vm: BooksViewModel = viewModel(), onBookClick: (Int) -> Unit = {
                 contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                items(books, key = { it.id }) { book ->
-                    BookCard(
-                        book = book,
-                        onClick = { onBookClick(book.id) },
-                        onLongClick = { selectedBook = book },
-                    )
+                // Collapsible Stephen King section header
+                item(key = "sk_header") {
+                    TextButton(
+                        onClick = { skExpanded = !skExpanded },
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = ButtonDefaults.textButtonColors(
+                            contentColor = MaterialTheme.colorScheme.onSurface,
+                        ),
+                    ) {
+                        Text(
+                            text = "Stephen King",
+                            style = MaterialTheme.typography.titleMedium,
+                            modifier = Modifier.weight(1f),
+                        )
+                        Icon(
+                            imageVector = if (skExpanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
+                            contentDescription = if (skExpanded) "Collapse" else "Expand",
+                        )
+                    }
+                }
+
+                if (skExpanded) {
+                    items(books, key = { it.id }) { book ->
+                        BookCard(
+                            book = book,
+                            onClick = { onBookClick(book.id) },
+                            onLongClick = { selectedBook = book },
+                        )
+                    }
                 }
             }
         }

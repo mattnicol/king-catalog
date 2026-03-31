@@ -8251,7 +8251,7 @@
     "title": "The Bachman Books",
     "year": 1985,
     "decade": 1980,
-    "word_count": 248050,
+    "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8270,21 +8270,19 @@
     ],
     "boring_description": null,
     "notes": "Collection of 4 stories/pieces",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8565607-L.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/The_Bachman_Books.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
   },
   {
     "id": 219,
     "title": "Night Shift",
     "year": 1978,
     "decade": 1970,
-    "word_count": 272800,
+    "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8319,21 +8317,19 @@
     ],
     "boring_description": null,
     "notes": "Collection of 20 stories/pieces",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/12015639-L.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/Night_Shift.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
   },
   {
     "id": 220,
     "title": "Different Seasons",
     "year": 1982,
     "decade": 1980,
-    "word_count": 145475,
+    "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8352,21 +8348,19 @@
     ],
     "boring_description": null,
     "notes": "Collection of 4 stories/pieces",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14655761-L.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/Different_Seasons.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
   },
   {
     "id": 221,
     "title": "Skeleton Crew",
     "year": 1985,
     "decade": 1980,
-    "word_count": 157575,
+    "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8403,21 +8397,19 @@
     ],
     "boring_description": null,
     "notes": "Collection of 22 stories/pieces",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14657166-L.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/Skeleton_Crew.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
   },
   {
     "id": 222,
     "title": "Nightmares & Dreamscapes",
     "year": 1993,
     "decade": 1990,
-    "word_count": 193050,
+    "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8456,14 +8448,12 @@
     ],
     "boring_description": null,
     "notes": "Collection of 24 stories/pieces",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14654718-L.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/Nightmares___Dreamscapes.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
   },
   {
     "id": 223,
@@ -8574,7 +8564,7 @@
     "title": "Just After Sunset",
     "year": 2008,
     "decade": 2000,
-    "word_count": 123200,
+    "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8602,21 +8592,19 @@
     ],
     "boring_description": null,
     "notes": "Collection of 13 stories/pieces",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8494916-L.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/Just_After_Sunset.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
   },
   {
     "id": 227,
     "title": "Full Dark, No Stars",
     "year": 2010,
     "decade": 2010,
-    "word_count": 123200,
+    "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8635,14 +8623,12 @@
     ],
     "boring_description": null,
     "notes": "Collection of 4 stories/pieces",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/12018685-L.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/Full_Dark__No_Stars.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
   },
   {
     "id": 228,
