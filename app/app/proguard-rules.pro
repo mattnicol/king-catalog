@@ -1,0 +1,3 @@
+-keep class com.mattnicol.kingcatalog.data.model.** { *; }
+-keepattributes Signature
+-keepattributes *Annotation*

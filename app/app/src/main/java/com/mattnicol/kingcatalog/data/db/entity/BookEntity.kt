@@ -1,0 +1,92 @@
+package com.mattnicol.kingcatalog.data.db.entity
+
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import com.mattnicol.kingcatalog.data.model.Adaptation
+import com.mattnicol.kingcatalog.data.model.Book
+
+@Entity(tableName = "books")
+data class BookEntity(
+    @PrimaryKey val id: Int,
+    val title: String,
+    val author: String = "Stephen King",
+    val year: Int?,
+    val decade: Int?,
+    @ColumnInfo(name = "word_count") val wordCount: Int?,
+    @ColumnInfo(name = "audible_minutes") val audibleMinutes: Int?,
+    @ColumnInfo(name = "story_type") val storyType: String,
+    val keywords: List<String>,
+    val genres: List<String>,
+    @ColumnInfo(name = "is_collection_parent") val isCollectionParent: Boolean,
+    val collection: String?,
+    @ColumnInfo(name = "collection_id") val collectionId: Int?,
+    @ColumnInfo(name = "child_ids") val childIds: List<Int>,
+    @ColumnInfo(name = "has_adaptation") val hasAdaptation: Boolean,
+    val adaptations: List<Adaptation>,
+    @ColumnInfo(name = "imdb_url") val imdbUrl: String?,
+    @ColumnInfo(name = "cover_local_path") val coverLocalPath: String?,
+    @ColumnInfo(name = "cover_candidate_url") val coverCandidateUrl: String?,
+    @ColumnInfo(name = "is_owned") val isOwned: Boolean = false,
+    @ColumnInfo(name = "is_read") val isRead: Boolean = false,
+    @ColumnInfo(name = "is_reading_now") val isReadingNow: Boolean = false,
+    @ColumnInfo(name = "is_on_reading_list") val isOnReadingList: Boolean = false,
+    @ColumnInfo(name = "last_status_changed") val lastStatusChanged: Long? = null,
+    val notes: String?,
+)
+
+fun BookEntity.toDomain() = Book(
+    id = id,
+    title = title,
+    author = author,
+    year = year,
+    decade = decade,
+    wordCount = wordCount,
+    audibleMinutes = audibleMinutes,
+    storyType = storyType,
+    keywords = keywords,
+    genres = genres,
+    isCollectionParent = isCollectionParent,
+    collection = collection,
+    collectionId = collectionId,
+    childIds = childIds,
+    hasAdaptation = hasAdaptation,
+    adaptations = adaptations,
+    imdbUrl = imdbUrl,
+    coverLocalPath = coverLocalPath,
+    coverCandidateUrl = coverCandidateUrl,
+    isOwned = isOwned,
+    isRead = isRead,
+    isReadingNow = isReadingNow,
+    isOnReadingList = isOnReadingList,
+    lastStatusChanged = lastStatusChanged,
+    notes = notes,
+)
+
+fun Book.toEntity() = BookEntity(
+    id = id,
+    title = title,
+    author = author,
+    year = year,
+    decade = decade,
+    wordCount = wordCount,
+    audibleMinutes = audibleMinutes,
+    storyType = storyType,
+    keywords = keywords,
+    genres = genres,
+    isCollectionParent = isCollectionParent,
+    collection = collection,
+    collectionId = collectionId,
+    childIds = childIds,
+    hasAdaptation = hasAdaptation,
+    adaptations = adaptations,
+    imdbUrl = imdbUrl,
+    coverLocalPath = coverLocalPath,
+    coverCandidateUrl = coverCandidateUrl,
+    isOwned = isOwned,
+    isRead = isRead,
+    isReadingNow = isReadingNow,
+    isOnReadingList = isOnReadingList,
+    lastStatusChanged = lastStatusChanged,
+    notes = notes,
+)

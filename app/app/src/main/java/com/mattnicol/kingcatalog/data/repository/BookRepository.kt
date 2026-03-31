@@ -1,0 +1,79 @@
+package com.mattnicol.kingcatalog.data.repository
+
+import com.mattnicol.kingcatalog.data.db.dao.BookDao
+import com.mattnicol.kingcatalog.data.db.entity.BookEntity
+import com.mattnicol.kingcatalog.data.db.entity.toDomain
+import com.mattnicol.kingcatalog.data.model.Book
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
+
+class BookRepository(private val dao: BookDao) {
+
+    fun observeBrowseable(): Flow<List<Book>> =
+        dao.observeBrowseable().map { list -> list.map { it.toDomain() } }
+
+    fun observeOtherAuthors(): Flow<List<Book>> =
+        dao.observeOtherAuthors().map { list -> list.map { it.toDomain() } }
+
+    fun observeOwned(): Flow<List<Book>> =
+        dao.observeOwned().map { list -> list.map { it.toDomain() } }
+
+    fun observeReadingNow(): Flow<List<Book>> =
+        dao.observeReadingNow().map { list -> list.map { it.toDomain() } }
+
+    fun observeRecentlyRead(): Flow<List<Book>> =
+        dao.observeRecentlyRead().map { list -> list.map { it.toDomain() } }
+
+    fun observeReadingList(): Flow<List<Book>> =
+        dao.observeReadingList().map { list -> list.map { it.toDomain() } }
+
+    fun observeStoryTypes(): Flow<List<String>> = dao.observeStoryTypes()
+
+    fun observeDecades(): Flow<List<Int>> = dao.observeDecades()
+
+    suspend fun count(): Int = dao.count()
+
+    suspend fun insertAll(books: List<BookEntity>) = dao.insertAll(books)
+
+    suspend fun updateBook(book: Book) = dao.update(
+        dao.getById(book.id)!!.copy(
+            isOwned = book.isOwned,
+            isRead = book.isRead,
+            isReadingNow = book.isReadingNow,
+            isOnReadingList = book.isOnReadingList,
+            lastStatusChanged = book.lastStatusChanged,
+            notes = book.notes,
+            imdbUrl = book.imdbUrl,
+        )
+    )
+
+    suspend fun setReadingNow(book: Book, value: Boolean) {
+        val entity = dao.getById(book.id) ?: return
+        dao.update(entity.copy(
+            isReadingNow = value,
+            lastStatusChanged = System.currentTimeMillis(),
+        ))
+    }
+
+    suspend fun setRead(book: Book, value: Boolean) {
+        val entity = dao.getById(book.id) ?: return
+        dao.update(entity.copy(
+            isRead = value,
+            isReadingNow = if (value) false else entity.isReadingNow,
+            lastStatusChanged = System.currentTimeMillis(),
+        ))
+    }
+
+    suspend fun setOwned(book: Book, value: Boolean) {
+        val entity = dao.getById(book.id) ?: return
+        dao.update(entity.copy(isOwned = value))
+    }
+
+    suspend fun setOnReadingList(book: Book, value: Boolean) {
+        val entity = dao.getById(book.id) ?: return
+        dao.update(entity.copy(
+            isOnReadingList = value,
+            lastStatusChanged = System.currentTimeMillis(),
+        ))
+    }
+}

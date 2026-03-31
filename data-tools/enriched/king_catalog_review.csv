@@ -1,0 +1,35 @@
+id,title,year,word_count,audible_minutes,story_type,collection,review_flags
+5,The Stand,1978,317075,2867.0,novel,,estimated_from_page_count
+33,The Plant: Zenith Rising,1982,30000,,short_story,,approximate_word_count
+167,A Death,2015,4781,32.8,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
+168,Afterlife,2015,4336,37.9,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
+170,Batman and Robin Have an Altercation,2015,4784,32.9,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
+173,Herman Wouk Is Still Alive,2015,6486,45.6,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
+175,Mister Yummy,2015,5876,36.9,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
+178,Premium Harmony,2015,3833,26.8,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
+179,Summer Thunder,2015,5448,36.0,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
+180,That Bus Is Another World,2015,3023,26.0,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
+182,The Dune,2015,4869,34.9,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
+183,The Little Green God of Agony,2015,,58.5,short_story,The Bazaar of Bad Dreams,missing_word_count; audible_format_inferred_mmss
+184,Cookie Jar,2015,,58.5,short_story,The Bazaar of Bad Dreams,missing_word_count; audible_format_inferred_mmss
+186,Under the Weather,2015,6077,36.8,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
+193,Laurie,2018,,,short_story,,missing_word_count
+195,In the Tall Grass,2019,8525,105.0,novella,,estimated_from_page_count
+196,Gwendy's Magic Feather,2019,57200,277.0,novel,,estimated_from_page_count
+201,Later,2021,78650,392.0,novel,,estimated_from_page_count
+202,Billy Summers,2021,,1017.0,novel,,missing_word_count
+203,Gwendy's Final Task,2022,112200,444.0,novel,,estimated_from_page_count
+204,Fairy Tale,2022,209550,1446.0,novel,,estimated_from_page_count
+205,Holly,2023,123475,,novel,,estimated_from_page_count
+206,Two Talented Bastids,2024,,,short_story,You Like It Darker,missing_word_count
+207,The Fifth Step,2024,,,short_story,You Like It Darker,missing_word_count
+208,Willie the Weirdo,2024,,,short_story,You Like It Darker,missing_word_count
+209,Danny Coughlin's Bad Dream,2024,,,short_story,You Like It Darker,missing_word_count
+210,Finn,2024,,,short_story,You Like It Darker,missing_word_count
+211,On Slide Inn Road,2024,,,short_story,You Like It Darker,missing_word_count
+212,Red Screen,2024,,,short_story,You Like It Darker,missing_word_count
+213,The Turbulence Expert,2024,,,short_story,You Like It Darker,missing_word_count
+214,Laurie,2024,,,short_story,You Like It Darker,missing_word_count
+215,Rattlesnakes,2024,,,short_story,You Like It Darker,missing_word_count
+216,The Dreamers,2024,,,short_story,You Like It Darker,missing_word_count
+217,The Answer Man,2024,,,short_story,You Like It Darker,missing_word_count
