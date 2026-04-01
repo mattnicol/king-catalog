@@ -3,6 +3,7 @@
 Enrich all author catalog files with:
   - Cover image candidates from Open Library (preferred edition closest to known year)
   - Word count estimates from page count where the field is missing
+  - Goodreads ratings scraped from book pages (goodreads_rating, goodreads_ratings_count)
 
 Files enriched (all in-place):
   data-tools/enriched/king_catalog.json   (Stephen King, produced by parse.py)
@@ -20,7 +21,9 @@ Outputs per run:
 """
 
 import csv
+import hashlib
 import json
+import re
 import subprocess
 import sys
 import time
@@ -48,9 +51,16 @@ OL_COVER  = "https://covers.openlibrary.org/b/id/{cover_id}-L.jpg"
 WORDS_PER_PAGE = 275   # conservative estimate for page-count → word-count fills
 REQUEST_DELAY  = 0.5   # seconds between Open Library API calls (be polite)
 
+# Known OL placeholder image hashes (returned when no cover is available)
+# These are the "no cover" placeholder files served by Open Library.
+OL_PLACEHOLDER_HASHES: set[str] = {
+    "04b41f5dc246f9ed8bf27ade4999603a",  # common OL "no cover" placeholder
+}
+
 CSV_FIELDS = [
     "id", "author", "title", "year", "word_count", "audible_minutes",
-    "story_type", "collection", "review_flags",
+    "story_type", "collection", "goodreads_rating", "goodreads_ratings_count",
+    "review_flags",
 ]
 
 
@@ -94,8 +104,8 @@ def ol_search(title: str, year: int | None, author: str, use_author_filter: bool
 def download_cover(cover_id: int, dest: Path) -> bool:
     """
     Download a cover image to dest.
-    Returns True on success. Open Library serves a 1×1 GIF placeholder for
-    missing covers; treat files under 1 000 bytes as failures.
+    Returns True on success.
+    Rejects files under 10 000 bytes or matching known OL placeholder hashes.
     """
     url = OL_COVER.format(cover_id=cover_id)
     try:
@@ -103,7 +113,9 @@ def download_cover(cover_id: int, dest: Path) -> bool:
             data = resp.read()
     except Exception:
         return False
-    if len(data) < 1_000:
+    if len(data) < 10_000:
+        return False
+    if hashlib.md5(data).hexdigest() in OL_PLACEHOLDER_HASHES:
         return False
     dest.write_bytes(data)
     return True
@@ -142,6 +154,79 @@ def recalculate_review_status(entry: dict) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Goodreads scraping
+# ---------------------------------------------------------------------------
+
+GR_SEARCH = "https://www.goodreads.com/search?q={query}&search_type=books"
+GR_REQUEST_DELAY = 1.5  # Goodreads rate-limits aggressively
+
+
+def _gr_headers() -> dict:
+    return {
+        "User-Agent": (
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/122.0 Safari/537.36"
+        ),
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    }
+
+
+def _fetch_url(url: str, timeout: int = 15) -> str | None:
+    req = urllib.request.Request(url, headers=_gr_headers())
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return resp.read().decode("utf-8", errors="replace")
+    except Exception:
+        return None
+
+
+def _parse_gr_rating(html: str) -> tuple[float | None, int | None]:
+    """
+    Parse Goodreads rating from JSON-LD embedded in the page.
+    Returns (rating_value, ratings_count) or (None, None).
+    """
+    # Try JSON-LD first (most reliable)
+    for m in re.finditer(r'<script[^>]+type="application/ld\+json"[^>]*>(.*?)</script>', html, re.DOTALL):
+        try:
+            obj = json.loads(m.group(1))
+            ar = obj.get("aggregateRating") or {}
+            rv = ar.get("ratingValue")
+            rc = ar.get("ratingCount")
+            if rv is not None:
+                return float(rv), (int(rc) if rc is not None else None)
+        except Exception:
+            continue
+    return None, None
+
+
+def fetch_goodreads_rating(title: str, author: str) -> tuple[float | None, int | None]:
+    """
+    Search Goodreads for a book and return (rating, ratings_count).
+    Returns (None, None) on failure or if not confidently resolved.
+    """
+    query = f"{title} {author}"
+    search_url = GR_SEARCH.format(query=urllib.parse.quote_plus(query))
+    html = _fetch_url(search_url)
+    time.sleep(GR_REQUEST_DELAY)
+    if not html:
+        return None, None
+
+    # Find first book link in search results
+    m = re.search(r'href="(/book/show/[^"?]+)"', html)
+    if not m:
+        return None, None
+
+    book_url = "https://www.goodreads.com" + m.group(1)
+    book_html = _fetch_url(book_url)
+    time.sleep(GR_REQUEST_DELAY)
+    if not book_html:
+        return None, None
+
+    return _parse_gr_rating(book_html)
+
+
+# ---------------------------------------------------------------------------
 # Core enrichment logic
 # ---------------------------------------------------------------------------
 
@@ -150,12 +235,13 @@ def enrich_entry(entry: dict) -> dict:
     Attempt to enrich a single catalog entry.
     Returns a stats dict with integer counts.
     """
-    stats = {"cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0, "wc_filled": 0}
+    stats = {"cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0, "wc_filled": 0, "gr_filled": 0}
 
     title:  str       = entry.get("title") or ""
     year:   int | None = entry.get("year")
     author: str       = entry.get("author") or "Stephen King"
     is_parent = entry.get("is_collection_parent", False)
+    is_bachman = entry.get("as_bachman", False)
 
     if not title:
         return stats
@@ -164,8 +250,15 @@ def enrich_entry(entry: dict) -> dict:
         stats["cover_skipped"] = 1
         return stats
 
+    # Bachman books: strip " (Bachman)" suffix for search, use "Richard Bachman" as author
+    search_title = title
+    search_author = author
+    if is_bachman:
+        search_title = re.sub(r"\s*\(Bachman\)\s*$", "", title, flags=re.IGNORECASE).strip()
+        search_author = "Richard Bachman"
+
     # Collection parents: skip author filter — works better for anthologies
-    doc = ol_search(title, year, author=author, use_author_filter=(not is_parent))
+    doc = ol_search(search_title, year, author=search_author, use_author_filter=(not is_parent))
     time.sleep(REQUEST_DELAY)
 
     if not doc:
@@ -242,7 +335,7 @@ def write_csv(all_entries: list[dict]) -> None:
 # Per-file enrichment
 # ---------------------------------------------------------------------------
 
-def enrich_file(path: Path, label: str) -> tuple[list[dict], dict]:
+def enrich_file(path: Path, label: str, fetch_goodreads: bool = False) -> tuple[list[dict], dict]:
     """Load, enrich, and write back a single JSON catalog file. Returns (entries, totals)."""
     entries: list[dict] = json.loads(path.read_text(encoding="utf-8"))
     count = len(entries)
@@ -251,7 +344,7 @@ def enrich_file(path: Path, label: str) -> tuple[list[dict], dict]:
     if repaired:
         print(f"  Repaired {repaired} missing cover paths from existing files")
 
-    totals = {"cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0, "wc_filled": 0}
+    totals = {"cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0, "wc_filled": 0, "gr_filled": 0}
 
     for i, entry in enumerate(entries, 1):
         title  = entry.get("title", "?")
@@ -272,6 +365,25 @@ def enrich_file(path: Path, label: str) -> tuple[list[dict], dict]:
             status += ", wc estimated"
         print(status)
 
+    if fetch_goodreads:
+        print(f"\n  [Goodreads ratings pass for {label}]")
+        for i, entry in enumerate(entries, 1):
+            if entry.get("goodreads_rating") is not None:
+                continue  # already populated
+            title  = entry.get("title", "")
+            author = entry.get("author") or "Stephen King"
+            if entry.get("as_bachman"):
+                author = "Richard Bachman"
+            print(f"    GR [{i:>3}/{count}] {title}", end=" ... ", flush=True)
+            rating, count_ = fetch_goodreads_rating(title, author)
+            if rating is not None:
+                entry["goodreads_rating"] = rating
+                entry["goodreads_ratings_count"] = count_
+                totals["gr_filled"] += 1
+                print(f"{rating} ({count_} ratings)")
+            else:
+                print("not found")
+
     path.write_text(json.dumps(entries, indent=2, ensure_ascii=False), encoding="utf-8")
     return entries, totals
 
@@ -281,6 +393,12 @@ def enrich_file(path: Path, label: str) -> tuple[list[dict], dict]:
 # ---------------------------------------------------------------------------
 
 def main() -> int:
+    import argparse
+    parser = argparse.ArgumentParser(description="Enrich catalog with covers and metadata.")
+    parser.add_argument("--goodreads", action="store_true",
+                        help="Also fetch Goodreads ratings (slow; makes many HTTP requests)")
+    args = parser.parse_args()
+
     COVERS_DIR.mkdir(parents=True, exist_ok=True)
 
     # Collect all source files: SK catalog + other-author raw files
@@ -291,14 +409,14 @@ def main() -> int:
         source_files.append((p, stem))
 
     all_entries: list[dict] = []
-    grand_totals = {"cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0, "wc_filled": 0}
+    grand_totals = {"cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0, "wc_filled": 0, "gr_filled": 0}
 
     for path, label in source_files:
         if not path.exists():
             print(f"[SKIP] {path} not found")
             continue
         print(f"\n── {label} ({path.name}) ──")
-        entries, totals = enrich_file(path, label)
+        entries, totals = enrich_file(path, label, fetch_goodreads=args.goodreads)
         all_entries.extend(entries)
         for k, v in totals.items():
             grand_totals[k] += v
@@ -316,6 +434,8 @@ def main() -> int:
     print(f"  Covers skipped:     {grand_totals['cover_skipped']}  (already done)")
     print(f"  Covers failed:      {grand_totals['cover_failed']}  (no OL result or no cover ID)")
     print(f"  Word count fills:   {grand_totals['wc_filled']}  (estimated from page count)")
+    if args.goodreads:
+        print(f"  Goodreads ratings:  {grand_totals['gr_filled']}  (fetched)")
     print(f"  Still needs review: {needs_review_count}")
     print()
 

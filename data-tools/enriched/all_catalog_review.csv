@@ -1,57 +1,58 @@
-id,author,title,year,word_count,audible_minutes,story_type,collection,review_flags
-5,,The Stand,1978,,2867.0,novel,,missing_word_count
-33,,The Plant: Zenith Rising,1982,30000,,short_story,,approximate_word_count
-167,,A Death,2015,4781,32.8,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
-168,,Afterlife,2015,4336,37.9,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
-170,,Batman and Robin Have an Altercation,2015,4784,32.9,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
-173,,Herman Wouk Is Still Alive,2015,6486,45.6,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
-175,,Mister Yummy,2015,5876,36.9,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
-178,,Premium Harmony,2015,3833,26.8,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
-179,,Summer Thunder,2015,5448,36.0,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
-180,,That Bus Is Another World,2015,3023,26.0,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
-182,,The Dune,2015,4869,34.9,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
-183,,The Little Green God of Agony,2015,,58.5,short_story,The Bazaar of Bad Dreams,missing_word_count; audible_format_inferred_mmss
-184,,Cookie Jar,2015,,58.5,short_story,The Bazaar of Bad Dreams,missing_word_count; audible_format_inferred_mmss
-186,,Under the Weather,2015,6077,36.8,short_story,The Bazaar of Bad Dreams,audible_format_inferred_mmss
-193,,Laurie,2018,,,short_story,,missing_word_count
-195,,In the Tall Grass,2019,,105.0,novella,,missing_word_count
-196,,Gwendy's Magic Feather,2019,,277.0,novel,,missing_word_count
-201,,Later,2021,,392.0,novel,,missing_word_count
-202,,Billy Summers,2021,,1017.0,novel,,missing_word_count
-203,,Gwendy's Final Task,2022,,444.0,novel,,missing_word_count
-204,,Fairy Tale,2022,,1446.0,novel,,missing_word_count
-205,,Holly,2023,,,novel,,missing_word_count
-206,,Two Talented Bastids,2024,,,short_story,You Like It Darker,missing_word_count
-207,,The Fifth Step,2024,,,short_story,You Like It Darker,missing_word_count
-208,,Willie the Weirdo,2024,,,short_story,You Like It Darker,missing_word_count
-209,,Danny Coughlin's Bad Dream,2024,,,short_story,You Like It Darker,missing_word_count
-210,,Finn,2024,,,short_story,You Like It Darker,missing_word_count
-211,,On Slide Inn Road,2024,,,short_story,You Like It Darker,missing_word_count
-212,,Red Screen,2024,,,short_story,You Like It Darker,missing_word_count
-213,,The Turbulence Expert,2024,,,short_story,You Like It Darker,missing_word_count
-214,,Laurie,2024,,,short_story,You Like It Darker,missing_word_count
-215,,Rattlesnakes,2024,,,short_story,You Like It Darker,missing_word_count
-216,,The Dreamers,2024,,,short_story,You Like It Darker,missing_word_count
-217,,The Answer Man,2024,,,short_story,You Like It Darker,missing_word_count
-3001,Grady Hendrix,Horrorstör,2014,66275,,novel,,estimated_from_page_count
-3002,Grady Hendrix,My Best Friend's Exorcism,2016,92400,,novel,,estimated_from_page_count
-3003,Grady Hendrix,Paperbacks from Hell,2017,35200,,non_fiction,,estimated_from_page_count
-3004,Grady Hendrix,We Sold Our Souls,2018,92400,,novel,,estimated_from_page_count
-3005,Grady Hendrix,The Southern Book Club's Guide to Slaying Vampires,2020,112200,,novel,,estimated_from_page_count
-3006,Grady Hendrix,The Final Girl Support Group,2021,96800,,novel,,estimated_from_page_count
-2001,Joe Hill,20th Century Ghosts,2005,92400,,collection,,year_is_uk_edition: US edition 2007; estimated_from_page_count
-2002,Joe Hill,Heart-Shaped Box,2007,111100,,novel,,estimated_from_page_count
-2003,Joe Hill,Horns,2010,119900,,novel,,estimated_from_page_count
-2004,Joe Hill,NOS4A2,2013,191675,,novel,,estimated_from_page_count
-2005,Joe Hill,The Fireman,2016,211200,,novel,,estimated_from_page_count
-2006,Joe Hill,Strange Weather,2017,123200,,collection,,estimated_from_page_count
-2007,Joe Hill,Full Throttle,2019,136400,,collection,,estimated_from_page_count
-1001,Josh Malerman,Bird Box,2014,84975,,novel,,estimated_from_page_count
-1002,Josh Malerman,Black Mad Wheel,2016,83600,,novel,,estimated_from_page_count
-1003,Josh Malerman,A House at the Bottom of a Lake,2016,42625,,novella,,estimated_from_page_count
-1004,Josh Malerman,Goblin,2016,116600,,novel,,"year_uncertain: limited ed 2016, trade 2020; estimated_from_page_count"
-1005,Josh Malerman,Unbury Carol,2019,105600,,novel,,estimated_from_page_count
-1006,Josh Malerman,Inspection,2019,110000,,novel,,estimated_from_page_count
-1008,Josh Malerman,Pearl,2021,88000,,novel,,plot_summary_uncertain; estimated_from_page_count
-1009,Josh Malerman,"On This, the Day of the Pig",2021,,,novella,,year_uncertain; story_type_uncertain
-1012,Josh Malerman,Incidents Around the House,2024,105600,,novel,,estimated_from_page_count
+id,author,title,year,word_count,audible_minutes,story_type,collection,goodreads_rating,goodreads_ratings_count,review_flags
+5,,The Stand,1978,,2867.0,novel,,,,missing_word_count
+33,,The Plant: Zenith Rising,1982,30000,,short_story,,,,approximate_word_count
+167,,A Death,2015,4781,32.8,short_story,The Bazaar of Bad Dreams,,,audible_format_inferred_mmss
+168,,Afterlife,2015,4336,37.9,short_story,The Bazaar of Bad Dreams,,,audible_format_inferred_mmss
+170,,Batman and Robin Have an Altercation,2015,4784,32.9,short_story,The Bazaar of Bad Dreams,,,audible_format_inferred_mmss
+173,,Herman Wouk Is Still Alive,2015,6486,45.6,short_story,The Bazaar of Bad Dreams,,,audible_format_inferred_mmss
+175,,Mister Yummy,2015,5876,36.9,short_story,The Bazaar of Bad Dreams,,,audible_format_inferred_mmss
+178,,Premium Harmony,2015,3833,26.8,short_story,The Bazaar of Bad Dreams,,,audible_format_inferred_mmss
+179,,Summer Thunder,2015,5448,36.0,short_story,The Bazaar of Bad Dreams,,,audible_format_inferred_mmss
+180,,That Bus Is Another World,2015,3023,26.0,short_story,The Bazaar of Bad Dreams,,,audible_format_inferred_mmss
+182,,The Dune,2015,4869,34.9,short_story,The Bazaar of Bad Dreams,,,audible_format_inferred_mmss
+183,,The Little Green God of Agony,2015,,58.5,short_story,The Bazaar of Bad Dreams,,,missing_word_count; audible_format_inferred_mmss
+184,,Cookie Jar,2015,,58.5,short_story,The Bazaar of Bad Dreams,,,missing_word_count; audible_format_inferred_mmss
+186,,Under the Weather,2015,6077,36.8,short_story,The Bazaar of Bad Dreams,,,audible_format_inferred_mmss
+193,,Laurie,2018,,,short_story,,,,missing_word_count
+195,,In the Tall Grass,2019,,105.0,novella,,,,missing_word_count
+196,,Gwendy's Magic Feather,2019,,277.0,novel,,,,missing_word_count
+201,,Later,2021,,392.0,novel,,,,missing_word_count
+202,,Billy Summers,2021,,1017.0,novel,,,,missing_word_count
+203,,Gwendy's Final Task,2022,,444.0,novel,,,,missing_word_count
+204,,Fairy Tale,2022,,1446.0,novel,,,,missing_word_count
+205,,Holly,2023,,,novel,,,,missing_word_count
+206,,Two Talented Bastids,2024,,,short_story,You Like It Darker,,,missing_word_count
+207,,The Fifth Step,2024,,,short_story,You Like It Darker,,,missing_word_count
+208,,Willie the Weirdo,2024,,,short_story,You Like It Darker,,,missing_word_count
+209,,Danny Coughlin's Bad Dream,2024,,,short_story,You Like It Darker,,,missing_word_count
+210,,Finn,2024,,,short_story,You Like It Darker,,,missing_word_count
+211,,On Slide Inn Road,2024,,,short_story,You Like It Darker,,,missing_word_count
+212,,Red Screen,2024,,,short_story,You Like It Darker,,,missing_word_count
+213,,The Turbulence Expert,2024,,,short_story,You Like It Darker,,,missing_word_count
+214,,Laurie,2024,,,short_story,You Like It Darker,,,missing_word_count
+215,,Rattlesnakes,2024,,,short_story,You Like It Darker,,,missing_word_count
+216,,The Dreamers,2024,,,short_story,You Like It Darker,,,missing_word_count
+217,,The Answer Man,2024,,,short_story,You Like It Darker,,,missing_word_count
+218,,The Bachman Books,1985,248050,,collection,,,,estimated_from_page_count
+3001,Grady Hendrix,Horrorstör,2014,66275,,novel,,,,estimated_from_page_count
+3002,Grady Hendrix,My Best Friend's Exorcism,2016,92400,,novel,,,,estimated_from_page_count
+3003,Grady Hendrix,Paperbacks from Hell,2017,35200,,non_fiction,,,,estimated_from_page_count
+3004,Grady Hendrix,We Sold Our Souls,2018,92400,,novel,,,,estimated_from_page_count
+3005,Grady Hendrix,The Southern Book Club's Guide to Slaying Vampires,2020,112200,,novel,,,,estimated_from_page_count
+3006,Grady Hendrix,The Final Girl Support Group,2021,96800,,novel,,,,estimated_from_page_count
+2001,Joe Hill,20th Century Ghosts,2005,92400,,collection,,,,year_is_uk_edition: US edition 2007; estimated_from_page_count
+2002,Joe Hill,Heart-Shaped Box,2007,111100,,novel,,,,estimated_from_page_count
+2003,Joe Hill,Horns,2010,119900,,novel,,,,estimated_from_page_count
+2004,Joe Hill,NOS4A2,2013,191675,,novel,,,,estimated_from_page_count
+2005,Joe Hill,The Fireman,2016,211200,,novel,,,,estimated_from_page_count
+2006,Joe Hill,Strange Weather,2017,123200,,collection,,,,estimated_from_page_count
+2007,Joe Hill,Full Throttle,2019,136400,,collection,,,,estimated_from_page_count
+1001,Josh Malerman,Bird Box,2014,84975,,novel,,,,estimated_from_page_count
+1002,Josh Malerman,Black Mad Wheel,2016,83600,,novel,,,,estimated_from_page_count
+1003,Josh Malerman,A House at the Bottom of a Lake,2016,42625,,novella,,,,estimated_from_page_count
+1004,Josh Malerman,Goblin,2016,116600,,novel,,,,"year_uncertain: limited ed 2016, trade 2020; estimated_from_page_count"
+1005,Josh Malerman,Unbury Carol,2019,105600,,novel,,,,estimated_from_page_count
+1006,Josh Malerman,Inspection,2019,110000,,novel,,,,estimated_from_page_count
+1008,Josh Malerman,Pearl,2021,88000,,novel,,,,plot_summary_uncertain; estimated_from_page_count
+1009,Josh Malerman,"On This, the Day of the Pig",2021,,,novella,,,,year_uncertain; story_type_uncertain
+1012,Josh Malerman,Incidents Around the House,2024,105600,,novel,,,,estimated_from_page_count

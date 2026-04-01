@@ -272,5 +272,43 @@
     "review_flags": [
       "estimated_from_page_count"
     ]
+  },
+  {
+    "id": 2008,
+    "title": "King Sorrow",
+    "author": "Joe Hill",
+    "year": 2025,
+    "decade": 2020,
+    "word_count": 270000,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Horror",
+      "Dark Fantasy",
+      "Supernatural Fiction"
+    ],
+    "keywords": [
+      "dark academia",
+      "dragons",
+      "faustian bargain",
+      "supernatural",
+      "occult"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Joe Hill's fifth novel. A Faustian fable of dark academia, summoned dragons, and a terrible bargain made by six friends.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/15138472-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/King_Sorrow.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "ok",
+    "review_flags": [],
+    "goodreads_rating": null,
+    "goodreads_ratings_count": null
   }
 ]

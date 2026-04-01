@@ -33,12 +33,12 @@ public final class KingCatalogDatabase_Impl extends KingCatalogDatabase {
   @Override
   @NonNull
   protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(3) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(4) {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS `books` (`id` INTEGER NOT NULL, `title` TEXT NOT NULL, `author` TEXT NOT NULL, `as_bachman` INTEGER NOT NULL, `year` INTEGER, `decade` INTEGER, `word_count` INTEGER, `audible_minutes` INTEGER, `story_type` TEXT NOT NULL, `keywords` TEXT NOT NULL, `genres` TEXT NOT NULL, `is_collection_parent` INTEGER NOT NULL, `collection` TEXT, `collection_id` INTEGER, `child_ids` TEXT NOT NULL, `has_adaptation` INTEGER NOT NULL, `adaptations` TEXT NOT NULL, `imdb_url` TEXT, `cover_local_path` TEXT, `cover_candidate_url` TEXT, `is_owned` INTEGER NOT NULL, `is_read` INTEGER NOT NULL, `is_reading_now` INTEGER NOT NULL, `is_on_reading_list` INTEGER NOT NULL, `last_status_changed` INTEGER, `notes` TEXT, PRIMARY KEY(`id`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `books` (`id` INTEGER NOT NULL, `title` TEXT NOT NULL, `author` TEXT NOT NULL, `as_bachman` INTEGER NOT NULL, `year` INTEGER, `decade` INTEGER, `word_count` INTEGER, `audible_minutes` INTEGER, `story_type` TEXT NOT NULL, `keywords` TEXT NOT NULL, `genres` TEXT NOT NULL, `is_collection_parent` INTEGER NOT NULL, `collection` TEXT, `collection_id` INTEGER, `child_ids` TEXT NOT NULL, `has_adaptation` INTEGER NOT NULL, `adaptations` TEXT NOT NULL, `imdb_url` TEXT, `cover_local_path` TEXT, `cover_candidate_url` TEXT, `goodreads_rating` REAL, `goodreads_ratings_count` INTEGER, `is_owned` INTEGER NOT NULL, `is_read` INTEGER NOT NULL, `is_reading_now` INTEGER NOT NULL, `is_on_reading_list` INTEGER NOT NULL, `last_status_changed` INTEGER, `notes` TEXT, PRIMARY KEY(`id`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd8967728827618f743c425e115c1e125')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'fe4a738c33d2e5de6b2d0a9bdbba1beb')");
       }
 
       @Override
@@ -87,7 +87,7 @@ public final class KingCatalogDatabase_Impl extends KingCatalogDatabase {
       @NonNull
       public RoomOpenHelper.ValidationResult onValidateSchema(
           @NonNull final SupportSQLiteDatabase db) {
-        final HashMap<String, TableInfo.Column> _columnsBooks = new HashMap<String, TableInfo.Column>(26);
+        final HashMap<String, TableInfo.Column> _columnsBooks = new HashMap<String, TableInfo.Column>(28);
         _columnsBooks.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsBooks.put("title", new TableInfo.Column("title", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsBooks.put("author", new TableInfo.Column("author", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -108,6 +108,8 @@ public final class KingCatalogDatabase_Impl extends KingCatalogDatabase {
         _columnsBooks.put("imdb_url", new TableInfo.Column("imdb_url", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsBooks.put("cover_local_path", new TableInfo.Column("cover_local_path", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsBooks.put("cover_candidate_url", new TableInfo.Column("cover_candidate_url", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsBooks.put("goodreads_rating", new TableInfo.Column("goodreads_rating", "REAL", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsBooks.put("goodreads_ratings_count", new TableInfo.Column("goodreads_ratings_count", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsBooks.put("is_owned", new TableInfo.Column("is_owned", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsBooks.put("is_read", new TableInfo.Column("is_read", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsBooks.put("is_reading_now", new TableInfo.Column("is_reading_now", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -125,7 +127,7 @@ public final class KingCatalogDatabase_Impl extends KingCatalogDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "d8967728827618f743c425e115c1e125", "655dddc37e1987aa7e8d1f35a49c53ea");
+    }, "fe4a738c33d2e5de6b2d0a9bdbba1beb", "aa520930df5439915ebb49d676cdd696");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;

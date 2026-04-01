@@ -4492,9 +4492,9 @@
     "is_collection_parent": false,
     "notes": "Parallel universe with Desperation. Published at the same time as twinner novel of Desperation",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Regulators__Bachman_.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5423,9 +5423,9 @@
     "is_collection_parent": false,
     "notes": "Part V. Alternate worlds. Has the most occurrences of the word \"twins\" with 59 instances",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__Wolves_of_the_Calla.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5451,9 +5451,9 @@
     "is_collection_parent": false,
     "notes": "Part VI. Alternate worlds",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__Song_of_Susannah.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -5626,9 +5626,9 @@
     "is_collection_parent": false,
     "notes": "Supernatural",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Blaze__Bachman_.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -6469,9 +6469,9 @@
     "is_collection_parent": false,
     "notes": "Part 4.5. Alternate worlds",
     "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__The_Wind_Through_the_Keyhole.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": []
   },
@@ -8251,7 +8251,7 @@
     "title": "The Bachman Books",
     "year": 1985,
     "decade": 1980,
-    "word_count": null,
+    "word_count": 248050,
     "audible_minutes": null,
     "story_type": "collection",
     "genres": [],
@@ -8270,12 +8270,14 @@
     ],
     "boring_description": null,
     "notes": "Collection of 4 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/The_Bachman_Books.jpg",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8565607-L.jpg",
+    "cover_local_path": null,
     "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": []
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
   },
   {
     "id": 219,
