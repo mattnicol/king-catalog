@@ -289,8 +289,8 @@ def _extract_book_urls(html: str) -> list[str]:
     seen: set[str] = set()
     results: list[str] = []
     patterns = [
-        r'href=["\'](/book/show/[0-9]+[^"\'?\s#]*)["\']',
-        r'href=["\']https?://(?:www\.)?goodreads\.com(/book/show/[0-9]+[^"\'?\s#]*)["\']',
+        r'href=["\']?(/book/show/[0-9]+[^"\'?\s#]*)',
+        r'href=["\']?https?://(?:www\.)?goodreads\.com(/book/show/[0-9]+[^"\'?\s#]*)',
     ]
     for pat in patterns:
         for m in re.finditer(pat, html):
@@ -305,17 +305,90 @@ def _extract_book_urls(html: str) -> list[str]:
 
 
 def _normalize_for_match(s: str) -> str:
-    """Lowercase, strip punctuation/parens/subtitles for loose title matching."""
+    """Lowercase, strip punctuation/parens/articles for loose title matching."""
     s = re.sub(r"\s*\([^)]*\)", "", s)           # remove parentheticals
-    s = re.split(r"[:\u2013\u2014]", s)[0]        # strip subtitles
     s = re.sub(r"[^a-z0-9 ]", "", s.lower())
+    # Drop leading articles for matching purposes
+    s = re.sub(r"^(the|a|an) ", "", s.strip())
     return s.strip()
+
+
+def _extract_subtitle(title: str) -> str | None:
+    """Return the post-colon portion of a title, if any."""
+    if ":" in title:
+        part = title.split(":", 1)[1].strip()
+        return part if part else None
+    return None
+
+
+def _series_query_variants(title: str, author: str, is_bachman: bool) -> list[str]:
+    """
+    Build an ordered list of search queries to try for a title.
+    Tries the most specific query first, falling back to progressively looser ones.
+    """
+    # Strip Bachman annotation before building queries
+    clean = re.sub(r"\s*\(Bachman\)\s*$", "", title, flags=re.IGNORECASE).strip()
+
+    queries: list[str] = []
+
+    # 1. Full title + author
+    queries.append(f"{clean} {author}")
+
+    # 2. If title has a series prefix ("Series: Subtitle"), try subtitle + author
+    subtitle = _extract_subtitle(clean)
+    if subtitle:
+        queries.append(f"{subtitle} {author}")
+        queries.append(subtitle)
+
+    # 3. Bachman alias fallback: also search under "Stephen King"
+    if is_bachman:
+        queries.append(f"{clean} Stephen King")
+        if subtitle:
+            queries.append(f"{subtitle} Stephen King")
+
+    # 4. Bare title as last resort
+    queries.append(clean)
+
+    # Deduplicate while preserving order
+    seen: set[str] = set()
+    unique: list[str] = []
+    for q in queries:
+        if q not in seen:
+            seen.add(q)
+            unique.append(q)
+    return unique
+
+
+def _title_matches(norm_title: str, page_title_norm: str) -> tuple[bool, str]:
+    """
+    Check if the normalised catalog title plausibly matches the Goodreads page title.
+    Returns (matched: bool, reason: str) so callers can log rejections.
+    """
+    if not norm_title or len(norm_title) < 3:
+        return True, "title too short to verify"
+
+    # Word-overlap check: at least one significant word (≥4 chars) must appear in
+    # the page title.  This handles "The Dark Tower I: The Gunslinger" → "gunslinger"
+    # matching against a page whose <title> is "The Gunslinger (The Dark Tower, #1)".
+    title_words = {w for w in norm_title.split() if len(w) >= 4}
+    page_words  = {w for w in page_title_norm.split() if len(w) >= 4}
+    overlap = title_words & page_words
+    if overlap:
+        return True, f"word overlap: {overlap}"
+
+    # Substring check as safety net for very short significant words
+    if norm_title in page_title_norm or page_title_norm[:len(norm_title)] == norm_title:
+        return True, "substring match"
+
+    return False, f"no overlap — title words={title_words!r} page words={page_words!r}"
 
 
 def fetch_goodreads_rating(
     title: str,
     author: str,
     year: int | None = None,
+    is_bachman: bool = False,
+    verbose: bool = True,
 ) -> tuple[float | None, int | None]:
     """
     Search Goodreads for a book and return (rating, ratings_count).
@@ -323,12 +396,14 @@ def fetch_goodreads_rating(
     Returns (None, None) if no confident match is found.
     Never invents values.
     """
-    # Strip publishing-name annotation from title
     clean_title = re.sub(r"\s*\(Bachman\)\s*$", "", title, flags=re.IGNORECASE).strip()
-    norm_title = _normalize_for_match(clean_title)
 
-    # Try title+author first, then title alone as a fallback
-    queries = [f"{clean_title} {author}", clean_title]
+    # Build normalised title for matching — prefer the subtitle when present
+    # (e.g. "The Dark Tower I: The Gunslinger" → match on "gunslinger")
+    subtitle = _extract_subtitle(clean_title)
+    norm_title = _normalize_for_match(subtitle if subtitle else clean_title)
+
+    queries = _series_query_variants(title, author, is_bachman)
 
     for query in queries:
         search_url = (
@@ -339,34 +414,51 @@ def fetch_goodreads_rating(
         search_html = _fetch_url(search_url)
         time.sleep(GR_REQUEST_DELAY)
         if not search_html:
+            if verbose:
+                print(f"      [GR] fetch failed for query: {query!r}", flush=True)
             continue
 
         book_urls = _extract_book_urls(search_html)
         if not book_urls:
+            if verbose:
+                print(f"      [GR] no book URLs in search results for: {query!r}", flush=True)
             continue
 
         # Try top candidates from this search
+        found_url_but_no_rating = False
         for book_url in book_urls[:3]:
             book_html = _fetch_url(book_url)
             time.sleep(GR_REQUEST_DELAY)
             if not book_html:
+                if verbose:
+                    print(f"      [GR] failed to fetch {book_url}", flush=True)
                 continue
 
-            # Sanity-check: page title should contain a fragment of our title
+            # Title sanity-check against <title> tag
             page_title_m = re.search(r"<title[^>]*>([^<]+)</title>", book_html, re.IGNORECASE)
             if page_title_m:
                 page_title_norm = _normalize_for_match(page_title_m.group(1))
-                # Require at least 3 chars of our title to appear in the page title
-                if norm_title and len(norm_title) >= 3:
-                    if norm_title[:6] not in page_title_norm and page_title_norm[:6] not in norm_title:
-                        continue  # wrong book
+                matched, reason = _title_matches(norm_title, page_title_norm)
+                if not matched:
+                    if verbose:
+                        print(
+                            f"      [GR] SKIP {book_url} — {reason}",
+                            flush=True,
+                        )
+                    continue
 
             rating, count = _parse_gr_rating(book_html)
             if rating is not None:
                 return rating, count
 
-        # Found URLs but no rating — don't fall through to title-only query
-        break
+            if verbose:
+                print(f"      [GR] rating not parsed from {book_url}", flush=True)
+            found_url_but_no_rating = True
+
+        if found_url_but_no_rating:
+            # We found a plausible page but couldn't parse the rating — don't
+            # keep trying looser queries that might return a wrong book.
+            break
 
     return None, None
 
@@ -515,20 +607,21 @@ def enrich_file(path: Path, label: str, fetch_goodreads: bool = False) -> tuple[
         for i, entry in enumerate(entries, 1):
             if entry.get("goodreads_rating") is not None:
                 continue  # already populated
-            title  = entry.get("title", "")
-            year_  = entry.get("year")
-            author = entry.get("author") or "Stephen King"
-            if entry.get("as_bachman"):
-                author = "Richard Bachman"
-            print(f"    GR [{i:>3}/{count}] {title}", end=" ... ", flush=True)
-            rating, count_ = fetch_goodreads_rating(title, author, year=year_)
+            title      = entry.get("title", "")
+            year_      = entry.get("year")
+            is_bachman = bool(entry.get("as_bachman"))
+            author     = "Richard Bachman" if is_bachman else (entry.get("author") or "Stephen King")
+            print(f"    GR [{i:>3}/{count}] {title}", end="\n", flush=True)
+            rating, count_ = fetch_goodreads_rating(
+                title, author, year=year_, is_bachman=is_bachman, verbose=True,
+            )
             if rating is not None:
                 entry["goodreads_rating"] = rating
                 entry["goodreads_ratings_count"] = count_
                 totals["gr_filled"] += 1
-                print(f"{rating} ({count_} ratings)")
+                print(f"      => {rating} ({count_} ratings)", flush=True)
             else:
-                print("not found")
+                print(f"      => not found", flush=True)
 
     path.write_text(json.dumps(entries, indent=2, ensure_ascii=False), encoding="utf-8")
     return entries, totals

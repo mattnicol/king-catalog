@@ -44,7 +44,9 @@
     "review_status": "needs_review",
     "review_flags": [
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 4.05,
+    "goodreads_ratings_count": 212616
   },
   {
     "id": 1002,
@@ -80,7 +82,9 @@
     "review_status": "needs_review",
     "review_flags": [
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.27,
+    "goodreads_ratings_count": 5790
   },
   {
     "id": 1003,
@@ -115,7 +119,9 @@
     "review_status": "needs_review",
     "review_flags": [
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.18,
+    "goodreads_ratings_count": 20194
   },
   {
     "id": 1004,
@@ -151,7 +157,9 @@
     "review_flags": [
       "year_uncertain: limited ed 2016, trade 2020",
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.39,
+    "goodreads_ratings_count": 6213
   },
   {
     "id": 1005,
@@ -187,7 +195,9 @@
     "review_status": "needs_review",
     "review_flags": [
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.33,
+    "goodreads_ratings_count": 6460
   },
   {
     "id": 1006,
@@ -224,7 +234,9 @@
     "review_status": "needs_review",
     "review_flags": [
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.48,
+    "goodreads_ratings_count": 9025
   },
   {
     "id": 1007,
@@ -258,7 +270,9 @@
     "cover_verified": false,
     "cover_source": "open_library",
     "review_status": "ok",
-    "review_flags": []
+    "review_flags": [],
+    "goodreads_rating": 3.79,
+    "goodreads_ratings_count": 28142
   },
   {
     "id": 1008,
@@ -295,7 +309,9 @@
     "review_flags": [
       "plot_summary_uncertain",
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.37,
+    "goodreads_ratings_count": 6629
   },
   {
     "id": 1009,
@@ -330,7 +346,9 @@
     "review_flags": [
       "year_uncertain",
       "story_type_uncertain"
-    ]
+    ],
+    "goodreads_rating": 3.37,
+    "goodreads_ratings_count": 6629
   },
   {
     "id": 1010,
@@ -363,7 +381,9 @@
     "cover_verified": false,
     "cover_source": "open_library",
     "review_status": "ok",
-    "review_flags": []
+    "review_flags": [],
+    "goodreads_rating": 3.37,
+    "goodreads_ratings_count": 6383
   },
   {
     "id": 1011,
@@ -396,7 +416,9 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": []
+    "review_flags": [],
+    "goodreads_rating": 3.09,
+    "goodreads_ratings_count": 14777
   },
   {
     "id": 1012,
@@ -431,6 +453,8 @@
     "review_status": "needs_review",
     "review_flags": [
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.56,
+    "goodreads_ratings_count": 95391
   }
 ]

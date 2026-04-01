@@ -33,7 +33,9 @@
     "review_flags": [
       "year_is_uk_edition: US edition 2007",
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.89,
+    "goodreads_ratings_count": 49785
   },
   {
     "id": 2002,
@@ -69,7 +71,9 @@
     "review_status": "needs_review",
     "review_flags": [
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.0,
+    "goodreads_ratings_count": 1
   },
   {
     "id": 2003,
@@ -117,7 +121,9 @@
     "review_status": "needs_review",
     "review_flags": [
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.93,
+    "goodreads_ratings_count": 121029
   },
   {
     "id": 2004,
@@ -164,7 +170,9 @@
     "review_status": "needs_review",
     "review_flags": [
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 4.0,
+    "goodreads_ratings_count": 1
   },
   {
     "id": 2005,
@@ -201,7 +209,9 @@
     "review_status": "needs_review",
     "review_flags": [
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.92,
+    "goodreads_ratings_count": 66561
   },
   {
     "id": 2006,
@@ -237,7 +247,9 @@
     "review_status": "needs_review",
     "review_flags": [
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.86,
+    "goodreads_ratings_count": 27036
   },
   {
     "id": 2007,
@@ -271,7 +283,9 @@
     "review_status": "needs_review",
     "review_flags": [
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.99,
+    "goodreads_ratings_count": 19462
   },
   {
     "id": 2008,
@@ -308,7 +322,7 @@
     "cover_source": "open_library",
     "review_status": "ok",
     "review_flags": [],
-    "goodreads_rating": null,
-    "goodreads_ratings_count": null
+    "goodreads_rating": 4.39,
+    "goodreads_ratings_count": 22460
   }
 ]
