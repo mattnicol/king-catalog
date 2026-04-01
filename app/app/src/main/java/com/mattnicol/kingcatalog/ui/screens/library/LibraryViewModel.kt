@@ -55,6 +55,7 @@ class LibraryViewModel(application: Application) : AndroidViewModel(application)
                     decadeFilter = filter.decades,
                     bachamanFilter = filter.bachman,
                     readFilter = filter.isRead,
+                    inLibraryFilter = filter.inLibrary,
                 )
             }
             .sortedWith(compareBy(nullsLast()) {

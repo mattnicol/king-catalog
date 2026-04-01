@@ -63,7 +63,8 @@ fun BooksScreen(vm: BooksViewModel = viewModel(), onBookClick: (Int) -> Unit = {
     val sheetState = rememberModalBottomSheetState()
 
     val activeFilterCount = filter.storyTypes.size + filter.genres.size + filter.keywords.size +
-        filter.decades.size + if (filter.bachman != null) 1 else 0 + if (filter.isRead != null) 1 else 0
+        filter.decades.size + (if (filter.bachman != null) 1 else 0) +
+        (if (filter.isRead != null) 1 else 0) + (if (filter.inLibrary != null) 1 else 0)
 
     Surface(modifier = Modifier.fillMaxSize()) {
         Column {
@@ -113,9 +114,30 @@ fun BooksScreen(vm: BooksViewModel = viewModel(), onBookClick: (Int) -> Unit = {
                 }
             }
 
+            Row(
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 2.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                FilterChip(
+                    selected = filter.inLibrary == null,
+                    onClick = { vm.onFilterChange(filter.copy(inLibrary = null)) },
+                    label = { Text("All") },
+                )
+                FilterChip(
+                    selected = filter.inLibrary == true,
+                    onClick = { vm.onFilterChange(filter.copy(inLibrary = if (filter.inLibrary == true) null else true)) },
+                    label = { Text("In Library") },
+                )
+                FilterChip(
+                    selected = filter.inLibrary == false,
+                    onClick = { vm.onFilterChange(filter.copy(inLibrary = if (filter.inLibrary == false) null else false)) },
+                    label = { Text("Not In Library") },
+                )
+            }
+
             LazyColumn(
                 contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
                 // Collapsible Stephen King section header
                 item(key = "sk_header") {
@@ -128,7 +150,8 @@ fun BooksScreen(vm: BooksViewModel = viewModel(), onBookClick: (Int) -> Unit = {
                     ) {
                         Text(
                             text = "Stephen King",
-                            style = MaterialTheme.typography.titleMedium,
+                            style = MaterialTheme.typography.titleLarge,
+                            color = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.weight(1f),
                         )
                         Icon(

@@ -20,12 +20,14 @@ class OtherAuthorsViewModel(application: Application) : AndroidViewModel(applica
     private val repo = (application as KingCatalogApp).bookRepository
 
     val searchQuery = MutableStateFlow("")
+    val inLibraryFilter = MutableStateFlow<Boolean?>(null)
 
-    // Books grouped by author, filtered by search query
+    // Books grouped by author, filtered by search query and library state
     val booksByAuthor: StateFlow<Map<String, List<Book>>> = combine(
         repo.observeOtherAuthors(),
         searchQuery,
-    ) { all, query ->
+        inLibraryFilter,
+    ) { all, query, inLibrary ->
         val filtered = all.filter {
             it.matchesFilter(
                 query = query,
@@ -35,6 +37,7 @@ class OtherAuthorsViewModel(application: Application) : AndroidViewModel(applica
                 decadeFilter = emptySet(),
                 bachamanFilter = null,
                 readFilter = null,
+                inLibraryFilter = inLibrary,
             )
         }
         // Group preserving OTHER_AUTHORS display order; unknown authors appended alphabetically
@@ -48,6 +51,7 @@ class OtherAuthorsViewModel(application: Application) : AndroidViewModel(applica
     }.stateIn(viewModelScope, SharingStarted.Lazily, emptyMap())
 
     fun onQueryChange(q: String) { searchQuery.value = q }
+    fun onInLibraryFilter(v: Boolean?) { inLibraryFilter.value = v }
 
     fun onReadingNow(book: Book) = viewModelScope.launch {
         repo.setReadingNow(book, !book.isReadingNow)

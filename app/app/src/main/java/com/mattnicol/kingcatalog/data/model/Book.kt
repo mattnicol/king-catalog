@@ -21,6 +21,8 @@ data class Book(
     val imdbUrl: String?,
     val coverLocalPath: String?,
     val coverCandidateUrl: String?,
+    val goodreadsRating: Float?,
+    val goodreadsRatingsCount: Int?,
     val isOwned: Boolean,
     val isRead: Boolean,
     val isReadingNow: Boolean,
@@ -37,6 +39,7 @@ fun Book.matchesFilter(
     decadeFilter: Set<Int>,
     bachamanFilter: Boolean?,
     readFilter: Boolean?,
+    inLibraryFilter: Boolean?,
 ): Boolean {
     if (query.isNotBlank() && !title.contains(query, ignoreCase = true)) return false
     if (storyTypeFilter.isNotEmpty() && storyType !in storyTypeFilter) return false
@@ -45,5 +48,6 @@ fun Book.matchesFilter(
     if (decadeFilter.isNotEmpty() && decade !in decadeFilter) return false
     if (bachamanFilter != null && asBachman != bachamanFilter) return false
     if (readFilter != null && isRead != readFilter) return false
+    if (inLibraryFilter != null && isOwned != inLibraryFilter) return false
     return true
 }

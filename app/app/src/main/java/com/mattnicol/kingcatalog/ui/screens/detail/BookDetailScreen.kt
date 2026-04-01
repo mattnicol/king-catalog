@@ -158,7 +158,11 @@ fun BookDetailScreen(bookId: Int, onBack: () -> Unit) {
                 item {
                     Column {
                         Text(b.title, style = MaterialTheme.typography.headlineSmall)
-                        val authorLine = if (b.asBachman) "Stephen King writing as Richard Bachman" else "Stephen King"
+                        val authorLine = when {
+                            b.asBachman -> "Stephen King writing as Richard Bachman"
+                            b.author != "Stephen King" -> b.author
+                            else -> "Stephen King"
+                        }
                         Text(
                             authorLine,
                             style = MaterialTheme.typography.bodyMedium,
@@ -215,6 +219,26 @@ fun BookDetailScreen(bookId: Int, onBack: () -> Unit) {
                             }
                         }
                         Text(parts.joinToString(" · "), style = MaterialTheme.typography.bodyMedium)
+                    }
+                }
+
+                // Goodreads rating
+                if (b.goodreadsRating != null) {
+                    item {
+                        val ratingStr = "★ ${"%.2f".format(b.goodreadsRating)}"
+                        val countStr = b.goodreadsRatingsCount?.let { count ->
+                            val fmt = when {
+                                count >= 1_000_000 -> "${"%.1f".format(count / 1_000_000f)}M"
+                                count >= 1_000 -> "${"%.0f".format(count / 1_000f)}K"
+                                else -> count.toString()
+                            }
+                            "  ($fmt ratings on Goodreads)"
+                        } ?: "  (Goodreads)"
+                        Text(
+                            text = ratingStr + countStr,
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.75f),
+                        )
                     }
                 }
 

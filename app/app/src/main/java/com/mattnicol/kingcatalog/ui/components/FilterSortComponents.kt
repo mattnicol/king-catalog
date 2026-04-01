@@ -164,7 +164,7 @@ fun FilterSheet(
 
         Divider(modifier = Modifier.padding(vertical = 4.dp))
 
-        FilterSection(label = "Status") {
+        FilterSection(label = "Read Status") {
             Row(
                 modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -186,16 +186,41 @@ fun FilterSheet(
                 )
             }
         }
+
+        Divider(modifier = Modifier.padding(vertical = 4.dp))
+
+        FilterSection(label = "Library") {
+            Row(
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                FilterChip(
+                    selected = filter.inLibrary == null,
+                    onClick = { onFilterChange(filter.copy(inLibrary = null)) },
+                    label = { Text("All") },
+                )
+                FilterChip(
+                    selected = filter.inLibrary == true,
+                    onClick = { onFilterChange(filter.copy(inLibrary = if (filter.inLibrary == true) null else true)) },
+                    label = { Text("In Library") },
+                )
+                FilterChip(
+                    selected = filter.inLibrary == false,
+                    onClick = { onFilterChange(filter.copy(inLibrary = if (filter.inLibrary == false) null else false)) },
+                    label = { Text("Not In Library") },
+                )
+            }
+        }
     }
 }
 
 @Composable
 fun FilterSection(label: String, content: @Composable () -> Unit) {
     Text(
-        text = label,
-        style = MaterialTheme.typography.labelMedium,
+        text = label.uppercase(),
+        style = MaterialTheme.typography.labelSmall,
         color = MaterialTheme.colorScheme.primary,
-        modifier = Modifier.padding(start = 16.dp, top = 10.dp, bottom = 2.dp),
+        modifier = Modifier.padding(start = 16.dp, top = 12.dp, bottom = 2.dp),
     )
     content()
 }

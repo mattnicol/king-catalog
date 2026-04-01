@@ -24,6 +24,7 @@ data class FilterState(
     val decades: Set<Int> = emptySet(),
     val bachman: Boolean? = null,
     val isRead: Boolean? = null,
+    val inLibrary: Boolean? = null,
 )
 
 @OptIn(ExperimentalCoroutinesApi::class)
@@ -64,6 +65,7 @@ class BooksViewModel(application: Application) : AndroidViewModel(application) {
                     decadeFilter = filter.decades,
                     bachamanFilter = filter.bachman,
                     readFilter = filter.isRead,
+                    inLibraryFilter = filter.inLibrary,
                 )
             }
             .sortedWith(compareBy(nullsLast()) {

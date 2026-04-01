@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.Collections
 import androidx.compose.material.icons.filled.Movie
 import androidx.compose.material3.Card
@@ -55,13 +56,14 @@ fun BookCard(
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceVariant,
         ),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
     ) {
         Row(
-            modifier = Modifier.padding(8.dp),
+            modifier = Modifier.padding(10.dp),
             verticalAlignment = Alignment.Top,
         ) {
-            BookCover(book = book, modifier = Modifier.size(64.dp, 96.dp))
-            Spacer(Modifier.width(12.dp))
+            BookCover(book = book, modifier = Modifier.size(60.dp, 90.dp))
+            Spacer(Modifier.width(14.dp))
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = book.title,
@@ -69,20 +71,29 @@ fun BookCard(
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                 )
-                book.year?.let {
-                    Spacer(Modifier.height(2.dp))
-                    Text(
-                        text = it.toString(),
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.55f),
-                    )
-                }
                 Spacer(Modifier.height(3.dp))
-                Text(
-                    text = book.storyType.replace('_', ' ').replaceFirstChar { it.uppercase() },
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.primary,
-                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                ) {
+                    Text(
+                        text = book.storyType.replace('_', ' ').replaceFirstChar { it.uppercase() },
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.primary,
+                    )
+                    book.year?.let {
+                        Text(
+                            text = "·",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.35f),
+                        )
+                        Text(
+                            text = it.toString(),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.55f),
+                        )
+                    }
+                }
                 // Word count + audible length meta row
                 val metaParts = buildList {
                     book.wordCount?.let { add("~${it / 1000}K words") }
@@ -91,17 +102,26 @@ fun BookCard(
                         val m = mins % 60
                         add(if (h > 0) "${h}h ${m}m" else "${m}m")
                     }
+                    book.goodreadsRating?.let { add("★ ${"%.2f".format(it)}") }
                 }
                 if (metaParts.isNotEmpty()) {
-                    Spacer(Modifier.height(2.dp))
+                    Spacer(Modifier.height(3.dp))
                     Text(
                         text = metaParts.joinToString(" · "),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.45f),
                     )
                 }
-                Spacer(Modifier.height(4.dp))
+                Spacer(Modifier.height(5.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    if (book.isOwned) {
+                        Icon(
+                            Icons.Filled.BookmarkBorder,
+                            contentDescription = "In library",
+                            modifier = Modifier.size(14.dp),
+                            tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.8f),
+                        )
+                    }
                     if (book.isCollectionParent) {
                         Icon(
                             Icons.Filled.Collections,

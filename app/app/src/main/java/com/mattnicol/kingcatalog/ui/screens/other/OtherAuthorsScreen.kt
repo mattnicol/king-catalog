@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -15,6 +16,7 @@ import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
@@ -46,6 +48,7 @@ fun OtherAuthorsScreen(
 ) {
     val booksByAuthor by vm.booksByAuthor.collectAsState()
     val query by vm.searchQuery.collectAsState()
+    val inLibrary by vm.inLibraryFilter.collectAsState()
 
     // Per-author expanded state; defaults to true (expanded)
     val expandedState = remember { mutableStateMapOf<String, Boolean>() }
@@ -66,6 +69,27 @@ fun OtherAuthorsScreen(
                     .padding(horizontal = 16.dp, vertical = 8.dp),
             )
 
+            Row(
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                FilterChip(
+                    selected = inLibrary == null,
+                    onClick = { vm.onInLibraryFilter(null) },
+                    label = { Text("All") },
+                )
+                FilterChip(
+                    selected = inLibrary == true,
+                    onClick = { vm.onInLibraryFilter(if (inLibrary == true) null else true) },
+                    label = { Text("In Library") },
+                )
+                FilterChip(
+                    selected = inLibrary == false,
+                    onClick = { vm.onInLibraryFilter(if (inLibrary == false) null else false) },
+                    label = { Text("Not In Library") },
+                )
+            }
+
             if (booksByAuthor.isEmpty()) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                     Text(
@@ -77,7 +101,7 @@ fun OtherAuthorsScreen(
             } else {
                 LazyColumn(
                     contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
                     booksByAuthor.forEach { (author, books) ->
                         val isExpanded = expandedState.getOrDefault(author, true)
@@ -93,7 +117,8 @@ fun OtherAuthorsScreen(
                             ) {
                                 Text(
                                     text = author,
-                                    style = MaterialTheme.typography.titleMedium,
+                                    style = MaterialTheme.typography.titleLarge,
+                                    color = MaterialTheme.colorScheme.primary,
                                     modifier = Modifier.weight(1f),
                                 )
                                 Icon(

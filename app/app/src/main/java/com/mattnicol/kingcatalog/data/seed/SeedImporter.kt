@@ -72,6 +72,8 @@ object SeedImporter {
             imdbUrl = null,
             coverLocalPath = obj.getStringOrNull("cover_local_path")?.substringAfterLast('/'),
             coverCandidateUrl = obj.getStringOrNull("cover_candidate_url"),
+            goodreadsRating = obj.get("goodreads_rating")?.takeIf { !it.isJsonNull }?.asFloat,
+            goodreadsRatingsCount = obj.getIntOrNull("goodreads_ratings_count"),
             notes = obj.getStringOrNull("notes"),
         )
     }
