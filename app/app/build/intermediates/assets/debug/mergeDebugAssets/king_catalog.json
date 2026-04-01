@@ -1,1013 +1,5 @@
 [
   {
-    "id": 3001,
-    "title": "Horrorstör",
-    "author": "Grady Hendrix",
-    "year": 2014,
-    "decade": 2010,
-    "word_count": 66275,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror",
-      "Comedy"
-    ],
-    "keywords": [
-      "IKEA",
-      "retail",
-      "haunted store",
-      "furniture catalog"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Designed to look like an IKEA catalog. A haunted furniture store.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8773505-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/Horrorstör.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 3002,
-    "title": "My Best Friend's Exorcism",
-    "author": "Grady Hendrix",
-    "year": 2016,
-    "decade": 2010,
-    "word_count": 92400,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror",
-      "Comedy"
-    ],
-    "keywords": [
-      "exorcism",
-      "friendship",
-      "possession",
-      "1980s",
-      "high school"
-    ],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 2022,
-        "year_end": null,
-        "title": "My Best Friend's Exorcism",
-        "format": "film",
-        "times_seen": null,
-        "status": null,
-        "want": false,
-        "raw": "2022 Amazon Prime film"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Set in the 1980s, structured like a mixtape with chapter titles as song names.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8850626-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/My_Best_Friend_s_Exorcism.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 3003,
-    "title": "Paperbacks from Hell",
-    "author": "Grady Hendrix",
-    "year": 2017,
-    "decade": 2010,
-    "word_count": 35200,
-    "audible_minutes": null,
-    "story_type": "non_fiction",
-    "genres": [
-      "Non-Fiction"
-    ],
-    "keywords": [
-      "horror history",
-      "paperbacks",
-      "1970s",
-      "1980s",
-      "publishing"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Non-fiction survey of horror paperbacks from the 1970s-80s. Co-authored with Will Errickson.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/10482787-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/Paperbacks_from_Hell.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 3004,
-    "title": "We Sold Our Souls",
-    "author": "Grady Hendrix",
-    "year": 2018,
-    "decade": 2010,
-    "word_count": 92400,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "rock music",
-      "metal",
-      "sold soul",
-      "road trip",
-      "betrayal"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "A former metal guitarist discovers her bandmate sold their souls for fame.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/9248396-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/We_Sold_Our_Souls.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 3005,
-    "title": "The Southern Book Club's Guide to Slaying Vampires",
-    "author": "Grady Hendrix",
-    "year": 2020,
-    "decade": 2020,
-    "word_count": 112200,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "vampire",
-      "book club",
-      "southern Gothic",
-      "suburbia",
-      "1990s"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Set in the 1990s South, a book club of women battles a charming vampire.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/9335125-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/The_Southern_Book_Club_s_Guide_to_Slaying_Vampires.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 3006,
-    "title": "The Final Girl Support Group",
-    "author": "Grady Hendrix",
-    "year": 2021,
-    "decade": 2020,
-    "word_count": 96800,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "slasher",
-      "final girls",
-      "survival",
-      "therapy",
-      "meta-horror"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Six women who survived slasher attacks meet in a support group—then someone targets them.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/10653604-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/The_Final_Girl_Support_Group.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 3007,
-    "title": "How to Sell a Haunted House",
-    "author": "Grady Hendrix",
-    "year": 2023,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "haunted house",
-      "family",
-      "puppets",
-      "inheritance",
-      "siblings"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Siblings must clean out and sell their deceased parents' haunted house.",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
-  },
-  {
-    "id": 2001,
-    "title": "20th Century Ghosts",
-    "author": "Joe Hill",
-    "year": 2005,
-    "decade": 2000,
-    "word_count": 92400,
-    "audible_minutes": null,
-    "story_type": "collection",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "short stories",
-      "ghosts",
-      "pop culture",
-      "dark fantasy"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": true,
-    "child_ids": [],
-    "notes": "Debut collection. Originally published in UK 2005, US 2007.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/4942829-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/20th_Century_Ghosts.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "year_is_uk_edition: US edition 2007",
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 2002,
-    "title": "Heart-Shaped Box",
-    "author": "Joe Hill",
-    "year": 2007,
-    "decade": 2000,
-    "word_count": 111100,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "ghost",
-      "rock musician",
-      "haunting",
-      "online auction",
-      "suit"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Debut novel. Aging rock star buys a ghost online.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/46671-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/Heart-Shaped_Box.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 2003,
-    "title": "Horns",
-    "author": "Joe Hill",
-    "year": 2010,
-    "decade": 2010,
-    "word_count": 119900,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror",
-      "Dark Fantasy"
-    ],
-    "keywords": [
-      "devil",
-      "horns",
-      "revenge",
-      "murder",
-      "supernatural"
-    ],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 2013,
-        "year_end": null,
-        "title": "Horns",
-        "format": "film",
-        "times_seen": null,
-        "status": null,
-        "want": false,
-        "raw": "2013 film dir. Alexandre Aja, starring Daniel Radcliffe"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "A young man wakes up with devil horns after his girlfriend is murdered.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/6303181-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/Horns.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 2004,
-    "title": "NOS4A2",
-    "author": "Joe Hill",
-    "year": 2013,
-    "decade": 2010,
-    "word_count": 191675,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "vampire",
-      "Christmasland",
-      "children",
-      "supernatural",
-      "road trip"
-    ],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 2019,
-        "year_end": 2020,
-        "title": "NOS4A2",
-        "format": "tv series",
-        "times_seen": null,
-        "status": null,
-        "want": false,
-        "raw": "2019-2020 AMC TV series"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Published as NOS4R2 in the UK. A woman with a supernatural ability battles a vampire.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/7254564-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/NOS4A2.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 2005,
-    "title": "The Fireman",
-    "author": "Joe Hill",
-    "year": 2016,
-    "decade": 2010,
-    "word_count": 211200,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror",
-      "Sci-Fi"
-    ],
-    "keywords": [
-      "plague",
-      "spontaneous combustion",
-      "post-apocalyptic",
-      "survival",
-      "mystery"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "A plague causes people to spontaneously combust. A nurse tries to survive.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/12920965-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/The_Fireman.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 2006,
-    "title": "Strange Weather",
-    "author": "Joe Hill",
-    "year": 2017,
-    "decade": 2010,
-    "word_count": 123200,
-    "audible_minutes": null,
-    "story_type": "collection",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "novellas",
-      "weather",
-      "guns",
-      "cloud",
-      "altitude"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": true,
-    "child_ids": [],
-    "notes": "Four short novels: Snapshot, Loaded, Aloft, Rain.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8367914-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/Strange_Weather.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 2007,
-    "title": "Full Throttle",
-    "author": "Joe Hill",
-    "year": 2019,
-    "decade": 2010,
-    "word_count": 136400,
-    "audible_minutes": null,
-    "story_type": "collection",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "short stories",
-      "trucks",
-      "dark fiction"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": true,
-    "child_ids": [],
-    "notes": "Short story collection including a collaboration with Stephen King.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8790622-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/Full_Throttle.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 2008,
-    "title": "King Sorrow",
-    "author": "Joe Hill",
-    "year": 2025,
-    "decade": 2020,
-    "word_count": 270000,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror",
-      "Dark Fantasy",
-      "Supernatural Fiction"
-    ],
-    "keywords": [
-      "dark academia",
-      "dragons",
-      "faustian bargain",
-      "supernatural",
-      "occult"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Joe Hill's fifth novel. A Faustian fable of dark academia, summoned dragons, and a terrible bargain made by six friends.",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": [],
-    "goodreads_rating": null,
-    "goodreads_ratings_count": null
-  },
-  {
-    "id": 1001,
-    "title": "Bird Box",
-    "author": "Josh Malerman",
-    "year": 2014,
-    "decade": 2010,
-    "word_count": 84975,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "blindness",
-      "monsters",
-      "post-apocalyptic",
-      "survival",
-      "creatures"
-    ],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 2018,
-        "year_end": null,
-        "title": "Bird Box",
-        "format": "film",
-        "times_seen": null,
-        "status": null,
-        "want": false,
-        "raw": "2018 Netflix film"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Debut novel. Creatures whose appearance drives viewers insane.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8159409-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/Bird_Box.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 1002,
-    "title": "Black Mad Wheel",
-    "author": "Josh Malerman",
-    "year": 2016,
-    "decade": 2010,
-    "word_count": 83600,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "music",
-      "sound",
-      "military",
-      "desert",
-      "mystery"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "A band investigates a mysterious sound in the African desert.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8845966-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/Black_Mad_Wheel.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 1003,
-    "title": "A House at the Bottom of a Lake",
-    "author": "Josh Malerman",
-    "year": 2016,
-    "decade": 2010,
-    "word_count": 42625,
-    "audible_minutes": null,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "lake",
-      "underwater house",
-      "mystery",
-      "romance"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Two teenagers discover a house at the bottom of a lake while canoeing.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/10085196-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/A_House_at_the_Bottom_of_a_Lake.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 1004,
-    "title": "Goblin",
-    "author": "Josh Malerman",
-    "year": 2016,
-    "decade": 2010,
-    "word_count": 116600,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "linked stories",
-      "small town",
-      "rain",
-      "supernatural"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Six linked novellas set in the fictional town of Goblin.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/11205377-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/Goblin.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "year_uncertain: limited ed 2016, trade 2020",
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 1005,
-    "title": "Unbury Carol",
-    "author": "Josh Malerman",
-    "year": 2019,
-    "decade": 2010,
-    "word_count": 105600,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror",
-      "Western"
-    ],
-    "keywords": [
-      "buried alive",
-      "outlaws",
-      "frontier",
-      "coma"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "A woman who periodically falls into a death-like coma is buried alive.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8808799-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/Unbury_Carol.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 1006,
-    "title": "Inspection",
-    "author": "Josh Malerman",
-    "year": 2019,
-    "decade": 2010,
-    "word_count": 110000,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror",
-      "Dystopian"
-    ],
-    "keywords": [
-      "boys school",
-      "isolation",
-      "girls",
-      "conspiracy",
-      "coming of age"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Boys raised in a tower school, unaware that girls exist.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8650336-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/Inspection.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 1007,
-    "title": "Malorie",
-    "author": "Josh Malerman",
-    "year": 2020,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "blindness",
-      "monsters",
-      "post-apocalyptic",
-      "survival",
-      "sequel"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Sequel to Bird Box, set twelve years later.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/10540711-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/Malorie.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "ok",
-    "review_flags": []
-  },
-  {
-    "id": 1008,
-    "title": "Pearl",
-    "author": "Josh Malerman",
-    "year": 2021,
-    "decade": 2020,
-    "word_count": 88000,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "barn",
-      "farm",
-      "creature",
-      "young woman",
-      "supernatural"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "A young woman discovers a creature in her barn.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/12217342-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/Pearl.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "plot_summary_uncertain",
-      "estimated_from_page_count"
-    ]
-  },
-  {
-    "id": 1009,
-    "title": "On This, the Day of the Pig",
-    "author": "Josh Malerman",
-    "year": 2021,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "pig",
-      "farm",
-      "supernatural"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": null,
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "needs_review",
-    "review_flags": [
-      "year_uncertain",
-      "story_type_uncertain"
-    ]
-  },
-  {
-    "id": 1010,
-    "title": "Daphne",
-    "author": "Josh Malerman",
-    "year": 2022,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "urban legend",
-      "basketball",
-      "teen",
-      "supernatural stalker"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "A teen basketball player is stalked by a figure from urban legend.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/12903091-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/Daphne.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "ok",
-    "review_flags": []
-  },
-  {
-    "id": 1011,
-    "title": "The Pallbearers Club",
-    "author": "Josh Malerman",
-    "year": 2022,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "friendship",
-      "vampire",
-      "memoir",
-      "unreliable narrator"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Told as a memoir with handwritten annotations challenging the narrator.",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": []
-  },
-  {
-    "id": 1012,
-    "title": "Incidents Around the House",
-    "author": "Josh Malerman",
-    "year": 2024,
-    "decade": 2020,
-    "word_count": 105600,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "haunted house",
-      "child narrator",
-      "paranormal",
-      "family"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Told from the perspective of a young child experiencing supernatural events.",
-    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14641706-L.jpg",
-    "cover_local_path": "data-tools/enriched/covers/Incidents_Around_the_House.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "needs_review",
-    "review_flags": [
-      "estimated_from_page_count"
-    ]
-  },
-  {
     "id": 1,
     "title": "Carrie",
     "year": 1974,
@@ -1084,8 +76,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 2,
@@ -1154,8 +145,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 3,
@@ -1208,8 +198,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 4,
@@ -1235,10 +224,9 @@
     "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/Rage__Bachman_.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
+    "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 5,
@@ -1288,8 +276,7 @@
     "review_status": "needs_review",
     "review_flags": [
       "missing_word_count"
-    ],
-    "author": "Stephen King"
+    ]
   },
   {
     "id": 6,
@@ -1326,8 +313,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 7,
@@ -1474,8 +460,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 8,
@@ -1512,8 +497,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 9,
@@ -1550,8 +534,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 10,
@@ -1589,8 +572,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 11,
@@ -1627,8 +609,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 12,
@@ -1665,8 +646,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 13,
@@ -1692,8 +672,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 14,
@@ -1719,8 +698,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 15,
@@ -1777,8 +755,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 16,
@@ -1835,8 +812,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 17,
@@ -1873,8 +849,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 18,
@@ -1931,8 +906,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 19,
@@ -1969,8 +943,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 20,
@@ -2017,8 +990,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 21,
@@ -2055,8 +1027,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 22,
@@ -2093,8 +1064,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 23,
@@ -2151,8 +1121,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 24,
@@ -2209,8 +1178,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 25,
@@ -2257,56 +1225,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 219,
-    "title": "Night Shift",
-    "year": 1978,
-    "decade": 1970,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "collection",
-    "genres": [],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": true,
-    "child_ids": [
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23,
-      24,
-      25
-    ],
-    "boring_description": null,
-    "notes": "Collection of 20 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Night_Shift.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 26,
@@ -2344,10 +1263,9 @@
     "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/The_Long_Walk__Bachman_.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
+    "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 27,
@@ -2407,8 +1325,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 28,
@@ -2470,8 +1387,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 29,
@@ -2506,10 +1422,9 @@
     "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/Roadwork__Bachman_.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
+    "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 30,
@@ -2547,8 +1462,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 31,
@@ -2593,10 +1507,9 @@
     "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/The_Running_Man__Bachman_.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
+    "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 32,
@@ -2633,13 +1546,12 @@
     "collection_id": null,
     "is_collection_parent": false,
     "notes": "Alternate universes",
-    "cover_candidate_url": "https://stephenking.com/images/dt22/novels/The_Dark_Tower__The_Gunslinger.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__The_Gunslinger.jpg",
-    "cover_verified": true,
-    "cover_source": "stephenking_com",
+    "cover_verified": false,
+    "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 33,
@@ -2668,8 +1580,7 @@
     "review_status": "needs_review",
     "review_flags": [
       "approximate_word_count"
-    ],
-    "author": "Stephen King"
+    ]
   },
   {
     "id": 34,
@@ -2708,8 +1619,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 35,
@@ -2746,8 +1656,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 36,
@@ -2786,8 +1695,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 37,
@@ -2824,40 +1732,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 220,
-    "title": "Different Seasons",
-    "year": 1982,
-    "decade": 1980,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "collection",
-    "genres": [],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": true,
-    "child_ids": [
-      34,
-      35,
-      36,
-      37
-    ],
-    "boring_description": null,
-    "notes": "Collection of 4 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Different_Seasons.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 38,
@@ -2906,201 +1781,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 61,
-    "title": "Pet Sematary",
-    "year": 1983,
-    "decade": 1980,
-    "word_count": 143094,
-    "audible_minutes": 941.0,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "resurrection"
-    ],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 1989,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": 1,
-        "status": null,
-        "want": false,
-        "raw": "1989 (seen 1 time)"
-      },
-      {
-        "year": 1992,
-        "year_end": null,
-        "title": "Pet Sematary II",
-        "format": null,
-        "times_seen": 1,
-        "status": null,
-        "want": false,
-        "raw": "1992 (Pet Sematary II) (seen 1 time)"
-      },
-      {
-        "year": 2019,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": 1,
-        "status": null,
-        "want": false,
-        "raw": "2019 (seen 1 time)"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Supernatural - raise the dead",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Pet_Sematary.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 62,
-    "title": "Cycle of the Werewolf",
-    "year": 1983,
-    "decade": 1980,
-    "word_count": 15904,
-    "audible_minutes": null,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "gothic",
-      "werewolf"
-    ],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 1985,
-        "year_end": null,
-        "title": "Silver Bullet",
-        "format": null,
-        "times_seen": 1,
-        "status": null,
-        "want": false,
-        "raw": "1985 (Silver Bullet) (seen 1 time)"
-      },
-      {
-        "year": null,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": null,
-        "status": "in_development",
-        "want": false,
-        "raw": "in development"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Werewolf. There is also a picture book",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Cycle_of_the_Werewolf.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 63,
-    "title": "The Talisman",
-    "year": 1984,
-    "decade": 1980,
-    "word_count": 261841,
-    "audible_minutes": 1680.0,
-    "story_type": "novel",
-    "genres": [
-      "Fantasy"
-    ],
-    "keywords": [
-      "dark",
-      "werewolves",
-      "gunslinger"
-    ],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": null,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": null,
-        "status": "in_development",
-        "want": false,
-        "raw": "in development"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Parallel universes and werewolves. Sequel: Black House. Has the most occurrences of the word axiomatic with 12 times",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/The_Talisman.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 64,
-    "title": "Thinner (Bachman)",
-    "year": 1984,
-    "decade": 1980,
-    "word_count": 95716,
-    "audible_minutes": 607.0,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "curses"
-    ],
-    "as_bachman": true,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 1996,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": 2,
-        "status": null,
-        "want": false,
-        "raw": "1996 (seen 2 times)"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Gypsy Magic",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Thinner__Bachman_.jpg",
-    "cover_verified": false,
-    "cover_source": "open_library",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 39,
@@ -3158,8 +1839,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 40,
@@ -3185,8 +1865,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 41,
@@ -3273,8 +1952,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 42,
@@ -3300,8 +1978,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 43,
@@ -3349,8 +2026,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 44,
@@ -3417,8 +2093,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 45,
@@ -3444,8 +2119,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 46,
@@ -3471,8 +2145,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 47,
@@ -3498,8 +2171,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 48,
@@ -3525,8 +2197,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 49,
@@ -3603,8 +2274,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 50,
@@ -3630,8 +2300,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 51,
@@ -3668,8 +2337,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 52,
@@ -3716,8 +2384,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 53,
@@ -3764,8 +2431,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 54,
@@ -3802,8 +2468,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 55,
@@ -3840,8 +2505,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 56,
@@ -3878,8 +2542,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 57,
@@ -3916,8 +2579,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 58,
@@ -3943,8 +2605,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 59,
@@ -3981,8 +2642,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 60,
@@ -4019,90 +2679,196 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
-    "id": 218,
-    "title": "The Bachman Books",
-    "year": 1985,
+    "id": 61,
+    "title": "Pet Sematary",
+    "year": 1983,
     "decade": 1980,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "collection",
-    "genres": [],
-    "keywords": [],
+    "word_count": 143094,
+    "audible_minutes": 941.0,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "resurrection"
+    ],
     "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 1989,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": 1,
+        "status": null,
+        "want": false,
+        "raw": "1989 (seen 1 time)"
+      },
+      {
+        "year": 1992,
+        "year_end": null,
+        "title": "Pet Sematary II",
+        "format": null,
+        "times_seen": 1,
+        "status": null,
+        "want": false,
+        "raw": "1992 (Pet Sematary II) (seen 1 time)"
+      },
+      {
+        "year": 2019,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": 1,
+        "status": null,
+        "want": false,
+        "raw": "2019 (seen 1 time)"
+      }
+    ],
     "collection": null,
     "collection_id": null,
-    "is_collection_parent": true,
-    "child_ids": [
-      4,
-      26,
-      29,
-      31
-    ],
-    "boring_description": null,
-    "notes": "Collection of 4 stories/pieces",
+    "is_collection_parent": false,
+    "notes": "Supernatural - raise the dead",
     "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 221,
-    "title": "Skeleton Crew",
-    "year": 1985,
-    "decade": 1980,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "collection",
-    "genres": [],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": true,
-    "child_ids": [
-      39,
-      40,
-      41,
-      42,
-      43,
-      44,
-      45,
-      46,
-      47,
-      48,
-      49,
-      50,
-      51,
-      52,
-      53,
-      54,
-      55,
-      56,
-      57,
-      58,
-      59,
-      60
-    ],
-    "boring_description": null,
-    "notes": "Collection of 22 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Skeleton_Crew.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Pet_Sematary.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
+  },
+  {
+    "id": 62,
+    "title": "Cycle of the Werewolf",
+    "year": 1983,
+    "decade": 1980,
+    "word_count": 15904,
+    "audible_minutes": null,
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "gothic",
+      "werewolf"
+    ],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 1985,
+        "year_end": null,
+        "title": "Silver Bullet",
+        "format": null,
+        "times_seen": 1,
+        "status": null,
+        "want": false,
+        "raw": "1985 (Silver Bullet) (seen 1 time)"
+      },
+      {
+        "year": null,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": null,
+        "status": "in_development",
+        "want": false,
+        "raw": "in development"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Werewolf. There is also a picture book",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Cycle_of_the_Werewolf.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 63,
+    "title": "The Talisman",
+    "year": 1984,
+    "decade": 1980,
+    "word_count": 261841,
+    "audible_minutes": 1680.0,
+    "story_type": "novel",
+    "genres": [
+      "Fantasy"
+    ],
+    "keywords": [
+      "dark",
+      "werewolves",
+      "gunslinger"
+    ],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": null,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": null,
+        "status": "in_development",
+        "want": false,
+        "raw": "in development"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Parallel universes and werewolves. Sequel: Black House. Has the most occurrences of the word axiomatic with 12 times",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Talisman.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 64,
+    "title": "Thinner (Bachman)",
+    "year": 1984,
+    "decade": 1980,
+    "word_count": 95716,
+    "audible_minutes": 607.0,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "curses"
+    ],
+    "as_bachman": true,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 1996,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": 2,
+        "status": null,
+        "want": false,
+        "raw": "1996 (seen 2 times)"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Gypsy Magic",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Thinner__Bachman_.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
   },
   {
     "id": 65,
@@ -4174,8 +2940,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 66,
@@ -4214,8 +2979,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 67,
@@ -4241,13 +3005,12 @@
     "collection_id": null,
     "is_collection_parent": false,
     "notes": "Part II. Alternate universes",
-    "cover_candidate_url": "https://stephenking.com/images/dt22/novels/The_Dark_Tower__The_Drawing_of_the_Three.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__The_Drawing_of_the_Three.jpg",
-    "cover_verified": true,
-    "cover_source": "stephenking_com",
+    "cover_verified": false,
+    "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 68,
@@ -4285,8 +3048,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 69,
@@ -4333,8 +3095,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 70,
@@ -4372,8 +3133,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 71,
@@ -4421,323 +3181,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 96,
-    "title": "The Langoliers",
-    "year": 1990,
-    "decade": 1990,
-    "word_count": 88399,
-    "audible_minutes": null,
-    "story_type": "novella",
-    "genres": [
-      "Sci-Fi",
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 1995,
-        "year_end": null,
-        "title": null,
-        "format": "tv mini-series",
-        "times_seen": 2,
-        "status": null,
-        "want": false,
-        "raw": "1995 (tv mini-series) (seen 2 times)"
-      }
-    ],
-    "collection": "Four Past Midnight",
-    "collection_id": 223,
-    "is_collection_parent": false,
-    "notes": "Boring description: Plane lands",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/The_Langoliers.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 97,
-    "title": "Secret Window, Secret Garden",
-    "year": 1990,
-    "decade": 1990,
-    "word_count": 58361,
-    "audible_minutes": null,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 2004,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": null,
-        "status": null,
-        "want": false,
-        "raw": "2004"
-      }
-    ],
-    "collection": "Four Past Midnight",
-    "collection_id": 223,
-    "is_collection_parent": false,
-    "notes": "Boring description: Author plagi",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Secret_Window__Secret_Garden.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 98,
-    "title": "The Library Policeman",
-    "year": 1990,
-    "decade": 1990,
-    "word_count": 78327,
-    "audible_minutes": null,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "Four Past Midnight",
-    "collection_id": 223,
-    "is_collection_parent": false,
-    "notes": "The only King novel with the word Thdeady. Boring description: (please sugg",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/The_Library_Policeman.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 99,
-    "title": "The Sun Dog",
-    "year": 1990,
-    "decade": 1990,
-    "word_count": 61654,
-    "audible_minutes": null,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "Four Past Midnight",
-    "collection_id": 223,
-    "is_collection_parent": false,
-    "notes": "Boring description: Kid gets a c",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/The_Sun_Dog.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 223,
-    "title": "Four Past Midnight",
-    "year": 1990,
-    "decade": 1990,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "collection",
-    "genres": [],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": true,
-    "child_ids": [
-      96,
-      97,
-      98,
-      99
-    ],
-    "boring_description": null,
-    "notes": "Collection of 4 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Four_Past_Midnight.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 100,
-    "title": "The Dark Tower: The Waste Lands",
-    "year": 1991,
-    "decade": 1990,
-    "word_count": 171879,
-    "audible_minutes": 1094.0,
-    "story_type": "novel",
-    "genres": [
-      "Sci-Fi",
-      "Horror",
-      "Fantasy",
-      "Western"
-    ],
-    "keywords": [
-      "gunslinger"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Part III. Alternate worlds. Referenced in Mrs. Todd's Shortcut",
-    "cover_candidate_url": "https://stephenking.com/images/dt22/novels/The_Dark_Tower__The_Waste_Lands.jpg",
-    "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__The_Waste_Lands.jpg",
-    "cover_verified": true,
-    "cover_source": "stephenking_com",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 101,
-    "title": "Needful Things",
-    "year": 1991,
-    "decade": 1990,
-    "word_count": 251219,
-    "audible_minutes": 1511.0,
-    "story_type": "novel",
-    "genres": [
-      "Horror",
-      "Crime"
-    ],
-    "keywords": [
-      "magic"
-    ],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 1993,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": 1,
-        "status": null,
-        "want": false,
-        "raw": "1993 (seen 1 time)"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Magic",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Needful_Things.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 102,
-    "title": "Gerald's Game",
-    "year": 1992,
-    "decade": 1990,
-    "word_count": 124349,
-    "audible_minutes": 814.0,
-    "story_type": "novel",
-    "genres": [
-      "Thriller",
-      "Horror"
-    ],
-    "keywords": [
-      "bondage"
-    ],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 2017,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": 1,
-        "status": null,
-        "want": false,
-        "raw": "2017 (seen 1 time)"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Mind powers (twinner novel: psychic connection with Dolores Claiborne (novel of same name) during eclipse). The Netflix movie was much better than I anticipated. There is so much more to it than we see in the trailer",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Gerald_s_Game.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 103,
-    "title": "Dolores Claiborne",
-    "year": 1992,
-    "decade": 1990,
-    "word_count": 94342,
-    "audible_minutes": 555.0,
-    "story_type": "novel",
-    "genres": [
-      "Thriller"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 1995,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": 1,
-        "status": null,
-        "want": false,
-        "raw": "1995 (seen 1 time)"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Mind powers (twinner novel: psychic connection with the little girl in Gerald's Game during the eclipse). No chapters. No sections. All one unbroken narritive",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Dolores_Claiborne.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 72,
@@ -4763,8 +3207,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 73,
@@ -4790,8 +3233,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 74,
@@ -4828,8 +3270,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 75,
@@ -4866,8 +3307,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 76,
@@ -4904,8 +3344,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 77,
@@ -4931,8 +3370,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 78,
@@ -4969,8 +3407,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 79,
@@ -4997,8 +3434,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 80,
@@ -5055,8 +3491,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 81,
@@ -5093,8 +3528,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 82,
@@ -5131,8 +3565,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 83,
@@ -5158,8 +3591,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 84,
@@ -5197,8 +3629,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 85,
@@ -5235,8 +3666,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 86,
@@ -5262,8 +3692,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 87,
@@ -5320,8 +3749,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 88,
@@ -5359,8 +3787,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 89,
@@ -5397,8 +3824,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 90,
@@ -5424,8 +3850,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 91,
@@ -5451,8 +3876,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 92,
@@ -5489,8 +3913,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 93,
@@ -5527,8 +3950,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 94,
@@ -5578,8 +4000,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 95,
@@ -5616,60 +4037,282 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
-    "id": 222,
-    "title": "Nightmares & Dreamscapes",
-    "year": 1993,
+    "id": 96,
+    "title": "The Langoliers",
+    "year": 1990,
     "decade": 1990,
-    "word_count": null,
+    "word_count": 88399,
     "audible_minutes": null,
-    "story_type": "collection",
-    "genres": [],
+    "story_type": "novella",
+    "genres": [
+      "Sci-Fi",
+      "Horror"
+    ],
     "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 1995,
+        "year_end": null,
+        "title": null,
+        "format": "tv mini-series",
+        "times_seen": 2,
+        "status": null,
+        "want": false,
+        "raw": "1995 (tv mini-series) (seen 2 times)"
+      }
+    ],
+    "collection": "Four Past Midnight",
+    "collection_id": 223,
+    "is_collection_parent": false,
+    "notes": "Boring description: Plane lands",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Langoliers.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 97,
+    "title": "Secret Window, Secret Garden",
+    "year": 1990,
+    "decade": 1990,
+    "word_count": 58361,
+    "audible_minutes": null,
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 2004,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": null,
+        "status": null,
+        "want": false,
+        "raw": "2004"
+      }
+    ],
+    "collection": "Four Past Midnight",
+    "collection_id": 223,
+    "is_collection_parent": false,
+    "notes": "Boring description: Author plagi",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Secret_Window__Secret_Garden.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 98,
+    "title": "The Library Policeman",
+    "year": 1990,
+    "decade": 1990,
+    "word_count": 78327,
+    "audible_minutes": null,
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": "Four Past Midnight",
+    "collection_id": 223,
+    "is_collection_parent": false,
+    "notes": "The only King novel with the word Thdeady. Boring description: (please sugg",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Library_Policeman.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 99,
+    "title": "The Sun Dog",
+    "year": 1990,
+    "decade": 1990,
+    "word_count": 61654,
+    "audible_minutes": null,
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": "Four Past Midnight",
+    "collection_id": 223,
+    "is_collection_parent": false,
+    "notes": "Boring description: Kid gets a c",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Sun_Dog.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 100,
+    "title": "The Dark Tower: The Waste Lands",
+    "year": 1991,
+    "decade": 1990,
+    "word_count": 171879,
+    "audible_minutes": 1094.0,
+    "story_type": "novel",
+    "genres": [
+      "Sci-Fi",
+      "Horror",
+      "Fantasy",
+      "Western"
+    ],
+    "keywords": [
+      "gunslinger"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
     "collection_id": null,
-    "is_collection_parent": true,
-    "child_ids": [
-      72,
-      73,
-      74,
-      75,
-      76,
-      77,
-      78,
-      79,
-      80,
-      81,
-      82,
-      83,
-      84,
-      85,
-      86,
-      87,
-      88,
-      89,
-      90,
-      91,
-      92,
-      93,
-      94,
-      95
-    ],
-    "boring_description": null,
-    "notes": "Collection of 24 stories/pieces",
+    "is_collection_parent": false,
+    "notes": "Part III. Alternate worlds. Referenced in Mrs. Todd's Shortcut",
     "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Nightmares___Dreamscapes.jpg",
+    "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__The_Waste_Lands.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
+  },
+  {
+    "id": 101,
+    "title": "Needful Things",
+    "year": 1991,
+    "decade": 1990,
+    "word_count": 251219,
+    "audible_minutes": 1511.0,
+    "story_type": "novel",
+    "genres": [
+      "Horror",
+      "Crime"
+    ],
+    "keywords": [
+      "magic"
+    ],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 1993,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": 1,
+        "status": null,
+        "want": false,
+        "raw": "1993 (seen 1 time)"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Magic",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Needful_Things.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 102,
+    "title": "Gerald's Game",
+    "year": 1992,
+    "decade": 1990,
+    "word_count": 124349,
+    "audible_minutes": 814.0,
+    "story_type": "novel",
+    "genres": [
+      "Thriller",
+      "Horror"
+    ],
+    "keywords": [
+      "bondage"
+    ],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 2017,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": 1,
+        "status": null,
+        "want": false,
+        "raw": "2017 (seen 1 time)"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Mind powers (twinner novel: psychic connection with Dolores Claiborne (novel of same name) during eclipse). The Netflix movie was much better than I anticipated. There is so much more to it than we see in the trailer",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Gerald_s_Game.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 103,
+    "title": "Dolores Claiborne",
+    "year": 1992,
+    "decade": 1990,
+    "word_count": 94342,
+    "audible_minutes": 555.0,
+    "story_type": "novel",
+    "genres": [
+      "Thriller"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 1995,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": 1,
+        "status": null,
+        "want": false,
+        "raw": "1995 (seen 1 time)"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Mind powers (twinner novel: psychic connection with the little girl in Gerald's Game during the eclipse). No chapters. No sections. All one unbroken narritive",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Dolores_Claiborne.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
   },
   {
     "id": 104,
@@ -5698,8 +4341,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 105,
@@ -5737,8 +4379,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 106,
@@ -5778,8 +4419,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 107,
@@ -5816,8 +4456,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 108,
@@ -5855,10 +4494,9 @@
     "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/The_Regulators__Bachman_.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
+    "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 109,
@@ -5895,13 +4533,12 @@
     "collection_id": null,
     "is_collection_parent": false,
     "notes": "Part IV. Alternate worlds",
-    "cover_candidate_url": "https://stephenking.com/images/dt22/novels/The_Dark_Tower__Wizard_and_Glass.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__Wizard_and_Glass.jpg",
-    "cover_verified": true,
-    "cover_source": "stephenking_com",
+    "cover_verified": false,
+    "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 110,
@@ -5942,8 +4579,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 111,
@@ -5983,8 +4619,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 112,
@@ -6010,8 +4645,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 113,
@@ -6037,8 +4671,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 114,
@@ -6064,8 +4697,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 115,
@@ -6102,8 +4734,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 116,
@@ -6129,41 +4760,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 224,
-    "title": "Hearts in Atlantis",
-    "year": 1999,
-    "decade": 1990,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "collection",
-    "genres": [],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": true,
-    "child_ids": [
-      112,
-      113,
-      114,
-      115,
-      116
-    ],
-    "boring_description": null,
-    "notes": "Collection of 5 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Hearts_in_Atlantis.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 117,
@@ -6205,8 +4802,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 118,
@@ -6235,8 +4831,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 119,
@@ -6275,8 +4870,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 120,
@@ -6313,8 +4907,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 121,
@@ -6351,8 +4944,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 122,
@@ -6399,8 +4991,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 123,
@@ -6426,8 +5017,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 124,
@@ -6464,8 +5054,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 125,
@@ -6491,8 +5080,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 126,
@@ -6529,8 +5117,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 127,
@@ -6567,8 +5154,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 128,
@@ -6605,8 +5191,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 129,
@@ -6643,8 +5228,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 130,
@@ -6681,8 +5265,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 131,
@@ -6719,8 +5302,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 132,
@@ -6767,8 +5349,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 133,
@@ -6815,50 +5396,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 225,
-    "title": "Everything's Eventual",
-    "year": 2002,
-    "decade": 2000,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "collection",
-    "genres": [],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": true,
-    "child_ids": [
-      120,
-      121,
-      122,
-      123,
-      124,
-      125,
-      126,
-      127,
-      128,
-      129,
-      130,
-      131,
-      132,
-      133
-    ],
-    "boring_description": null,
-    "notes": "Collection of 14 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Everything_s_Eventual.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 134,
@@ -6884,13 +5422,12 @@
     "collection_id": null,
     "is_collection_parent": false,
     "notes": "Part V. Alternate worlds. Has the most occurrences of the word \"twins\" with 59 instances",
-    "cover_candidate_url": "https://stephenking.com/images/dt22/novels/The_Dark_Tower__Wolves_of_the_Calla.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__Wolves_of_the_Calla.jpg",
-    "cover_verified": true,
-    "cover_source": "stephenking_com",
+    "cover_verified": false,
+    "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 135,
@@ -6913,13 +5450,12 @@
     "collection_id": null,
     "is_collection_parent": false,
     "notes": "Part VI. Alternate worlds",
-    "cover_candidate_url": "https://stephenking.com/images/dt22/novels/The_Dark_Tower__Song_of_Susannah.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__Song_of_Susannah.jpg",
-    "cover_verified": true,
-    "cover_source": "stephenking_com",
+    "cover_verified": false,
+    "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 136,
@@ -6942,13 +5478,12 @@
     "collection_id": null,
     "is_collection_parent": false,
     "notes": "Part VII. Alternate worlds",
-    "cover_candidate_url": "https://stephenking.com/images/dt22/novels/The_Dark_Tower.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower.jpg",
-    "cover_verified": true,
-    "cover_source": "stephenking_com",
+    "cover_verified": false,
+    "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 137,
@@ -6986,8 +5521,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 138,
@@ -7029,8 +5563,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 139,
@@ -7069,8 +5602,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 140,
@@ -7096,10 +5628,9 @@
     "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/Blaze__Bachman_.jpg",
     "cover_verified": false,
-    "cover_source": "open_library",
+    "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 141,
@@ -7137,8 +5668,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 142,
@@ -7185,8 +5715,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 143,
@@ -7223,8 +5752,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 144,
@@ -7291,8 +5819,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 145,
@@ -7349,8 +5876,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 146,
@@ -7387,8 +5913,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 147,
@@ -7425,8 +5950,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 148,
@@ -7473,8 +5997,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 149,
@@ -7500,8 +6023,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 150,
@@ -7538,8 +6060,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 151,
@@ -7576,8 +6097,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 152,
@@ -7603,8 +6123,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 153,
@@ -7661,8 +6180,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 154,
@@ -7709,49 +6227,144 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
-    "id": 226,
-    "title": "Just After Sunset",
-    "year": 2008,
-    "decade": 2000,
-    "word_count": null,
+    "id": 155,
+    "title": "1922",
+    "year": 2010,
+    "decade": 2010,
+    "word_count": 51282,
     "audible_minutes": null,
-    "story_type": "collection",
-    "genres": [],
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 2017,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": 1,
+        "status": null,
+        "want": false,
+        "raw": "2017 (seen 1 time)"
+      }
+    ],
+    "collection": "Full Dark, No Stars",
+    "collection_id": 227,
+    "is_collection_parent": false,
+    "notes": "Boring description: (please sugge",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/1922.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 156,
+    "title": "A Good Marriage",
+    "year": 2010,
+    "decade": 2010,
+    "word_count": 31955,
+    "audible_minutes": null,
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 2014,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": 1,
+        "status": null,
+        "want": false,
+        "raw": "2014 (seen 1 time)"
+      }
+    ],
+    "collection": "Full Dark, No Stars",
+    "collection_id": 227,
+    "is_collection_parent": false,
+    "notes": "Boring description: Woman decides",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/A_Good_Marriage.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 157,
+    "title": "Big Driver",
+    "year": 2010,
+    "decade": 2010,
+    "word_count": 40150,
+    "audible_minutes": null,
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 2014,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": null,
+        "status": null,
+        "want": false,
+        "raw": "2014"
+      }
+    ],
+    "collection": "Full Dark, No Stars",
+    "collection_id": 227,
+    "is_collection_parent": false,
+    "notes": "Boring description: (please sugge",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Big_Driver.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 158,
+    "title": "Fair Extension",
+    "year": 2010,
+    "decade": 2010,
+    "word_count": 10843,
+    "audible_minutes": null,
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
     "keywords": [],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": true,
-    "child_ids": [
-      142,
-      143,
-      144,
-      145,
-      146,
-      147,
-      148,
-      149,
-      150,
-      151,
-      152,
-      153,
-      154
-    ],
-    "boring_description": null,
-    "notes": "Collection of 13 stories/pieces",
+    "collection": "Full Dark, No Stars",
+    "collection_id": 227,
+    "is_collection_parent": false,
+    "notes": "Boring description: (please sugge",
     "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Just_After_Sunset.jpg",
+    "cover_local_path": null,
     "cover_verified": false,
-    "cover_source": "local_file",
+    "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 159,
@@ -7789,181 +6402,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 155,
-    "title": "1922",
-    "year": 2010,
-    "decade": 2010,
-    "word_count": 51282,
-    "audible_minutes": null,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 2017,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": 1,
-        "status": null,
-        "want": false,
-        "raw": "2017 (seen 1 time)"
-      }
-    ],
-    "collection": "Full Dark, No Stars",
-    "collection_id": 227,
-    "is_collection_parent": false,
-    "notes": "Boring description: (please sugge",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/1922.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 156,
-    "title": "A Good Marriage",
-    "year": 2010,
-    "decade": 2010,
-    "word_count": 31955,
-    "audible_minutes": null,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 2014,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": 1,
-        "status": null,
-        "want": false,
-        "raw": "2014 (seen 1 time)"
-      }
-    ],
-    "collection": "Full Dark, No Stars",
-    "collection_id": 227,
-    "is_collection_parent": false,
-    "notes": "Boring description: Woman decides",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/A_Good_Marriage.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 157,
-    "title": "Big Driver",
-    "year": 2010,
-    "decade": 2010,
-    "word_count": 40150,
-    "audible_minutes": null,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 2014,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": null,
-        "status": null,
-        "want": false,
-        "raw": "2014"
-      }
-    ],
-    "collection": "Full Dark, No Stars",
-    "collection_id": 227,
-    "is_collection_parent": false,
-    "notes": "Boring description: (please sugge",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Big_Driver.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 158,
-    "title": "Fair Extension",
-    "year": 2010,
-    "decade": 2010,
-    "word_count": 10843,
-    "audible_minutes": null,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "Full Dark, No Stars",
-    "collection_id": 227,
-    "is_collection_parent": false,
-    "notes": "Boring description: (please sugge",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 227,
-    "title": "Full Dark, No Stars",
-    "year": 2010,
-    "decade": 2010,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "collection",
-    "genres": [],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": true,
-    "child_ids": [
-      155,
-      156,
-      157,
-      158
-    ],
-    "boring_description": null,
-    "notes": "Collection of 4 stories/pieces",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Full_Dark__No_Stars.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 160,
@@ -8003,8 +6442,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 161,
@@ -8030,13 +6468,12 @@
     "collection_id": null,
     "is_collection_parent": false,
     "notes": "Part 4.5. Alternate worlds",
-    "cover_candidate_url": "https://stephenking.com/images/dt22/novels/The_Dark_Tower__The_Wind_Through_the_Keyhole.jpg",
+    "cover_candidate_url": null,
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__The_Wind_Through_the_Keyhole.jpg",
-    "cover_verified": true,
-    "cover_source": "stephenking_com",
+    "cover_verified": false,
+    "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 162,
@@ -8076,8 +6513,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 163,
@@ -8117,8 +6553,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 164,
@@ -8160,8 +6595,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 165,
@@ -8201,8 +6635,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 166,
@@ -8247,8 +6680,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 167,
@@ -8278,8 +6710,7 @@
     "review_status": "needs_review",
     "review_flags": [
       "audible_format_inferred_mmss"
-    ],
-    "author": "Stephen King"
+    ]
   },
   {
     "id": 168,
@@ -8309,8 +6740,7 @@
     "review_status": "needs_review",
     "review_flags": [
       "audible_format_inferred_mmss"
-    ],
-    "author": "Stephen King"
+    ]
   },
   {
     "id": 169,
@@ -8347,8 +6777,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 170,
@@ -8376,8 +6805,7 @@
     "review_status": "needs_review",
     "review_flags": [
       "audible_format_inferred_mmss"
-    ],
-    "author": "Stephen King"
+    ]
   },
   {
     "id": 171,
@@ -8403,8 +6831,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 172,
@@ -8441,8 +6868,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 173,
@@ -8470,8 +6896,7 @@
     "review_status": "needs_review",
     "review_flags": [
       "audible_format_inferred_mmss"
-    ],
-    "author": "Stephen King"
+    ]
   },
   {
     "id": 174,
@@ -8509,8 +6934,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 175,
@@ -8538,8 +6962,7 @@
     "review_status": "needs_review",
     "review_flags": [
       "audible_format_inferred_mmss"
-    ],
-    "author": "Stephen King"
+    ]
   },
   {
     "id": 176,
@@ -8566,8 +6989,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 177,
@@ -8593,8 +7015,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 178,
@@ -8622,8 +7043,7 @@
     "review_status": "needs_review",
     "review_flags": [
       "audible_format_inferred_mmss"
-    ],
-    "author": "Stephen King"
+    ]
   },
   {
     "id": 179,
@@ -8651,8 +7071,7 @@
     "review_status": "needs_review",
     "review_flags": [
       "audible_format_inferred_mmss"
-    ],
-    "author": "Stephen King"
+    ]
   },
   {
     "id": 180,
@@ -8680,8 +7099,7 @@
     "review_status": "needs_review",
     "review_flags": [
       "audible_format_inferred_mmss"
-    ],
-    "author": "Stephen King"
+    ]
   },
   {
     "id": 181,
@@ -8721,8 +7139,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 182,
@@ -8750,8 +7167,7 @@
     "review_status": "needs_review",
     "review_flags": [
       "audible_format_inferred_mmss"
-    ],
-    "author": "Stephen King"
+    ]
   },
   {
     "id": 183,
@@ -8780,8 +7196,7 @@
     "review_flags": [
       "missing_word_count",
       "audible_format_inferred_mmss"
-    ],
-    "author": "Stephen King"
+    ]
   },
   {
     "id": 184,
@@ -8810,8 +7225,7 @@
     "review_flags": [
       "missing_word_count",
       "audible_format_inferred_mmss"
-    ],
-    "author": "Stephen King"
+    ]
   },
   {
     "id": 185,
@@ -8838,8 +7252,7 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 186,
@@ -8867,8 +7280,7 @@
     "review_status": "needs_review",
     "review_flags": [
       "audible_format_inferred_mmss"
-    ],
-    "author": "Stephen King"
+    ]
   },
   {
     "id": 187,
@@ -8897,8 +7309,1328 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
+  },
+  {
+    "id": 188,
+    "title": "End of Watch",
+    "year": 2016,
+    "decade": 2010,
+    "word_count": 118741,
+    "audible_minutes": 773.0,
+    "story_type": "novel",
+    "genres": [
+      "Crime",
+      "Thriller",
+      "Mystery"
+    ],
+    "keywords": [
+      "murder",
+      "psychopath",
+      "telekinesis",
+      "mind-control",
+      "suicide"
+    ],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 2018,
+        "year_end": null,
+        "title": "Mr. Mercedes, season 2",
+        "format": "tv series",
+        "times_seen": 1,
+        "status": null,
+        "want": false,
+        "raw": "2018 (Mr. Mercedes, season 2) (tv series) (seen 1 time)"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Sequel is The Outsider. Mind powers. Part 3 of 3 in the Mr. Mercedes trilogy. Part 3 of 7 in the Holly Gibney series",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/End_of_Watch.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 189,
+    "title": "Gwendy's Button Box",
+    "year": 2017,
+    "decade": 2010,
+    "word_count": 22713,
+    "audible_minutes": 162.0,
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Box with special powers. Published May 2017. Sequels: Gwendy's Magic Feather and Gwendy's Final Task. Co-written with Richard Chizmar. Although sold as a novel, it's actually a novella",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Gwendy_s_Button_Box.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 190,
+    "title": "Sleeping Beauties",
+    "year": 2017,
+    "decade": 2010,
+    "word_count": 234642,
+    "audible_minutes": 1523.0,
+    "story_type": "novel",
+    "genres": [
+      "Sci-Fi",
+      "Horror",
+      "Thriller",
+      "Fantasy"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": null,
+        "year_end": null,
+        "title": null,
+        "format": "tv movie",
+        "times_seen": null,
+        "status": "in_development",
+        "want": true,
+        "raw": "in development (tv movie) (want)"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Alternate dimension. Co-written with son Owen King",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Sleeping_Beauties.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 191,
+    "title": "The Outsider",
+    "year": 2018,
+    "decade": 2010,
+    "word_count": 165444,
+    "audible_minutes": 1121.0,
+    "story_type": "novel",
+    "genres": [
+      "Crime",
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 2020,
+        "year_end": null,
+        "title": null,
+        "format": "tv series",
+        "times_seen": 1,
+        "status": null,
+        "want": false,
+        "raw": "2020 (tv series) (seen 1 time)"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Sequel is If It Bleeds (novella). Part 4 in the Holly Gibney series",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Outsider.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 192,
+    "title": "Elevation",
+    "year": 2018,
+    "decade": 2010,
+    "word_count": 27143,
+    "audible_minutes": 227.0,
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Alternate physics. The cover says \"A Novel\", but it's really a novella",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Elevation.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 193,
+    "title": "Laurie",
+    "year": 2018,
+    "decade": 2010,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "short_story",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Bonus short-story with Elevation with audio book. It's also a free audio download on stephenking.com",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Laurie.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 194,
+    "title": "The Institute",
+    "year": 2019,
+    "decade": 2010,
+    "word_count": 177976,
+    "audible_minutes": 1139.0,
+    "story_type": "novel",
+    "genres": [
+      "Horror",
+      "Sci-Fi"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 2025,
+        "year_end": null,
+        "title": null,
+        "format": "tv series",
+        "times_seen": 1,
+        "status": null,
+        "want": false,
+        "raw": "2025 (tv series) (seen 1 time)"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "kidnapping children with special talents. Shots for Dots!",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Institute.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 195,
+    "title": "In the Tall Grass",
+    "year": 2019,
+    "decade": 2010,
+    "word_count": null,
+    "audible_minutes": 105.0,
+    "story_type": "novella",
+    "genres": [
+      "Horror",
+      "Sci-Fi"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 2019,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": 2,
+        "status": null,
+        "want": false,
+        "raw": "2019 (seen 2 times)"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "cowritten with son Joe Hill",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/In_the_Tall_Grass.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 196,
+    "title": "Gwendy's Magic Feather",
+    "year": 2019,
+    "decade": 2010,
+    "word_count": null,
+    "audible_minutes": 277.0,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Written by Richard Chizmar in the style of Stephen King. Publish date Nov 19, 2019. Sequel to Gwendy's Button Box and followed by Gwendy's Final Task",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Gwendy_s_Magic_Feather.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 197,
+    "title": "Mr. Harrigan's Phone",
+    "year": 2020,
+    "decade": 2020,
+    "word_count": 29775,
+    "audible_minutes": null,
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 2022,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": 1,
+        "status": null,
+        "want": false,
+        "raw": "2022 (seen 1 time)"
+      }
+    ],
+    "collection": "If It Bleeds",
+    "collection_id": 229,
+    "is_collection_parent": false,
+    "notes": "Boring description: (pleas",
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 198,
+    "title": "The Life of Chuck",
+    "year": 2020,
+    "decade": 2020,
+    "word_count": 19054,
+    "audible_minutes": null,
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": 2025,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": 1,
+        "status": null,
+        "want": false,
+        "raw": "2025 (seen 1 time)"
+      }
+    ],
+    "collection": "If It Bleeds",
+    "collection_id": 229,
+    "is_collection_parent": false,
+    "notes": "Boring description: Man ge",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/The_Life_of_Chuck.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 199,
+    "title": "If It Bleeds",
+    "year": 2020,
+    "decade": 2020,
+    "word_count": 57024,
+    "audible_minutes": null,
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": "If It Bleeds",
+    "collection_id": 229,
+    "is_collection_parent": false,
+    "notes": "Part 5 of 7 in the Holly Gibney series. Boring description: (pleas",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/If_It_Bleeds.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 200,
+    "title": "Rat",
+    "year": 2020,
+    "decade": 2020,
+    "word_count": 28668,
+    "audible_minutes": null,
+    "story_type": "novella",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": null,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": null,
+        "status": "in_development",
+        "want": false,
+        "raw": "in development"
+      }
+    ],
+    "collection": "If It Bleeds",
+    "collection_id": 229,
+    "is_collection_parent": false,
+    "notes": "Boring description: (pleas",
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 201,
+    "title": "Later",
+    "year": 2021,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": 392.0,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Boy talks to dead people who can't lie",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Later.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 202,
+    "title": "Billy Summers",
+    "year": 2021,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": 1017.0,
+    "story_type": "novel",
+    "genres": [
+      "Crime"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": null,
+        "year_end": null,
+        "title": null,
+        "format": null,
+        "times_seen": null,
+        "status": "in_development",
+        "want": false,
+        "raw": "in development"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Publish date Aug 3, 2021",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Billy_Summers.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 203,
+    "title": "Gwendy's Final Task",
+    "year": 2022,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": 444.0,
+    "story_type": "novel",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Cowritten with Richard Chizmar. Publish date Feb 15, 2022. Sequel to Gwendy's Magic feather which is a sequel to Gwendy's Button Box",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Gwendy_s_Final_Task.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 204,
+    "title": "Fairy Tale",
+    "year": 2022,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": 1446.0,
+    "story_type": "novel",
+    "genres": [
+      "Fantasy"
+    ],
+    "keywords": [
+      "dark"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": "Publish date Sep 6, 2022",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Fairy_Tale.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 205,
+    "title": "Holly",
+    "year": 2023,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "novel",
+    "genres": [
+      "Crime"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "notes": null,
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Holly.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 206,
+    "title": "Two Talented Bastids",
+    "year": 2024,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "short_story",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": "You Like It Darker",
+    "collection_id": 230,
+    "is_collection_parent": false,
+    "notes": "Boring description: (please sugg",
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 207,
+    "title": "The Fifth Step",
+    "year": 2024,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "short_story",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": "You Like It Darker",
+    "collection_id": 230,
+    "is_collection_parent": false,
+    "notes": "Boring description: (please sugg",
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 208,
+    "title": "Willie the Weirdo",
+    "year": 2024,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "short_story",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": "You Like It Darker",
+    "collection_id": 230,
+    "is_collection_parent": false,
+    "notes": "Boring description: (please sugg",
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 209,
+    "title": "Danny Coughlin's Bad Dream",
+    "year": 2024,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "short_story",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": "You Like It Darker",
+    "collection_id": 230,
+    "is_collection_parent": false,
+    "notes": "Boring description: (please sugg",
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 210,
+    "title": "Finn",
+    "year": 2024,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "short_story",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": "You Like It Darker",
+    "collection_id": 230,
+    "is_collection_parent": false,
+    "notes": "Boring description: (please sugg",
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 211,
+    "title": "On Slide Inn Road",
+    "year": 2024,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "short_story",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": "You Like It Darker",
+    "collection_id": 230,
+    "is_collection_parent": false,
+    "notes": "Boring description: (please sugg",
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 212,
+    "title": "Red Screen",
+    "year": 2024,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "short_story",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": "You Like It Darker",
+    "collection_id": 230,
+    "is_collection_parent": false,
+    "notes": "Boring description: (please sugg",
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 213,
+    "title": "The Turbulence Expert",
+    "year": 2024,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "short_story",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": "You Like It Darker",
+    "collection_id": 230,
+    "is_collection_parent": false,
+    "notes": "Boring description: (please sugg",
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 214,
+    "title": "Laurie",
+    "year": 2024,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "short_story",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": "You Like It Darker",
+    "collection_id": 230,
+    "is_collection_parent": false,
+    "notes": "Boring description: (please sugg",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Laurie.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 215,
+    "title": "Rattlesnakes",
+    "year": 2024,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "short_story",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": "You Like It Darker",
+    "collection_id": 230,
+    "is_collection_parent": false,
+    "notes": "Boring description: (please sugg",
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 216,
+    "title": "The Dreamers",
+    "year": 2024,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "short_story",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": "You Like It Darker",
+    "collection_id": 230,
+    "is_collection_parent": false,
+    "notes": "Boring description: (please sugg",
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 217,
+    "title": "The Answer Man",
+    "year": 2024,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "short_story",
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": "You Like It Darker",
+    "collection_id": 230,
+    "is_collection_parent": false,
+    "notes": "Boring description: (please sugg",
+    "cover_candidate_url": null,
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": null,
+    "review_status": "needs_review",
+    "review_flags": [
+      "missing_word_count"
+    ]
+  },
+  {
+    "id": 218,
+    "title": "The Bachman Books",
+    "year": 1985,
+    "decade": 1980,
+    "word_count": 248050,
+    "audible_minutes": null,
+    "story_type": "collection",
+    "genres": [],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": true,
+    "child_ids": [
+      4,
+      26,
+      29,
+      31
+    ],
+    "boring_description": null,
+    "notes": "Collection of 4 stories/pieces",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8565607-L.jpg",
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "estimated_from_page_count"
+    ]
+  },
+  {
+    "id": 219,
+    "title": "Night Shift",
+    "year": 1978,
+    "decade": 1970,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "collection",
+    "genres": [],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": true,
+    "child_ids": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "boring_description": null,
+    "notes": "Collection of 20 stories/pieces",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Night_Shift.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 220,
+    "title": "Different Seasons",
+    "year": 1982,
+    "decade": 1980,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "collection",
+    "genres": [],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": true,
+    "child_ids": [
+      34,
+      35,
+      36,
+      37
+    ],
+    "boring_description": null,
+    "notes": "Collection of 4 stories/pieces",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Different_Seasons.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 221,
+    "title": "Skeleton Crew",
+    "year": 1985,
+    "decade": 1980,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "collection",
+    "genres": [],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": true,
+    "child_ids": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
+    ],
+    "boring_description": null,
+    "notes": "Collection of 22 stories/pieces",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Skeleton_Crew.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 222,
+    "title": "Nightmares & Dreamscapes",
+    "year": 1993,
+    "decade": 1990,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "collection",
+    "genres": [],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": true,
+    "child_ids": [
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "boring_description": null,
+    "notes": "Collection of 24 stories/pieces",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Nightmares___Dreamscapes.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 223,
+    "title": "Four Past Midnight",
+    "year": 1990,
+    "decade": 1990,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "collection",
+    "genres": [],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": true,
+    "child_ids": [
+      96,
+      97,
+      98,
+      99
+    ],
+    "boring_description": null,
+    "notes": "Collection of 4 stories/pieces",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Four_Past_Midnight.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 224,
+    "title": "Hearts in Atlantis",
+    "year": 1999,
+    "decade": 1990,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "collection",
+    "genres": [],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": true,
+    "child_ids": [
+      112,
+      113,
+      114,
+      115,
+      116
+    ],
+    "boring_description": null,
+    "notes": "Collection of 5 stories/pieces",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Hearts_in_Atlantis.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 225,
+    "title": "Everything's Eventual",
+    "year": 2002,
+    "decade": 2000,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "collection",
+    "genres": [],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": true,
+    "child_ids": [
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133
+    ],
+    "boring_description": null,
+    "notes": "Collection of 14 stories/pieces",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Everything_s_Eventual.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 226,
+    "title": "Just After Sunset",
+    "year": 2008,
+    "decade": 2000,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "collection",
+    "genres": [],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": true,
+    "child_ids": [
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154
+    ],
+    "boring_description": null,
+    "notes": "Collection of 13 stories/pieces",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Just_After_Sunset.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
+  },
+  {
+    "id": 227,
+    "title": "Full Dark, No Stars",
+    "year": 2010,
+    "decade": 2010,
+    "word_count": null,
+    "audible_minutes": null,
+    "story_type": "collection",
+    "genres": [],
+    "keywords": [],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": true,
+    "child_ids": [
+      155,
+      156,
+      157,
+      158
+    ],
+    "boring_description": null,
+    "notes": "Collection of 4 stories/pieces",
+    "cover_candidate_url": null,
+    "cover_local_path": "data-tools/enriched/covers/Full_Dark__No_Stars.jpg",
+    "cover_verified": false,
+    "cover_source": "local_file",
+    "review_status": "ok",
+    "review_flags": []
   },
   {
     "id": 228,
@@ -8946,467 +8678,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 188,
-    "title": "End of Watch",
-    "year": 2016,
-    "decade": 2010,
-    "word_count": 118741,
-    "audible_minutes": 773.0,
-    "story_type": "novel",
-    "genres": [
-      "Crime",
-      "Thriller",
-      "Mystery"
-    ],
-    "keywords": [
-      "murder",
-      "psychopath",
-      "telekinesis",
-      "mind-control",
-      "suicide"
-    ],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 2018,
-        "year_end": null,
-        "title": "Mr. Mercedes, season 2",
-        "format": "tv series",
-        "times_seen": 1,
-        "status": null,
-        "want": false,
-        "raw": "2018 (Mr. Mercedes, season 2) (tv series) (seen 1 time)"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Sequel is The Outsider. Mind powers. Part 3 of 3 in the Mr. Mercedes trilogy. Part 3 of 7 in the Holly Gibney series",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/End_of_Watch.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 189,
-    "title": "Gwendy's Button Box",
-    "year": 2017,
-    "decade": 2010,
-    "word_count": 22713,
-    "audible_minutes": 162.0,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Box with special powers. Published May 2017. Sequels: Gwendy's Magic Feather and Gwendy's Final Task. Co-written with Richard Chizmar. Although sold as a novel, it's actually a novella",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Gwendy_s_Button_Box.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 190,
-    "title": "Sleeping Beauties",
-    "year": 2017,
-    "decade": 2010,
-    "word_count": 234642,
-    "audible_minutes": 1523.0,
-    "story_type": "novel",
-    "genres": [
-      "Sci-Fi",
-      "Horror",
-      "Thriller",
-      "Fantasy"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": null,
-        "year_end": null,
-        "title": null,
-        "format": "tv movie",
-        "times_seen": null,
-        "status": "in_development",
-        "want": true,
-        "raw": "in development (tv movie) (want)"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Alternate dimension. Co-written with son Owen King",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Sleeping_Beauties.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 191,
-    "title": "The Outsider",
-    "year": 2018,
-    "decade": 2010,
-    "word_count": 165444,
-    "audible_minutes": 1121.0,
-    "story_type": "novel",
-    "genres": [
-      "Crime",
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 2020,
-        "year_end": null,
-        "title": null,
-        "format": "tv series",
-        "times_seen": 1,
-        "status": null,
-        "want": false,
-        "raw": "2020 (tv series) (seen 1 time)"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Sequel is If It Bleeds (novella). Part 4 in the Holly Gibney series",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/The_Outsider.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 192,
-    "title": "Elevation",
-    "year": 2018,
-    "decade": 2010,
-    "word_count": 27143,
-    "audible_minutes": 227.0,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Alternate physics. The cover says \"A Novel\", but it's really a novella",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Elevation.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 193,
-    "title": "Laurie",
-    "year": 2018,
-    "decade": 2010,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "short_story",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Bonus short-story with Elevation with audio book. It's also a free audio download on stephenking.com",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Laurie.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 194,
-    "title": "The Institute",
-    "year": 2019,
-    "decade": 2010,
-    "word_count": 177976,
-    "audible_minutes": 1139.0,
-    "story_type": "novel",
-    "genres": [
-      "Horror",
-      "Sci-Fi"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 2025,
-        "year_end": null,
-        "title": null,
-        "format": "tv series",
-        "times_seen": 1,
-        "status": null,
-        "want": false,
-        "raw": "2025 (tv series) (seen 1 time)"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "kidnapping children with special talents. Shots for Dots!",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/The_Institute.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 195,
-    "title": "In the Tall Grass",
-    "year": 2019,
-    "decade": 2010,
-    "word_count": null,
-    "audible_minutes": 105.0,
-    "story_type": "novella",
-    "genres": [
-      "Horror",
-      "Sci-Fi"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 2019,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": 2,
-        "status": null,
-        "want": false,
-        "raw": "2019 (seen 2 times)"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "cowritten with son Joe Hill",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/In_the_Tall_Grass.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 196,
-    "title": "Gwendy's Magic Feather",
-    "year": 2019,
-    "decade": 2010,
-    "word_count": null,
-    "audible_minutes": 277.0,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Written by Richard Chizmar in the style of Stephen King. Publish date Nov 19, 2019. Sequel to Gwendy's Button Box and followed by Gwendy's Final Task",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Gwendy_s_Magic_Feather.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 197,
-    "title": "Mr. Harrigan's Phone",
-    "year": 2020,
-    "decade": 2020,
-    "word_count": 29775,
-    "audible_minutes": null,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 2022,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": 1,
-        "status": null,
-        "want": false,
-        "raw": "2022 (seen 1 time)"
-      }
-    ],
-    "collection": "If It Bleeds",
-    "collection_id": 229,
-    "is_collection_parent": false,
-    "notes": "Boring description: (pleas",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 198,
-    "title": "The Life of Chuck",
-    "year": 2020,
-    "decade": 2020,
-    "word_count": 19054,
-    "audible_minutes": null,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": 2025,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": 1,
-        "status": null,
-        "want": false,
-        "raw": "2025 (seen 1 time)"
-      }
-    ],
-    "collection": "If It Bleeds",
-    "collection_id": 229,
-    "is_collection_parent": false,
-    "notes": "Boring description: Man ge",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/The_Life_of_Chuck.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 199,
-    "title": "If It Bleeds",
-    "year": 2020,
-    "decade": 2020,
-    "word_count": 57024,
-    "audible_minutes": null,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "If It Bleeds",
-    "collection_id": 229,
-    "is_collection_parent": false,
-    "notes": "Part 5 of 7 in the Holly Gibney series. Boring description: (pleas",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/If_It_Bleeds.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 200,
-    "title": "Rat",
-    "year": 2020,
-    "decade": 2020,
-    "word_count": 28668,
-    "audible_minutes": null,
-    "story_type": "novella",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": null,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": null,
-        "status": "in_development",
-        "want": false,
-        "raw": "in development"
-      }
-    ],
-    "collection": "If It Bleeds",
-    "collection_id": 229,
-    "is_collection_parent": false,
-    "notes": "Boring description: (pleas",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 229,
@@ -9437,514 +8709,7 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 201,
-    "title": "Later",
-    "year": 2021,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": 392.0,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Boy talks to dead people who can't lie",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Later.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 202,
-    "title": "Billy Summers",
-    "year": 2021,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": 1017.0,
-    "story_type": "novel",
-    "genres": [
-      "Crime"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": true,
-    "adaptations": [
-      {
-        "year": null,
-        "year_end": null,
-        "title": null,
-        "format": null,
-        "times_seen": null,
-        "status": "in_development",
-        "want": false,
-        "raw": "in development"
-      }
-    ],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Publish date Aug 3, 2021",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Billy_Summers.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 203,
-    "title": "Gwendy's Final Task",
-    "year": 2022,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": 444.0,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Cowritten with Richard Chizmar. Publish date Feb 15, 2022. Sequel to Gwendy's Magic feather which is a sequel to Gwendy's Button Box",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Gwendy_s_Final_Task.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 204,
-    "title": "Fairy Tale",
-    "year": 2022,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": 1446.0,
-    "story_type": "novel",
-    "genres": [
-      "Fantasy"
-    ],
-    "keywords": [
-      "dark"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Publish date Sep 6, 2022",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Fairy_Tale.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 205,
-    "title": "Holly",
-    "year": 2023,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Crime"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": null,
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Holly.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 206,
-    "title": "Two Talented Bastids",
-    "year": 2024,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "short_story",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "You Like It Darker",
-    "collection_id": 230,
-    "is_collection_parent": false,
-    "notes": "Boring description: (please sugg",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 207,
-    "title": "The Fifth Step",
-    "year": 2024,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "short_story",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "You Like It Darker",
-    "collection_id": 230,
-    "is_collection_parent": false,
-    "notes": "Boring description: (please sugg",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 208,
-    "title": "Willie the Weirdo",
-    "year": 2024,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "short_story",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "You Like It Darker",
-    "collection_id": 230,
-    "is_collection_parent": false,
-    "notes": "Boring description: (please sugg",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 209,
-    "title": "Danny Coughlin's Bad Dream",
-    "year": 2024,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "short_story",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "You Like It Darker",
-    "collection_id": 230,
-    "is_collection_parent": false,
-    "notes": "Boring description: (please sugg",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 210,
-    "title": "Finn",
-    "year": 2024,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "short_story",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "You Like It Darker",
-    "collection_id": 230,
-    "is_collection_parent": false,
-    "notes": "Boring description: (please sugg",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 211,
-    "title": "On Slide Inn Road",
-    "year": 2024,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "short_story",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "You Like It Darker",
-    "collection_id": 230,
-    "is_collection_parent": false,
-    "notes": "Boring description: (please sugg",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 212,
-    "title": "Red Screen",
-    "year": 2024,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "short_story",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "You Like It Darker",
-    "collection_id": 230,
-    "is_collection_parent": false,
-    "notes": "Boring description: (please sugg",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 213,
-    "title": "The Turbulence Expert",
-    "year": 2024,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "short_story",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "You Like It Darker",
-    "collection_id": 230,
-    "is_collection_parent": false,
-    "notes": "Boring description: (please sugg",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 214,
-    "title": "Laurie",
-    "year": 2024,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "short_story",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "You Like It Darker",
-    "collection_id": 230,
-    "is_collection_parent": false,
-    "notes": "Boring description: (please sugg",
-    "cover_candidate_url": null,
-    "cover_local_path": "data-tools/enriched/covers/Laurie.jpg",
-    "cover_verified": false,
-    "cover_source": "local_file",
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 215,
-    "title": "Rattlesnakes",
-    "year": 2024,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "short_story",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "You Like It Darker",
-    "collection_id": 230,
-    "is_collection_parent": false,
-    "notes": "Boring description: (please sugg",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 216,
-    "title": "The Dreamers",
-    "year": 2024,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "short_story",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "You Like It Darker",
-    "collection_id": 230,
-    "is_collection_parent": false,
-    "notes": "Boring description: (please sugg",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
-  },
-  {
-    "id": 217,
-    "title": "The Answer Man",
-    "year": 2024,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "short_story",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": "You Like It Darker",
-    "collection_id": 230,
-    "is_collection_parent": false,
-    "notes": "Boring description: (please sugg",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "needs_review",
-    "review_flags": [
-      "missing_word_count"
-    ],
-    "author": "Stephen King"
+    "review_flags": []
   },
   {
     "id": 230,
@@ -9983,43 +8748,6 @@
     "cover_verified": false,
     "cover_source": "local_file",
     "review_status": "ok",
-    "review_flags": [],
-    "author": "Stephen King"
-  },
-  {
-    "id": 231,
-    "title": "Never Flinch",
-    "year": 2025,
-    "decade": 2020,
-    "word_count": 130000,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Crime Fiction",
-      "Detective Fiction"
-    ],
-    "keywords": [
-      "holly gibney",
-      "detective",
-      "crime",
-      "mystery"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Holly Gibney #4. Fourth book in the Holly Gibney series, following If It Bleeds.",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": [],
-    "goodreads_rating": null,
-    "goodreads_ratings_count": null,
-    "author": "Stephen King"
+    "review_flags": []
   }
 ]

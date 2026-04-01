@@ -39,6 +39,36 @@ class LibraryViewModel(application: Application) : AndroidViewModel(application)
         .map { books -> books.flatMap { it.keywords }.distinct().sorted() }
         .stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
 
+    val ownedBooksByAuthor: StateFlow<Map<String, List<Book>>> = combine(
+        repo.observeOwned(),
+        searchQuery,
+        sortOrder,
+        filterState,
+    ) { all, query, sort, filter ->
+        all
+            .filter {
+                it.matchesFilter(
+                    query = query,
+                    storyTypeFilter = filter.storyTypes,
+                    genreFilter = filter.genres,
+                    keywordFilter = filter.keywords,
+                    decadeFilter = filter.decades,
+                    bachamanFilter = filter.bachman,
+                    readFilter = filter.isRead,
+                    inLibraryFilter = filter.inLibrary,
+                )
+            }
+            .sortedWith(compareBy(nullsLast()) {
+                when (sort) {
+                    SortOrder.RELEASE_DATE -> it.year
+                    SortOrder.WORD_COUNT -> it.wordCount
+                    SortOrder.AUDIBLE_LENGTH -> it.audibleMinutes
+                }
+            })
+            .groupBy { it.author }
+            .toSortedMap(compareBy { author -> if (author == "Stephen King") "" else author })
+    }.stateIn(viewModelScope, SharingStarted.Lazily, emptyMap())
+
     val ownedBooks: StateFlow<List<Book>> = combine(
         repo.observeOwned(),
         searchQuery,

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.mattnicol.kingcatalog.app-mergeDebugResources-58:/values-v21/values-v21.xml",
+            "outputFile": "com.mattnicol.kingcatalog.app-mergeDebugResources-59:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/home/matt/.gradle/caches/transforms-4/fd57110bb85a35cb25cb85bdf44993b5/transformed/core-1.13.1/res/values-v21/values-v21.xml",
+                    "source": "/home/matt/.gradle/caches/transforms-4/f68492e6591fb07fba77d14c8eb6dd18/transformed/core-1.13.1/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

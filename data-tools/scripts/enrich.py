@@ -157,73 +157,218 @@ def recalculate_review_status(entry: dict) -> None:
 # Goodreads scraping
 # ---------------------------------------------------------------------------
 
-GR_SEARCH = "https://www.goodreads.com/search?q={query}&search_type=books"
-GR_REQUEST_DELAY = 1.5  # Goodreads rate-limits aggressively
+GR_REQUEST_DELAY = 2.5  # seconds between Goodreads requests; be conservative
 
 
 def _gr_headers() -> dict:
     return {
         "User-Agent": (
-            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
-            "(KHTML, like Gecko) Chrome/122.0 Safari/537.36"
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
         ),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
         "Accept-Language": "en-US,en;q=0.9",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Cache-Control": "no-cache",
+        "Pragma": "no-cache",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "none",
+        "Upgrade-Insecure-Requests": "1",
     }
 
 
-def _fetch_url(url: str, timeout: int = 15) -> str | None:
+def _fetch_url(url: str, timeout: int = 20) -> str | None:
+    """Fetch a URL with browser-like headers. Handles gzip transparently."""
+    import gzip as _gzip
     req = urllib.request.Request(url, headers=_gr_headers())
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return resp.read().decode("utf-8", errors="replace")
+            data = resp.read()
+            encoding = resp.info().get("Content-Encoding", "")
+            if encoding == "gzip":
+                data = _gzip.decompress(data)
+            return data.decode("utf-8", errors="replace")
     except Exception:
         return None
 
 
 def _parse_gr_rating(html: str) -> tuple[float | None, int | None]:
     """
-    Parse Goodreads rating from JSON-LD embedded in the page.
-    Returns (rating_value, ratings_count) or (None, None).
+    Parse Goodreads rating + count from a book page.
+    Tries JSON-LD (most reliable), then HTML microdata, then JSON blobs.
+    Returns (rating, count) or (None, None).
     """
-    # Try JSON-LD first (most reliable)
-    for m in re.finditer(r'<script[^>]+type="application/ld\+json"[^>]*>(.*?)</script>', html, re.DOTALL):
+    def _valid_rating(v: float) -> bool:
+        return 1.0 <= v <= 5.0
+
+    # 1. JSON-LD blocks (GR includes these for SEO)
+    for m in re.finditer(
+        r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+        html, re.DOTALL | re.IGNORECASE,
+    ):
         try:
             obj = json.loads(m.group(1))
-            ar = obj.get("aggregateRating") or {}
-            rv = ar.get("ratingValue")
-            rc = ar.get("ratingCount")
-            if rv is not None:
-                return float(rv), (int(rc) if rc is not None else None)
+            # May be a single object or a list
+            items: list = obj if isinstance(obj, list) else [obj]
+            # Also unwrap @graph containers
+            expanded: list = []
+            for item in items:
+                if "@graph" in item:
+                    g = item["@graph"]
+                    expanded.extend(g if isinstance(g, list) else [g])
+                else:
+                    expanded.append(item)
+            for item in expanded:
+                ar = item.get("aggregateRating") or {}
+                rv = ar.get("ratingValue")
+                rc = ar.get("ratingCount")
+                if rv is not None:
+                    try:
+                        r = float(rv)
+                        if _valid_rating(r):
+                            return r, (int(float(rc)) if rc is not None else None)
+                    except (ValueError, TypeError):
+                        pass
         except Exception:
             continue
+
+    # 2. HTML microdata: itemprop="ratingValue" (various attribute orderings)
+    for pattern in [
+        r'itemprop=["\']ratingValue["\'][^>]*content=["\']([0-9.]+)["\']',
+        r'content=["\']([0-9.]+)["\'][^>]*itemprop=["\']ratingValue["\']',
+        r'itemprop=["\']ratingValue["\'][^>]*>\s*([0-9.]+)',
+    ]:
+        m = re.search(pattern, html)
+        if m:
+            try:
+                r = float(m.group(1))
+                if _valid_rating(r):
+                    count = None
+                    for cp in [
+                        r'itemprop=["\']ratingCount["\'][^>]*content=["\']([0-9,]+)["\']',
+                        r'content=["\']([0-9,]+)["\'][^>]*itemprop=["\']ratingCount["\']',
+                        r'itemprop=["\']ratingCount["\'][^>]*>\s*([0-9,]+)',
+                    ]:
+                        m2 = re.search(cp, html)
+                        if m2:
+                            count = int(m2.group(1).replace(",", ""))
+                            break
+                    return r, count
+            except (ValueError, TypeError):
+                pass
+
+    # 3. JSON blobs embedded in page scripts
+    m = re.search(r'"ratingValue"\s*:\s*"?([0-9.]+)"?', html)
+    if m:
+        try:
+            r = float(m.group(1))
+            if _valid_rating(r):
+                m2 = re.search(r'"(?:ratingsCount|ratingCount)"\s*:\s*([0-9]+)', html)
+                return r, (int(m2.group(1)) if m2 else None)
+        except (ValueError, TypeError):
+            pass
+
+    # 4. Plain text pattern: "X.XX avg rating · N,NNN ratings"
+    m = re.search(r'([0-9]\.[0-9]+)\s+avg\s+rating\s*[·\-]\s*([\d,]+)\s+ratings', html)
+    if m:
+        try:
+            r = float(m.group(1))
+            if _valid_rating(r):
+                return r, int(m.group(2).replace(",", ""))
+        except (ValueError, TypeError):
+            pass
+
     return None, None
 
 
-def fetch_goodreads_rating(title: str, author: str) -> tuple[float | None, int | None]:
+def _extract_book_urls(html: str) -> list[str]:
+    """
+    Extract candidate book-page URLs from a Goodreads search-results page.
+    Returns up to 5 unique URLs in result order.
+    """
+    seen: set[str] = set()
+    results: list[str] = []
+    patterns = [
+        r'href=["\'](/book/show/[0-9]+[^"\'?\s#]*)["\']',
+        r'href=["\']https?://(?:www\.)?goodreads\.com(/book/show/[0-9]+[^"\'?\s#]*)["\']',
+    ]
+    for pat in patterns:
+        for m in re.finditer(pat, html):
+            path = m.group(1)
+            url = "https://www.goodreads.com" + path.split("?")[0]
+            if url not in seen:
+                seen.add(url)
+                results.append(url)
+        if results:
+            break
+    return results[:5]
+
+
+def _normalize_for_match(s: str) -> str:
+    """Lowercase, strip punctuation/parens/subtitles for loose title matching."""
+    s = re.sub(r"\s*\([^)]*\)", "", s)           # remove parentheticals
+    s = re.split(r"[:\u2013\u2014]", s)[0]        # strip subtitles
+    s = re.sub(r"[^a-z0-9 ]", "", s.lower())
+    return s.strip()
+
+
+def fetch_goodreads_rating(
+    title: str,
+    author: str,
+    year: int | None = None,
+) -> tuple[float | None, int | None]:
     """
     Search Goodreads for a book and return (rating, ratings_count).
-    Returns (None, None) on failure or if not confidently resolved.
+    Uses multiple search strategies and several HTML parsing fallbacks.
+    Returns (None, None) if no confident match is found.
+    Never invents values.
     """
-    query = f"{title} {author}"
-    search_url = GR_SEARCH.format(query=urllib.parse.quote_plus(query))
-    html = _fetch_url(search_url)
-    time.sleep(GR_REQUEST_DELAY)
-    if not html:
-        return None, None
+    # Strip publishing-name annotation from title
+    clean_title = re.sub(r"\s*\(Bachman\)\s*$", "", title, flags=re.IGNORECASE).strip()
+    norm_title = _normalize_for_match(clean_title)
 
-    # Find first book link in search results
-    m = re.search(r'href="(/book/show/[^"?]+)"', html)
-    if not m:
-        return None, None
+    # Try title+author first, then title alone as a fallback
+    queries = [f"{clean_title} {author}", clean_title]
 
-    book_url = "https://www.goodreads.com" + m.group(1)
-    book_html = _fetch_url(book_url)
-    time.sleep(GR_REQUEST_DELAY)
-    if not book_html:
-        return None, None
+    for query in queries:
+        search_url = (
+            "https://www.goodreads.com/search?q="
+            + urllib.parse.quote_plus(query)
+            + "&search_type=books"
+        )
+        search_html = _fetch_url(search_url)
+        time.sleep(GR_REQUEST_DELAY)
+        if not search_html:
+            continue
 
-    return _parse_gr_rating(book_html)
+        book_urls = _extract_book_urls(search_html)
+        if not book_urls:
+            continue
+
+        # Try top candidates from this search
+        for book_url in book_urls[:3]:
+            book_html = _fetch_url(book_url)
+            time.sleep(GR_REQUEST_DELAY)
+            if not book_html:
+                continue
+
+            # Sanity-check: page title should contain a fragment of our title
+            page_title_m = re.search(r"<title[^>]*>([^<]+)</title>", book_html, re.IGNORECASE)
+            if page_title_m:
+                page_title_norm = _normalize_for_match(page_title_m.group(1))
+                # Require at least 3 chars of our title to appear in the page title
+                if norm_title and len(norm_title) >= 3:
+                    if norm_title[:6] not in page_title_norm and page_title_norm[:6] not in norm_title:
+                        continue  # wrong book
+
+            rating, count = _parse_gr_rating(book_html)
+            if rating is not None:
+                return rating, count
+
+        # Found URLs but no rating — don't fall through to title-only query
+        break
+
+    return None, None
 
 
 # ---------------------------------------------------------------------------
@@ -371,11 +516,12 @@ def enrich_file(path: Path, label: str, fetch_goodreads: bool = False) -> tuple[
             if entry.get("goodreads_rating") is not None:
                 continue  # already populated
             title  = entry.get("title", "")
+            year_  = entry.get("year")
             author = entry.get("author") or "Stephen King"
             if entry.get("as_bachman"):
                 author = "Richard Bachman"
             print(f"    GR [{i:>3}/{count}] {title}", end=" ... ", flush=True)
-            rating, count_ = fetch_goodreads_rating(title, author)
+            rating, count_ = fetch_goodreads_rating(title, author, year=year_)
             if rating is not None:
                 entry["goodreads_rating"] = rating
                 entry["goodreads_ratings_count"] = count_

@@ -11,11 +11,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
@@ -24,10 +27,12 @@ import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -47,7 +52,7 @@ import com.mattnicol.kingcatalog.ui.screens.books.SortOrder
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LibraryScreen(vm: LibraryViewModel = viewModel(), onBookClick: (Int) -> Unit = {}) {
-    val books by vm.ownedBooks.collectAsState()
+    val booksByAuthor by vm.ownedBooksByAuthor.collectAsState()
     val storyTypes by vm.storyTypes.collectAsState()
     val decades by vm.decades.collectAsState()
     val genres by vm.genres.collectAsState()
@@ -56,6 +61,7 @@ fun LibraryScreen(vm: LibraryViewModel = viewModel(), onBookClick: (Int) -> Unit
     val sort by vm.sortOrder.collectAsState()
     val filter by vm.filterState.collectAsState()
 
+    val expandedState = remember { mutableStateMapOf<String, Boolean>() }
     var selectedBook by remember { mutableStateOf<Book?>(null) }
     var showSortSheet by remember { mutableStateOf(false) }
     var showFilterSheet by remember { mutableStateOf(false) }
@@ -112,7 +118,7 @@ fun LibraryScreen(vm: LibraryViewModel = viewModel(), onBookClick: (Int) -> Unit
                 }
             }
 
-            if (books.isEmpty()) {
+            if (booksByAuthor.isEmpty()) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                     Text(
                         text = if (query.isBlank() && activeFilterCount == 0)
@@ -128,14 +134,41 @@ fun LibraryScreen(vm: LibraryViewModel = viewModel(), onBookClick: (Int) -> Unit
             } else {
                 LazyColumn(
                     contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
-                    items(books, key = { it.id }) { book ->
-                        BookCard(
-                            book = book,
-                            onClick = { onBookClick(book.id) },
-                            onLongClick = { selectedBook = book },
-                        )
+                    booksByAuthor.forEach { (author, books) ->
+                        val isExpanded = expandedState.getOrDefault(author, true)
+
+                        item(key = "header_$author") {
+                            TextButton(
+                                onClick = { expandedState[author] = !isExpanded },
+                                modifier = Modifier.fillMaxWidth(),
+                                colors = ButtonDefaults.textButtonColors(
+                                    contentColor = MaterialTheme.colorScheme.onSurface,
+                                ),
+                            ) {
+                                Text(
+                                    text = author,
+                                    style = MaterialTheme.typography.titleLarge,
+                                    color = MaterialTheme.colorScheme.primary,
+                                    modifier = Modifier.weight(1f),
+                                )
+                                Icon(
+                                    imageVector = if (isExpanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
+                                    contentDescription = if (isExpanded) "Collapse" else "Expand",
+                                )
+                            }
+                        }
+
+                        if (isExpanded) {
+                            items(books, key = { it.id }) { book ->
+                                BookCard(
+                                    book = book,
+                                    onClick = { onBookClick(book.id) },
+                                    onLongClick = { selectedBook = book },
+                                )
+                            }
+                        }
                     }
                 }
             }
