@@ -9,8 +9,10 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -31,6 +33,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.mattnicol.kingcatalog.data.model.Book
@@ -44,22 +48,36 @@ fun BookCard(
     onLongClick: (() -> Unit)? = null,
 ) {
     val interactionSource = remember { MutableInteractionSource() }
-    Card(
+    Row(
         modifier = modifier
             .fillMaxWidth()
-            .combinedClickable(
-                interactionSource = interactionSource,
-                indication = LocalIndication.current,
-                onClick = onClick ?: {},
-                onLongClick = onLongClick,
-            ),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceVariant,
-        ),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+            .height(IntrinsicSize.Min),
     ) {
+        Box(
+            modifier = Modifier
+                .width(3.dp)
+                .fillMaxHeight()
+                .background(MaterialTheme.colorScheme.primary),
+        )
+        Card(
+            modifier = Modifier
+                .weight(1f)
+                .combinedClickable(
+                    interactionSource = interactionSource,
+                    indication = LocalIndication.current,
+                    onClick = onClick ?: {},
+                    onLongClick = onLongClick,
+                ),
+            colors = CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.surfaceVariant,
+            ),
+            elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+            shape = androidx.compose.foundation.shape.RoundedCornerShape(
+                topStart = 0.dp, bottomStart = 0.dp, topEnd = 4.dp, bottomEnd = 4.dp,
+            ),
+        ) {
         Row(
-            modifier = Modifier.padding(10.dp),
+            modifier = Modifier.padding(12.dp),
             verticalAlignment = Alignment.Top,
         ) {
             BookCover(book = book, modifier = Modifier.size(60.dp, 90.dp))
@@ -71,7 +89,7 @@ fun BookCard(
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                 )
-                Spacer(Modifier.height(3.dp))
+                Spacer(Modifier.height(4.dp))
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
@@ -102,7 +120,6 @@ fun BookCard(
                         val m = mins % 60
                         add(if (h > 0) "${h}h ${m}m" else "${m}m")
                     }
-                    book.goodreadsRating?.let { add("★ ${"%.2f".format(it)}") }
                 }
                 if (metaParts.isNotEmpty()) {
                     Spacer(Modifier.height(3.dp))
@@ -110,6 +127,16 @@ fun BookCard(
                         text = metaParts.joinToString(" · "),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.45f),
+                    )
+                }
+                book.goodreadsRating?.let { rating ->
+                    Spacer(Modifier.height(3.dp))
+                    Text(
+                        text = "★ ${"%.2f".format(rating)}",
+                        style = MaterialTheme.typography.labelSmall.copy(
+                            fontWeight = FontWeight.Bold,
+                            color = Color(0xFFD4A017),
+                        ),
                     )
                 }
                 Spacer(Modifier.height(5.dp))
@@ -141,7 +168,8 @@ fun BookCard(
                 }
             }
         }
-    }
+        } // end Card
+    } // end outer Row
 }
 
 @Composable

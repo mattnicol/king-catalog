@@ -1,5 +1,5 @@
 id,author,title,year,word_count,audible_minutes,story_type,collection,goodreads_rating,goodreads_ratings_count,review_flags
-5,,The Stand,1978,,2867.0,novel,,4.35,843562,missing_word_count
+5,,The Stand,1978,,2867.0,novel,,4.35,843596,missing_word_count
 33,,The Plant: Zenith Rising,1982,30000,,short_story,,3.56,1229,approximate_word_count
 167,,A Death,2015,4781,32.8,short_story,The Bazaar of Bad Dreams,3.33,2274,audible_format_inferred_mmss
 168,,Afterlife,2015,4336,37.9,short_story,The Bazaar of Bad Dreams,3.59,185,audible_format_inferred_mmss
@@ -9,31 +9,31 @@ id,author,title,year,word_count,audible_minutes,story_type,collection,goodreads_
 178,,Premium Harmony,2015,3833,26.8,short_story,The Bazaar of Bad Dreams,2.93,1217,audible_format_inferred_mmss
 179,,Summer Thunder,2015,5448,36.0,short_story,The Bazaar of Bad Dreams,3.81,227,audible_format_inferred_mmss
 180,,That Bus Is Another World,2015,3023,26.0,short_story,The Bazaar of Bad Dreams,3.44,378,audible_format_inferred_mmss
-182,,The Dune,2015,4869,34.9,short_story,The Bazaar of Bad Dreams,3.68,30448,audible_format_inferred_mmss
+182,,The Dune,2015,4869,34.9,short_story,The Bazaar of Bad Dreams,3.88,40191,audible_format_inferred_mmss
 183,,The Little Green God of Agony,2015,,58.5,short_story,The Bazaar of Bad Dreams,3.57,448,missing_word_count; audible_format_inferred_mmss
 184,,Cookie Jar,2015,,58.5,short_story,The Bazaar of Bad Dreams,3.83,1045,missing_word_count; audible_format_inferred_mmss
 186,,Under the Weather,2015,6077,36.8,short_story,The Bazaar of Bad Dreams,3.55,898,audible_format_inferred_mmss
-193,,Laurie,2018,,,short_story,,3.64,13845,missing_word_count
-195,,In the Tall Grass,2019,,105.0,novella,,3.62,31453,missing_word_count
-196,,Gwendy's Magic Feather,2019,,277.0,novel,,3.76,27006,missing_word_count
-201,,Later,2021,,392.0,novel,,3.95,153156,missing_word_count
+193,,Laurie,2018,,,short_story,,3.64,13847,missing_word_count
+195,,In the Tall Grass,2019,,105.0,novella,,3.62,31457,missing_word_count
+196,,Gwendy's Magic Feather,2019,,277.0,novel,,3.76,27007,missing_word_count
+201,,Later,2021,,392.0,novel,,3.95,153158,missing_word_count
 202,,Billy Summers,2021,,1017.0,novel,,4.18,28,missing_word_count
 203,,Gwendy's Final Task,2022,,444.0,novel,,4.04,22860,missing_word_count
 204,,Fairy Tale,2022,,1446.0,novel,,3.2,5,missing_word_count
-205,,Holly,2023,,,novel,,4.07,193141,missing_word_count
+205,,Holly,2023,,,novel,,4.07,193145,missing_word_count
 206,,Two Talented Bastids,2024,,,short_story,You Like It Darker,,,missing_word_count
 207,,The Fifth Step,2024,,,short_story,You Like It Darker,3.93,412,missing_word_count
 208,,Willie the Weirdo,2024,,,short_story,You Like It Darker,3.67,219,missing_word_count
 209,,Danny Coughlin's Bad Dream,2024,,,short_story,You Like It Darker,,,missing_word_count
-210,,Finn,2024,,,short_story,You Like It Darker,3.9,25772,missing_word_count
+210,,Finn,2024,,,short_story,You Like It Darker,3.9,25773,missing_word_count
 211,,On Slide Inn Road,2024,,,short_story,You Like It Darker,3.73,221,missing_word_count
 212,,Red Screen,2024,,,short_story,You Like It Darker,3.56,957,missing_word_count
 213,,The Turbulence Expert,2024,,,short_story,You Like It Darker,3.57,176,missing_word_count
-214,,Laurie,2024,,,short_story,You Like It Darker,3.64,13845,missing_word_count
+214,,Laurie,2024,,,short_story,You Like It Darker,3.64,13847,missing_word_count
 215,,Rattlesnakes,2024,,,short_story,You Like It Darker,3.84,250,missing_word_count
 216,,The Dreamers,2024,,,short_story,You Like It Darker,3.94,86449,missing_word_count
 217,,The Answer Man,2024,,,short_story,You Like It Darker,3.0,4,missing_word_count
-218,,The Bachman Books,1985,248050,,collection,,4.15,75895,estimated_from_page_count
+218,,The Bachman Books,1985,248050,,collection,,4.15,75896,estimated_from_page_count
 3001,Grady Hendrix,Horrorstör,2014,66275,,novel,,,,estimated_from_page_count
 3002,Grady Hendrix,My Best Friend's Exorcism,2016,92400,,novel,,3.92,154615,estimated_from_page_count
 3003,Grady Hendrix,Paperbacks from Hell,2017,35200,,non_fiction,,4.26,12138,estimated_from_page_count

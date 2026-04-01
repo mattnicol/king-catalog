@@ -21,6 +21,7 @@ import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
@@ -68,7 +69,8 @@ fun LibraryScreen(vm: LibraryViewModel = viewModel(), onBookClick: (Int) -> Unit
     val sheetState = rememberModalBottomSheetState()
 
     val activeFilterCount = filter.storyTypes.size + filter.genres.size + filter.keywords.size +
-        filter.decades.size + if (filter.bachman != null) 1 else 0 + if (filter.isRead != null) 1 else 0
+        filter.decades.size + (if (filter.bachman != null) 1 else 0) +
+        (if (filter.isRead != null) 1 else 0) + (if (filter.inLibrary != null) 1 else 0)
 
     Surface(modifier = Modifier.fillMaxSize()) {
         Column {
@@ -96,6 +98,7 @@ fun LibraryScreen(vm: LibraryViewModel = viewModel(), onBookClick: (Int) -> Unit
                                 SortOrder.RELEASE_DATE -> "Date"
                                 SortOrder.WORD_COUNT -> "Words"
                                 SortOrder.AUDIBLE_LENGTH -> "Audible"
+                                SortOrder.GOODREADS_RATING -> "Goodreads"
                             }
                         )
                     },
@@ -158,6 +161,10 @@ fun LibraryScreen(vm: LibraryViewModel = viewModel(), onBookClick: (Int) -> Unit
                                     contentDescription = if (isExpanded) "Collapse" else "Expand",
                                 )
                             }
+                            HorizontalDivider(
+                                color = MaterialTheme.colorScheme.primary.copy(alpha = 0.3f),
+                                thickness = 1.dp,
+                            )
                         }
 
                         if (isExpanded) {

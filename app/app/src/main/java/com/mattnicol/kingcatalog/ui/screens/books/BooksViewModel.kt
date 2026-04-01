@@ -15,7 +15,7 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
-enum class SortOrder { RELEASE_DATE, WORD_COUNT, AUDIBLE_LENGTH }
+enum class SortOrder { RELEASE_DATE, WORD_COUNT, AUDIBLE_LENGTH, GOODREADS_RATING }
 
 data class FilterState(
     val storyTypes: Set<String> = emptySet(),
@@ -68,13 +68,25 @@ class BooksViewModel(application: Application) : AndroidViewModel(application) {
                     inLibraryFilter = filter.inLibrary,
                 )
             }
-            .sortedWith(compareBy(nullsLast()) {
+            .let { list ->
                 when (sort) {
-                    SortOrder.RELEASE_DATE -> it.year
-                    SortOrder.WORD_COUNT -> it.wordCount
-                    SortOrder.AUDIBLE_LENGTH -> it.audibleMinutes
+                    SortOrder.RELEASE_DATE -> list.sortedWith(compareBy(nullsLast()) { it.year })
+                    SortOrder.WORD_COUNT -> list.sortedWith(compareBy(nullsLast()) { it.wordCount })
+                    SortOrder.AUDIBLE_LENGTH -> list.sortedWith(compareBy(nullsLast()) { it.audibleMinutes })
+                    SortOrder.GOODREADS_RATING -> list.sortedWith(
+                        Comparator { a, b ->
+                            val ra = a.goodreadsRating
+                            val rb = b.goodreadsRating
+                            when {
+                                ra == null && rb == null -> 0
+                                ra == null -> 1
+                                rb == null -> -1
+                                else -> rb.compareTo(ra)
+                            }
+                        }
+                    )
                 }
-            })
+            }
     }.stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
 
     fun onQueryChange(q: String) { searchQuery.value = q }

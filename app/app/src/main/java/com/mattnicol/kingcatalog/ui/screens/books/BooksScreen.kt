@@ -86,6 +86,7 @@ fun BooksScreen(vm: BooksViewModel = viewModel(), onBookClick: (Int) -> Unit = {
                                 SortOrder.RELEASE_DATE -> "Date"
                                 SortOrder.WORD_COUNT -> "Words"
                                 SortOrder.AUDIBLE_LENGTH -> "Audible"
+                                SortOrder.GOODREADS_RATING -> "Goodreads"
                             }
                         )
                     },

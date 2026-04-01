@@ -10,7 +10,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.MaterialTheme
@@ -33,10 +33,10 @@ fun SortSheet(current: SortOrder, onSelect: (SortOrder) -> Unit) {
     Column(modifier = Modifier.padding(bottom = 16.dp)) {
         Text(
             text = "Sort by",
-            style = MaterialTheme.typography.titleMedium,
+            style = MaterialTheme.typography.headlineSmall,
             modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
         )
-        Divider()
+        HorizontalDivider()
         SortOrder.entries.forEach { s ->
             Row(
                 modifier = Modifier
@@ -50,6 +50,7 @@ fun SortSheet(current: SortOrder, onSelect: (SortOrder) -> Unit) {
                         SortOrder.RELEASE_DATE -> "Release Date"
                         SortOrder.WORD_COUNT -> "Word Count"
                         SortOrder.AUDIBLE_LENGTH -> "Audible Length"
+                        SortOrder.GOODREADS_RATING -> "Goodreads Rating"
                     },
                     style = MaterialTheme.typography.bodyLarge,
                     modifier = Modifier.padding(start = 8.dp),
@@ -79,13 +80,13 @@ fun FilterSheet(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Text("Filter", style = MaterialTheme.typography.titleMedium)
+            Text("Filter", style = MaterialTheme.typography.headlineSmall)
             Row {
                 TextButton(onClick = onClearAll) { Text("Clear all") }
                 TextButton(onClick = onDone) { Text("Done") }
             }
         }
-        Divider()
+        HorizontalDivider()
 
         FilterSection(label = "Type") {
             ToggleChipRow(
@@ -98,7 +99,7 @@ fun FilterSheet(
             )
         }
 
-        Divider(modifier = Modifier.padding(vertical = 4.dp))
+        HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
 
         FilterSection(label = "Genre") {
             ToggleChipRow(
@@ -111,7 +112,7 @@ fun FilterSheet(
             )
         }
 
-        Divider(modifier = Modifier.padding(vertical = 4.dp))
+        HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
 
         FilterSection(label = "Keywords") {
             ToggleChipRow(
@@ -124,7 +125,7 @@ fun FilterSheet(
             )
         }
 
-        Divider(modifier = Modifier.padding(vertical = 4.dp))
+        HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
 
         FilterSection(label = "Author") {
             Row(
@@ -149,7 +150,7 @@ fun FilterSheet(
             }
         }
 
-        Divider(modifier = Modifier.padding(vertical = 4.dp))
+        HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
 
         FilterSection(label = "Decade") {
             ToggleChipRow(
@@ -162,7 +163,7 @@ fun FilterSheet(
             )
         }
 
-        Divider(modifier = Modifier.padding(vertical = 4.dp))
+        HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
 
         FilterSection(label = "Read Status") {
             Row(
@@ -187,7 +188,7 @@ fun FilterSheet(
             }
         }
 
-        Divider(modifier = Modifier.padding(vertical = 4.dp))
+        HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
 
         FilterSection(label = "Library") {
             Row(
@@ -274,7 +275,7 @@ fun BookActionSheet(
             modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
             maxLines = 2,
         )
-        Divider()
+        HorizontalDivider()
         if (!book.isOwned) {
             TextButton(
                 onClick = onAddToLibrary,

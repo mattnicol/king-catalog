@@ -14,14 +14,14 @@ private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(na
 class UserPreferencesRepository(private val context: Context) {
 
     private object Keys {
-        // v3: includes Malerman, Hill, Hendrix in addition to Stephen King
-        val SEED_V3_IMPORTED = booleanPreferencesKey("seed_v3_imported")
+        // v5: adds Witchcraft for Wayward Girls (id=231) + cover/word-count fixes
+        val SEED_V5_IMPORTED = booleanPreferencesKey("seed_v5_imported")
     }
 
     val seedImported: Flow<Boolean> = context.dataStore.data
-        .map { it[Keys.SEED_V3_IMPORTED] ?: false }
+        .map { it[Keys.SEED_V5_IMPORTED] ?: false }
 
     suspend fun markSeedImported() {
-        context.dataStore.edit { it[Keys.SEED_V3_IMPORTED] = true }
+        context.dataStore.edit { it[Keys.SEED_V5_IMPORTED] = true }
     }
 }

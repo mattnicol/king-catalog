@@ -58,13 +58,25 @@ class LibraryViewModel(application: Application) : AndroidViewModel(application)
                     inLibraryFilter = filter.inLibrary,
                 )
             }
-            .sortedWith(compareBy(nullsLast()) {
+            .let { list ->
                 when (sort) {
-                    SortOrder.RELEASE_DATE -> it.year
-                    SortOrder.WORD_COUNT -> it.wordCount
-                    SortOrder.AUDIBLE_LENGTH -> it.audibleMinutes
+                    SortOrder.RELEASE_DATE -> list.sortedWith(compareBy(nullsLast()) { it.year })
+                    SortOrder.WORD_COUNT -> list.sortedWith(compareBy(nullsLast()) { it.wordCount })
+                    SortOrder.AUDIBLE_LENGTH -> list.sortedWith(compareBy(nullsLast()) { it.audibleMinutes })
+                    SortOrder.GOODREADS_RATING -> list.sortedWith(
+                        Comparator { a, b ->
+                            val ra = a.goodreadsRating
+                            val rb = b.goodreadsRating
+                            when {
+                                ra == null && rb == null -> 0
+                                ra == null -> 1
+                                rb == null -> -1
+                                else -> rb.compareTo(ra)
+                            }
+                        }
+                    )
                 }
-            })
+            }
             .groupBy { it.author }
             .toSortedMap(compareBy { author -> if (author == "Stephen King") "" else author })
     }.stateIn(viewModelScope, SharingStarted.Lazily, emptyMap())
@@ -88,13 +100,25 @@ class LibraryViewModel(application: Application) : AndroidViewModel(application)
                     inLibraryFilter = filter.inLibrary,
                 )
             }
-            .sortedWith(compareBy(nullsLast()) {
+            .let { list ->
                 when (sort) {
-                    SortOrder.RELEASE_DATE -> it.year
-                    SortOrder.WORD_COUNT -> it.wordCount
-                    SortOrder.AUDIBLE_LENGTH -> it.audibleMinutes
+                    SortOrder.RELEASE_DATE -> list.sortedWith(compareBy(nullsLast()) { it.year })
+                    SortOrder.WORD_COUNT -> list.sortedWith(compareBy(nullsLast()) { it.wordCount })
+                    SortOrder.AUDIBLE_LENGTH -> list.sortedWith(compareBy(nullsLast()) { it.audibleMinutes })
+                    SortOrder.GOODREADS_RATING -> list.sortedWith(
+                        Comparator { a, b ->
+                            val ra = a.goodreadsRating
+                            val rb = b.goodreadsRating
+                            when {
+                                ra == null && rb == null -> 0
+                                ra == null -> 1
+                                rb == null -> -1
+                                else -> rb.compareTo(ra)
+                            }
+                        }
+                    )
                 }
-            })
+            }
     }.stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
 
     fun onQueryChange(q: String) { searchQuery.value = q }

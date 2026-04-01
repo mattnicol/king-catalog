@@ -20,6 +20,8 @@ abstract class KingCatalogDatabase : RoomDatabase() {
     abstract fun bookDao(): BookDao
 
     companion object {
+        const val DB_VERSION = 4
+
         @Volatile private var INSTANCE: KingCatalogDatabase? = null
 
         fun getInstance(context: Context): KingCatalogDatabase =

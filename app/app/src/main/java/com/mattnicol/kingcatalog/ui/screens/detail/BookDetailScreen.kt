@@ -21,7 +21,9 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.AssistChip
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -157,7 +159,7 @@ fun BookDetailScreen(bookId: Int, onBack: () -> Unit) {
                 // Title + author
                 item {
                     Column {
-                        Text(b.title, style = MaterialTheme.typography.headlineSmall)
+                        Text(b.title, style = MaterialTheme.typography.headlineMedium)
                         val authorLine = when {
                             b.asBachman -> "Stephen King writing as Richard Bachman"
                             b.author != "Stephen King" -> b.author
@@ -225,20 +227,31 @@ fun BookDetailScreen(bookId: Int, onBack: () -> Unit) {
                 // Goodreads rating
                 if (b.goodreadsRating != null) {
                     item {
-                        val ratingStr = "★ ${"%.2f".format(b.goodreadsRating)}"
                         val countStr = b.goodreadsRatingsCount?.let { count ->
                             val fmt = when {
                                 count >= 1_000_000 -> "${"%.1f".format(count / 1_000_000f)}M"
                                 count >= 1_000 -> "${"%.0f".format(count / 1_000f)}K"
                                 else -> count.toString()
                             }
-                            "  ($fmt ratings on Goodreads)"
-                        } ?: "  (Goodreads)"
-                        Text(
-                            text = ratingStr + countStr,
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.75f),
-                        )
+                            " ($fmt ratings)"
+                        } ?: ""
+                        androidx.compose.foundation.layout.Row(
+                            verticalAlignment = androidx.compose.ui.Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                        ) {
+                            Text(
+                                text = "★ ${"%.2f".format(b.goodreadsRating)}",
+                                style = MaterialTheme.typography.titleMedium.copy(
+                                    fontWeight = FontWeight.Bold,
+                                    color = Color(0xFFD4A017),
+                                ),
+                            )
+                            Text(
+                                text = "Goodreads$countStr",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
+                            )
+                        }
                     }
                 }
 
@@ -278,7 +291,7 @@ fun BookDetailScreen(bookId: Int, onBack: () -> Unit) {
                 }
 
                 // Actions
-                item { Divider() }
+                item { HorizontalDivider() }
                 item {
                     DetailActions(
                         book = b,
@@ -298,7 +311,7 @@ fun BookDetailScreen(bookId: Int, onBack: () -> Unit) {
                             style = MaterialTheme.typography.titleMedium,
                             modifier = Modifier.padding(top = 8.dp),
                         )
-                        Divider()
+                        HorizontalDivider()
                     }
                     items(children, key = { it.id }) { child ->
                         BookCard(book = child)
@@ -312,7 +325,7 @@ fun BookDetailScreen(bookId: Int, onBack: () -> Unit) {
 @Composable
 private fun DetailSection(label: String, content: @Composable () -> Unit) {
     Text(
-        text = label,
+        text = label.uppercase(),
         style = MaterialTheme.typography.labelMedium,
         color = MaterialTheme.colorScheme.primary,
         modifier = Modifier.padding(bottom = 4.dp),

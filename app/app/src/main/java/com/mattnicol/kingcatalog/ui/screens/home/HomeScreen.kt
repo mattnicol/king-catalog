@@ -77,9 +77,9 @@ private fun HomeSection(title: String, books: List<Book>, emptyMessage: String) 
     Column {
         Text(
             text = title.uppercase(),
-            style = MaterialTheme.typography.titleMedium,
+            style = MaterialTheme.typography.titleLarge,
             color = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.padding(horizontal = 16.dp, vertical = 6.dp),
+            modifier = Modifier.padding(start = 20.dp, end = 16.dp, top = 6.dp, bottom = 6.dp),
         )
         if (books.isEmpty()) {
             Text(

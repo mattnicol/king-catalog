@@ -241,8 +241,8 @@
     "author": "Grady Hendrix",
     "year": 2023,
     "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
+    "word_count": 92400,
+    "audible_minutes": 630,
     "story_type": "novel",
     "genres": [
       "Horror"
@@ -989,8 +989,8 @@
     "author": "Josh Malerman",
     "year": 2022,
     "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
+    "word_count": 87450,
+    "audible_minutes": 533,
     "story_type": "novel",
     "genres": [
       "Horror"
@@ -1134,7 +1134,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.99,
-    "goodreads_ratings_count": 857776,
+    "goodreads_ratings_count": 857802,
     "author": "Stephen King"
   },
   {
@@ -1206,7 +1206,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.1,
-    "goodreads_ratings_count": 668155,
+    "goodreads_ratings_count": 668170,
     "author": "Stephen King"
   },
   {
@@ -1262,7 +1262,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.28,
-    "goodreads_ratings_count": 1727415,
+    "goodreads_ratings_count": 1727463,
     "author": "Stephen King"
   },
   {
@@ -1346,7 +1346,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 4.35,
-    "goodreads_ratings_count": 843562,
+    "goodreads_ratings_count": 843596,
     "author": "Stephen King"
   },
   {
@@ -2403,7 +2403,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.04,
-    "goodreads_ratings_count": 200180,
+    "goodreads_ratings_count": 200183,
     "author": "Stephen King"
   },
   {
@@ -2446,7 +2446,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.0,
-    "goodreads_ratings_count": 288620,
+    "goodreads_ratings_count": 288662,
     "author": "Stephen King"
   },
   {
@@ -2509,7 +2509,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.97,
-    "goodreads_ratings_count": 248706,
+    "goodreads_ratings_count": 248710,
     "author": "Stephen King"
   },
   {
@@ -2574,7 +2574,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.92,
-    "goodreads_ratings_count": 248906,
+    "goodreads_ratings_count": 248912,
     "author": "Stephen King"
   },
   {
@@ -2614,7 +2614,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.58,
-    "goodreads_ratings_count": 45767,
+    "goodreads_ratings_count": 45768,
     "author": "Stephen King"
   },
   {
@@ -2655,7 +2655,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.8,
-    "goodreads_ratings_count": 325158,
+    "goodreads_ratings_count": 325167,
     "author": "Stephen King"
   },
   {
@@ -2824,7 +2824,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.48,
-    "goodreads_ratings_count": 66531,
+    "goodreads_ratings_count": 66542,
     "author": "Stephen King"
   },
   {
@@ -2864,7 +2864,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.93,
-    "goodreads_ratings_count": 42895,
+    "goodreads_ratings_count": 42896,
     "author": "Stephen King"
   },
   {
@@ -2906,7 +2906,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.02,
-    "goodreads_ratings_count": 39406,
+    "goodreads_ratings_count": 39415,
     "author": "Stephen King"
   },
   {
@@ -3032,7 +3032,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.86,
-    "goodreads_ratings_count": 265818,
+    "goodreads_ratings_count": 265823,
     "author": "Stephen King"
   },
   {
@@ -3147,7 +3147,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.67,
-    "goodreads_ratings_count": 66310,
+    "goodreads_ratings_count": 66313,
     "author": "Stephen King"
   },
   {
@@ -3191,7 +3191,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.1,
-    "goodreads_ratings_count": 143120,
+    "goodreads_ratings_count": 143126,
     "author": "Stephen King"
   },
   {
@@ -3233,7 +3233,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.78,
-    "goodreads_ratings_count": 228949,
+    "goodreads_ratings_count": 228953,
     "author": "Stephen King"
   },
   {
@@ -3649,8 +3649,8 @@
     "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": [],
-    "goodreads_rating": 3.64,
-    "goodreads_ratings_count": 408,
+    "goodreads_rating": 4.33,
+    "goodreads_ratings_count": 57339,
     "author": "Stephen King"
   },
   {
@@ -3928,7 +3928,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.93,
-    "goodreads_ratings_count": 184126,
+    "goodreads_ratings_count": 184133,
     "author": "Stephen King"
   },
   {
@@ -4157,7 +4157,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.32,
-    "goodreads_ratings_count": 2700,
+    "goodreads_ratings_count": 2701,
     "author": "Stephen King"
   },
   {
@@ -4233,7 +4233,7 @@
       "estimated_from_page_count"
     ],
     "goodreads_rating": 4.15,
-    "goodreads_ratings_count": 75895,
+    "goodreads_ratings_count": 75896,
     "author": "Stephen King"
   },
   {
@@ -4285,7 +4285,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.97,
-    "goodreads_ratings_count": 138915,
+    "goodreads_ratings_count": 138917,
     "author": "Stephen King"
   },
   {
@@ -4360,7 +4360,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.24,
-    "goodreads_ratings_count": 1286191,
+    "goodreads_ratings_count": 1286224,
     "author": "Stephen King"
   },
   {
@@ -4402,7 +4402,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.94,
-    "goodreads_ratings_count": 146144,
+    "goodreads_ratings_count": 146148,
     "author": "Stephen King"
   },
   {
@@ -4476,8 +4476,8 @@
     "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": [],
-    "goodreads_rating": 4.23,
-    "goodreads_ratings_count": 792968,
+    "goodreads_rating": 4.18,
+    "goodreads_ratings_count": 4638,
     "author": "Stephen King"
   },
   {
@@ -4527,7 +4527,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.61,
-    "goodreads_ratings_count": 166404,
+    "goodreads_ratings_count": 166405,
     "author": "Stephen King"
   },
   {
@@ -4568,7 +4568,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.81,
-    "goodreads_ratings_count": 153703,
+    "goodreads_ratings_count": 153704,
     "author": "Stephen King"
   },
   {
@@ -4660,7 +4660,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.93,
-    "goodreads_ratings_count": 45254,
+    "goodreads_ratings_count": 45255,
     "author": "Stephen King"
   },
   {
@@ -4826,7 +4826,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.25,
-    "goodreads_ratings_count": 250312,
+    "goodreads_ratings_count": 250316,
     "author": "Stephen King"
   },
   {
@@ -4869,7 +4869,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.98,
-    "goodreads_ratings_count": 281747,
+    "goodreads_ratings_count": 281754,
     "author": "Stephen King"
   },
   {
@@ -4912,7 +4912,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.59,
-    "goodreads_ratings_count": 180499,
+    "goodreads_ratings_count": 180504,
     "author": "Stephen King"
   },
   {
@@ -5128,7 +5128,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.87,
-    "goodreads_ratings_count": 2874,
+    "goodreads_ratings_count": 2875,
     "author": "Stephen King"
   },
   {
@@ -5286,8 +5286,8 @@
     "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": [],
-    "goodreads_rating": 2.0,
-    "goodreads_ratings_count": 1,
+    "goodreads_rating": 3.62,
+    "goodreads_ratings_count": 531,
     "author": "Stephen King"
   },
   {
@@ -5962,7 +5962,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.83,
-    "goodreads_ratings_count": 169640,
+    "goodreads_ratings_count": 169644,
     "author": "Stephen King"
   },
   {
@@ -6003,7 +6003,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.76,
-    "goodreads_ratings_count": 124995,
+    "goodreads_ratings_count": 124997,
     "author": "Stephen King"
   },
   {
@@ -6086,7 +6086,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.86,
-    "goodreads_ratings_count": 154529,
+    "goodreads_ratings_count": 154533,
     "author": "Stephen King"
   },
   {
@@ -6129,7 +6129,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.22,
-    "goodreads_ratings_count": 8833,
+    "goodreads_ratings_count": 8835,
     "author": "Stephen King"
   },
   {
@@ -6174,7 +6174,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.27,
-    "goodreads_ratings_count": 222617,
+    "goodreads_ratings_count": 222624,
     "author": "Stephen King"
   },
   {
@@ -6218,7 +6218,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.92,
-    "goodreads_ratings_count": 212602,
+    "goodreads_ratings_count": 212603,
     "author": "Stephen King"
   },
   {
@@ -6261,7 +6261,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.64,
-    "goodreads_ratings_count": 180731,
+    "goodreads_ratings_count": 180735,
     "author": "Stephen King"
   },
   {
@@ -6497,7 +6497,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.66,
-    "goodreads_ratings_count": 187400,
+    "goodreads_ratings_count": 187404,
     "author": "Stephen King"
   },
   {
@@ -6529,7 +6529,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.04,
-    "goodreads_ratings_count": 69754,
+    "goodreads_ratings_count": 69758,
     "author": "Stephen King"
   },
   {
@@ -6571,7 +6571,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.49,
-    "goodreads_ratings_count": 75509,
+    "goodreads_ratings_count": 75512,
     "author": "Stephen King"
   },
   {
@@ -6730,7 +6730,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.97,
-    "goodreads_ratings_count": 109661,
+    "goodreads_ratings_count": 109665,
     "author": "Stephen King"
   },
   {
@@ -6769,8 +6769,8 @@
     "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": [],
-    "goodreads_rating": 3.33,
-    "goodreads_ratings_count": 2274,
+    "goodreads_rating": 3.32,
+    "goodreads_ratings_count": 183,
     "author": "Stephen King"
   },
   {
@@ -7183,7 +7183,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.97,
-    "goodreads_ratings_count": 109661,
+    "goodreads_ratings_count": 109666,
     "author": "Stephen King"
   },
   {
@@ -7217,7 +7217,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.2,
-    "goodreads_ratings_count": 203915,
+    "goodreads_ratings_count": 203918,
     "author": "Stephen King"
   },
   {
@@ -7248,7 +7248,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.0,
-    "goodreads_ratings_count": 177460,
+    "goodreads_ratings_count": 177466,
     "author": "Stephen King"
   },
   {
@@ -7320,7 +7320,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.38,
-    "goodreads_ratings_count": 60977,
+    "goodreads_ratings_count": 60979,
     "author": "Stephen King"
   },
   {
@@ -7365,7 +7365,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.65,
-    "goodreads_ratings_count": 238574,
+    "goodreads_ratings_count": 238578,
     "author": "Stephen King"
   },
   {
@@ -7438,7 +7438,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.77,
-    "goodreads_ratings_count": 56360,
+    "goodreads_ratings_count": 56363,
     "author": "Stephen King"
   },
   {
@@ -7479,7 +7479,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.99,
-    "goodreads_ratings_count": 138176,
+    "goodreads_ratings_count": 138179,
     "author": "Stephen King"
   },
   {
@@ -7775,7 +7775,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.98,
-    "goodreads_ratings_count": 281747,
+    "goodreads_ratings_count": 281754,
     "author": "Stephen King"
   },
   {
@@ -7825,7 +7825,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.19,
-    "goodreads_ratings_count": 565,
+    "goodreads_ratings_count": 566,
     "author": "Stephen King"
   },
   {
@@ -8157,7 +8157,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.93,
-    "goodreads_ratings_count": 326449,
+    "goodreads_ratings_count": 326457,
     "author": "Stephen King"
   },
   {
@@ -8417,7 +8417,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.13,
-    "goodreads_ratings_count": 94571,
+    "goodreads_ratings_count": 94574,
     "author": "Stephen King"
   },
   {
@@ -8460,7 +8460,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.93,
-    "goodreads_ratings_count": 181221,
+    "goodreads_ratings_count": 181225,
     "author": "Stephen King"
   },
   {
@@ -8503,7 +8503,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.13,
-    "goodreads_ratings_count": 300700,
+    "goodreads_ratings_count": 300712,
     "author": "Stephen King"
   },
   {
@@ -9173,8 +9173,8 @@
     "review_flags": [
       "audible_format_inferred_mmss"
     ],
-    "goodreads_rating": 3.68,
-    "goodreads_ratings_count": 30448,
+    "goodreads_rating": 3.88,
+    "goodreads_ratings_count": 40191,
     "author": "Stephen King"
   },
   {
@@ -9268,7 +9268,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.61,
-    "goodreads_ratings_count": 166404,
+    "goodreads_ratings_count": 166406,
     "author": "Stephen King"
   },
   {
@@ -9459,7 +9459,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.92,
-    "goodreads_ratings_count": 81405,
+    "goodreads_ratings_count": 81406,
     "author": "Stephen King"
   },
   {
@@ -9502,7 +9502,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.73,
-    "goodreads_ratings_count": 96181,
+    "goodreads_ratings_count": 96185,
     "author": "Stephen King"
   },
   {
@@ -9543,7 +9543,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.01,
-    "goodreads_ratings_count": 387312,
+    "goodreads_ratings_count": 387328,
     "author": "Stephen King"
   },
   {
@@ -9572,7 +9572,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.63,
-    "goodreads_ratings_count": 161634,
+    "goodreads_ratings_count": 161637,
     "author": "Stephen King"
   },
   {
@@ -9603,7 +9603,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 3.64,
-    "goodreads_ratings_count": 13845,
+    "goodreads_ratings_count": 13847,
     "author": "Stephen King"
   },
   {
@@ -9644,7 +9644,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.19,
-    "goodreads_ratings_count": 348003,
+    "goodreads_ratings_count": 348020,
     "author": "Stephen King"
   },
   {
@@ -9687,7 +9687,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 3.62,
-    "goodreads_ratings_count": 31453,
+    "goodreads_ratings_count": 31457,
     "author": "Stephen King"
   },
   {
@@ -9718,7 +9718,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 3.76,
-    "goodreads_ratings_count": 27006,
+    "goodreads_ratings_count": 27007,
     "author": "Stephen King"
   },
   {
@@ -9758,7 +9758,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.86,
-    "goodreads_ratings_count": 1266,
+    "goodreads_ratings_count": 1267,
     "author": "Stephen King"
   },
   {
@@ -9798,7 +9798,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.0,
-    "goodreads_ratings_count": 15046,
+    "goodreads_ratings_count": 15048,
     "author": "Stephen King"
   },
   {
@@ -9826,8 +9826,8 @@
     "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": [],
-    "goodreads_rating": 3.67,
-    "goodreads_ratings_count": 9,
+    "goodreads_rating": 3.97,
+    "goodreads_ratings_count": 129837,
     "author": "Stephen King"
   },
   {
@@ -9932,7 +9932,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 3.95,
-    "goodreads_ratings_count": 153156,
+    "goodreads_ratings_count": 153158,
     "author": "Stephen King"
   },
   {
@@ -10069,7 +10069,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 4.07,
-    "goodreads_ratings_count": 193141,
+    "goodreads_ratings_count": 193145,
     "author": "Stephen King"
   },
   {
@@ -10220,7 +10220,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 3.9,
-    "goodreads_ratings_count": 25772,
+    "goodreads_ratings_count": 25773,
     "author": "Stephen King"
   },
   {
@@ -10344,7 +10344,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 3.64,
-    "goodreads_ratings_count": 13845,
+    "goodreads_ratings_count": 13847,
     "author": "Stephen King"
   },
   {
@@ -10479,7 +10479,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.17,
-    "goodreads_ratings_count": 91456,
+    "goodreads_ratings_count": 91460,
     "author": "Stephen King"
   }
 ]

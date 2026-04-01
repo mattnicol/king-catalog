@@ -78,7 +78,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.99,
-    "goodreads_ratings_count": 857776
+    "goodreads_ratings_count": 857802
   },
   {
     "id": 2,
@@ -149,7 +149,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.1,
-    "goodreads_ratings_count": 668155
+    "goodreads_ratings_count": 668170
   },
   {
     "id": 3,
@@ -204,7 +204,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.28,
-    "goodreads_ratings_count": 1727415
+    "goodreads_ratings_count": 1727463
   },
   {
     "id": 4,
@@ -286,7 +286,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 4.35,
-    "goodreads_ratings_count": 843562
+    "goodreads_ratings_count": 843596
   },
   {
     "id": 6,
@@ -1315,7 +1315,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.0,
-    "goodreads_ratings_count": 288620
+    "goodreads_ratings_count": 288662
   },
   {
     "id": 27,
@@ -1377,7 +1377,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.97,
-    "goodreads_ratings_count": 248706
+    "goodreads_ratings_count": 248710
   },
   {
     "id": 28,
@@ -1441,7 +1441,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.92,
-    "goodreads_ratings_count": 248906
+    "goodreads_ratings_count": 248912
   },
   {
     "id": 29,
@@ -1480,7 +1480,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.58,
-    "goodreads_ratings_count": 45767
+    "goodreads_ratings_count": 45768
   },
   {
     "id": 30,
@@ -1520,7 +1520,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.8,
-    "goodreads_ratings_count": 325158
+    "goodreads_ratings_count": 325167
   },
   {
     "id": 31,
@@ -1685,7 +1685,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.48,
-    "goodreads_ratings_count": 66531
+    "goodreads_ratings_count": 66542
   },
   {
     "id": 35,
@@ -1724,7 +1724,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.93,
-    "goodreads_ratings_count": 42895
+    "goodreads_ratings_count": 42896
   },
   {
     "id": 36,
@@ -1765,7 +1765,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.02,
-    "goodreads_ratings_count": 39406
+    "goodreads_ratings_count": 39415
   },
   {
     "id": 37,
@@ -1855,7 +1855,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.86,
-    "goodreads_ratings_count": 265818
+    "goodreads_ratings_count": 265823
   },
   {
     "id": 39,
@@ -2262,8 +2262,8 @@
     "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": [],
-    "goodreads_rating": 3.64,
-    "goodreads_ratings_count": 408
+    "goodreads_rating": 4.33,
+    "goodreads_ratings_count": 57339
   },
   {
     "id": 48,
@@ -2535,7 +2535,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.93,
-    "goodreads_ratings_count": 184126
+    "goodreads_ratings_count": 184133
   },
   {
     "id": 54,
@@ -2758,7 +2758,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.32,
-    "goodreads_ratings_count": 2700
+    "goodreads_ratings_count": 2701
   },
   {
     "id": 60,
@@ -2910,7 +2910,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.67,
-    "goodreads_ratings_count": 66310
+    "goodreads_ratings_count": 66313
   },
   {
     "id": 63,
@@ -2953,7 +2953,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.1,
-    "goodreads_ratings_count": 143120
+    "goodreads_ratings_count": 143126
   },
   {
     "id": 64,
@@ -2994,7 +2994,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.78,
-    "goodreads_ratings_count": 228949
+    "goodreads_ratings_count": 228953
   },
   {
     "id": 65,
@@ -3068,7 +3068,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.24,
-    "goodreads_ratings_count": 1286191
+    "goodreads_ratings_count": 1286224
   },
   {
     "id": 66,
@@ -3109,7 +3109,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.94,
-    "goodreads_ratings_count": 146144
+    "goodreads_ratings_count": 146148
   },
   {
     "id": 67,
@@ -3181,8 +3181,8 @@
     "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": [],
-    "goodreads_rating": 4.23,
-    "goodreads_ratings_count": 792968
+    "goodreads_rating": 4.18,
+    "goodreads_ratings_count": 4638
   },
   {
     "id": 69,
@@ -3231,7 +3231,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.61,
-    "goodreads_ratings_count": 166404
+    "goodreads_ratings_count": 166405
   },
   {
     "id": 70,
@@ -3271,7 +3271,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.81,
-    "goodreads_ratings_count": 153703
+    "goodreads_ratings_count": 153704
   },
   {
     "id": 71,
@@ -3492,7 +3492,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.87,
-    "goodreads_ratings_count": 2874
+    "goodreads_ratings_count": 2875
   },
   {
     "id": 77,
@@ -3646,8 +3646,8 @@
     "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": [],
-    "goodreads_rating": 2.0,
-    "goodreads_ratings_count": 1
+    "goodreads_rating": 3.62,
+    "goodreads_ratings_count": 531
   },
   {
     "id": 81,
@@ -4261,7 +4261,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.93,
-    "goodreads_ratings_count": 45254
+    "goodreads_ratings_count": 45255
   },
   {
     "id": 97,
@@ -4389,7 +4389,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.25,
-    "goodreads_ratings_count": 250312
+    "goodreads_ratings_count": 250316
   },
   {
     "id": 101,
@@ -4431,7 +4431,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.98,
-    "goodreads_ratings_count": 281747
+    "goodreads_ratings_count": 281754
   },
   {
     "id": 102,
@@ -4473,7 +4473,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.59,
-    "goodreads_ratings_count": 180499
+    "goodreads_ratings_count": 180504
   },
   {
     "id": 103,
@@ -4543,7 +4543,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.83,
-    "goodreads_ratings_count": 169640
+    "goodreads_ratings_count": 169644
   },
   {
     "id": 105,
@@ -4583,7 +4583,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.76,
-    "goodreads_ratings_count": 124995
+    "goodreads_ratings_count": 124997
   },
   {
     "id": 106,
@@ -4664,7 +4664,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.86,
-    "goodreads_ratings_count": 154529
+    "goodreads_ratings_count": 154533
   },
   {
     "id": 108,
@@ -4706,7 +4706,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.22,
-    "goodreads_ratings_count": 8833
+    "goodreads_ratings_count": 8835
   },
   {
     "id": 109,
@@ -4750,7 +4750,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.27,
-    "goodreads_ratings_count": 222617
+    "goodreads_ratings_count": 222624
   },
   {
     "id": 110,
@@ -4793,7 +4793,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.92,
-    "goodreads_ratings_count": 212602
+    "goodreads_ratings_count": 212603
   },
   {
     "id": 111,
@@ -4835,7 +4835,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.64,
-    "goodreads_ratings_count": 180731
+    "goodreads_ratings_count": 180735
   },
   {
     "id": 112,
@@ -5030,7 +5030,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.66,
-    "goodreads_ratings_count": 187400
+    "goodreads_ratings_count": 187404
   },
   {
     "id": 118,
@@ -5061,7 +5061,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.04,
-    "goodreads_ratings_count": 69754
+    "goodreads_ratings_count": 69758
   },
   {
     "id": 119,
@@ -5102,7 +5102,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.49,
-    "goodreads_ratings_count": 75509
+    "goodreads_ratings_count": 75512
   },
   {
     "id": 120,
@@ -5257,7 +5257,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.97,
-    "goodreads_ratings_count": 109661
+    "goodreads_ratings_count": 109665
   },
   {
     "id": 124,
@@ -5295,8 +5295,8 @@
     "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": [],
-    "goodreads_rating": 3.33,
-    "goodreads_ratings_count": 2274
+    "goodreads_rating": 3.32,
+    "goodreads_ratings_count": 183
   },
   {
     "id": 125,
@@ -5689,7 +5689,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.2,
-    "goodreads_ratings_count": 203915
+    "goodreads_ratings_count": 203918
   },
   {
     "id": 135,
@@ -5719,7 +5719,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.0,
-    "goodreads_ratings_count": 177460
+    "goodreads_ratings_count": 177466
   },
   {
     "id": 136,
@@ -5789,7 +5789,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.38,
-    "goodreads_ratings_count": 60977
+    "goodreads_ratings_count": 60979
   },
   {
     "id": 138,
@@ -5833,7 +5833,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.65,
-    "goodreads_ratings_count": 238574
+    "goodreads_ratings_count": 238578
   },
   {
     "id": 139,
@@ -5904,7 +5904,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.77,
-    "goodreads_ratings_count": 56360
+    "goodreads_ratings_count": 56363
   },
   {
     "id": 141,
@@ -5944,7 +5944,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.99,
-    "goodreads_ratings_count": 138176
+    "goodreads_ratings_count": 138179
   },
   {
     "id": 142,
@@ -6234,7 +6234,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.98,
-    "goodreads_ratings_count": 281747
+    "goodreads_ratings_count": 281754
   },
   {
     "id": 148,
@@ -6283,7 +6283,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.19,
-    "goodreads_ratings_count": 565
+    "goodreads_ratings_count": 566
   },
   {
     "id": 149,
@@ -6710,7 +6710,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.93,
-    "goodreads_ratings_count": 326449
+    "goodreads_ratings_count": 326457
   },
   {
     "id": 160,
@@ -6785,7 +6785,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.13,
-    "goodreads_ratings_count": 94571
+    "goodreads_ratings_count": 94574
   },
   {
     "id": 162,
@@ -6827,7 +6827,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.93,
-    "goodreads_ratings_count": 181221
+    "goodreads_ratings_count": 181225
   },
   {
     "id": 163,
@@ -6869,7 +6869,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.13,
-    "goodreads_ratings_count": 300700
+    "goodreads_ratings_count": 300712
   },
   {
     "id": 164,
@@ -7520,8 +7520,8 @@
     "review_flags": [
       "audible_format_inferred_mmss"
     ],
-    "goodreads_rating": 3.68,
-    "goodreads_ratings_count": 30448
+    "goodreads_rating": 3.88,
+    "goodreads_ratings_count": 40191
   },
   {
     "id": 183,
@@ -7612,7 +7612,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.61,
-    "goodreads_ratings_count": 166404
+    "goodreads_ratings_count": 166406
   },
   {
     "id": 186,
@@ -7748,7 +7748,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.92,
-    "goodreads_ratings_count": 81405
+    "goodreads_ratings_count": 81406
   },
   {
     "id": 190,
@@ -7790,7 +7790,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.73,
-    "goodreads_ratings_count": 96181
+    "goodreads_ratings_count": 96185
   },
   {
     "id": 191,
@@ -7830,7 +7830,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.01,
-    "goodreads_ratings_count": 387312
+    "goodreads_ratings_count": 387328
   },
   {
     "id": 192,
@@ -7858,7 +7858,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.63,
-    "goodreads_ratings_count": 161634
+    "goodreads_ratings_count": 161637
   },
   {
     "id": 193,
@@ -7888,7 +7888,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 3.64,
-    "goodreads_ratings_count": 13845
+    "goodreads_ratings_count": 13847
   },
   {
     "id": 194,
@@ -7928,7 +7928,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.19,
-    "goodreads_ratings_count": 348003
+    "goodreads_ratings_count": 348020
   },
   {
     "id": 195,
@@ -7970,7 +7970,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 3.62,
-    "goodreads_ratings_count": 31453
+    "goodreads_ratings_count": 31457
   },
   {
     "id": 196,
@@ -8000,7 +8000,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 3.76,
-    "goodreads_ratings_count": 27006
+    "goodreads_ratings_count": 27007
   },
   {
     "id": 197,
@@ -8039,7 +8039,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.86,
-    "goodreads_ratings_count": 1266
+    "goodreads_ratings_count": 1267
   },
   {
     "id": 198,
@@ -8078,7 +8078,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.0,
-    "goodreads_ratings_count": 15046
+    "goodreads_ratings_count": 15048
   },
   {
     "id": 199,
@@ -8105,8 +8105,8 @@
     "cover_source": "local_file",
     "review_status": "ok",
     "review_flags": [],
-    "goodreads_rating": 3.67,
-    "goodreads_ratings_count": 9
+    "goodreads_rating": 3.97,
+    "goodreads_ratings_count": 129837
   },
   {
     "id": 200,
@@ -8175,7 +8175,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 3.95,
-    "goodreads_ratings_count": 153156
+    "goodreads_ratings_count": 153158
   },
   {
     "id": 202,
@@ -8308,7 +8308,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 4.07,
-    "goodreads_ratings_count": 193141
+    "goodreads_ratings_count": 193145
   },
   {
     "id": 206,
@@ -8454,7 +8454,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 3.9,
-    "goodreads_ratings_count": 25772
+    "goodreads_ratings_count": 25773
   },
   {
     "id": 211,
@@ -8574,7 +8574,7 @@
       "missing_word_count"
     ],
     "goodreads_rating": 3.64,
-    "goodreads_ratings_count": 13845
+    "goodreads_ratings_count": 13847
   },
   {
     "id": 215,
@@ -8699,7 +8699,7 @@
       "estimated_from_page_count"
     ],
     "goodreads_rating": 4.15,
-    "goodreads_ratings_count": 75895
+    "goodreads_ratings_count": 75896
   },
   {
     "id": 219,
@@ -8748,7 +8748,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.04,
-    "goodreads_ratings_count": 200180
+    "goodreads_ratings_count": 200183
   },
   {
     "id": 220,
@@ -8832,7 +8832,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.97,
-    "goodreads_ratings_count": 138915
+    "goodreads_ratings_count": 138917
   },
   {
     "id": 222,
@@ -8995,7 +8995,7 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.97,
-    "goodreads_ratings_count": 109661
+    "goodreads_ratings_count": 109666
   },
   {
     "id": 226,
@@ -9194,6 +9194,6 @@
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 4.17,
-    "goodreads_ratings_count": 91456
+    "goodreads_ratings_count": 91460
   }
 ]
