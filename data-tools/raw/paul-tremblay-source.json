@@ -8,8 +8,15 @@
     "word_count": 87450,
     "audible_minutes": 533,
     "story_type": "novel",
-    "genres": ["Horror"],
-    "keywords": ["friendship", "vampire", "memoir", "unreliable narrator"],
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "friendship",
+      "vampire",
+      "memoir",
+      "unreliable narrator"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
