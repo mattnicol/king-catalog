@@ -33,7 +33,9 @@
     "review_status": "needs_review",
     "review_flags": [
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.65,
+    "goodreads_ratings_count": 127751
   },
   {
     "id": 3002,
@@ -291,8 +293,18 @@
     "word_count": null,
     "audible_minutes": 979,
     "story_type": "novel",
-    "genres": ["Horror", "Historical Fiction"],
-    "keywords": ["witchcraft", "unwed mothers", "1960s", "Florida", "supernatural", "pregnancy"],
+    "genres": [
+      "Horror",
+      "Historical Fiction"
+    ],
+    "keywords": [
+      "witchcraft",
+      "unwed mothers",
+      "1960s",
+      "Florida",
+      "supernatural",
+      "pregnancy"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
@@ -302,11 +314,13 @@
     "child_ids": [],
     "notes": "Three women at a home for unwed mothers in 1960s Florida discover actual witchcraft.",
     "cover_candidate_url": "https://covers.openlibrary.org/b/id/15152523-L.jpg",
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Witchcraft_for_Wayward_Girls.jpg",
     "cover_verified": false,
     "cover_source": "open_library",
     "review_status": "ok",
-    "review_flags": ["word_count_unconfirmed"],
+    "review_flags": [
+      "word_count_unconfirmed"
+    ],
     "goodreads_rating": 3.9,
     "goodreads_ratings_count": 130434
   }

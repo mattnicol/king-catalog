@@ -33,7 +33,9 @@
     "review_status": "needs_review",
     "review_flags": [
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.65,
+    "goodreads_ratings_count": 127751
   },
   {
     "id": 3002,
@@ -312,7 +314,7 @@
     "child_ids": [],
     "notes": "Three women at a home for unwed mothers in 1960s Florida discover actual witchcraft.",
     "cover_candidate_url": "https://covers.openlibrary.org/b/id/15152523-L.jpg",
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Witchcraft_for_Wayward_Girls.jpg",
     "cover_verified": false,
     "cover_source": "open_library",
     "review_status": "ok",
@@ -10536,7 +10538,7 @@
     "child_ids": [],
     "notes": "Holly Gibney #4. Two converging storylines: a vigilante serial killer pledging to kill thirteen innocents, and feminist author Kate McKay being stalked by a religious extremist—Holly works both cases.",
     "cover_candidate_url": "https://covers.openlibrary.org/b/id/14825714-L.jpg",
-    "cover_local_path": null,
+    "cover_local_path": "data-tools/enriched/covers/Never_Flinch.jpg",
     "cover_verified": false,
     "cover_source": "open_library",
     "review_status": "needs_review",
