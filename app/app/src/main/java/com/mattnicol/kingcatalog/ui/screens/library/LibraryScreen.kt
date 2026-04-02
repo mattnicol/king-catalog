@@ -11,12 +11,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material3.Badge
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -79,6 +81,13 @@ fun LibraryScreen(vm: LibraryViewModel = viewModel(), onBookClick: (Int) -> Unit
                 onValueChange = vm::onQueryChange,
                 placeholder = { Text("Search My Library…") },
                 leadingIcon = { Icon(Icons.Filled.Search, null) },
+                trailingIcon = {
+                    if (query.isNotEmpty()) {
+                        IconButton(onClick = { vm.onQueryChange("") }) {
+                            Icon(Icons.Filled.Clear, contentDescription = "Clear search")
+                        }
+                    }
+                },
                 singleLine = true,
                 modifier = Modifier
                     .fillMaxWidth()

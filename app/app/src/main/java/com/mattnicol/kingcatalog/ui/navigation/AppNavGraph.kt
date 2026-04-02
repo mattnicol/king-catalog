@@ -80,7 +80,9 @@ fun AppNavGraph() {
             startDestination = NavRoute.Home.route,
             modifier = Modifier.padding(innerPadding),
         ) {
-            composable(NavRoute.Home.route) { HomeScreen() }
+            composable(NavRoute.Home.route) {
+                HomeScreen(onBookClick = { id -> navController.navigate("book_detail/$id") })
+            }
             composable(NavRoute.Books.route) {
                 BooksScreen(onBookClick = { id -> navController.navigate("book_detail/$id") })
             }

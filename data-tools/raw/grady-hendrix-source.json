@@ -242,7 +242,7 @@
     "year": 2023,
     "decade": 2020,
     "word_count": 92400,
-    "audible_minutes": 630,
+    "audible_minutes": 780,
     "story_type": "novel",
     "genres": [
       "Horror"
@@ -255,20 +255,59 @@
       "siblings"
     ],
     "as_bachman": false,
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": null,
+        "year_end": null,
+        "title": "How to Sell a Haunted House",
+        "format": "film",
+        "times_seen": null,
+        "status": "in_development",
+        "want": false,
+        "raw": "in development (Legendary Entertainment, prod. Sam Raimi/Rob Tapert, dir. James Ashcroft)"
+      }
+    ],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Siblings must clean out and sell their deceased parents' haunted house.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/15093959-L.jpg",
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "ok",
+    "review_flags": [],
+    "goodreads_rating": 3.63,
+    "goodreads_ratings_count": 172331
+  },
+  {
+    "id": 3008,
+    "title": "Witchcraft for Wayward Girls",
+    "author": "Grady Hendrix",
+    "year": 2025,
+    "decade": 2020,
+    "word_count": null,
+    "audible_minutes": 979,
+    "story_type": "novel",
+    "genres": ["Horror", "Historical Fiction"],
+    "keywords": ["witchcraft", "unwed mothers", "1960s", "Florida", "supernatural", "pregnancy"],
+    "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
     "collection": null,
     "collection_id": null,
     "is_collection_parent": false,
     "child_ids": [],
-    "notes": "Siblings must clean out and sell their deceased parents' haunted house.",
-    "cover_candidate_url": null,
+    "notes": "Three women at a home for unwed mothers in 1960s Florida discover actual witchcraft.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/15152523-L.jpg",
     "cover_local_path": null,
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "ok",
-    "review_flags": [],
-    "goodreads_rating": 3.63,
-    "goodreads_ratings_count": 172273
+    "review_flags": ["word_count_unconfirmed"],
+    "goodreads_rating": 3.9,
+    "goodreads_ratings_count": 130434
   }
 ]

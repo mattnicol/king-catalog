@@ -1616,37 +1616,6 @@
     "goodreads_ratings_count": 15
   },
   {
-    "id": 33,
-    "title": "The Plant: Zenith Rising",
-    "year": 1982,
-    "decade": 1980,
-    "word_count": 30000,
-    "audible_minutes": null,
-    "story_type": "short_story",
-    "genres": [],
-    "keywords": [
-      "monster",
-      "plant"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "notes": "Download PDFs for free here. Collection of 6 chapters, each about 5,000 words long. Plot: A vampire-vine takes over the offices of a paperback publishing company, offering financial success in trade for human sacrifices.",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "needs_review",
-    "review_flags": [
-      "approximate_word_count"
-    ],
-    "goodreads_rating": 3.56,
-    "goodreads_ratings_count": 1229
-  },
-  {
     "id": 34,
     "title": "Rita Hayworth and Shawshank Redemption",
     "year": 1982,
@@ -9195,5 +9164,51 @@
     "review_flags": [],
     "goodreads_rating": 4.17,
     "goodreads_ratings_count": 91460
+  },
+  {
+    "id": 231,
+    "title": "Never Flinch",
+    "author": "Stephen King",
+    "year": 2025,
+    "decade": 2020,
+    "word_count": 132000,
+    "audible_minutes": 885,
+    "story_type": "novel",
+    "genres": [
+      "Horror",
+      "Thriller",
+      "Crime Fiction"
+    ],
+    "keywords": [
+      "Holly Gibney",
+      "serial killer",
+      "bodyguard",
+      "feminist activist",
+      "private investigator",
+      "detective",
+      "dual narrative",
+      "Buckeye City",
+      "anti-abortion extremism",
+      "vigilante justice"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Holly Gibney #4. Two converging storylines: a vigilante serial killer pledging to kill thirteen innocents, and feminist author Kate McKay being stalked by a religious extremist—Holly works both cases.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14825714-L.jpg",
+    "cover_local_path": null,
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "word_count_estimated",
+      "goodreads_count_approximate"
+    ],
+    "goodreads_rating": 3.75,
+    "goodreads_ratings_count": 65000
   }
 ]

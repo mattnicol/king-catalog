@@ -23,6 +23,7 @@ KING_JSON      = os.path.join(REPO_ROOT, "data-tools", "enriched", "king_catalog
 MALERMAN_JSON  = os.path.join(REPO_ROOT, "data-tools", "raw", "josh-malerman-source.json")
 HILL_JSON      = os.path.join(REPO_ROOT, "data-tools", "raw", "joe-hill-source.json")
 HENDRIX_JSON   = os.path.join(REPO_ROOT, "data-tools", "raw", "grady-hendrix-source.json")
+TREMBLAY_JSON  = os.path.join(REPO_ROOT, "data-tools", "raw", "paul-tremblay-source.json")
 
 OUT_ENRICHED   = os.path.join(REPO_ROOT, "data-tools", "enriched", "all_catalog.json")
 OUT_ASSETS     = os.path.join(REPO_ROOT, "app", "app", "src", "main", "assets", "king_catalog.json")
@@ -50,8 +51,9 @@ def main():
     malerman = load(MALERMAN_JSON)
     hill     = load(HILL_JSON)
     hendrix  = load(HENDRIX_JSON)
+    tremblay = load(TREMBLAY_JSON)
 
-    combined = king + malerman + hill + hendrix
+    combined = king + malerman + hill + hendrix + tremblay
     check_id_collisions(combined)
 
     # Sort by author then year for readability

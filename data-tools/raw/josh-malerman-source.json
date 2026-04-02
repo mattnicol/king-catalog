@@ -347,8 +347,8 @@
       "year_uncertain",
       "story_type_uncertain"
     ],
-    "goodreads_rating": 3.37,
-    "goodreads_ratings_count": 6629
+    "goodreads_rating": null,
+    "goodreads_ratings_count": null
   },
   {
     "id": 1010,
@@ -384,41 +384,6 @@
     "review_flags": [],
     "goodreads_rating": 3.37,
     "goodreads_ratings_count": 6383
-  },
-  {
-    "id": 1011,
-    "title": "The Pallbearers Club",
-    "author": "Josh Malerman",
-    "year": 2022,
-    "decade": 2020,
-    "word_count": 87450,
-    "audible_minutes": 533,
-    "story_type": "novel",
-    "genres": [
-      "Horror"
-    ],
-    "keywords": [
-      "friendship",
-      "vampire",
-      "memoir",
-      "unreliable narrator"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Told as a memoir with handwritten annotations challenging the narrator.",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": [],
-    "goodreads_rating": 3.09,
-    "goodreads_ratings_count": 14777
   },
   {
     "id": 1012,
