@@ -572,8 +572,28 @@ def write_csv(all_entries: list[dict]) -> None:
 # Per-file enrichment
 # ---------------------------------------------------------------------------
 
-def enrich_file(path: Path, label: str, fetch_goodreads: bool = False) -> tuple[list[dict], dict]:
-    """Load, enrich, and write back a single JSON catalog file. Returns (entries, totals)."""
+def _matches_title_filter(entry: dict, title_filter: set[str] | None) -> bool:
+    """True when no filter is active, or the entry title matches one of the filter strings."""
+    if title_filter is None:
+        return True
+    entry_title = (entry.get("title") or "").lower()
+    return any(t.lower() in entry_title for t in title_filter)
+
+
+def enrich_file(
+    path: Path,
+    label: str,
+    fetch_goodreads: bool = False,
+    title_filter: set[str] | None = None,
+    force: bool = False,
+) -> tuple[list[dict], dict]:
+    """Load, enrich, and write back a single JSON catalog file. Returns (entries, totals).
+
+    title_filter: when set, only entries whose titles contain one of the filter strings
+                  (case-insensitive) are processed; others are skipped silently.
+    force:        when True (only meaningful with title_filter), clears existing cover and
+                  Goodreads data from matched entries so they are re-fetched from scratch.
+    """
     entries: list[dict] = json.loads(path.read_text(encoding="utf-8"))
     count = len(entries)
 
@@ -586,6 +606,17 @@ def enrich_file(path: Path, label: str, fetch_goodreads: bool = False) -> tuple[
     for i, entry in enumerate(entries, 1):
         title  = entry.get("title", "?")
         prefix = f"  [{i:>3}/{count}]"
+
+        if not _matches_title_filter(entry, title_filter):
+            totals["cover_skipped"] += 1
+            continue
+
+        if force:
+            # Clear existing cover so enrich_entry re-downloads it
+            entry.pop("cover_local_path", None)
+            entry.pop("cover_candidate_url", None)
+            entry.pop("cover_source", None)
+
         print(f"{prefix} {title}", end=" ... ", flush=True)
 
         stats = enrich_entry(entry)
@@ -605,8 +636,13 @@ def enrich_file(path: Path, label: str, fetch_goodreads: bool = False) -> tuple[
     if fetch_goodreads:
         print(f"\n  [Goodreads ratings pass for {label}]")
         for i, entry in enumerate(entries, 1):
-            if entry.get("goodreads_rating") is not None:
+            if not _matches_title_filter(entry, title_filter):
+                continue
+            if not force and entry.get("goodreads_rating") is not None:
                 continue  # already populated
+            if force:
+                entry.pop("goodreads_rating", None)
+                entry.pop("goodreads_ratings_count", None)
             title      = entry.get("title", "")
             year_      = entry.get("year")
             is_bachman = bool(entry.get("as_bachman"))
@@ -636,7 +672,20 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Enrich catalog with covers and metadata.")
     parser.add_argument("--goodreads", action="store_true",
                         help="Also fetch Goodreads ratings (slow; makes many HTTP requests)")
+    parser.add_argument("--titles", nargs="+", metavar="TITLE",
+                        help="Only process entries whose titles contain one of these strings "
+                             "(case-insensitive). All other entries are skipped.")
+    parser.add_argument("--force", action="store_true",
+                        help="With --titles: clear existing cover and Goodreads data for "
+                             "matched entries so they are re-fetched from scratch. "
+                             "Has no effect without --titles.")
     args = parser.parse_args()
+
+    title_filter: set[str] | None = set(args.titles) if args.titles else None
+    force = bool(args.force and title_filter)
+
+    if force and not args.goodreads:
+        print("Note: --force without --goodreads will only re-download covers, not ratings.")
 
     COVERS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -655,7 +704,12 @@ def main() -> int:
             print(f"[SKIP] {path} not found")
             continue
         print(f"\n── {label} ({path.name}) ──")
-        entries, totals = enrich_file(path, label, fetch_goodreads=args.goodreads)
+        entries, totals = enrich_file(
+            path, label,
+            fetch_goodreads=args.goodreads,
+            title_filter=title_filter,
+            force=force,
+        )
         all_entries.extend(entries)
         for k, v in totals.items():
             grand_totals[k] += v
@@ -668,9 +722,11 @@ def main() -> int:
 
     print()
     print("=== Enrichment Summary (all authors) ===")
+    if title_filter:
+        print(f"  Targeted titles:    {sorted(title_filter)}")
     print(f"  Entries processed:  {len(all_entries)}")
     print(f"  Covers resolved:    {grand_totals['cover_resolved']}")
-    print(f"  Covers skipped:     {grand_totals['cover_skipped']}  (already done)")
+    print(f"  Covers skipped:     {grand_totals['cover_skipped']}  (already done or not targeted)")
     print(f"  Covers failed:      {grand_totals['cover_failed']}  (no OL result or no cover ID)")
     print(f"  Word count fills:   {grand_totals['wc_filled']}  (estimated from page count)")
     if args.goodreads:

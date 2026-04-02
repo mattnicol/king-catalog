@@ -290,7 +290,7 @@
     "author": "Grady Hendrix",
     "year": 2025,
     "decade": 2020,
-    "word_count": null,
+    "word_count": 146850,
     "audible_minutes": 979,
     "story_type": "novel",
     "genres": [
@@ -317,9 +317,9 @@
     "cover_local_path": "data-tools/enriched/covers/Witchcraft_for_Wayward_Girls.jpg",
     "cover_verified": false,
     "cover_source": "open_library",
-    "review_status": "ok",
+    "review_status": "needs_review",
     "review_flags": [
-      "word_count_unconfirmed"
+      "estimated_from_audible_minutes"
     ],
     "goodreads_rating": 3.9,
     "goodreads_ratings_count": 130434

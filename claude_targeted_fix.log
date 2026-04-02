@@ -1,0 +1,18 @@
+---
+
+## Summary
+
+**Root cause:** The app seed file (`app/app/src/main/assets/king_catalog.json`) was stale — it contained only the 230 Stephen King entries, while `data-tools/enriched/all_catalog.json` already had 258 entries including all other authors. `build_catalog.py` had not been re-run after multi-author support was added.
+
+**Fix applied:** Ran `data-tools/scripts/build_catalog.py` — no source data changes needed.
+
+**Verification output printed above:**
+
+| Check | Before | After |
+|---|---|---|
+| App seed size | 230 entries | 258 entries |
+| Witchcraft for Wayward Girls (app seed) | ❌ NOT FOUND | ✅ EXISTS, author = "Grady Hendrix" |
+| Never Flinch (app seed) | ✅ EXISTS, author = "Stephen King" | ✅ EXISTS, author = "Stephen King" |
+| The Plant (app seed) | ✅ NOT PRESENT | ✅ NOT PRESENT |
+
+**All 3 assertions PASSED.**
