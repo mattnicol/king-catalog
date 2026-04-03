@@ -22,7 +22,7 @@ abstract class KingCatalogDatabase : RoomDatabase() {
     companion object {
         const val DB_VERSION = 4
         // Bump this whenever king_catalog.json catalog data changes (preserves user fields).
-        const val CATALOG_VERSION = 6
+        const val CATALOG_VERSION = 7
 
         @Volatile private var INSTANCE: KingCatalogDatabase? = null
 

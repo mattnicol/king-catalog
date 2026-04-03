@@ -33,7 +33,9 @@
     "review_status": "needs_review",
     "review_flags": [
       "estimated_from_page_count"
-    ]
+    ],
+    "goodreads_rating": 3.65,
+    "goodreads_ratings_count": 127751
   },
   {
     "id": 3002,
@@ -242,7 +244,7 @@
     "year": 2023,
     "decade": 2020,
     "word_count": 92400,
-    "audible_minutes": 630,
+    "audible_minutes": 780,
     "story_type": "novel",
     "genres": [
       "Horror"
@@ -255,30 +257,41 @@
       "siblings"
     ],
     "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
+    "has_adaptation": true,
+    "adaptations": [
+      {
+        "year": null,
+        "year_end": null,
+        "title": "How to Sell a Haunted House",
+        "format": "film",
+        "times_seen": null,
+        "status": "in_development",
+        "want": false,
+        "raw": "in development (Legendary Entertainment, prod. Sam Raimi/Rob Tapert, dir. James Ashcroft)"
+      }
+    ],
     "collection": null,
     "collection_id": null,
     "is_collection_parent": false,
     "child_ids": [],
     "notes": "Siblings must clean out and sell their deceased parents' haunted house.",
-    "cover_candidate_url": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/15093959-L.jpg",
     "cover_local_path": null,
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "ok",
     "review_flags": [],
     "goodreads_rating": 3.63,
-    "goodreads_ratings_count": 172273
+    "goodreads_ratings_count": 172331
   },
   {
     "id": 3008,
     "title": "Witchcraft for Wayward Girls",
     "author": "Grady Hendrix",
-    "year": 2024,
+    "year": 2025,
     "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
+    "word_count": 146850,
+    "audible_minutes": 979,
     "story_type": "novel",
     "genres": [
       "Horror",
@@ -300,17 +313,16 @@
     "is_collection_parent": false,
     "child_ids": [],
     "notes": "Three women at a home for unwed mothers in 1960s Florida discover actual witchcraft.",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/15152523-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Witchcraft_for_Wayward_Girls.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "needs_review",
     "review_flags": [
-      "word_count_unconfirmed",
-      "audible_unconfirmed"
+      "estimated_from_audible_minutes"
     ],
-    "goodreads_rating": null,
-    "goodreads_ratings_count": null
+    "goodreads_rating": 3.9,
+    "goodreads_ratings_count": 130434
   },
   {
     "id": 2001,
@@ -637,45 +649,6 @@
     "review_flags": [],
     "goodreads_rating": 4.39,
     "goodreads_ratings_count": 22460
-  },
-  {
-    "id": 2009,
-    "title": "Never Flinch",
-    "author": "Joe Hill",
-    "year": 2025,
-    "decade": 2020,
-    "word_count": null,
-    "audible_minutes": null,
-    "story_type": "novel",
-    "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "keywords": [
-      "journalist",
-      "violence",
-      "dark web",
-      "obsession"
-    ],
-    "as_bachman": false,
-    "has_adaptation": false,
-    "adaptations": [],
-    "collection": null,
-    "collection_id": null,
-    "is_collection_parent": false,
-    "child_ids": [],
-    "notes": "Joe Hill's sixth novel.",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
-    "cover_verified": false,
-    "cover_source": null,
-    "review_status": "needs_review",
-    "review_flags": [
-      "word_count_unconfirmed",
-      "audible_unconfirmed"
-    ],
-    "goodreads_rating": null,
-    "goodreads_ratings_count": null
   },
   {
     "id": 1001,
@@ -10529,5 +10502,51 @@
     "goodreads_rating": 4.17,
     "goodreads_ratings_count": 91460,
     "author": "Stephen King"
+  },
+  {
+    "id": 231,
+    "title": "Never Flinch",
+    "author": "Stephen King",
+    "year": 2025,
+    "decade": 2020,
+    "word_count": 132000,
+    "audible_minutes": 885,
+    "story_type": "novel",
+    "genres": [
+      "Horror",
+      "Thriller",
+      "Crime Fiction"
+    ],
+    "keywords": [
+      "Holly Gibney",
+      "serial killer",
+      "bodyguard",
+      "feminist activist",
+      "private investigator",
+      "detective",
+      "dual narrative",
+      "Buckeye City",
+      "anti-abortion extremism",
+      "vigilante justice"
+    ],
+    "as_bachman": false,
+    "has_adaptation": false,
+    "adaptations": [],
+    "collection": null,
+    "collection_id": null,
+    "is_collection_parent": false,
+    "child_ids": [],
+    "notes": "Holly Gibney #4. Two converging storylines: a vigilante serial killer pledging to kill thirteen innocents, and feminist author Kate McKay being stalked by a religious extremist—Holly works both cases.",
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14825714-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Never_Flinch.jpg",
+    "cover_verified": false,
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "word_count_estimated",
+      "goodreads_count_approximate"
+    ],
+    "goodreads_rating": 3.75,
+    "goodreads_ratings_count": 65000
   }
 ]

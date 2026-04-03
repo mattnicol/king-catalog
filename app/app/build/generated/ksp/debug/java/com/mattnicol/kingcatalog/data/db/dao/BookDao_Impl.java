@@ -8,6 +8,7 @@ import androidx.room.CoroutinesRoom;
 import androidx.room.EntityDeletionOrUpdateAdapter;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
+import androidx.room.RoomDatabaseKt;
 import androidx.room.RoomSQLiteQuery;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
@@ -37,7 +38,7 @@ import kotlinx.coroutines.flow.Flow;
 
 @Generated("androidx.room.RoomProcessor")
 @SuppressWarnings({"unchecked", "deprecation"})
-public final class BookDao_Impl implements BookDao {
+public final class BookDao_Impl extends BookDao {
   private final RoomDatabase __db;
 
   private final EntityInsertionAdapter<BookEntity> __insertionAdapterOfBookEntity;
@@ -292,6 +293,12 @@ public final class BookDao_Impl implements BookDao {
         }
       }
     }, $completion);
+  }
+
+  @Override
+  public Object upsertCatalogData(final List<BookEntity> books,
+      final Continuation<? super Unit> $completion) {
+    return RoomDatabaseKt.withTransaction(__db, (__cont) -> BookDao_Impl.super.upsertCatalogData(books, __cont), $completion);
   }
 
   @Override
