@@ -22,30 +22,30 @@ class KingCatalogApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        Log.d(TAG, "App created — DB version ${KingCatalogDatabase.DB_VERSION}")
+        Log.d(TAG, "App created — DB version ${KingCatalogDatabase.DB_VERSION}, catalog version ${KingCatalogDatabase.CATALOG_VERSION}")
         appScope.launch {
-            runCatching { ensureSeedImported() }
-                .onFailure { e -> Log.e(TAG, "Seed bootstrap failed", e) }
+            runCatching { ensureCatalogCurrent() }
+                .onFailure { e -> Log.e(TAG, "Catalog sync failed", e) }
         }
     }
 
-    private suspend fun ensureSeedImported() {
-        val alreadyImported = userPreferencesRepository.seedImported.first()
-        val dbCount = runCatching { bookRepository.count() }.getOrDefault(0)
-        Log.d(TAG, "Seed check: alreadyImported=$alreadyImported dbCount=$dbCount")
+    private suspend fun ensureCatalogCurrent() {
+        val storedVersion = userPreferencesRepository.catalogVersion.first()
+        val targetVersion = KingCatalogDatabase.CATALOG_VERSION
+        Log.d(TAG, "Catalog check: storedVersion=$storedVersion targetVersion=$targetVersion")
 
-        if (!alreadyImported || dbCount == 0) {
-            Log.d(TAG, "Seeding database...")
+        if (storedVersion < targetVersion) {
+            Log.d(TAG, "Catalog out of date — upserting...")
             runCatching {
                 val books = SeedImporter.load(this@KingCatalogApp)
                 Log.d(TAG, "Seed loaded ${books.size} titles from assets")
-                bookRepository.insertAll(books)
-                Log.d(TAG, "Seed inserted ${books.size} titles")
-                userPreferencesRepository.markSeedImported()
-                Log.d(TAG, "Seed complete")
+                bookRepository.upsertCatalogData(books)
+                Log.d(TAG, "Catalog upsert complete")
+                userPreferencesRepository.markCatalogVersion(targetVersion)
+                Log.d(TAG, "Catalog version marked as $targetVersion")
             }.onFailure { e ->
-                Log.e(TAG, "Seed import failed — will retry next launch", e)
-                // Do NOT mark as imported so we retry next launch
+                Log.e(TAG, "Catalog upsert failed — will retry next launch", e)
+                // Do NOT mark version so we retry next launch
             }
         }
     }
