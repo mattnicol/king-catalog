@@ -72,7 +72,8 @@ fun LibraryScreen(vm: LibraryViewModel = viewModel(), onBookClick: (Int) -> Unit
 
     val activeFilterCount = filter.storyTypes.size + filter.genres.size + filter.keywords.size +
         filter.decades.size + (if (filter.bachman != null) 1 else 0) +
-        (if (filter.isRead != null) 1 else 0) + (if (filter.inLibrary != null) 1 else 0)
+        (if (filter.isRead != null) 1 else 0) + (if (filter.inLibrary != null) 1 else 0) +
+        (if (filter.bindingFilter != null) 1 else 0)
 
     Surface(modifier = Modifier.fillMaxSize()) {
         Column {
@@ -218,6 +219,7 @@ fun LibraryScreen(vm: LibraryViewModel = viewModel(), onBookClick: (Int) -> Unit
                     onFilterChange = vm::onFilterChange,
                     onClearAll = { vm.onFilterChange(FilterState()); showFilterSheet = false },
                     onDone = { showFilterSheet = false },
+                    showBindingFilter = true,
                 )
             }
         }
@@ -231,7 +233,10 @@ fun LibraryScreen(vm: LibraryViewModel = viewModel(), onBookClick: (Int) -> Unit
                 BookActionSheet(
                     book = book,
                     onDismiss = { selectedBook = null },
-                    onAddToLibrary = { vm.setOwned(book, true); selectedBook = null },
+                    onAddToLibrary = { binding ->
+                        vm.setOwnedWithBinding(book, binding)
+                        selectedBook = null
+                    },
                     onReadingNow = { vm.setReadingNow(book, !book.isReadingNow); selectedBook = null },
                     onMarkRead = { vm.setRead(book, !book.isRead); selectedBook = null },
                     onToggleReadingList = { vm.setOnReadingList(book, !book.isOnReadingList); selectedBook = null },

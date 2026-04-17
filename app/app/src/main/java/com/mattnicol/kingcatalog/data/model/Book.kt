@@ -23,12 +23,18 @@ data class Book(
     val coverCandidateUrl: String?,
     val goodreadsRating: Float?,
     val goodreadsRatingsCount: Int?,
+    val description: String?,
+    val connections: List<Connection>,
     val isOwned: Boolean,
     val isRead: Boolean,
     val isReadingNow: Boolean,
     val isOnReadingList: Boolean,
     val lastStatusChanged: Long?,
     val notes: String?,
+    /** null = unknown, "paperback", "hardcover" */
+    val bindingOwned: String?,
+    /** null = no preference, "paperback", "hardcover" */
+    val bindingWanted: String?,
 )
 
 fun Book.matchesFilter(
@@ -40,6 +46,7 @@ fun Book.matchesFilter(
     bachamanFilter: Boolean?,
     readFilter: Boolean?,
     inLibraryFilter: Boolean?,
+    bindingFilter: String? = null,
 ): Boolean {
     if (query.isNotBlank() && !title.contains(query, ignoreCase = true)) return false
     if (storyTypeFilter.isNotEmpty() && storyType !in storyTypeFilter) return false
@@ -49,5 +56,14 @@ fun Book.matchesFilter(
     if (bachamanFilter != null && asBachman != bachamanFilter) return false
     if (readFilter != null && isRead != readFilter) return false
     if (inLibraryFilter != null && isOwned != inLibraryFilter) return false
+    if (bindingFilter != null) {
+        val matches = when (bindingFilter) {
+            "hardcover" -> bindingOwned == "hardcover"
+            "paperback" -> bindingOwned == "paperback"
+            "unknown"   -> bindingOwned == null
+            else        -> true
+        }
+        if (!matches) return false
+    }
     return true
 }

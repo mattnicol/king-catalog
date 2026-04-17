@@ -20,6 +20,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.ui.graphics.Color
@@ -35,6 +37,9 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -47,6 +52,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 import com.mattnicol.kingcatalog.KingCatalogApp
 import com.mattnicol.kingcatalog.data.model.Book
+import com.mattnicol.kingcatalog.data.model.Connection
 import com.mattnicol.kingcatalog.ui.components.BookCard
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -76,6 +82,9 @@ class BookDetailViewModel(application: Application, val bookId: Int) : AndroidVi
     fun onReadingNow(book: Book) = viewModelScope.launch { repo.setReadingNow(book, !book.isReadingNow) }
     fun onMarkRead(book: Book) = viewModelScope.launch { repo.setRead(book, !book.isRead) }
     fun onToggleOwned(book: Book) = viewModelScope.launch { repo.setOwned(book, !book.isOwned) }
+    fun onToggleOwnedWithBinding(book: Book, binding: String?) = viewModelScope.launch {
+        repo.setOwnedWithBinding(book, binding)
+    }
     fun onToggleReadingList(book: Book) = viewModelScope.launch { repo.setOnReadingList(book, !book.isOnReadingList) }
 
     companion object {
@@ -183,6 +192,15 @@ fun BookDetailScreen(bookId: Int, onBack: () -> Unit) {
                     Text(parts.joinToString(" · "), style = MaterialTheme.typography.bodyMedium)
                 }
 
+                // Description
+                b.description?.let { desc ->
+                    item {
+                        DetailSection("About") {
+                            Text(desc, style = MaterialTheme.typography.bodySmall)
+                        }
+                    }
+                }
+
                 // Genres
                 if (b.genres.isNotEmpty()) {
                     item {
@@ -235,8 +253,8 @@ fun BookDetailScreen(bookId: Int, onBack: () -> Unit) {
                             }
                             " ($fmt ratings)"
                         } ?: ""
-                        androidx.compose.foundation.layout.Row(
-                            verticalAlignment = androidx.compose.ui.Alignment.CenterVertically,
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.spacedBy(6.dp),
                         ) {
                             Text(
@@ -252,6 +270,13 @@ fun BookDetailScreen(bookId: Int, onBack: () -> Unit) {
                                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
                             )
                         }
+                    }
+                }
+
+                // Series / Connections
+                if (b.connections.isNotEmpty()) {
+                    item {
+                        ConnectionsSection(connections = b.connections)
                     }
                 }
 
@@ -295,7 +320,7 @@ fun BookDetailScreen(bookId: Int, onBack: () -> Unit) {
                 item {
                     DetailActions(
                         book = b,
-                        onAddToLibrary = { vm.onToggleOwned(b) },
+                        onAddToLibrary = { binding -> vm.onToggleOwnedWithBinding(b, binding) },
                         onReadingNow = { vm.onReadingNow(b) },
                         onMarkRead = { vm.onMarkRead(b) },
                         onToggleReadingList = { vm.onToggleReadingList(b) },
@@ -323,6 +348,78 @@ fun BookDetailScreen(bookId: Int, onBack: () -> Unit) {
 }
 
 @Composable
+private fun ConnectionsSection(connections: List<Connection>) {
+    var showSpoilers by remember { mutableStateOf(false) }
+
+    val visibleGroups = connections
+        .filter { showSpoilers || !it.spoiler }
+        .groupBy { it.group }
+        .toSortedMap()
+
+    if (visibleGroups.isEmpty() && !showSpoilers) return
+
+    Column {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween,
+        ) {
+            Text(
+                text = "SERIES / CONNECTIONS",
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.primary,
+            )
+            IconButton(onClick = { showSpoilers = !showSpoilers }) {
+                Icon(
+                    imageVector = if (showSpoilers) Icons.Filled.Visibility else Icons.Filled.VisibilityOff,
+                    contentDescription = if (showSpoilers) "Hide spoilers" else "Show spoilers",
+                    tint = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
+                )
+            }
+        }
+        visibleGroups.forEach { (group, entries) ->
+            Text(
+                text = group,
+                style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.SemiBold),
+                modifier = Modifier.padding(top = 4.dp),
+            )
+            val sorted = entries.sortedWith(compareBy(nullsLast()) { it.order })
+            sorted.forEach { conn ->
+                val roleLabel = conn.role.replaceFirstChar { it.uppercase() }
+                val kindLabel = conn.kind.replace('_', ' ').replaceFirstChar { it.uppercase() }
+                val prefix = if (conn.order != null) "#${conn.order} · " else ""
+                Text(
+                    text = "$prefix$roleLabel · $kindLabel",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
+                    modifier = Modifier.padding(start = 8.dp),
+                )
+                conn.note?.let { note ->
+                    if (showSpoilers || !conn.spoiler) {
+                        Text(
+                            text = note,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
+                            modifier = Modifier.padding(start = 8.dp, bottom = 2.dp),
+                        )
+                    }
+                }
+            }
+            Spacer(Modifier.height(4.dp))
+        }
+
+        val spoilerCount = connections.count { it.spoiler }
+        if (!showSpoilers && spoilerCount > 0) {
+            Text(
+                text = "$spoilerCount spoiler connection${if (spoilerCount > 1) "s" else ""} hidden",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.4f),
+            )
+        }
+    }
+}
+
+@Composable
 private fun DetailSection(label: String, content: @Composable () -> Unit) {
     Text(
         text = label.uppercase(),
@@ -336,7 +433,7 @@ private fun DetailSection(label: String, content: @Composable () -> Unit) {
 @Composable
 private fun DetailActions(
     book: Book,
-    onAddToLibrary: () -> Unit,
+    onAddToLibrary: (binding: String?) -> Unit,
     onReadingNow: () -> Unit,
     onMarkRead: () -> Unit,
     onToggleReadingList: () -> Unit,
@@ -344,11 +441,36 @@ private fun DetailActions(
 ) {
     Column {
         if (!book.isOwned) {
-            TextButton(
-                onClick = onAddToLibrary,
-                modifier = Modifier.fillMaxWidth(),
-            ) { Text("Add to Library") }
+            Text(
+                text = "ADD TO LIBRARY",
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(bottom = 4.dp),
+            )
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                TextButton(
+                    onClick = { onAddToLibrary("hardcover") },
+                    modifier = Modifier.weight(1f),
+                ) { Text("Hardcover") }
+                TextButton(
+                    onClick = { onAddToLibrary("paperback") },
+                    modifier = Modifier.weight(1f),
+                ) { Text("Paperback") }
+                TextButton(
+                    onClick = { onAddToLibrary(null) },
+                    modifier = Modifier.weight(1f),
+                ) { Text("Unknown") }
+            }
         } else {
+            // Show binding if known
+            book.bindingOwned?.let { binding ->
+                Text(
+                    text = "Library: ${binding.replaceFirstChar { it.uppercase() }}",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.55f),
+                    modifier = Modifier.padding(bottom = 4.dp),
+                )
+            }
             TextButton(
                 onClick = onReadingNow,
                 modifier = Modifier.fillMaxWidth(),

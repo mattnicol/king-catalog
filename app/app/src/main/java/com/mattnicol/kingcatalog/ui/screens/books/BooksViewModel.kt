@@ -25,6 +25,8 @@ data class FilterState(
     val bachman: Boolean? = null,
     val isRead: Boolean? = null,
     val inLibrary: Boolean? = null,
+    /** null = all, "hardcover", "paperback", "unknown" */
+    val bindingFilter: String? = null,
 )
 
 @OptIn(ExperimentalCoroutinesApi::class)

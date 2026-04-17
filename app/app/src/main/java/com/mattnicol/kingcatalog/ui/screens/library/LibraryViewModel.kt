@@ -56,6 +56,7 @@ class LibraryViewModel(application: Application) : AndroidViewModel(application)
                     bachamanFilter = filter.bachman,
                     readFilter = filter.isRead,
                     inLibraryFilter = filter.inLibrary,
+                    bindingFilter = filter.bindingFilter,
                 )
             }
             .let { list ->
@@ -98,6 +99,7 @@ class LibraryViewModel(application: Application) : AndroidViewModel(application)
                     bachamanFilter = filter.bachman,
                     readFilter = filter.isRead,
                     inLibraryFilter = filter.inLibrary,
+                    bindingFilter = filter.bindingFilter,
                 )
             }
             .let { list ->
@@ -135,6 +137,10 @@ class LibraryViewModel(application: Application) : AndroidViewModel(application)
 
     fun setOwned(book: Book, value: Boolean) = viewModelScope.launch {
         repo.setOwned(book, value)
+    }
+
+    fun setOwnedWithBinding(book: Book, binding: String?) = viewModelScope.launch {
+        repo.setOwnedWithBinding(book, binding)
     }
 
     fun setOnReadingList(book: Book, value: Boolean) = viewModelScope.launch {

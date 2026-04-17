@@ -6,6 +6,7 @@ import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 import com.mattnicol.kingcatalog.data.db.entity.BookEntity
 import com.mattnicol.kingcatalog.data.model.Adaptation
+import com.mattnicol.kingcatalog.data.model.Connection
 
 /**
  * Reads king_catalog.json from assets and maps it to [BookEntity] rows.
@@ -37,6 +38,20 @@ object SeedImporter {
                 want = a.get("want")?.asBoolean ?: false,
                 raw = a.getStringOrNull("raw"),
             )
+        } ?: emptyList()
+
+        val connections = obj.getAsJsonArray("connections")?.mapNotNull { elem ->
+            runCatching {
+                val c = elem.asJsonObject
+                Connection(
+                    group = c.getStringOrNull("group") ?: return@mapNotNull null,
+                    kind = c.getStringOrNull("kind") ?: "connection",
+                    role = c.getStringOrNull("role") ?: "supplemental",
+                    order = c.getIntOrNull("order"),
+                    spoiler = c.get("spoiler")?.asBoolean ?: false,
+                    note = c.getStringOrNull("note"),
+                )
+            }.getOrNull()
         } ?: emptyList()
 
         val keywords = obj.getAsJsonArray("keywords")
@@ -74,7 +89,12 @@ object SeedImporter {
             coverCandidateUrl = obj.getStringOrNull("cover_candidate_url"),
             goodreadsRating = obj.get("goodreads_rating")?.takeIf { !it.isJsonNull }?.asFloat,
             goodreadsRatingsCount = obj.getIntOrNull("goodreads_ratings_count"),
+            description = obj.getStringOrNull("description"),
+            connections = connections,
             notes = obj.getStringOrNull("notes"),
+            // binding fields are user-managed; not seeded from catalog JSON
+            bindingOwned = null,
+            bindingWanted = null,
         )
     }
 

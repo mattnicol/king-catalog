@@ -5,6 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.mattnicol.kingcatalog.data.model.Adaptation
 import com.mattnicol.kingcatalog.data.model.Book
+import com.mattnicol.kingcatalog.data.model.Connection
 
 @Entity(tableName = "books")
 data class BookEntity(
@@ -30,12 +31,18 @@ data class BookEntity(
     @ColumnInfo(name = "cover_candidate_url") val coverCandidateUrl: String?,
     @ColumnInfo(name = "goodreads_rating") val goodreadsRating: Float? = null,
     @ColumnInfo(name = "goodreads_ratings_count") val goodreadsRatingsCount: Int? = null,
+    val description: String? = null,
+    val connections: List<Connection> = emptyList(),
     @ColumnInfo(name = "is_owned") val isOwned: Boolean = false,
     @ColumnInfo(name = "is_read") val isRead: Boolean = false,
     @ColumnInfo(name = "is_reading_now") val isReadingNow: Boolean = false,
     @ColumnInfo(name = "is_on_reading_list") val isOnReadingList: Boolean = false,
     @ColumnInfo(name = "last_status_changed") val lastStatusChanged: Long? = null,
     val notes: String?,
+    /** null = unknown, "paperback", "hardcover" */
+    @ColumnInfo(name = "binding_owned") val bindingOwned: String? = null,
+    /** null = no preference, "paperback", "hardcover" */
+    @ColumnInfo(name = "binding_wanted") val bindingWanted: String? = null,
 )
 
 fun BookEntity.toDomain() = Book(
@@ -61,12 +68,16 @@ fun BookEntity.toDomain() = Book(
     coverCandidateUrl = coverCandidateUrl,
     goodreadsRating = goodreadsRating,
     goodreadsRatingsCount = goodreadsRatingsCount,
+    description = description,
+    connections = connections,
     isOwned = isOwned,
     isRead = isRead,
     isReadingNow = isReadingNow,
     isOnReadingList = isOnReadingList,
     lastStatusChanged = lastStatusChanged,
     notes = notes,
+    bindingOwned = bindingOwned,
+    bindingWanted = bindingWanted,
 )
 
 fun Book.toEntity() = BookEntity(
@@ -92,10 +103,14 @@ fun Book.toEntity() = BookEntity(
     coverCandidateUrl = coverCandidateUrl,
     goodreadsRating = goodreadsRating,
     goodreadsRatingsCount = goodreadsRatingsCount,
+    description = description,
+    connections = connections,
     isOwned = isOwned,
     isRead = isRead,
     isReadingNow = isReadingNow,
     isOnReadingList = isOnReadingList,
     lastStatusChanged = lastStatusChanged,
     notes = notes,
+    bindingOwned = bindingOwned,
+    bindingWanted = bindingWanted,
 )

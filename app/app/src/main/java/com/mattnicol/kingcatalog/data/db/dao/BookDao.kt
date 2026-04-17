@@ -23,7 +23,7 @@ abstract class BookDao {
 
     /**
      * Inserts new books and updates catalog fields on existing ones,
-     * preserving user fields (owned/read/reading-list/notes/imdb_url).
+     * preserving all user fields (owned/read/reading-list/binding/notes/imdb_url).
      */
     @Transaction
     open suspend fun upsertCatalogData(books: List<BookEntity>) {
@@ -38,6 +38,8 @@ abstract class BookDao {
                     lastStatusChanged = existing.lastStatusChanged,
                     imdbUrl = existing.imdbUrl,
                     notes = existing.notes,
+                    bindingOwned = existing.bindingOwned,
+                    bindingWanted = existing.bindingWanted,
                 ))
             } else {
                 insertAll(listOf(book))
@@ -101,4 +103,8 @@ abstract class BookDao {
 
     @Query("SELECT * FROM books WHERE id IN (:ids) ORDER BY year ASC, title ASC")
     abstract fun observeByIds(ids: List<Int>): Flow<List<BookEntity>>
+
+    // Books with any connections data (for Series screen)
+    @Query("SELECT * FROM books WHERE connections != '[]' AND connections IS NOT NULL ORDER BY author ASC, year ASC")
+    abstract fun observeWithConnections(): Flow<List<BookEntity>>
 }

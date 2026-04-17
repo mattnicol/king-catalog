@@ -71,6 +71,7 @@ fun FilterSheet(
     onFilterChange: (FilterState) -> Unit,
     onClearAll: () -> Unit,
     onDone: () -> Unit,
+    showBindingFilter: Boolean = false,
 ) {
     Column(modifier = Modifier.padding(bottom = 24.dp)) {
         Row(
@@ -212,6 +213,50 @@ fun FilterSheet(
                 )
             }
         }
+
+        if (showBindingFilter) {
+            HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
+
+            FilterSection(label = "Binding") {
+                Row(
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    FilterChip(
+                        selected = filter.bindingFilter == null,
+                        onClick = { onFilterChange(filter.copy(bindingFilter = null)) },
+                        label = { Text("All") },
+                    )
+                    FilterChip(
+                        selected = filter.bindingFilter == "hardcover",
+                        onClick = {
+                            onFilterChange(filter.copy(
+                                bindingFilter = if (filter.bindingFilter == "hardcover") null else "hardcover"
+                            ))
+                        },
+                        label = { Text("Hardcover") },
+                    )
+                    FilterChip(
+                        selected = filter.bindingFilter == "paperback",
+                        onClick = {
+                            onFilterChange(filter.copy(
+                                bindingFilter = if (filter.bindingFilter == "paperback") null else "paperback"
+                            ))
+                        },
+                        label = { Text("Paperback") },
+                    )
+                    FilterChip(
+                        selected = filter.bindingFilter == "unknown",
+                        onClick = {
+                            onFilterChange(filter.copy(
+                                bindingFilter = if (filter.bindingFilter == "unknown") null else "unknown"
+                            ))
+                        },
+                        label = { Text("Unknown") },
+                    )
+                }
+            }
+        }
     }
 }
 
@@ -258,11 +303,15 @@ fun <T> ToggleChipRow(
     Spacer(Modifier.height(4.dp))
 }
 
+/**
+ * Bottom sheet shown on long-press of a book card.
+ * Includes a binding picker when adding to library.
+ */
 @Composable
 fun BookActionSheet(
     book: Book,
     onDismiss: () -> Unit,
-    onAddToLibrary: () -> Unit,
+    onAddToLibrary: (binding: String?) -> Unit,
     onReadingNow: () -> Unit,
     onMarkRead: () -> Unit,
     onToggleReadingList: () -> Unit,
@@ -277,12 +326,26 @@ fun BookActionSheet(
         )
         HorizontalDivider()
         if (!book.isOwned) {
-            TextButton(
-                onClick = onAddToLibrary,
+            // Binding picker for "Add to Library"
+            Text(
+                text = "ADD TO LIBRARY",
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(start = 16.dp, top = 12.dp, bottom = 2.dp),
+            )
+            Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 8.dp),
-            ) { Text("Add to Library") }
+                    .padding(horizontal = 16.dp, vertical = 4.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                TextButton(onClick = { onAddToLibrary("hardcover") },
+                    modifier = Modifier.weight(1f)) { Text("Hardcover") }
+                TextButton(onClick = { onAddToLibrary("paperback") },
+                    modifier = Modifier.weight(1f)) { Text("Paperback") }
+                TextButton(onClick = { onAddToLibrary(null) },
+                    modifier = Modifier.weight(1f)) { Text("Unknown") }
+            }
         } else {
             TextButton(
                 onClick = onReadingNow,

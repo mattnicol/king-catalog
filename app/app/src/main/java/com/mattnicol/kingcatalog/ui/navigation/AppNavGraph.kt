@@ -2,6 +2,7 @@ package com.mattnicol.kingcatalog.ui.navigation
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Bookmarks
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.LibraryBooks
 import androidx.compose.material.icons.filled.MenuBook
@@ -29,11 +30,14 @@ import com.mattnicol.kingcatalog.ui.screens.detail.BookDetailScreen
 import com.mattnicol.kingcatalog.ui.screens.home.HomeScreen
 import com.mattnicol.kingcatalog.ui.screens.library.LibraryScreen
 import com.mattnicol.kingcatalog.ui.screens.other.OtherAuthorsScreen
+import com.mattnicol.kingcatalog.ui.screens.series.SeriesGroupDetailScreen
+import com.mattnicol.kingcatalog.ui.screens.series.SeriesScreen
 
 sealed class NavRoute(val route: String, val label: String, val icon: ImageVector) {
     data object Home : NavRoute("home", "Home", Icons.Filled.Home)
     data object Books : NavRoute("books", "Books", Icons.Filled.MenuBook)
     data object Library : NavRoute("library", "My Library", Icons.Filled.LibraryBooks)
+    data object Series : NavRoute("series", "Series", Icons.Filled.Bookmarks)
     data object OtherAuthors : NavRoute("other_authors", "Other Authors", Icons.Filled.People)
 }
 
@@ -41,6 +45,7 @@ private val bottomNavItems = listOf(
     NavRoute.Home,
     NavRoute.Books,
     NavRoute.Library,
+    NavRoute.Series,
     NavRoute.OtherAuthors,
 )
 
@@ -89,6 +94,24 @@ fun AppNavGraph() {
             composable(NavRoute.Library.route) {
                 LibraryScreen(onBookClick = { id -> navController.navigate("book_detail/$id") })
             }
+            composable(NavRoute.Series.route) {
+                SeriesScreen(
+                    onGroupClick = { groupName ->
+                        navController.navigate("series_detail/${encodeNavArg(groupName)}")
+                    },
+                )
+            }
+            composable(
+                route = "series_detail/{groupName}",
+                arguments = listOf(navArgument("groupName") { type = NavType.StringType }),
+            ) { backStackEntry ->
+                val groupName = backStackEntry.arguments!!.getString("groupName") ?: ""
+                SeriesGroupDetailScreen(
+                    groupName = decodeNavArg(groupName),
+                    onBack = { navController.popBackStack() },
+                    onBookClick = { id -> navController.navigate("book_detail/$id") },
+                )
+            }
             composable(NavRoute.OtherAuthors.route) {
                 OtherAuthorsScreen(onBookClick = { id -> navController.navigate("book_detail/$id") })
             }
@@ -102,3 +125,10 @@ fun AppNavGraph() {
         }
     }
 }
+
+/** Simple URL-encode for nav arguments that may contain slashes or spaces. */
+private fun encodeNavArg(value: String): String =
+    java.net.URLEncoder.encode(value, "UTF-8")
+
+private fun decodeNavArg(value: String): String =
+    java.net.URLDecoder.decode(value, "UTF-8")

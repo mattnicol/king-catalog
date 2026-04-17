@@ -11,7 +11,7 @@ import com.mattnicol.kingcatalog.data.db.entity.BookEntity
 
 @Database(
     entities = [BookEntity::class],
-    version = 4,
+    version = 5,
     exportSchema = true,
 )
 @TypeConverters(Converters::class)
@@ -20,9 +20,9 @@ abstract class KingCatalogDatabase : RoomDatabase() {
     abstract fun bookDao(): BookDao
 
     companion object {
-        const val DB_VERSION = 4
+        const val DB_VERSION = 5
         // Bump this whenever king_catalog.json catalog data changes (preserves user fields).
-        const val CATALOG_VERSION = 7
+        const val CATALOG_VERSION = 8
 
         @Volatile private var INSTANCE: KingCatalogDatabase? = null
 

@@ -115,7 +115,7 @@ fun HomeScreen(
             BookActionSheet(
                 book = book,
                 onDismiss = { selectedBook = null },
-                onAddToLibrary = { vm.onToggleOwned(book); selectedBook = null },
+                onAddToLibrary = { _ -> vm.onToggleOwned(book); selectedBook = null },
                 onReadingNow = { vm.onReadingNow(book); selectedBook = null },
                 onMarkRead = { vm.onMarkRead(book); selectedBook = null },
                 onToggleReadingList = { vm.onToggleReadingList(book); selectedBook = null },

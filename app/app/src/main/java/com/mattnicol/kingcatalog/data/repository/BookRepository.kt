@@ -42,6 +42,9 @@ class BookRepository(private val dao: BookDao) {
         if (ids.isEmpty()) flowOf(emptyList())
         else dao.observeByIds(ids).map { list -> list.map { it.toDomain() } }
 
+    fun observeWithConnections(): Flow<List<Book>> =
+        dao.observeWithConnections().map { list -> list.map { it.toDomain() } }
+
     suspend fun count(): Int = dao.count()
 
     suspend fun insertAll(books: List<BookEntity>) = dao.insertAll(books)
@@ -57,6 +60,8 @@ class BookRepository(private val dao: BookDao) {
             lastStatusChanged = book.lastStatusChanged,
             notes = book.notes,
             imdbUrl = book.imdbUrl,
+            bindingOwned = book.bindingOwned,
+            bindingWanted = book.bindingWanted,
         )
     )
 
@@ -80,6 +85,16 @@ class BookRepository(private val dao: BookDao) {
     suspend fun setOwned(book: Book, value: Boolean) {
         val entity = dao.getById(book.id) ?: return
         dao.update(entity.copy(isOwned = value))
+    }
+
+    suspend fun setOwnedWithBinding(book: Book, binding: String?) {
+        val entity = dao.getById(book.id) ?: return
+        dao.update(entity.copy(isOwned = true, bindingOwned = binding))
+    }
+
+    suspend fun setBinding(book: Book, bindingOwned: String?, bindingWanted: String?) {
+        val entity = dao.getById(book.id) ?: return
+        dao.update(entity.copy(bindingOwned = bindingOwned, bindingWanted = bindingWanted))
     }
 
     suspend fun setOnReadingList(book: Book, value: Boolean) {

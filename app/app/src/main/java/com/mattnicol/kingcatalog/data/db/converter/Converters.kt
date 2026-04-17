@@ -4,6 +4,7 @@ import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.mattnicol.kingcatalog.data.model.Adaptation
+import com.mattnicol.kingcatalog.data.model.Connection
 
 class Converters {
     private val gson = Gson()
@@ -34,4 +35,13 @@ class Converters {
     @TypeConverter
     fun toAdaptationList(list: List<Adaptation>?): String =
         gson.toJson(list ?: emptyList<Adaptation>())
+
+    @TypeConverter
+    fun fromConnectionList(value: String?): List<Connection> =
+        if (value.isNullOrBlank()) emptyList()
+        else gson.fromJson(value, object : TypeToken<List<Connection>>() {}.type)
+
+    @TypeConverter
+    fun toConnectionList(list: List<Connection>?): String =
+        gson.toJson(list ?: emptyList<Connection>())
 }

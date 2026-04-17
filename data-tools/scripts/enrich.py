@@ -1,25 +1,94 @@
 #!/usr/bin/env python3
 """
-Enrich all author catalog files with:
-  - Cover image candidates from Open Library (preferred edition closest to known year)
-  - Word count estimates from page count where the field is missing
-  - Goodreads ratings scraped from book pages (goodreads_rating, goodreads_ratings_count)
+enrich.py — King Catalog enrichment CLI.
 
-Files enriched (all in-place):
-  data-tools/enriched/king_catalog.json   (Stephen King, produced by parse.py)
-  data-tools/raw/*-source.json            (other authors: Malerman, Hill, Hendrix, …)
+Enriches catalog entries with cover images, word counts, Goodreads ratings,
+descriptions, keywords, and series/connections data from external sources.
 
-After enrichment, rebuild_catalog.py is called to regenerate the combined
-app seed file at app/app/src/main/assets/king_catalog.json.
+IMPORTANT: This tool never invents data. If a field cannot be confidently
+populated from a reliable source it leaves the field null and marks the
+entry for review.
 
-Idempotent: entries whose cover_local_path already points to an existing file
-are skipped. Safe to rerun.
+─────────────────────────────────────────────────────────────────────────────
+TARGETING  (one required unless --review-only)
+─────────────────────────────────────────────────────────────────────────────
+  --title "The Shining"       Process entries whose title contains this string
+                                (repeatable; case-insensitive substring match)
+  --author "Stephen King"     Process all entries by this author (repeatable)
+  --all-authors               Process every entry in all author catalog files
 
-Outputs per run:
-  data-tools/enriched/covers/                  downloaded images (all authors)
-  data-tools/enriched/all_catalog_review.csv   review flags across all authors
+─────────────────────────────────────────────────────────────────────────────
+FIELD SELECTION  (default: covers)
+─────────────────────────────────────────────────────────────────────────────
+  --fields covers,goodreads,descriptions,keywords,connections,metadata
+                              Comma-separated fields to enrich
+  --descriptions              Shortcut for --fields descriptions
+  --keywords                  Shortcut for --fields keywords
+  --connections               Shortcut for --fields connections
+
+─────────────────────────────────────────────────────────────────────────────
+BEHAVIOR FLAGS
+─────────────────────────────────────────────────────────────────────────────
+  --blanks-only               Only update null/empty fields; skip populated
+  --once-only-curation        Same as --blanks-only; intended for one-time
+                                description and keyword curation passes
+  --dry-run                   Preview changes without writing to disk
+  --verbose                   Show detailed HTTP and parse output
+  --include-spoilers          Include spoiler-tagged connections in output
+  --force                     Re-fetch and overwrite existing data
+
+─────────────────────────────────────────────────────────────────────────────
+SOURCES
+─────────────────────────────────────────────────────────────────────────────
+  --source wikipedia,goodreads,openlibrary,reddit
+                              Comma-separated sources to use (default varies
+                              by --fields)
+  --reddit-thread-url <url>   Reddit thread to parse as seed for connections
+                                (repeatable; requires --fields connections)
+
+─────────────────────────────────────────────────────────────────────────────
+CATALOG REBUILD
+─────────────────────────────────────────────────────────────────────────────
+  --no-rebuild-seed           Skip rebuild of combined catalog after enrichment
+                                (default: rebuild is performed)
+
+─────────────────────────────────────────────────────────────────────────────
+REVIEW
+─────────────────────────────────────────────────────────────────────────────
+  --review-only               Print review flags and unresolved items only;
+                                no enrichment is performed
+
+─────────────────────────────────────────────────────────────────────────────
+EXAMPLES
+─────────────────────────────────────────────────────────────────────────────
+
+  # Download missing covers for The Shining
+  python enrich.py --title "The Shining"
+
+  # Re-fetch cover + Goodreads rating for two specific titles
+  python enrich.py --title "It" --title "Carrie" --fields covers,goodreads --force
+
+  # Fill all blank descriptions from Wikipedia (one-time pass, never overwrites)
+  python enrich.py --all-authors --fields descriptions --once-only-curation
+
+  # Fill blank keywords from Wikipedia categories (one-time pass)
+  python enrich.py --all-authors --fields keywords --once-only-curation
+
+  # Full enrichment run for Stephen King titles
+  python enrich.py --author "Stephen King" --fields covers,goodreads,descriptions,keywords
+
+  # Seed connections from a Reddit thread (adds candidates marked for review)
+  python enrich.py --all-authors --fields connections \\
+    --reddit-thread-url "https://www.reddit.com/r/stephenking/comments/abc123/"
+
+  # Dry run: see what would be updated without writing
+  python enrich.py --all-authors --dry-run
+
+  # Show all review flags (no changes made)
+  python enrich.py --review-only
 """
 
+import argparse
 import csv
 import hashlib
 import json
@@ -27,10 +96,15 @@ import re
 import subprocess
 import sys
 import time
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Path constants
+# ─────────────────────────────────────────────────────────────────────────────
 
 ROOT         = Path(__file__).parent.parent       # data-tools/
 PROJECT_ROOT = ROOT.parent                         # king-catalog/
@@ -39,22 +113,35 @@ RAW          = ROOT / "raw"
 COVERS_DIR   = ENRICHED / "covers"
 CSV_PATH     = ENRICHED / "all_catalog_review.csv"
 
-# Stephen King source (Stage 1 output from parse.py)
 SK_JSON = ENRICHED / "king_catalog.json"
-
-# Pattern for other-author raw source files
 OTHER_AUTHOR_GLOB = "*-source.json"
 
 OL_SEARCH = "https://openlibrary.org/search.json"
 OL_COVER  = "https://covers.openlibrary.org/b/id/{cover_id}-L.jpg"
 
-WORDS_PER_PAGE = 275   # conservative estimate for page-count → word-count fills
-REQUEST_DELAY  = 0.5   # seconds between Open Library API calls (be polite)
+WORDS_PER_PAGE   = 275
+REQUEST_DELAY    = 0.5
+GR_REQUEST_DELAY = 2.5
+WP_REQUEST_DELAY = 0.4
 
-# Known OL placeholder image hashes (returned when no cover is available)
-# These are the "no cover" placeholder files served by Open Library.
+GR_MIN_RATINGS = 1000
+
+# Patterns that identify non-book summary/guide/analysis editions — reject on match
+GR_REJECT_PATTERNS: list[str] = [
+    "summary of",
+    "includes analysis",
+    "study guide",
+    "workbook",
+    "trivia",
+    "instaread summaries",
+    "instaread",
+    "analysis",
+    "summary",
+    "book review",
+]
+
 OL_PLACEHOLDER_HASHES: set[str] = {
-    "04b41f5dc246f9ed8bf27ade4999603a",  # common OL "no cover" placeholder
+    "04b41f5dc246f9ed8bf27ade4999603a",
 }
 
 CSV_FIELDS = [
@@ -63,16 +150,151 @@ CSV_FIELDS = [
     "review_flags",
 ]
 
+VALID_FIELDS  = {"covers", "goodreads", "descriptions", "keywords", "connections", "metadata"}
+VALID_SOURCES = {"wikipedia", "goodreads", "openlibrary", "reddit"}
 
-# ---------------------------------------------------------------------------
+# Singular → plural aliases accepted on the CLI
+FIELD_ALIASES = {
+    "description": "descriptions",
+    "keyword":     "keywords",
+    "connection":  "connections",
+    "cover":       "covers",
+}
+
+VALID_CONNECTION_KINDS = {"series", "trilogy", "cycle", "universe", "connection", "easter_egg"}
+VALID_CONNECTION_ROLES = {"core", "supplemental"}
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Argument parsing
+# ─────────────────────────────────────────────────────────────────────────────
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        prog="enrich.py",
+        description=(
+            "King Catalog enrichment CLI.\n"
+            "Enriches catalog entries with covers, ratings, descriptions,\n"
+            "keywords, and series/connections. Never invents data."
+        ),
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=__doc__,
+    )
+
+    tgt = parser.add_argument_group("Targeting (one required unless --review-only)")
+    tgt.add_argument("--title", dest="titles", action="append", metavar="TITLE",
+                     help="Process entries whose title contains this string (repeatable)")
+    tgt.add_argument("--author", dest="authors", action="append", metavar="AUTHOR",
+                     help="Process all entries by this author (repeatable)")
+    tgt.add_argument("--all-authors", action="store_true",
+                     help="Process every entry in all author catalog files")
+
+    fld = parser.add_argument_group("Field selection")
+    fld.add_argument("--fields", metavar="FIELD,...",
+                     help=("Comma-separated fields: "
+                           + ", ".join(sorted(VALID_FIELDS))))
+    fld.add_argument("--descriptions", action="store_true",
+                     help="Shortcut for --fields descriptions")
+    fld.add_argument("--keywords", action="store_true",
+                     help="Shortcut for --fields keywords")
+    fld.add_argument("--connections", action="store_true",
+                     help="Shortcut for --fields connections")
+
+    beh = parser.add_argument_group("Behavior")
+    beh.add_argument("--blanks-only", action="store_true",
+                     help="Only update null/empty fields; skip populated ones")
+    beh.add_argument("--once-only-curation", action="store_true",
+                     help="Same as --blanks-only; for one-time description/keyword passes")
+    beh.add_argument("--dry-run", action="store_true",
+                     help="Print what would change without writing to disk")
+    beh.add_argument("--verbose", action="store_true",
+                     help="Show detailed HTTP and parse output")
+    beh.add_argument("--include-spoilers", action="store_true",
+                     help="Include spoiler-tagged connections in output")
+    beh.add_argument("--force", action="store_true",
+                     help="Re-fetch and overwrite existing data for targeted entries")
+
+    src = parser.add_argument_group("Sources")
+    src.add_argument("--source", metavar="SOURCE,...",
+                     help=("Comma-separated sources: "
+                           + ", ".join(sorted(VALID_SOURCES))))
+    src.add_argument("--reddit-thread-url", dest="reddit_urls", action="append",
+                     metavar="URL",
+                     help="Reddit thread URL for connections seed (repeatable)")
+
+    parser.add_argument("--no-rebuild-seed", action="store_true",
+                        help="Skip combined catalog rebuild after enrichment")
+    parser.add_argument("--review-only", action="store_true",
+                        help="Print review flags only; no enrichment performed")
+
+    return parser
+
+
+def resolve_fields(args: argparse.Namespace) -> set[str]:
+    """Merge --fields, --descriptions, --keywords, --connections into a set."""
+    fields: set[str] = set()
+
+    if args.fields:
+        for f in args.fields.split(","):
+            f = f.strip().lower()
+            f = FIELD_ALIASES.get(f, f)  # normalize singular aliases
+            if f not in VALID_FIELDS:
+                print(f"WARNING: unknown field '{f}' — ignoring", file=sys.stderr)
+            else:
+                fields.add(f)
+
+    if args.descriptions:
+        fields.add("descriptions")
+    if args.keywords:
+        fields.add("keywords")
+    if args.connections:
+        fields.add("connections")
+
+    # Default to covers when nothing specified
+    if not fields:
+        fields.add("covers")
+
+    return fields
+
+
+def resolve_sources(args: argparse.Namespace, fields: set[str]) -> set[str]:
+    """Resolve --source or derive sensible defaults from fields."""
+    if args.source:
+        sources: set[str] = set()
+        for s in args.source.split(","):
+            s = s.strip().lower()
+            if s not in VALID_SOURCES:
+                print(f"WARNING: unknown source '{s}' — ignoring", file=sys.stderr)
+            else:
+                sources.add(s)
+        return sources
+
+    # Defaults by field
+    sources = set()
+    if "covers" in fields:
+        sources.add("openlibrary")
+    if "goodreads" in fields:
+        sources.add("goodreads")
+    if "descriptions" in fields:
+        sources.add("wikipedia")
+    if "keywords" in fields:
+        sources.add("wikipedia")
+    if "connections" in fields:
+        sources.add("reddit")
+        sources.add("wikipedia")
+    return sources
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Open Library helpers
-# ---------------------------------------------------------------------------
+# ─────────────────────────────────────────────────────────────────────────────
 
-def ol_search(title: str, year: int | None, author: str, use_author_filter: bool = True) -> dict | None:
-    """
-    Search Open Library for a title by a given author.
-    Returns the best-matching document dict or None.
-    """
+def ol_search(
+    title: str,
+    year: int | None,
+    author: str,
+    use_author_filter: bool = True,
+) -> dict | None:
     params_dict = {
         "title": title,
         "fields": "key,title,first_publish_year,cover_i,number_of_pages_median",
@@ -93,7 +315,6 @@ def ol_search(title: str, year: int | None, author: str, use_author_filter: bool
     if len(docs) == 1 or year is None:
         return docs[0]
 
-    # Prefer the doc whose first_publish_year is closest to the known year
     def year_dist(doc: dict) -> int:
         y = doc.get("first_publish_year")
         return abs(y - year) if isinstance(y, int) else 9999
@@ -102,11 +323,6 @@ def ol_search(title: str, year: int | None, author: str, use_author_filter: bool
 
 
 def download_cover(cover_id: int, dest: Path) -> bool:
-    """
-    Download a cover image to dest.
-    Returns True on success.
-    Rejects files under 10 000 bytes or matching known OL placeholder hashes.
-    """
     url = OL_COVER.format(cover_id=cover_id)
     try:
         with urllib.request.urlopen(url, timeout=15) as resp:
@@ -126,39 +342,9 @@ def safe_filename(title: str) -> str:
     return cleaned.strip().replace(" ", "_")[:80] + ".jpg"
 
 
-# ---------------------------------------------------------------------------
-# Entry helpers
-# ---------------------------------------------------------------------------
-
-def cover_already_done(entry: dict) -> bool:
-    """True if cover_local_path is set and the file exists on disk."""
-    lp = entry.get("cover_local_path")
-    if not lp:
-        return False
-    return (PROJECT_ROOT / lp).exists()
-
-
-def add_flag(entry: dict, flag: str) -> None:
-    flags: list = entry.setdefault("review_flags", [])
-    if flag not in flags:
-        flags.append(flag)
-
-
-def remove_flag(entry: dict, flag: str) -> None:
-    entry["review_flags"] = [f for f in (entry.get("review_flags") or []) if f != flag]
-
-
-def recalculate_review_status(entry: dict) -> None:
-    flags = entry.get("review_flags") or []
-    entry["review_status"] = "needs_review" if flags else "ok"
-
-
-# ---------------------------------------------------------------------------
-# Goodreads scraping
-# ---------------------------------------------------------------------------
-
-GR_REQUEST_DELAY = 2.5  # seconds between Goodreads requests; be conservative
-
+# ─────────────────────────────────────────────────────────────────────────────
+# Goodreads helpers
+# ─────────────────────────────────────────────────────────────────────────────
 
 def _gr_headers() -> dict:
     return {
@@ -178,7 +364,7 @@ def _gr_headers() -> dict:
 
 
 def _fetch_url(url: str, timeout: int = 20) -> str | None:
-    """Fetch a URL with browser-like headers. Handles gzip transparently."""
+    """Fetch a URL with browser-like headers; handles gzip transparently."""
     import gzip as _gzip
     req = urllib.request.Request(url, headers=_gr_headers())
     try:
@@ -193,24 +379,16 @@ def _fetch_url(url: str, timeout: int = 20) -> str | None:
 
 
 def _parse_gr_rating(html: str) -> tuple[float | None, int | None]:
-    """
-    Parse Goodreads rating + count from a book page.
-    Tries JSON-LD (most reliable), then HTML microdata, then JSON blobs.
-    Returns (rating, count) or (None, None).
-    """
     def _valid_rating(v: float) -> bool:
         return 1.0 <= v <= 5.0
 
-    # 1. JSON-LD blocks (GR includes these for SEO)
     for m in re.finditer(
         r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
         html, re.DOTALL | re.IGNORECASE,
     ):
         try:
             obj = json.loads(m.group(1))
-            # May be a single object or a list
             items: list = obj if isinstance(obj, list) else [obj]
-            # Also unwrap @graph containers
             expanded: list = []
             for item in items:
                 if "@graph" in item:
@@ -232,7 +410,6 @@ def _parse_gr_rating(html: str) -> tuple[float | None, int | None]:
         except Exception:
             continue
 
-    # 2. HTML microdata: itemprop="ratingValue" (various attribute orderings)
     for pattern in [
         r'itemprop=["\']ratingValue["\'][^>]*content=["\']([0-9.]+)["\']',
         r'content=["\']([0-9.]+)["\'][^>]*itemprop=["\']ratingValue["\']',
@@ -257,7 +434,6 @@ def _parse_gr_rating(html: str) -> tuple[float | None, int | None]:
             except (ValueError, TypeError):
                 pass
 
-    # 3. JSON blobs embedded in page scripts
     m = re.search(r'"ratingValue"\s*:\s*"?([0-9.]+)"?', html)
     if m:
         try:
@@ -268,7 +444,6 @@ def _parse_gr_rating(html: str) -> tuple[float | None, int | None]:
         except (ValueError, TypeError):
             pass
 
-    # 4. Plain text pattern: "X.XX avg rating · N,NNN ratings"
     m = re.search(r'([0-9]\.[0-9]+)\s+avg\s+rating\s*[·\-]\s*([\d,]+)\s+ratings', html)
     if m:
         try:
@@ -282,10 +457,6 @@ def _parse_gr_rating(html: str) -> tuple[float | None, int | None]:
 
 
 def _extract_book_urls(html: str) -> list[str]:
-    """
-    Extract candidate book-page URLs from a Goodreads search-results page.
-    Returns up to 5 unique URLs in result order.
-    """
     seen: set[str] = set()
     results: list[str] = []
     patterns = [
@@ -305,16 +476,35 @@ def _extract_book_urls(html: str) -> list[str]:
 
 
 def _normalize_for_match(s: str) -> str:
-    """Lowercase, strip punctuation/parens/articles for loose title matching."""
-    s = re.sub(r"\s*\([^)]*\)", "", s)           # remove parentheticals
+    # Transliterate accented/special chars to ASCII equivalents (ö→o, é→e, etc.)
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    s = re.sub(r"\s*\([^)]*\)", "", s)
     s = re.sub(r"[^a-z0-9 ]", "", s.lower())
-    # Drop leading articles for matching purposes
     s = re.sub(r"^(the|a|an) ", "", s.strip())
     return s.strip()
 
 
+def _gr_parse_page_title(html_title: str) -> tuple[str, str]:
+    """Parse a Goodreads <title> tag into (book_title_part, author_part)."""
+    raw = re.sub(r'\s*[|].*$', '', html_title).strip()
+    lower = raw.lower()
+    idx = lower.rfind(" by ")
+    if idx >= 0:
+        return raw[:idx].strip(), raw[idx + 4:].strip()
+    return raw, ""
+
+
+def _is_rejected_gr_edition(book_title: str, page_author: str) -> tuple[bool, str]:
+    """Return (True, reason) if the page looks like a summary/guide/analysis edition."""
+    combined = (book_title + " " + page_author).lower()
+    for pat in GR_REJECT_PATTERNS:
+        if pat in combined:
+            return True, f"reject pattern {pat!r} found in {combined[:80]!r}"
+    return False, ""
+
+
 def _extract_subtitle(title: str) -> str | None:
-    """Return the post-colon portion of a title, if any."""
     if ":" in title:
         part = title.split(":", 1)[1].strip()
         return part if part else None
@@ -322,34 +512,18 @@ def _extract_subtitle(title: str) -> str | None:
 
 
 def _series_query_variants(title: str, author: str, is_bachman: bool) -> list[str]:
-    """
-    Build an ordered list of search queries to try for a title.
-    Tries the most specific query first, falling back to progressively looser ones.
-    """
-    # Strip Bachman annotation before building queries
     clean = re.sub(r"\s*\(Bachman\)\s*$", "", title, flags=re.IGNORECASE).strip()
-
     queries: list[str] = []
-
-    # 1. Full title + author
     queries.append(f"{clean} {author}")
-
-    # 2. If title has a series prefix ("Series: Subtitle"), try subtitle + author
     subtitle = _extract_subtitle(clean)
     if subtitle:
         queries.append(f"{subtitle} {author}")
         queries.append(subtitle)
-
-    # 3. Bachman alias fallback: also search under "Stephen King"
     if is_bachman:
         queries.append(f"{clean} Stephen King")
         if subtitle:
             queries.append(f"{subtitle} Stephen King")
-
-    # 4. Bare title as last resort
     queries.append(clean)
-
-    # Deduplicate while preserving order
     seen: set[str] = set()
     unique: list[str] = []
     for q in queries:
@@ -360,26 +534,15 @@ def _series_query_variants(title: str, author: str, is_bachman: bool) -> list[st
 
 
 def _title_matches(norm_title: str, page_title_norm: str) -> tuple[bool, str]:
-    """
-    Check if the normalised catalog title plausibly matches the Goodreads page title.
-    Returns (matched: bool, reason: str) so callers can log rejections.
-    """
     if not norm_title or len(norm_title) < 3:
         return True, "title too short to verify"
-
-    # Word-overlap check: at least one significant word (≥4 chars) must appear in
-    # the page title.  This handles "The Dark Tower I: The Gunslinger" → "gunslinger"
-    # matching against a page whose <title> is "The Gunslinger (The Dark Tower, #1)".
     title_words = {w for w in norm_title.split() if len(w) >= 4}
     page_words  = {w for w in page_title_norm.split() if len(w) >= 4}
     overlap = title_words & page_words
     if overlap:
         return True, f"word overlap: {overlap}"
-
-    # Substring check as safety net for very short significant words
     if norm_title in page_title_norm or page_title_norm[:len(norm_title)] == norm_title:
         return True, "substring match"
-
     return False, f"no overlap — title words={title_words!r} page words={page_words!r}"
 
 
@@ -390,20 +553,14 @@ def fetch_goodreads_rating(
     is_bachman: bool = False,
     verbose: bool = True,
 ) -> tuple[float | None, int | None]:
-    """
-    Search Goodreads for a book and return (rating, ratings_count).
-    Uses multiple search strategies and several HTML parsing fallbacks.
-    Returns (None, None) if no confident match is found.
-    Never invents values.
-    """
     clean_title = re.sub(r"\s*\(Bachman\)\s*$", "", title, flags=re.IGNORECASE).strip()
-
-    # Build normalised title for matching — prefer the subtitle when present
-    # (e.g. "The Dark Tower I: The Gunslinger" → match on "gunslinger")
     subtitle = _extract_subtitle(clean_title)
     norm_title = _normalize_for_match(subtitle if subtitle else clean_title)
-
     queries = _series_query_variants(title, author, is_bachman)
+
+    if verbose:
+        print(f"      [GR] target title:    {title!r}", flush=True)
+        print(f"      [GR] expected author: {author!r}", flush=True)
 
     for query in queries:
         search_url = (
@@ -421,125 +578,604 @@ def fetch_goodreads_rating(
         book_urls = _extract_book_urls(search_html)
         if not book_urls:
             if verbose:
-                print(f"      [GR] no book URLs in search results for: {query!r}", flush=True)
+                print(f"      [GR] no book URLs for: {query!r}", flush=True)
             continue
 
-        # Try top candidates from this search
+        if verbose:
+            print(f"      [GR] query {query!r} → {len(book_urls)} candidate(s)", flush=True)
+
         found_url_but_no_rating = False
         for book_url in book_urls[:3]:
             book_html = _fetch_url(book_url)
             time.sleep(GR_REQUEST_DELAY)
             if not book_html:
                 if verbose:
-                    print(f"      [GR] failed to fetch {book_url}", flush=True)
+                    print(f"      [GR]   SKIP {book_url} — fetch failed", flush=True)
                 continue
 
-            # Title sanity-check against <title> tag
+            page_book_title, page_author = "", ""
             page_title_m = re.search(r"<title[^>]*>([^<]+)</title>", book_html, re.IGNORECASE)
             if page_title_m:
+                page_book_title, page_author = _gr_parse_page_title(page_title_m.group(1))
+                if verbose:
+                    print(f"      [GR]   candidate: {book_url}", flush=True)
+                    print(f"      [GR]     title:   {page_book_title!r}", flush=True)
+                    print(f"      [GR]     author:  {page_author!r}", flush=True)
+
+                # Title similarity check
                 page_title_norm = _normalize_for_match(page_title_m.group(1))
                 matched, reason = _title_matches(norm_title, page_title_norm)
                 if not matched:
                     if verbose:
-                        print(
-                            f"      [GR] SKIP {book_url} — {reason}",
-                            flush=True,
-                        )
+                        print(f"      [GR]     REJECT — title mismatch: {reason}", flush=True)
                     continue
 
+                # Reject summary/guide/analysis editions
+                rejected, rej_reason = _is_rejected_gr_edition(page_book_title, page_author)
+                if rejected:
+                    if verbose:
+                        print(f"      [GR]     REJECT — {rej_reason}", flush=True)
+                    continue
+            elif verbose:
+                print(f"      [GR]   candidate: {book_url} (no <title>)", flush=True)
+
             rating, count = _parse_gr_rating(book_html)
+
+            # Minimum ratings threshold
+            if rating is not None and count is not None and count < GR_MIN_RATINGS:
+                print(
+                    f"      [GR]     REJECT {book_url} — ratings count {count} < {GR_MIN_RATINGS}",
+                    flush=True,
+                )
+                continue
+
             if rating is not None:
+                if verbose:
+                    print(f"      [GR]     ACCEPT — rating={rating} count={count}", flush=True)
+                    print(f"      [GR]   SELECTED: {book_url}", flush=True)
+                    print(f"      [GR]     title:   {page_book_title!r}", flush=True)
+                    print(f"      [GR]     author:  {page_author!r}", flush=True)
+                    print(f"      [GR]     rating:  {rating}  count: {count}", flush=True)
                 return rating, count
 
             if verbose:
-                print(f"      [GR] rating not parsed from {book_url}", flush=True)
+                print(f"      [GR]   rating not parsed from {book_url}", flush=True)
             found_url_but_no_rating = True
 
         if found_url_but_no_rating:
-            # We found a plausible page but couldn't parse the rating — don't
-            # keep trying looser queries that might return a wrong book.
             break
 
     return None, None
 
 
-# ---------------------------------------------------------------------------
-# Core enrichment logic
-# ---------------------------------------------------------------------------
+def _parse_gr_description(html: str) -> str | None:
+    """Extract book description from a Goodreads book page."""
+    # JSON-LD first
+    for m in re.finditer(
+        r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+        html, re.DOTALL | re.IGNORECASE,
+    ):
+        try:
+            obj = json.loads(m.group(1))
+            items = obj if isinstance(obj, list) else [obj]
+            expanded: list = []
+            for item in items:
+                if "@graph" in item:
+                    g = item["@graph"]
+                    expanded.extend(g if isinstance(g, list) else [g])
+                else:
+                    expanded.append(item)
+            for item in expanded:
+                desc = item.get("description") or ""
+                if isinstance(desc, str) and len(desc) > 30:
+                    desc = re.sub(r"<[^>]+>", " ", desc)
+                    return re.sub(r"\s+", " ", desc).strip()[:1200]
+        except Exception:
+            continue
 
-def enrich_entry(entry: dict) -> dict:
-    """
-    Attempt to enrich a single catalog entry.
-    Returns a stats dict with integer counts.
-    """
-    stats = {"cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0, "wc_filled": 0, "gr_filled": 0}
+    # HTML fallback — Goodreads description container patterns
+    for pattern in [
+        r'<div[^>]+class=["\'][^"\']*BookPageMetaData[^"\']*description[^"\']*["\'][^>]*>(.*?)</div>',
+        r'<span[^>]+class=["\'][^"\']*Formatted[^"\']*["\'][^>]*>(.*?)</span>',
+        r'<div[^>]+id=["\']description["\'][^>]*>.*?<span[^>]*>(.*?)</span>',
+    ]:
+        m = re.search(pattern, html, re.DOTALL | re.IGNORECASE)
+        if m:
+            text = re.sub(r"<[^>]+>", " ", m.group(1))
+            text = re.sub(r"\s+", " ", text).strip()
+            if len(text) > 30:
+                return text[:1200]
 
-    title:  str       = entry.get("title") or ""
-    year:   int | None = entry.get("year")
-    author: str       = entry.get("author") or "Stephen King"
-    is_parent = entry.get("is_collection_parent", False)
-    is_bachman = entry.get("as_bachman", False)
+    return None
 
-    if not title:
-        return stats
 
-    if cover_already_done(entry):
-        stats["cover_skipped"] = 1
-        return stats
+def _parse_gr_keywords(html: str) -> list[str]:
+    """Extract genre/shelf tags from a Goodreads book page."""
+    keywords: list[str] = []
+    seen: set[str] = set()
+    # Genre links typically contain /genres/ or /shelf/show/
+    for m in re.finditer(
+        r'href=["\'][^"\']*(?:genres|shelf/show)[^"\']*["\'][^>]*>([^<]+)</a>',
+        html, re.IGNORECASE,
+    ):
+        kw = m.group(1).strip().lower().replace(" ", "-")
+        kw = re.sub(r"[^a-z0-9\-]", "", kw)
+        if 3 <= len(kw) <= 40 and kw not in seen:
+            seen.add(kw)
+            keywords.append(kw)
+    return keywords[:12]
 
-    # Bachman books: strip " (Bachman)" suffix for search, use "Richard Bachman" as author
-    search_title = title
-    search_author = author
-    if is_bachman:
-        search_title = re.sub(r"\s*\(Bachman\)\s*$", "", title, flags=re.IGNORECASE).strip()
-        search_author = "Richard Bachman"
 
-    # Collection parents: skip author filter — works better for anthologies
-    doc = ol_search(search_title, year, author=search_author, use_author_filter=(not is_parent))
-    time.sleep(REQUEST_DELAY)
+def _fetch_goodreads_book_html(
+    title: str, author: str, year: int | None, is_bachman: bool, verbose: bool,
+) -> str | None:
+    """Search Goodreads for the book and return the HTML of the best matching page."""
+    queries = _series_query_variants(title, author, is_bachman)
+    clean_title = re.sub(r"\s*\(Bachman\)\s*$", "", title, flags=re.IGNORECASE).strip()
+    subtitle = _extract_subtitle(clean_title)
+    norm_title = _normalize_for_match(subtitle if subtitle else clean_title)
 
+    for query in queries:
+        search_url = (
+            "https://www.goodreads.com/search?q="
+            + urllib.parse.quote_plus(query)
+            + "&search_type=books"
+        )
+        search_html = _fetch_url(search_url)
+        time.sleep(GR_REQUEST_DELAY)
+        if not search_html:
+            continue
+
+        book_urls = _extract_book_urls(search_html)
+        if not book_urls:
+            continue
+
+        for book_url in book_urls[:3]:
+            book_html = _fetch_url(book_url)
+            time.sleep(GR_REQUEST_DELAY)
+            if not book_html:
+                continue
+            page_title_m = re.search(r"<title[^>]*>([^<]+)</title>", book_html, re.IGNORECASE)
+            if page_title_m:
+                page_book_title, page_author = _gr_parse_page_title(page_title_m.group(1))
+                page_title_norm = _normalize_for_match(page_title_m.group(1))
+                matched, reason = _title_matches(norm_title, page_title_norm)
+                if not matched:
+                    if verbose:
+                        print(f"      [GR] SKIP {book_url} — {reason}", flush=True)
+                    continue
+                rejected, rej_reason = _is_rejected_gr_edition(page_book_title, page_author)
+                if rejected:
+                    if verbose:
+                        print(f"      [GR] SKIP {book_url} — {rej_reason}", flush=True)
+                    continue
+            if verbose:
+                print(f"      [GR] fetched {book_url}", flush=True)
+            return book_html
+
+    return None
+
+
+def fetch_goodreads_description(
+    title: str,
+    author: str,
+    year: int | None = None,
+    is_bachman: bool = False,
+    verbose: bool = False,
+) -> str | None:
+    html = _fetch_goodreads_book_html(title, author, year, is_bachman, verbose)
+    if not html:
+        if verbose:
+            print(f"      [GR] no page found for description: {title!r}", flush=True)
+        return None
+    desc = _parse_gr_description(html)
+    if verbose:
+        if desc:
+            print(f"      [GR] description found: {desc[:80]}…", flush=True)
+        else:
+            print(f"      [GR] description not parsed for: {title!r}", flush=True)
+    return desc
+
+
+def fetch_goodreads_keywords(
+    title: str,
+    author: str,
+    year: int | None = None,
+    is_bachman: bool = False,
+    verbose: bool = False,
+) -> list[str]:
+    html = _fetch_goodreads_book_html(title, author, year, is_bachman, verbose)
+    if not html:
+        return []
+    kws = _parse_gr_keywords(html)
+    if verbose and kws:
+        print(f"      [GR] keywords found: {kws[:6]}", flush=True)
+    return kws
+
+
+def fetch_openlibrary_description(
+    title: str,
+    author: str,
+    year: int | None = None,
+    verbose: bool = False,
+) -> str | None:
+    """Fetch description from Open Library works API."""
+    normalized = _normalize_title_for_lookup(title)
+    doc = ol_search(normalized, year, author)
     if not doc:
-        stats["cover_failed"] = 1
-        return stats
+        if verbose:
+            print(f"      [OL] no search result for: {title!r}", flush=True)
+        return None
 
-    cover_id: int | None = doc.get("cover_i")
-    ol_pages: int | None = doc.get("number_of_pages_median")
+    work_key = doc.get("key")
+    if not work_key:
+        return None
 
-    # Word count fill (only if currently missing)
-    if ol_pages and entry.get("word_count") is None:
-        entry["word_count"] = round(ol_pages * WORDS_PER_PAGE)
-        remove_flag(entry, "missing_word_count")
-        add_flag(entry, "estimated_from_page_count")
-        stats["wc_filled"] = 1
-
-    if not cover_id:
-        stats["cover_failed"] = 1
-        recalculate_review_status(entry)
-        return stats
-
-    cover_url = OL_COVER.format(cover_id=cover_id)
-    entry["cover_candidate_url"] = cover_url
-    entry["cover_source"] = "open_library"
-    entry["cover_verified"] = False   # candidate only — requires human verification
-
-    fname = safe_filename(title)
-    dest  = COVERS_DIR / fname
-    if download_cover(cover_id, dest):
-        entry["cover_local_path"] = f"data-tools/enriched/covers/{fname}"
-        stats["cover_resolved"] = 1
-    else:
-        stats["cover_failed"] = 1
-
-    recalculate_review_status(entry)
-    return stats
+    try:
+        url = f"https://openlibrary.org{work_key}.json"
+        with urllib.request.urlopen(url, timeout=12) as resp:
+            work = json.loads(resp.read().decode("utf-8"))
+        time.sleep(REQUEST_DELAY)
+        desc = work.get("description") or ""
+        if isinstance(desc, dict):
+            desc = desc.get("value", "")
+        if isinstance(desc, str) and len(desc) > 30:
+            if verbose:
+                print(f"      [OL] description found: {desc[:80]}…", flush=True)
+            return desc[:1200]
+    except Exception as e:
+        if verbose:
+            print(f"      [OL] description fetch error: {e}", flush=True)
+    return None
 
 
-# ---------------------------------------------------------------------------
-# Repair pass
-# ---------------------------------------------------------------------------
+def fetch_openlibrary_keywords(
+    title: str,
+    author: str,
+    year: int | None = None,
+    verbose: bool = False,
+) -> list[str]:
+    """Fetch subject-derived keywords from Open Library."""
+    normalized = _normalize_title_for_lookup(title)
+    params_dict = {
+        "title": normalized,
+        "author": author.lower(),
+        "fields": "key,title,subject",
+        "limit": 3,
+    }
+    params = urllib.parse.urlencode(params_dict)
+    try:
+        with urllib.request.urlopen(f"{OL_SEARCH}?{params}", timeout=12) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        time.sleep(REQUEST_DELAY)
+        docs = data.get("docs") or []
+        if not docs:
+            return []
+        subjects = docs[0].get("subject") or []
+        keywords: list[str] = []
+        seen: set[str] = set()
+        for subj in subjects[:20]:
+            kw = subj.lower().strip().replace(" ", "-")
+            kw = re.sub(r"[^a-z0-9\-]", "", kw)
+            if 3 <= len(kw) <= 40 and kw not in seen:
+                seen.add(kw)
+                keywords.append(kw)
+        if verbose and keywords:
+            print(f"      [OL] keywords found: {keywords[:6]}", flush=True)
+        return keywords[:12]
+    except Exception as e:
+        if verbose:
+            print(f"      [OL] keywords fetch error: {e}", flush=True)
+        return []
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Wikipedia helpers
+# ─────────────────────────────────────────────────────────────────────────────
+
+WP_API = "https://en.wikipedia.org/api/rest_v1/page/summary/{title}"
+WP_CATS_API = (
+    "https://en.wikipedia.org/w/api.php"
+    "?action=query&titles={title}&prop=categories"
+    "&cllimit=20&format=json&redirects=1"
+)
+
+_IGNORE_WP_CATS = {
+    "articles", "pages", "stubs", "wikidata", "cs1", "dmy dates", "mdy dates",
+    "wikipedia", "all articles", "use", "short description",
+}
+
+
+def _normalize_title_for_lookup(title: str) -> str:
+    """Strip quotes, parenthetical suffixes, normalize apostrophes."""
+    t = title.strip("'\"")
+    # Normalize smart apostrophes
+    t = t.replace("\u2018", "'").replace("\u2019", "'")
+    # Strip parenthetical pen-name / edition suffixes like (Bachman)
+    t = re.sub(r"\s*\([^)]*\)\s*$", "", t).strip()
+    return t
+
+
+def _wp_search_title(title: str, author: str) -> str | None:
+    """Return the Wikipedia page title for a book, or None."""
+    normalized = _normalize_title_for_lookup(title)
+    # Try both author variants for Bachman titles
+    queries = [f"{normalized} {author} novel"]
+    if normalized != title.strip():
+        queries.append(f"{normalized} Stephen King novel")
+    queries.append(normalized)
+
+    for query in queries:
+        params = urllib.parse.urlencode({"action": "opensearch", "search": query,
+                                         "limit": 3, "format": "json"})
+        try:
+            with urllib.request.urlopen(
+                f"https://en.wikipedia.org/w/api.php?{params}", timeout=10
+            ) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            results = data[1] if data and len(data) > 1 else []
+            if results:
+                return results[0]
+        except Exception:
+            pass
+    return None
+
+
+
+
+def fetch_wikipedia_summary(title: str, author: str, verbose: bool = False) -> str | None:
+    """
+    Fetch a short summary for a book from Wikipedia.
+    Returns the extract (first paragraph) or None.
+    """
+    wp_title = _wp_search_title(title, author)
+    if not wp_title:
+        if verbose:
+            print(f"      [WP] no Wikipedia title found for: {title!r}", flush=True)
+        return None
+
+    encoded = urllib.parse.quote(wp_title.replace(" ", "_"))
+    url = WP_API.format(title=encoded)
+    try:
+        with urllib.request.urlopen(url, timeout=10) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        extract = data.get("extract") or ""
+        # Only take the first paragraph
+        first_para = extract.split("\n\n")[0].strip()
+        if len(first_para) < 30:
+            return None
+        if verbose:
+            print(f"      [WP] summary for {title!r}: {first_para[:80]}…", flush=True)
+        return first_para
+    except Exception:
+        return None
+
+
+def fetch_wikipedia_keywords(title: str, author: str, verbose: bool = False) -> list[str]:
+    """Fetch category-derived keywords for a book from Wikipedia."""
+    wp_title = _wp_search_title(title, author)
+    if not wp_title:
+        return []
+
+    encoded = urllib.parse.quote(wp_title.replace(" ", "_"))
+    url = WP_CATS_API.format(title=encoded)
+    try:
+        with urllib.request.urlopen(url, timeout=10) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        pages = data.get("query", {}).get("pages", {})
+        cats: list[str] = []
+        for page in pages.values():
+            for cat in (page.get("categories") or []):
+                raw = cat.get("title", "").replace("Category:", "").lower().strip()
+                # Skip noisy maintenance / meta categories
+                if any(ig in raw for ig in _IGNORE_WP_CATS):
+                    continue
+                # Clean to a simple keyword
+                kw = re.sub(r"\s+novels?$", "", raw).strip()
+                kw = re.sub(r"^[\d]{4}\s+", "", kw)  # strip leading years
+                kw = kw.replace(" ", "-")
+                if 3 <= len(kw) <= 40:
+                    cats.append(kw)
+        if verbose and cats:
+            print(f"      [WP] keywords for {title!r}: {cats[:6]}", flush=True)
+        return cats[:12]
+    except Exception:
+        return []
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Reddit / Connections helpers
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _reddit_json_url(url: str) -> str:
+    """Convert a Reddit thread URL to its JSON API endpoint."""
+    url = url.rstrip("/")
+    if not url.endswith(".json"):
+        url += ".json"
+    return url
+
+
+def fetch_reddit_comments(url: str, verbose: bool = False) -> list[str]:
+    """
+    Fetch comment bodies from a Reddit thread.
+    Returns a list of plain-text comment strings.
+    """
+    json_url = _reddit_json_url(url)
+    headers = {
+        "User-Agent": "king-catalog-enrich/1.0 (catalog enrichment tool)",
+    }
+    req = urllib.request.Request(json_url, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except Exception as e:
+        if verbose:
+            print(f"      [Reddit] fetch failed for {url}: {e}", flush=True)
+        return []
+
+    comments: list[str] = []
+
+    def _walk(node: object) -> None:
+        if isinstance(node, list):
+            for item in node:
+                _walk(item)
+        elif isinstance(node, dict):
+            kind = node.get("kind")
+            data_ = node.get("data") or {}
+            if kind == "t1":
+                body = data_.get("body") or ""
+                if body and body != "[deleted]":
+                    comments.append(body)
+            for child_key in ("children", "replies"):
+                child = data_.get(child_key)
+                if child:
+                    _walk(child)
+
+    _walk(data)
+    if verbose:
+        print(f"      [Reddit] fetched {len(comments)} comments from {url}", flush=True)
+    return comments
+
+
+def extract_connection_candidates(
+    comments: list[str],
+    catalog_titles: list[str],
+    thread_url: str,
+    verbose: bool = False,
+) -> dict[str, list[dict]]:
+    """
+    Cross-reference Reddit comments against catalog titles to build candidate
+    connections.  Returns { title_lower: [candidate_connection, ...] }.
+
+    Candidates are marked spoiler=False and need_review=True.  They should
+    not be written without human verification.
+    """
+    # Build a quick-lookup set of normalised titles
+    norm_map: dict[str, str] = {
+        _normalize_for_match(t): t for t in catalog_titles
+    }
+
+    results: dict[str, list[dict]] = {}
+
+    for comment in comments:
+        for norm, orig_title in norm_map.items():
+            if len(norm) < 4:
+                continue
+            # Check if the normalised title appears in the normalised comment
+            norm_comment = re.sub(r"[^a-z0-9 ]", "", comment.lower())
+            if norm not in norm_comment:
+                continue
+
+            # Try to infer a group name from context words near the mention
+            context_snip = comment[:500]
+            group = _infer_group_from_context(context_snip, orig_title)
+
+            candidate: dict = {
+                "group": group,
+                "kind": "connection",
+                "role": "supplemental",
+                "order": None,
+                "spoiler": False,
+                "note": f"Candidate from Reddit thread: {thread_url}",
+                "review_flag": "needs_verification_connections",
+            }
+
+            bucket = results.setdefault(orig_title.lower(), [])
+            # Deduplicate by group
+            if not any(c["group"] == group for c in bucket):
+                bucket.append(candidate)
+
+    if verbose:
+        print(f"      [Connections] found candidates for {len(results)} titles", flush=True)
+    return results
+
+
+def _infer_group_from_context(text: str, book_title: str) -> str:
+    """
+    Heuristic: look for known universe / category names near the book mention.
+    Group names are sourced from the Reddit thread categories.
+    Falls back to 'Unknown Group (needs review)'.
+    """
+    # Ordered by specificity — more specific phrases checked first
+    known_groups = [
+        # Dark Tower categories (from Reddit thread)
+        ("dark tower lead", "Dark Tower lead-ins"),
+        ("dark tower core", "Dark Tower core"),
+        ("dark tower tie", "Dark Tower tie-ins"),
+        ("dark tower", "Dark Tower"),
+        ("gunslinger", "Dark Tower"),
+        # Bachman
+        ("bachman book", "Bachman Books"),
+        ("bachman", "Bachman Books"),
+        # Multi-book groupings
+        ("trilogy", "trilogies"),
+        ("duology", "duologies"),
+        ("genre group", "genre groupings"),
+        # Named universes / locations
+        ("castle rock", "Castle Rock"),
+        ("derry", "Derry"),
+        ("overlook", "Overlook"),
+        ("holly gibney", "Holly Gibney"),
+        ("bill hodges", "Bill Hodges"),
+        ("the stand", "The Stand"),
+    ]
+    text_lower = text.lower()
+    for keyword, group in known_groups:
+        if keyword in text_lower:
+            return group
+    return "Unknown Group (needs review)"
+
+
+def make_connection(
+    group: str,
+    kind: str = "connection",
+    role: str = "supplemental",
+    order: int | None = None,
+    spoiler: bool = False,
+    note: str | None = None,
+) -> dict:
+    """Build a validated connection dict."""
+    if kind not in VALID_CONNECTION_KINDS:
+        kind = "connection"
+    if role not in VALID_CONNECTION_ROLES:
+        role = "supplemental"
+    return {
+        "group": group,
+        "kind": kind,
+        "role": role,
+        "order": order,
+        "spoiler": spoiler,
+        "note": note,
+    }
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Entry helpers
+# ─────────────────────────────────────────────────────────────────────────────
+
+def cover_already_done(entry: dict) -> bool:
+    lp = entry.get("cover_local_path")
+    if not lp:
+        return False
+    return (PROJECT_ROOT / lp).exists()
+
+
+def add_flag(entry: dict, flag: str) -> None:
+    flags: list = entry.setdefault("review_flags", [])
+    if flag not in flags:
+        flags.append(flag)
+
+
+def remove_flag(entry: dict, flag: str) -> None:
+    entry["review_flags"] = [f for f in (entry.get("review_flags") or []) if f != flag]
+
+
+def recalculate_review_status(entry: dict) -> None:
+    flags = entry.get("review_flags") or []
+    entry["review_status"] = "needs_review" if flags else "ok"
+
 
 def repair_missing_cover_paths(entries: list[dict]) -> int:
-    """Set cover_local_path for entries with a matching file in covers/ but no path recorded."""
     repaired = 0
     for entry in entries:
         if entry.get("cover_local_path"):
@@ -553,9 +1189,326 @@ def repair_missing_cover_paths(entries: list[dict]) -> int:
     return repaired
 
 
-# ---------------------------------------------------------------------------
-# CSV output (combined across all authors)
-# ---------------------------------------------------------------------------
+def _matches_title_filter(entry: dict, title_filter: set[str] | None) -> bool:
+    if title_filter is None:
+        return True
+    entry_title = (entry.get("title") or "").lower()
+    return any(t.lower() in entry_title for t in title_filter)
+
+
+def _matches_author_filter(entry: dict, author_filter: set[str] | None) -> bool:
+    if author_filter is None:
+        return True
+    entry_author = (entry.get("author") or "Stephen King").lower()
+    return any(a.lower() in entry_author for a in author_filter)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Field-level enrichment functions
+# ─────────────────────────────────────────────────────────────────────────────
+
+def enrich_covers(
+    entry: dict,
+    force: bool,
+    blanks_only: bool,
+    verbose: bool,
+    dry_run: bool,
+) -> dict:
+    """Enrich cover image.  Returns stats dict."""
+    stats = {"cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0}
+
+    if not force and not dry_run and cover_already_done(entry):
+        stats["cover_skipped"] = 1
+        return stats
+
+    title  = entry.get("title") or ""
+    year   = entry.get("year")
+    author = entry.get("author") or "Stephen King"
+    is_parent  = entry.get("is_collection_parent", False)
+    is_bachman = entry.get("as_bachman", False)
+
+    search_title  = title
+    search_author = author
+    if is_bachman:
+        search_title  = re.sub(r"\s*\(Bachman\)\s*$", "", title, flags=re.IGNORECASE).strip()
+        search_author = "Richard Bachman"
+
+    doc = ol_search(search_title, year, author=search_author, use_author_filter=(not is_parent))
+    time.sleep(REQUEST_DELAY)
+
+    if not doc:
+        stats["cover_failed"] = 1
+        return stats
+
+    cover_id: int | None = doc.get("cover_i")
+    ol_pages: int | None = doc.get("number_of_pages_median")
+
+    if ol_pages and entry.get("word_count") is None:
+        if not dry_run:
+            entry["word_count"] = round(ol_pages * WORDS_PER_PAGE)
+            remove_flag(entry, "missing_word_count")
+            add_flag(entry, "estimated_from_page_count")
+        if verbose:
+            print(f"        word_count estimated from {ol_pages} pages", flush=True)
+
+    if not cover_id:
+        stats["cover_failed"] = 1
+        return stats
+
+    cover_url = OL_COVER.format(cover_id=cover_id)
+    if not dry_run:
+        entry["cover_candidate_url"] = cover_url
+        entry["cover_source"] = "open_library"
+        entry["cover_verified"] = False
+
+    fname = safe_filename(title)
+    dest  = COVERS_DIR / fname
+    if not dry_run and download_cover(cover_id, dest):
+        entry["cover_local_path"] = f"data-tools/enriched/covers/{fname}"
+        stats["cover_resolved"] = 1
+    elif dry_run:
+        stats["cover_resolved"] = 1  # assume would succeed
+    else:
+        stats["cover_failed"] = 1
+
+    return stats
+
+
+def enrich_goodreads(
+    entry: dict,
+    force: bool,
+    blanks_only: bool,
+    verbose: bool,
+    dry_run: bool,
+) -> dict:
+    """Enrich Goodreads rating.  Returns stats dict."""
+    stats = {"gr_filled": 0, "gr_skipped": 0}
+
+    has_rating = entry.get("goodreads_rating") is not None
+    if not force and (blanks_only or has_rating) and has_rating:
+        stats["gr_skipped"] = 1
+        return stats
+
+    title      = entry.get("title") or ""
+    year       = entry.get("year")
+    is_bachman = bool(entry.get("as_bachman"))
+    author     = "Richard Bachman" if is_bachman else (entry.get("author") or "Stephen King")
+
+    if dry_run:
+        print(f"        [dry-run] would fetch Goodreads rating for {title!r}", flush=True)
+        return stats
+
+    if force:
+        entry.pop("goodreads_rating", None)
+        entry.pop("goodreads_ratings_count", None)
+
+    rating, count = fetch_goodreads_rating(
+        title, author, year=year, is_bachman=is_bachman, verbose=verbose,
+    )
+    if rating is not None:
+        entry["goodreads_rating"] = rating
+        entry["goodreads_ratings_count"] = count
+        stats["gr_filled"] = 1
+        if verbose:
+            print(f"        => {rating} ({count} ratings)", flush=True)
+    return stats
+
+
+def enrich_description(
+    entry: dict,
+    force: bool,
+    blanks_only: bool,
+    verbose: bool,
+    dry_run: bool,
+    sources: set[str] | None = None,
+) -> dict:
+    """Enrich description via cascade: Wikipedia → Goodreads → OpenLibrary."""
+    stats = {"desc_filled": 0, "desc_skipped": 0}
+
+    has_desc = bool(entry.get("description"))
+    if not force and (blanks_only or has_desc) and has_desc:
+        stats["desc_skipped"] = 1
+        return stats
+
+    title      = entry.get("title") or ""
+    author     = entry.get("author") or "Stephen King"
+    year       = entry.get("year")
+    is_bachman = bool(entry.get("as_bachman"))
+    if is_bachman:
+        author = "Richard Bachman"
+
+    if sources is None:
+        sources = {"wikipedia", "goodreads", "openlibrary"}
+
+    normalized = _normalize_title_for_lookup(title)
+    if verbose:
+        print(f"      [desc] normalized lookup title: {normalized!r}", flush=True)
+
+    if dry_run:
+        print(f"        [dry-run] would fetch description for {title!r} via {sorted(sources)}", flush=True)
+        return stats
+
+    summary: str | None = None
+    used_source: str = ""
+
+    # 1. Wikipedia
+    if "wikipedia" in sources:
+        if verbose:
+            print(f"      [desc] trying Wikipedia …", flush=True)
+        summary = fetch_wikipedia_summary(title, author, verbose=verbose)
+        time.sleep(WP_REQUEST_DELAY)
+        if summary:
+            used_source = "wikipedia"
+
+    # 2. Goodreads
+    if not summary and "goodreads" in sources:
+        if verbose:
+            print(f"      [desc] Wikipedia failed — trying Goodreads …", flush=True)
+        summary = fetch_goodreads_description(title, author, year=year, is_bachman=is_bachman, verbose=verbose)
+        if summary:
+            used_source = "goodreads"
+
+    # 3. Open Library
+    if not summary and "openlibrary" in sources:
+        if verbose:
+            print(f"      [desc] Goodreads failed — trying Open Library …", flush=True)
+        summary = fetch_openlibrary_description(title, author, year=year, verbose=verbose)
+        if summary:
+            used_source = "openlibrary"
+
+    if summary:
+        entry["description"] = summary
+        entry["description_source"] = used_source
+        remove_flag(entry, "missing_description")
+        stats["desc_filled"] = 1
+        if verbose:
+            print(f"      [desc] filled from {used_source}", flush=True)
+    else:
+        add_flag(entry, "missing_description")
+        if verbose:
+            print(f"      [desc] unresolved — all sources failed for {title!r}", flush=True)
+
+    return stats
+
+
+def enrich_keywords(
+    entry: dict,
+    force: bool,
+    blanks_only: bool,
+    verbose: bool,
+    dry_run: bool,
+    sources: set[str] | None = None,
+) -> dict:
+    """Enrich keywords via cascade: Wikipedia → Goodreads → OpenLibrary."""
+    stats = {"kw_filled": 0, "kw_skipped": 0}
+
+    existing = entry.get("keywords") or []
+    if not force and blanks_only and existing:
+        stats["kw_skipped"] = 1
+        return stats
+
+    title      = entry.get("title") or ""
+    author     = entry.get("author") or "Stephen King"
+    year       = entry.get("year")
+    is_bachman = bool(entry.get("as_bachman"))
+    if is_bachman:
+        author = "Richard Bachman"
+
+    if sources is None:
+        sources = {"wikipedia", "goodreads", "openlibrary"}
+
+    if dry_run:
+        print(f"        [dry-run] would fetch keywords for {title!r} via {sorted(sources)}", flush=True)
+        return stats
+
+    new_kws: list[str] = []
+    used_source: str = ""
+
+    # 1. Wikipedia
+    if "wikipedia" in sources:
+        if verbose:
+            print(f"      [kw] trying Wikipedia …", flush=True)
+        new_kws = fetch_wikipedia_keywords(title, author, verbose=verbose)
+        time.sleep(WP_REQUEST_DELAY)
+        if new_kws:
+            used_source = "wikipedia"
+
+    # 2. Goodreads
+    if not new_kws and "goodreads" in sources:
+        if verbose:
+            print(f"      [kw] Wikipedia failed — trying Goodreads …", flush=True)
+        new_kws = fetch_goodreads_keywords(title, author, year=year, is_bachman=is_bachman, verbose=verbose)
+        if new_kws:
+            used_source = "goodreads"
+
+    # 3. Open Library
+    if not new_kws and "openlibrary" in sources:
+        if verbose:
+            print(f"      [kw] Goodreads failed — trying Open Library …", flush=True)
+        new_kws = fetch_openlibrary_keywords(title, author, year=year, verbose=verbose)
+        if new_kws:
+            used_source = "openlibrary"
+
+    if new_kws:
+        merged = list(dict.fromkeys(existing + new_kws))
+        entry["keywords"] = merged
+        entry["keywords_source"] = used_source
+        stats["kw_filled"] = 1
+        if verbose:
+            print(f"      [kw] filled from {used_source}: {new_kws[:6]}", flush=True)
+    return stats
+
+
+def enrich_connections(
+    entry: dict,
+    candidate_map: dict[str, list[dict]],
+    force: bool,
+    blanks_only: bool,
+    verbose: bool,
+    dry_run: bool,
+    include_spoilers: bool,
+) -> dict:
+    """
+    Merge candidate connections from Reddit into the entry.
+    Only adds candidates; never removes existing connections.
+    Returns stats dict.
+    """
+    stats = {"conn_added": 0, "conn_skipped": 0}
+
+    title_lower = (entry.get("title") or "").lower()
+    candidates = candidate_map.get(title_lower) or []
+
+    if not candidates:
+        return stats
+
+    existing: list[dict] = entry.get("connections") or []
+    existing_groups = {c.get("group", "").lower() for c in existing}
+
+    new_conns = []
+    for cand in candidates:
+        if not include_spoilers and cand.get("spoiler"):
+            continue
+        if cand["group"].lower() in existing_groups:
+            continue
+        new_conns.append(cand)
+
+    if not new_conns:
+        stats["conn_skipped"] = len(candidates)
+        return stats
+
+    if dry_run:
+        print(f"        [dry-run] would add {len(new_conns)} connection candidate(s)", flush=True)
+        return stats
+
+    entry["connections"] = existing + new_conns
+    add_flag(entry, "needs_review_connections")
+    stats["conn_added"] = len(new_conns)
+    return stats
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CSV output
+# ─────────────────────────────────────────────────────────────────────────────
 
 def write_csv(all_entries: list[dict]) -> None:
     needs_review = [e for e in all_entries if e.get("review_status") == "needs_review"]
@@ -568,181 +1521,319 @@ def write_csv(all_entries: list[dict]) -> None:
             writer.writerow(row)
 
 
-# ---------------------------------------------------------------------------
+# ─────────────────────────────────────────────────────────────────────────────
 # Per-file enrichment
-# ---------------------------------------------------------------------------
-
-def _matches_title_filter(entry: dict, title_filter: set[str] | None) -> bool:
-    """True when no filter is active, or the entry title matches one of the filter strings."""
-    if title_filter is None:
-        return True
-    entry_title = (entry.get("title") or "").lower()
-    return any(t.lower() in entry_title for t in title_filter)
-
+# ─────────────────────────────────────────────────────────────────────────────
 
 def enrich_file(
     path: Path,
     label: str,
-    fetch_goodreads: bool = False,
-    title_filter: set[str] | None = None,
-    force: bool = False,
+    fields: set[str],
+    sources: set[str],
+    title_filter: set[str] | None,
+    author_filter: set[str] | None,
+    force: bool,
+    blanks_only: bool,
+    verbose: bool,
+    dry_run: bool,
+    include_spoilers: bool,
+    candidate_connections: dict[str, list[dict]],
 ) -> tuple[list[dict], dict]:
-    """Load, enrich, and write back a single JSON catalog file. Returns (entries, totals).
-
-    title_filter: when set, only entries whose titles contain one of the filter strings
-                  (case-insensitive) are processed; others are skipped silently.
-    force:        when True (only meaningful with title_filter), clears existing cover and
-                  Goodreads data from matched entries so they are re-fetched from scratch.
-    """
+    """Load, enrich, and write-back a single JSON catalog file."""
     entries: list[dict] = json.loads(path.read_text(encoding="utf-8"))
     count = len(entries)
 
-    repaired = repair_missing_cover_paths(entries)
-    if repaired:
-        print(f"  Repaired {repaired} missing cover paths from existing files")
+    if "covers" in fields:
+        repaired = repair_missing_cover_paths(entries)
+        if repaired:
+            print(f"  Repaired {repaired} missing cover paths from existing files")
 
-    totals = {"cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0, "wc_filled": 0, "gr_filled": 0}
+    totals: dict[str, int] = {
+        "cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0,
+        "wc_filled": 0,
+        "gr_filled": 0, "gr_skipped": 0,
+        "desc_filled": 0, "desc_skipped": 0,
+        "kw_filled": 0, "kw_skipped": 0,
+        "conn_added": 0, "conn_skipped": 0,
+        "processed": 0, "skipped": 0,
+    }
 
     for i, entry in enumerate(entries, 1):
         title  = entry.get("title", "?")
         prefix = f"  [{i:>3}/{count}]"
 
-        if not _matches_title_filter(entry, title_filter):
-            totals["cover_skipped"] += 1
+        # Apply targeting filters
+        title_match  = _matches_title_filter(entry, title_filter)
+        author_match = _matches_author_filter(entry, author_filter)
+        if not (title_match and author_match):
+            totals["skipped"] += 1
             continue
 
-        if force:
-            # Clear existing cover so enrich_entry re-downloads it
-            entry.pop("cover_local_path", None)
-            entry.pop("cover_candidate_url", None)
-            entry.pop("cover_source", None)
+        print(f"{prefix} {title}", flush=True)
+        totals["processed"] += 1
 
-        print(f"{prefix} {title}", end=" ... ", flush=True)
+        status_parts: list[str] = []
 
-        stats = enrich_entry(entry)
-        for k, v in stats.items():
-            totals[k] += v
-
-        if stats["cover_resolved"]:
-            status = "cover ok"
-        elif stats["cover_skipped"]:
-            status = "already done"
-        else:
-            status = "no cover"
-        if stats["wc_filled"]:
-            status += ", wc estimated"
-        print(status)
-
-    if fetch_goodreads:
-        print(f"\n  [Goodreads ratings pass for {label}]")
-        for i, entry in enumerate(entries, 1):
-            if not _matches_title_filter(entry, title_filter):
-                continue
-            if not force and entry.get("goodreads_rating") is not None:
-                continue  # already populated
-            if force:
-                entry.pop("goodreads_rating", None)
-                entry.pop("goodreads_ratings_count", None)
-            title      = entry.get("title", "")
-            year_      = entry.get("year")
-            is_bachman = bool(entry.get("as_bachman"))
-            author     = "Richard Bachman" if is_bachman else (entry.get("author") or "Stephen King")
-            print(f"    GR [{i:>3}/{count}] {title}", end="\n", flush=True)
-            rating, count_ = fetch_goodreads_rating(
-                title, author, year=year_, is_bachman=is_bachman, verbose=True,
-            )
-            if rating is not None:
-                entry["goodreads_rating"] = rating
-                entry["goodreads_ratings_count"] = count_
-                totals["gr_filled"] += 1
-                print(f"      => {rating} ({count_} ratings)", flush=True)
+        if "covers" in fields:
+            stats = enrich_covers(entry, force=force, blanks_only=blanks_only,
+                                  verbose=verbose, dry_run=dry_run)
+            for k, v in stats.items():
+                totals[k] += v
+            if stats["cover_resolved"]:
+                status_parts.append("cover ok")
+            elif stats["cover_skipped"]:
+                status_parts.append("cover already done")
             else:
-                print(f"      => not found", flush=True)
+                status_parts.append("cover failed")
 
-    path.write_text(json.dumps(entries, indent=2, ensure_ascii=False), encoding="utf-8")
+        if "goodreads" in fields:
+            stats = enrich_goodreads(entry, force=force, blanks_only=blanks_only,
+                                     verbose=verbose, dry_run=dry_run)
+            for k, v in stats.items():
+                totals[k] += v
+            if stats.get("gr_filled"):
+                status_parts.append("goodreads ok")
+
+        if "descriptions" in fields:
+            stats = enrich_description(entry, force=force, blanks_only=blanks_only,
+                                       verbose=verbose, dry_run=dry_run, sources=sources)
+            for k, v in stats.items():
+                totals[k] += v
+            if stats.get("desc_filled"):
+                status_parts.append("description filled")
+
+        if "keywords" in fields:
+            stats = enrich_keywords(entry, force=force, blanks_only=blanks_only,
+                                    verbose=verbose, dry_run=dry_run, sources=sources)
+            for k, v in stats.items():
+                totals[k] += v
+            if stats.get("kw_filled"):
+                status_parts.append("keywords filled")
+
+        if "connections" in fields:
+            stats = enrich_connections(
+                entry, candidate_connections,
+                force=force, blanks_only=blanks_only, verbose=verbose,
+                dry_run=dry_run, include_spoilers=include_spoilers,
+            )
+            for k, v in stats.items():
+                totals[k] += v
+            if stats.get("conn_added"):
+                status_parts.append(f"{stats['conn_added']} connections added")
+
+        recalculate_review_status(entry)
+        print(f"       → {', '.join(status_parts) or 'no changes'}", flush=True)
+
+    if not dry_run:
+        path.write_text(json.dumps(entries, indent=2, ensure_ascii=False), encoding="utf-8")
+
     return entries, totals
 
 
-# ---------------------------------------------------------------------------
+# ─────────────────────────────────────────────────────────────────────────────
+# Review-only output
+# ─────────────────────────────────────────────────────────────────────────────
+
+def print_review(all_entries: list[dict]) -> None:
+    needs_review = [e for e in all_entries if e.get("review_status") == "needs_review"]
+    if not needs_review:
+        print("No entries flagged for review.")
+        return
+
+    print(f"\n{'─'*60}")
+    print(f"  REVIEW FLAGS  ({len(needs_review)} entries)")
+    print(f"{'─'*60}")
+    for e in sorted(needs_review, key=lambda x: (x.get("author") or "", x.get("title") or "")):
+        flags = "; ".join(e.get("review_flags") or [])
+        author = e.get("author") or "Stephen King"
+        title  = e.get("title") or "?"
+        print(f"  [{author}] {title}")
+        print(f"    Flags: {flags}")
+    print(f"{'─'*60}\n")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Entry point
-# ---------------------------------------------------------------------------
+# ─────────────────────────────────────────────────────────────────────────────
 
 def main() -> int:
-    import argparse
-    parser = argparse.ArgumentParser(description="Enrich catalog with covers and metadata.")
-    parser.add_argument("--goodreads", action="store_true",
-                        help="Also fetch Goodreads ratings (slow; makes many HTTP requests)")
-    parser.add_argument("--titles", nargs="+", metavar="TITLE",
-                        help="Only process entries whose titles contain one of these strings "
-                             "(case-insensitive). All other entries are skipped.")
-    parser.add_argument("--force", action="store_true",
-                        help="With --titles: clear existing cover and Goodreads data for "
-                             "matched entries so they are re-fetched from scratch. "
-                             "Has no effect without --titles.")
-    args = parser.parse_args()
+    parser = build_parser()
+    args   = parser.parse_args()
 
-    title_filter: set[str] | None = set(args.titles) if args.titles else None
-    force = bool(args.force and title_filter)
+    # ── Validate targeting ───────────────────────────────────────────────────
+    has_target = bool(args.titles or args.authors or args.all_authors or args.review_only)
+    if not has_target:
+        parser.error(
+            "Specify a target: --title <TITLE>, --author <AUTHOR>, --all-authors, "
+            "or --review-only.\n\nRun with --help for examples."
+        )
 
-    if force and not args.goodreads:
-        print("Note: --force without --goodreads will only re-download covers, not ratings.")
+    fields  = resolve_fields(args)
+    sources = resolve_sources(args, fields)
 
+    blanks_only = args.blanks_only or args.once_only_curation
+
+    # ── Validate connections flags ───────────────────────────────────────────
+    if "connections" in fields and not args.reddit_urls:
+        print(
+            "INFO: --fields connections without --reddit-thread-url will only "
+            "review/flag existing connection fields.",
+            flush=True,
+        )
+
+    # ── Print run plan ───────────────────────────────────────────────────────
+    print()
+    print("King Catalog Enrichment Tool")
+    print("=" * 44)
+    if args.dry_run:
+        print("  *** DRY RUN — no files will be modified ***")
+    if args.all_authors:
+        print("  Target:       all authors")
+    elif args.authors:
+        print(f"  Target:       authors {args.authors}")
+    elif args.titles:
+        print(f"  Target:       titles {args.titles}")
+    print(f"  Fields:       {', '.join(sorted(fields))}")
+    print(f"  Sources:      {', '.join(sorted(sources)) or 'none'}")
+    print(f"  Blanks only:  {blanks_only}")
+    print(f"  Force:        {args.force}")
+    print(f"  Verbose:      {args.verbose}")
+    if args.reddit_urls:
+        print(f"  Reddit URLs:  {args.reddit_urls}")
+    print()
+
+    # ── Source file collection ───────────────────────────────────────────────
     COVERS_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Collect all source files: SK catalog + other-author raw files
     source_files: list[tuple[Path, str]] = [(SK_JSON, "Stephen King")]
     for p in sorted(RAW.glob(OTHER_AUTHOR_GLOB)):
-        # Derive a display label from filename, e.g. "josh-malerman-source.json" → "Josh Malerman"
         stem = p.stem.replace("-source", "").replace("-", " ").title()
         source_files.append((p, stem))
 
-    all_entries: list[dict] = []
-    grand_totals = {"cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0, "wc_filled": 0, "gr_filled": 0}
+    # ── Collect all entries for review-only mode ─────────────────────────────
+    if args.review_only:
+        all_entries: list[dict] = []
+        for path, label in source_files:
+            if path.exists():
+                all_entries.extend(json.loads(path.read_text(encoding="utf-8")))
+        print_review(all_entries)
+        print(f"Total entries loaded: {len(all_entries)}")
+        return 0
+
+    # ── Resolve targeting filters ────────────────────────────────────────────
+    title_filter:  set[str] | None = set(args.titles)  if args.titles  else None
+    author_filter: set[str] | None = set(args.authors) if args.authors else None
+    if args.all_authors:
+        title_filter  = None
+        author_filter = None
+
+    # ── Fetch Reddit connection candidates ───────────────────────────────────
+    candidate_connections: dict[str, list[dict]] = {}
+    if "connections" in fields and args.reddit_urls:
+        # Build full catalog title list for cross-referencing
+        all_catalog_titles: list[str] = []
+        for path, _ in source_files:
+            if path.exists():
+                entries_tmp = json.loads(path.read_text(encoding="utf-8"))
+                all_catalog_titles.extend(e.get("title", "") for e in entries_tmp)
+
+        print("Fetching Reddit thread(s) for connections seed …")
+        for url in args.reddit_urls:
+            print(f"  {url}")
+            comments = fetch_reddit_comments(url, verbose=args.verbose)
+            if comments:
+                candidates = extract_connection_candidates(
+                    comments, all_catalog_titles, url, verbose=args.verbose,
+                )
+                for title_key, conns in candidates.items():
+                    candidate_connections.setdefault(title_key, []).extend(conns)
+        print(f"  Candidates found for {len(candidate_connections)} title(s).")
+        print()
+
+    # ── Per-file enrichment loop ─────────────────────────────────────────────
+    all_entries = []
+    grand_totals: dict[str, int] = {
+        "cover_resolved": 0, "cover_skipped": 0, "cover_failed": 0,
+        "wc_filled": 0,
+        "gr_filled": 0, "gr_skipped": 0,
+        "desc_filled": 0, "desc_skipped": 0,
+        "kw_filled": 0, "kw_skipped": 0,
+        "conn_added": 0, "conn_skipped": 0,
+        "processed": 0, "skipped": 0,
+    }
 
     for path, label in source_files:
         if not path.exists():
             print(f"[SKIP] {path} not found")
             continue
-        print(f"\n── {label} ({path.name}) ──")
+        print(f"── {label} ({path.name}) ──")
         entries, totals = enrich_file(
-            path, label,
-            fetch_goodreads=args.goodreads,
+            path=path,
+            label=label,
+            fields=fields,
+            sources=sources,
             title_filter=title_filter,
-            force=force,
+            author_filter=author_filter,
+            force=args.force,
+            blanks_only=blanks_only,
+            verbose=args.verbose,
+            dry_run=args.dry_run,
+            include_spoilers=args.include_spoilers,
+            candidate_connections=candidate_connections,
         )
         all_entries.extend(entries)
         for k, v in totals.items():
             grand_totals[k] += v
+        print()
 
-    # Combined review CSV
-    print(f"\nWriting {CSV_PATH} ...")
-    write_csv(all_entries)
+    # ── Review CSV ───────────────────────────────────────────────────────────
+    if not args.dry_run:
+        print(f"Writing {CSV_PATH} …")
+        write_csv(all_entries)
 
+    # ── Summary ──────────────────────────────────────────────────────────────
     needs_review_count = sum(1 for e in all_entries if e.get("review_status") == "needs_review")
 
     print()
-    print("=== Enrichment Summary (all authors) ===")
-    if title_filter:
-        print(f"  Targeted titles:    {sorted(title_filter)}")
-    print(f"  Entries processed:  {len(all_entries)}")
-    print(f"  Covers resolved:    {grand_totals['cover_resolved']}")
-    print(f"  Covers skipped:     {grand_totals['cover_skipped']}  (already done or not targeted)")
-    print(f"  Covers failed:      {grand_totals['cover_failed']}  (no OL result or no cover ID)")
-    print(f"  Word count fills:   {grand_totals['wc_filled']}  (estimated from page count)")
-    if args.goodreads:
-        print(f"  Goodreads ratings:  {grand_totals['gr_filled']}  (fetched)")
-    print(f"  Still needs review: {needs_review_count}")
+    print("═" * 44)
+    print("  Enrichment Summary")
+    print("═" * 44)
+    if args.dry_run:
+        print("  *** DRY RUN — no files modified ***")
+    print(f"  Entries processed:    {grand_totals['processed']}")
+    print(f"  Entries skipped:      {grand_totals['skipped']}  (not targeted)")
+    if "covers" in fields:
+        print(f"  Covers resolved:      {grand_totals['cover_resolved']}")
+        print(f"  Covers already done:  {grand_totals['cover_skipped']}")
+        print(f"  Covers failed:        {grand_totals['cover_failed']}")
+        print(f"  Word counts filled:   {grand_totals['wc_filled']}  (estimated from page count)")
+    if "goodreads" in fields:
+        print(f"  Goodreads ratings:    {grand_totals['gr_filled']}  (fetched)")
+    if "descriptions" in fields:
+        print(f"  Descriptions filled:  {grand_totals['desc_filled']}")
+    if "keywords" in fields:
+        print(f"  Keyword sets filled:  {grand_totals['kw_filled']}")
+    if "connections" in fields:
+        print(f"  Connections added:    {grand_totals['conn_added']}  (needs review)")
+    print(f"  Still needs review:   {needs_review_count}")
+    print("═" * 44)
     print()
 
-    # Rebuild combined catalog so assets stay in sync
-    build_script = Path(__file__).parent / "build_catalog.py"
-    if build_script.exists():
-        print("Rebuilding combined catalog ...")
-        result = subprocess.run([sys.executable, str(build_script)], check=False)
-        if result.returncode != 0:
-            print("  WARNING: build_catalog.py exited with errors.")
-    else:
-        print(f"WARNING: {build_script} not found — run it manually to refresh assets.")
+    # ── Print any review flags if verbose ────────────────────────────────────
+    if args.verbose and needs_review_count:
+        print_review(all_entries)
+
+    # ── Rebuild combined catalog ─────────────────────────────────────────────
+    if not args.no_rebuild_seed and not args.dry_run:
+        build_script = Path(__file__).parent / "build_catalog.py"
+        if build_script.exists():
+            print("Rebuilding combined catalog …")
+            result = subprocess.run([sys.executable, str(build_script)], check=False)
+            if result.returncode != 0:
+                print("  WARNING: build_catalog.py exited with errors.")
+            print()
+        else:
+            print(f"WARNING: {build_script} not found — run it manually to refresh assets.")
 
     return 0
 

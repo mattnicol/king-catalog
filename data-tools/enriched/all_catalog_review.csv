@@ -1,45 +1,79 @@
 id,author,title,year,word_count,audible_minutes,story_type,collection,goodreads_rating,goodreads_ratings_count,review_flags
-5,,The Stand,1978,,2867.0,novel,,4.35,843596,missing_word_count
-167,,A Death,2015,4781,32.8,short_story,The Bazaar of Bad Dreams,3.33,2274,audible_format_inferred_mmss
-168,,Afterlife,2015,4336,37.9,short_story,The Bazaar of Bad Dreams,3.59,185,audible_format_inferred_mmss
+5,,The Stand,1978,,2867.0,novel,,4.35,845457,missing_word_count
+10,,I Am the Doorway,1978,4881,,short_story,Night Shift,3.66,1129,missing_description
+11,,I Know What You Need,1978,8173,,short_story,Night Shift,3.71,744,missing_description
+12,,Jerusalem's Lot,1978,12799,,short_story,Night Shift,,,missing_description
+13,,Night Surf,1978,3249,,short_story,Night Shift,3.1,1061,missing_description
+40,,Big Wheels,1985,5124,,short_story,Skeleton Crew,2.7,280,missing_description
+41,,Cain Rose Up,1985,2114,,short_story,Skeleton Crew,3.39,753,missing_description
+42,,For Owen,1985,250,,collection_piece,Skeleton Crew,2.92,311,missing_description
+45,,Morning Deliveries,1985,1652,,short_story,Skeleton Crew,3.34,379,missing_description
+48,,Paranoid: A Chant,1985,603,,collection_piece,Skeleton Crew,3.13,446,missing_description
+52,,The Man Who Would Not Shake Hands,1985,7556,,short_story,Skeleton Crew,3.28,344,missing_description
+58,,The Wedding Gig,1985,5982,,short_story,Skeleton Crew,3.16,506,missing_description
+60,,Word Processor of the Gods,1985,7085,,short_story,Skeleton Crew,3.5,2,missing_description
+69,,The Tommyknockers,1987,256253,1663.0,novel,,3.61,166684,missing_description
+72,,Brooklyn August,1993,308,,collection_piece,Nightmares & Dreamscapes,,,missing_description
+73,,Chattery Teeth,1993,12647,,short_story,Nightmares & Dreamscapes,3.95,22,missing_description
+82,,Rainy Season,1993,8129,,short_story,Nightmares & Dreamscapes,4.0,2,missing_description
+91,,The Moving Finger,1993,13322,,short_story,Nightmares & Dreamscapes,3.55,223,missing_description
+92,,The Night Flier,1993,13307,,short_story,Nightmares & Dreamscapes,3.5,339,missing_description
+93,,The Ten O'Clock People,1993,19262,,short_story,Nightmares & Dreamscapes,,,missing_description
+95,,You Know They Got a Hell of a Band,1993,16180,,short_story,Nightmares & Dreamscapes,3.74,213,missing_description
+106,,The Green Mile,1996,130364,833.0,novel,,5.0,1,missing_description
+120,,1408,2002,14742,,short_story,Everything's Eventual,3.82,9425,missing_description
+124,,In the Deathroom,2002,9925,,short_story,Everything's Eventual,3.33,2282,missing_description
+127,,Lunch at the Gotham Café,2002,13115,,short_story,Everything's Eventual,3.33,2282,missing_description
+129,,"That Feeling, You Can Only Say What It Is in French",2002,6457,,short_story,Everything's Eventual,2.93,14,missing_description
+130,,The Death of Jack Hamilton,2002,11773,,short_story,Everything's Eventual,3.41,278,missing_description
+139,,Lisey's Story,2006,183659,1132.0,novel,,4.4,586,missing_description
+142,,A Very Tight Place,2008,20358,,novella,Just After Sunset,,,missing_description
+145,,Harvey's Dream,2008,3936,,short_story,Just After Sunset,,,missing_description
+150,,The Cat from Hell,2008,5717,,short_story,Just After Sunset,3.7,477,missing_description
+167,,A Death,2015,4781,32.8,short_story,The Bazaar of Bad Dreams,3.33,2282,audible_format_inferred_mmss; missing_description
+168,,Afterlife,2015,4336,37.9,short_story,The Bazaar of Bad Dreams,3.58,187,audible_format_inferred_mmss
 170,,Batman and Robin Have an Altercation,2015,4784,32.9,short_story,The Bazaar of Bad Dreams,3.6,569,audible_format_inferred_mmss
-173,,Herman Wouk Is Still Alive,2015,6486,45.6,short_story,The Bazaar of Bad Dreams,3.45,502,audible_format_inferred_mmss
-175,,Mister Yummy,2015,5876,36.9,short_story,The Bazaar of Bad Dreams,3.22,294,audible_format_inferred_mmss
+173,,Herman Wouk Is Still Alive,2015,6486,45.6,short_story,The Bazaar of Bad Dreams,3.46,503,audible_format_inferred_mmss
+175,,Mister Yummy,2015,5876,36.9,short_story,The Bazaar of Bad Dreams,3.22,293,audible_format_inferred_mmss
+176,,Morality,2015,10286,61.5,novella,The Bazaar of Bad Dreams,5.0,2,missing_description
 178,,Premium Harmony,2015,3833,26.8,short_story,The Bazaar of Bad Dreams,2.93,1217,audible_format_inferred_mmss
-179,,Summer Thunder,2015,5448,36.0,short_story,The Bazaar of Bad Dreams,3.81,227,audible_format_inferred_mmss
-180,,That Bus Is Another World,2015,3023,26.0,short_story,The Bazaar of Bad Dreams,3.44,378,audible_format_inferred_mmss
-182,,The Dune,2015,4869,34.9,short_story,The Bazaar of Bad Dreams,3.88,40191,audible_format_inferred_mmss
-183,,The Little Green God of Agony,2015,,58.5,short_story,The Bazaar of Bad Dreams,3.57,448,missing_word_count; audible_format_inferred_mmss
-184,,Cookie Jar,2015,,58.5,short_story,The Bazaar of Bad Dreams,3.83,1045,missing_word_count; audible_format_inferred_mmss
-186,,Under the Weather,2015,6077,36.8,short_story,The Bazaar of Bad Dreams,3.55,898,audible_format_inferred_mmss
-193,,Laurie,2018,,,short_story,,3.64,13847,missing_word_count
-195,,In the Tall Grass,2019,,105.0,novella,,3.62,31457,missing_word_count
-196,,Gwendy's Magic Feather,2019,,277.0,novel,,3.76,27007,missing_word_count
-201,,Later,2021,,392.0,novel,,3.95,153158,missing_word_count
+179,,Summer Thunder,2015,5448,36.0,short_story,The Bazaar of Bad Dreams,4.05,1863,audible_format_inferred_mmss
+180,,That Bus Is Another World,2015,3023,26.0,short_story,The Bazaar of Bad Dreams,3.44,377,audible_format_inferred_mmss
+182,,The Dune,2015,4869,34.9,short_story,The Bazaar of Bad Dreams,3.68,30494,audible_format_inferred_mmss
+183,,The Little Green God of Agony,2015,,58.5,short_story,The Bazaar of Bad Dreams,3.57,447,missing_word_count; audible_format_inferred_mmss
+184,,Cookie Jar,2015,,58.5,short_story,The Bazaar of Bad Dreams,3.83,1044,missing_word_count; audible_format_inferred_mmss
+186,,Under the Weather,2015,6077,36.8,short_story,The Bazaar of Bad Dreams,3.55,900,audible_format_inferred_mmss
+193,,Laurie,2018,,,short_story,,3.64,13889,missing_word_count
+195,,In the Tall Grass,2019,,105.0,novella,,3.62,31550,missing_word_count
+196,,Gwendy's Magic Feather,2019,,277.0,novel,,3.76,27087,missing_word_count
+200,,Rat,2020,28668,,novella,If It Bleeds,3.68,613,missing_description
+201,,Later,2021,,392.0,novel,,3.95,153585,missing_word_count
 202,,Billy Summers,2021,,1017.0,novel,,4.18,28,missing_word_count
-203,,Gwendy's Final Task,2022,,444.0,novel,,4.04,22860,missing_word_count
-204,,Fairy Tale,2022,,1446.0,novel,,3.2,5,missing_word_count
-205,,Holly,2023,,,novel,,4.07,193145,missing_word_count
-206,,Two Talented Bastids,2024,,,short_story,You Like It Darker,,,missing_word_count
-207,,The Fifth Step,2024,,,short_story,You Like It Darker,3.93,412,missing_word_count
-208,,Willie the Weirdo,2024,,,short_story,You Like It Darker,3.67,219,missing_word_count
-209,,Danny Coughlin's Bad Dream,2024,,,short_story,You Like It Darker,,,missing_word_count
-210,,Finn,2024,,,short_story,You Like It Darker,3.9,25773,missing_word_count
-211,,On Slide Inn Road,2024,,,short_story,You Like It Darker,3.73,221,missing_word_count
-212,,Red Screen,2024,,,short_story,You Like It Darker,3.56,957,missing_word_count
-213,,The Turbulence Expert,2024,,,short_story,You Like It Darker,3.57,176,missing_word_count
-214,,Laurie,2024,,,short_story,You Like It Darker,3.64,13847,missing_word_count
-215,,Rattlesnakes,2024,,,short_story,You Like It Darker,3.84,250,missing_word_count
-216,,The Dreamers,2024,,,short_story,You Like It Darker,3.94,86449,missing_word_count
+203,,Gwendy's Final Task,2022,,444.0,novel,,4.04,22958,missing_word_count
+204,,Fairy Tale,2022,,1446.0,novel,,3.2,5,missing_word_count; missing_description
+205,,Holly,2023,,,novel,,4.07,194029,missing_word_count
+206,,Two Talented Bastids,2024,,,short_story,You Like It Darker,,,missing_word_count; missing_description
+207,,The Fifth Step,2024,,,short_story,You Like It Darker,3.93,413,missing_word_count
+208,,Willie the Weirdo,2024,,,short_story,You Like It Darker,3.67,220,missing_word_count
+209,,Danny Coughlin's Bad Dream,2024,,,short_story,You Like It Darker,,,missing_word_count; missing_description
+210,,Finn,2024,,,short_story,You Like It Darker,3.9,25831,missing_word_count
+211,,On Slide Inn Road,2024,,,short_story,You Like It Darker,3.73,222,missing_word_count
+212,,Red Screen,2024,,,short_story,You Like It Darker,3.56,958,missing_word_count
+213,,The Turbulence Expert,2024,,,short_story,You Like It Darker,3.57,177,missing_word_count
+214,,Laurie,2024,,,short_story,You Like It Darker,3.64,13889,missing_word_count
+215,,Rattlesnakes,2024,,,short_story,You Like It Darker,3.85,256,missing_word_count
+216,,The Dreamers,2024,,,short_story,You Like It Darker,3.94,86568,missing_word_count
 217,,The Answer Man,2024,,,short_story,You Like It Darker,3.0,4,missing_word_count
-218,,The Bachman Books,1985,248050,,collection,,4.15,75896,estimated_from_page_count
-231,Stephen King,Never Flinch,2025,132000,885,novel,,3.75,65000,word_count_estimated; goodreads_count_approximate
-3001,Grady Hendrix,Horrorstör,2014,66275,,novel,,3.65,127751,estimated_from_page_count
+218,,The Bachman Books,1985,248050,,collection,,4.15,75959,estimated_from_page_count
+222,,Nightmares & Dreamscapes,1993,,,collection,,4.26,220,missing_description
+231,Stephen King,Never Flinch,2025,132000,885,novel,,5.0,2,word_count_estimated; goodreads_count_approximate; missing_description
+3001,Grady Hendrix,Horrorstör,2014,66275,,novel,,3.65,128431,estimated_from_page_count
 3002,Grady Hendrix,My Best Friend's Exorcism,2016,92400,,novel,,3.92,154615,estimated_from_page_count
 3003,Grady Hendrix,Paperbacks from Hell,2017,35200,,non_fiction,,4.26,12138,estimated_from_page_count
 3004,Grady Hendrix,We Sold Our Souls,2018,92400,,novel,,3.69,33597,estimated_from_page_count
 3005,Grady Hendrix,The Southern Book Club's Guide to Slaying Vampires,2020,112200,,novel,,3.75,16,estimated_from_page_count
 3006,Grady Hendrix,The Final Girl Support Group,2021,96800,,novel,,,,estimated_from_page_count
+3008,Grady Hendrix,Witchcraft for Wayward Girls,2025,146850,979,novel,,3.9,130434,estimated_from_audible_minutes
 2001,Joe Hill,20th Century Ghosts,2005,92400,,collection,,3.89,49785,year_is_uk_edition: US edition 2007; estimated_from_page_count
 2002,Joe Hill,Heart-Shaped Box,2007,111100,,novel,,3.0,1,estimated_from_page_count
 2003,Joe Hill,Horns,2010,119900,,novel,,3.93,121029,estimated_from_page_count
