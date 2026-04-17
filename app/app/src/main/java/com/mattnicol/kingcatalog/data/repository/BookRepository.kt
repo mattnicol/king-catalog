@@ -49,7 +49,8 @@ class BookRepository(private val dao: BookDao) {
 
     suspend fun insertAll(books: List<BookEntity>) = dao.insertAll(books)
 
-    suspend fun upsertCatalogData(books: List<BookEntity>) = dao.upsertCatalogData(books)
+    suspend fun upsertCatalogData(books: List<BookEntity>): BookDao.UpsertResult =
+        dao.upsertCatalogData(books)
 
     suspend fun updateBook(book: Book) = dao.update(
         dao.getById(book.id)!!.copy(

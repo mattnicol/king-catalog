@@ -48,6 +48,13 @@ SOURCES
 
 ─────────────────────────────────────────────────────────────────────────────
 CATALOG REBUILD
+def _normalize_reddit_json_url(url: str) -> str:
+    url = url.strip()
+    if url.endswith(".json"):
+        return url
+    url = url.rstrip("/")
+    return url + "/.json"
+
 ─────────────────────────────────────────────────────────────────────────────
   --no-rebuild-seed           Skip rebuild of combined catalog after enrichment
                                 (default: rebuild is performed)
@@ -161,7 +168,7 @@ FIELD_ALIASES = {
     "cover":       "covers",
 }
 
-VALID_CONNECTION_KINDS = {"series", "trilogy", "cycle", "universe", "connection", "easter_egg"}
+VALID_CONNECTION_KINDS = {"series", "trilogy", "cycle", "universe", "connection", "easter_egg", "tie_in"}
 VALID_CONNECTION_ROLES = {"core", "supplemental"}
 
 
@@ -221,6 +228,9 @@ def build_parser() -> argparse.ArgumentParser:
     src.add_argument("--reddit-thread-url", dest="reddit_urls", action="append",
                      metavar="URL",
                      help="Reddit thread URL for connections seed (repeatable)")
+    src.add_argument("--reddit-text-file", dest="reddit_text_files", action="append",
+                     metavar="PATH",
+                     help="Local text file with connections seed (repeatable; skips live Reddit fetch)")
 
     parser.add_argument("--no-rebuild-seed", action="store_true",
                         help="Skip combined catalog rebuild after enrichment")
@@ -997,23 +1007,37 @@ def _reddit_json_url(url: str) -> str:
 
 def fetch_reddit_comments(url: str, verbose: bool = False) -> list[str]:
     """
-    Fetch comment bodies from a Reddit thread.
-    Returns a list of plain-text comment strings.
+    Fetch post body + comment bodies from a Reddit thread JSON endpoint.
+    Returns a list of plain-text strings (post body first, then comments).
     """
     json_url = _reddit_json_url(url)
+    if verbose:
+        print(f"      [Reddit] original URL:    {url}", flush=True)
+        print(f"      [Reddit] normalized URL:  {json_url}", flush=True)
+
     headers = {
-        "User-Agent": "king-catalog-enrich/1.0 (catalog enrichment tool)",
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+        ),
+        "Accept": "application/json,text/html,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
     }
     req = urllib.request.Request(json_url, headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
+            raw = resp.read().decode("utf-8")
+        data = json.loads(raw)
+        if verbose:
+            print(f"      [Reddit] fetch status:   OK", flush=True)
     except Exception as e:
         if verbose:
+            print(f"      [Reddit] fetch status:   FAILED — {e}", flush=True)
+        else:
             print(f"      [Reddit] fetch failed for {url}: {e}", flush=True)
         return []
 
-    comments: list[str] = []
+    texts: list[str] = []
 
     def _walk(node: object) -> None:
         if isinstance(node, list):
@@ -1022,10 +1046,14 @@ def fetch_reddit_comments(url: str, verbose: bool = False) -> list[str]:
         elif isinstance(node, dict):
             kind = node.get("kind")
             data_ = node.get("data") or {}
-            if kind == "t1":
+            if kind == "t3":
+                selftext = data_.get("selftext") or ""
+                if selftext and selftext not in ("[deleted]", "[removed]"):
+                    texts.append(selftext)
+            elif kind == "t1":
                 body = data_.get("body") or ""
-                if body and body != "[deleted]":
-                    comments.append(body)
+                if body and body not in ("[deleted]", "[removed]"):
+                    texts.append(body)
             for child_key in ("children", "replies"):
                 child = data_.get(child_key)
                 if child:
@@ -1033,8 +1061,8 @@ def fetch_reddit_comments(url: str, verbose: bool = False) -> list[str]:
 
     _walk(data)
     if verbose:
-        print(f"      [Reddit] fetched {len(comments)} comments from {url}", flush=True)
-    return comments
+        print(f"      [Reddit] texts extracted: {len(texts)} (post body + comments)", flush=True)
+    return texts
 
 
 def extract_connection_candidates(
@@ -1086,7 +1114,9 @@ def extract_connection_candidates(
                 bucket.append(candidate)
 
     if verbose:
-        print(f"      [Connections] found candidates for {len(results)} titles", flush=True)
+        all_groups = {c["group"] for conns in results.values() for c in conns}
+        print(f"      [Connections] candidate groups found:  {len(all_groups)}", flush=True)
+        print(f"      [Connections] candidate titles found:  {len(results)}", flush=True)
     return results
 
 
@@ -1147,6 +1177,195 @@ def make_connection(
         "spoiler": spoiler,
         "note": note,
     }
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Local seed file parser
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _clean_section_canonical(line: str) -> str:
+    """Strip emoji/non-ASCII, trailing parentheticals, normalize to uppercase."""
+    s = re.sub(r"[^\x00-\x7F]", "", line)
+    s = re.sub(r"\s*\(.*?\)\s*$", "", s)
+    return s.strip().upper()
+
+
+def _is_section_heading(line: str) -> bool:
+    """True if line is naturally all-uppercase (section header heuristic).
+
+    Lines containing a publication year like (1977) are titles, not headings.
+    We check the ORIGINAL case of the stripped line, not the uppercased canonical.
+    """
+    if re.search(r"\(\d{4}\)", line):
+        return False
+    s = re.sub(r"[^\x00-\x7F]", "", line)  # strip non-ASCII / emoji
+    s = re.sub(r"\s*\(.*?\)\s*$", "", s).strip()  # strip trailing parentheticals
+    if not s:
+        return False
+    letters = re.sub(r"[^A-Za-z]", "", s)  # keep only letters, original case
+    return bool(letters) and letters == letters.upper() and len(letters) >= 3
+
+
+def _to_title_case(s: str) -> str:
+    """Title-case an all-caps string, handling apostrophes correctly."""
+    return " ".join(w[0].upper() + w[1:].lower() if w else w for w in s.split())
+
+
+_LOCAL_SECTION_ATTRS: dict[str, dict] = {
+    "STORIES LEADING TO THE DARK TOWER": {
+        "group": "The Dark Tower", "kind": "connection", "role": "supplemental",
+    },
+    "THE DARK TOWER": {
+        "group": "The Dark Tower", "kind": "series", "role": "core",
+    },
+    "DARK TOWER TIE-IN MATERIAL": {
+        "group": "The Dark Tower", "kind": "tie_in", "role": "supplemental",
+    },
+    "THE BACHMAN BOOKS": {
+        "group": "The Bachman Books", "kind": "connection", "role": "core",
+    },
+}
+
+_LOCAL_SKIP_SECTIONS = {"NOVELS", "NOVELLAS", "SHORT STORIES", "MOVIES", "MINISERIES"}
+_LOCAL_SUBGROUP_SECTIONS = {"DUOLOGIES", "TRILOGIES", "TRIOLOGIES"}
+_LOCAL_GENRE_SECTION = "CATEGORIZED BY GENRE"
+
+_SECTION_TYPE_SKIP     = "skip"
+_SECTION_TYPE_SUBGROUP = "subgroup"
+_SECTION_TYPE_GENRE    = "genre"
+
+
+def parse_local_text_file(
+    path: Path,
+    catalog_titles: list[str],
+    verbose: bool = False,
+) -> dict[str, list[dict]]:
+    """
+    Parse a local seed text file into candidate connection groups.
+    Detects section headings and maps titles to structured connection records.
+    Returns {title_lower: [connection_dict, ...]}.
+    """
+    norm_map: dict[str, str] = {
+        _normalize_for_match(t): t for t in catalog_titles if t
+    }
+
+    results: dict[str, list[dict]] = {}
+    sections_found: list[str] = []
+    groups_found: set[str] = set()
+
+    current_section_type: str = _SECTION_TYPE_SKIP
+    current_attrs: dict | None = None
+
+    def _add_candidate(title_lower: str, attrs: dict) -> None:
+        group = attrs["group"]
+        bucket = results.setdefault(title_lower, [])
+        if not any(c["group"] == group for c in bucket):
+            bucket.append({
+                "group": group,
+                "kind": attrs["kind"],
+                "role": attrs["role"],
+                "order": None,
+                "spoiler": False,
+                "note": f"Candidate from local seed: {path.name}",
+                "review_flag": "needs_verification_connections",
+            })
+            groups_found.add(group)
+
+    def _match_title(line: str) -> str | None:
+        m = re.match(r"^(.+?)\s*\(\d{4}\)", line)
+        raw = (m.group(1) if m else line.split(" - ")[0]).strip().strip("'\"")
+        if not raw or len(raw) < 2:
+            return None
+        norm = _normalize_for_match(raw)
+        orig = norm_map.get(norm)
+        if orig:
+            return orig.lower()
+        # Fallback: allow "The Gunslinger" to match "The Dark Tower: The Gunslinger"
+        if len(norm) >= 6:
+            for catalog_norm, catalog_orig in norm_map.items():
+                if catalog_norm.endswith(norm):
+                    return catalog_orig.lower()
+        return None
+
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("="):
+            continue
+
+        if not _is_section_heading(line):
+            # Attempt title match in active sections
+            if current_attrs is not None:
+                clean = re.sub(r"[^\x00-\x7F]", "", line).strip()
+                matched = _match_title(clean)
+                if matched:
+                    _add_candidate(matched, current_attrs)
+            continue
+
+        canonical = _clean_section_canonical(line)
+
+        # Known major section with explicit attrs
+        if canonical in _LOCAL_SECTION_ATTRS:
+            current_section_type = canonical
+            current_attrs = _LOCAL_SECTION_ATTRS[canonical]
+            if canonical not in sections_found:
+                sections_found.append(canonical)
+            continue
+
+        # Skip sections (novels, movies, etc.)
+        if any(canonical == s or canonical.startswith(s) or s in canonical
+               for s in _LOCAL_SKIP_SECTIONS):
+            current_section_type = _SECTION_TYPE_SKIP
+            current_attrs = None
+            if canonical not in sections_found:
+                sections_found.append(canonical)
+            continue
+
+        # Duologies / trilogies top-level section
+        if any(s in canonical for s in _LOCAL_SUBGROUP_SECTIONS):
+            current_section_type = _SECTION_TYPE_SUBGROUP
+            current_attrs = None
+            if canonical not in sections_found:
+                sections_found.append(canonical)
+            continue
+
+        # Genre section
+        if _LOCAL_GENRE_SECTION in canonical or canonical == _LOCAL_GENRE_SECTION:
+            current_section_type = _SECTION_TYPE_GENRE
+            current_attrs = None
+            if canonical not in sections_found:
+                sections_found.append(canonical)
+            continue
+
+        # Named sub-group within duologies/trilogies
+        if current_section_type == _SECTION_TYPE_SUBGROUP:
+            kind = "trilogy" if "TRILOG" in canonical else "series"
+            group_name = _to_title_case(canonical)
+            current_attrs = {"group": group_name, "kind": kind, "role": "core"}
+            if canonical not in sections_found:
+                sections_found.append(canonical)
+            continue
+
+        # Genre sub-heading (Horror, Mystery, etc.)
+        if current_section_type == _SECTION_TYPE_GENRE:
+            group_name = _to_title_case(canonical)
+            current_attrs = {"group": group_name, "kind": "connection", "role": "supplemental"}
+            if canonical not in sections_found:
+                sections_found.append(canonical)
+            continue
+
+        # Unknown heading — stop collecting
+        current_section_type = _SECTION_TYPE_SKIP
+        current_attrs = None
+        if canonical not in sections_found:
+            sections_found.append(canonical)
+
+    if verbose:
+        print(f"  [LocalSeed] loaded: {path}", flush=True)
+        print(f"  [LocalSeed] sections found: {sections_found}", flush=True)
+        print(f"  [LocalSeed] candidate groups: {sorted(groups_found)}", flush=True)
+        print(f"  [LocalSeed] candidate titles: {len(results)}", flush=True)
+
+    return results
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1674,9 +1893,10 @@ def main() -> int:
     blanks_only = args.blanks_only or args.once_only_curation
 
     # ── Validate connections flags ───────────────────────────────────────────
-    if "connections" in fields and not args.reddit_urls:
+    has_text_files = bool(args.reddit_text_files)
+    if "connections" in fields and not args.reddit_urls and not has_text_files:
         print(
-            "INFO: --fields connections without --reddit-thread-url will only "
+            "INFO: --fields connections without --reddit-thread-url or --reddit-text-file will only "
             "review/flag existing connection fields.",
             flush=True,
         )
@@ -1700,6 +1920,8 @@ def main() -> int:
     print(f"  Verbose:      {args.verbose}")
     if args.reddit_urls:
         print(f"  Reddit URLs:  {args.reddit_urls}")
+    if args.reddit_text_files:
+        print(f"  Text files:   {args.reddit_text_files}")
     print()
 
     # ── Source file collection ───────────────────────────────────────────────
@@ -1727,9 +1949,9 @@ def main() -> int:
         title_filter  = None
         author_filter = None
 
-    # ── Fetch Reddit connection candidates ───────────────────────────────────
+    # ── Fetch/parse connection candidates ────────────────────────────────────
     candidate_connections: dict[str, list[dict]] = {}
-    if "connections" in fields and args.reddit_urls:
+    if "connections" in fields and (args.reddit_urls or args.reddit_text_files):
         # Build full catalog title list for cross-referencing
         all_catalog_titles: list[str] = []
         for path, _ in source_files:
@@ -1737,18 +1959,35 @@ def main() -> int:
                 entries_tmp = json.loads(path.read_text(encoding="utf-8"))
                 all_catalog_titles.extend(e.get("title", "") for e in entries_tmp)
 
-        print("Fetching Reddit thread(s) for connections seed …")
-        for url in args.reddit_urls:
-            print(f"  {url}")
-            comments = fetch_reddit_comments(url, verbose=args.verbose)
-            if comments:
-                candidates = extract_connection_candidates(
-                    comments, all_catalog_titles, url, verbose=args.verbose,
+        if args.reddit_text_files:
+            print("Parsing local text file(s) for connections seed …")
+            for txt_path_str in args.reddit_text_files:
+                txt_path = Path(txt_path_str)
+                if not txt_path.exists():
+                    print(f"  WARNING: text file not found: {txt_path}")
+                    continue
+                print(f"  {txt_path}")
+                candidates = parse_local_text_file(
+                    txt_path, all_catalog_titles, verbose=args.verbose,
                 )
                 for title_key, conns in candidates.items():
                     candidate_connections.setdefault(title_key, []).extend(conns)
-        print(f"  Candidates found for {len(candidate_connections)} title(s).")
-        print()
+            print(f"  Candidates found for {len(candidate_connections)} title(s) from local file(s).")
+            print()
+
+        if args.reddit_urls:
+            print("Fetching Reddit thread(s) for connections seed …")
+            for url in args.reddit_urls:
+                print(f"  {url}")
+                comments = fetch_reddit_comments(url, verbose=args.verbose)
+                if comments:
+                    candidates = extract_connection_candidates(
+                        comments, all_catalog_titles, url, verbose=args.verbose,
+                    )
+                    for title_key, conns in candidates.items():
+                        candidate_connections.setdefault(title_key, []).extend(conns)
+            print(f"  Candidates found for {len(candidate_connections)} title(s) total.")
+            print()
 
     # ── Per-file enrichment loop ─────────────────────────────────────────────
     all_entries = []

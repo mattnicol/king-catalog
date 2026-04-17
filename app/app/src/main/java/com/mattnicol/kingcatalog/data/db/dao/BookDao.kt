@@ -21,15 +21,28 @@ abstract class BookDao {
     @Query("SELECT * FROM books WHERE id = :id")
     abstract suspend fun getById(id: Int): BookEntity?
 
+    data class UpsertResult(
+        val totalProcessed: Int,
+        val inserted: Int,
+        val updated: Int,
+        val userStatePreserved: Int,
+    )
+
     /**
      * Inserts new books and updates catalog fields on existing ones,
      * preserving all user fields (owned/read/reading-list/binding/notes/imdb_url).
      */
     @Transaction
-    open suspend fun upsertCatalogData(books: List<BookEntity>) {
+    open suspend fun upsertCatalogData(books: List<BookEntity>): UpsertResult {
+        var inserted = 0
+        var updated = 0
+        var userStatePreserved = 0
         for (book in books) {
             val existing = getById(book.id)
             if (existing != null) {
+                val hadUserState = existing.isOwned || existing.isRead ||
+                    existing.isReadingNow || existing.isOnReadingList ||
+                    existing.notes != null || existing.bindingOwned != null
                 update(book.copy(
                     isOwned = existing.isOwned,
                     isRead = existing.isRead,
@@ -41,10 +54,19 @@ abstract class BookDao {
                     bindingOwned = existing.bindingOwned,
                     bindingWanted = existing.bindingWanted,
                 ))
+                updated++
+                if (hadUserState) userStatePreserved++
             } else {
                 insertAll(listOf(book))
+                inserted++
             }
         }
+        return UpsertResult(
+            totalProcessed = books.size,
+            inserted = inserted,
+            updated = updated,
+            userStatePreserved = userStatePreserved,
+        )
     }
 
     @Query("SELECT * FROM books ORDER BY year ASC")

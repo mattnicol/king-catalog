@@ -332,7 +332,7 @@ public final class BookDao_Impl extends BookDao {
 
   @Override
   public Object upsertCatalogData(final List<BookEntity> books,
-      final Continuation<? super Unit> $completion) {
+      final Continuation<? super BookDao.UpsertResult> $completion) {
     return RoomDatabaseKt.withTransaction(__db, (__cont) -> BookDao_Impl.super.upsertCatalogData(books, __cont), $completion);
   }
 

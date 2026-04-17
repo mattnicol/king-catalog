@@ -1,9 +1,21 @@
 id,author,title,year,word_count,audible_minutes,story_type,collection,goodreads_rating,goodreads_ratings_count,review_flags
-5,,The Stand,1978,,2867.0,novel,,4.35,845457,missing_word_count
+1,,Carrie,1974,60581,444.0,novel,,3.99,860060,needs_review_connections
+2,,'Salem's Lot,1975,157607,1056.0,novel,,4.1,669703,needs_review_connections
+3,,The Shining,1977,161321,950.0,novel,,4.28,1731123,needs_review_connections
+4,,Rage (Bachman),1977,53994,,novel,The Bachman Books,3.7,58978,needs_review_connections
+5,,The Stand,1978,,2867.0,novel,,4.35,845457,missing_word_count; needs_review_connections
 10,,I Am the Doorway,1978,4881,,short_story,Night Shift,3.66,1129,missing_description
 11,,I Know What You Need,1978,8173,,short_story,Night Shift,3.71,744,missing_description
 12,,Jerusalem's Lot,1978,12799,,short_story,Night Shift,,,missing_description
 13,,Night Surf,1978,3249,,short_story,Night Shift,3.1,1061,missing_description
+26,,The Long Walk (Bachman),1979,83736,644.0,novel,The Bachman Books,4.0,290842,needs_review_connections
+27,,The Dead Zone,1979,150623,972.0,novel,,3.97,249244,needs_review_connections
+28,,Firestarter,1980,150863,893.0,novel,,3.92,249288,needs_review_connections
+29,,Roadwork (Bachman),1981,89804,577.0,novel,The Bachman Books,3.58,45911,needs_review_connections
+30,,Cujo,1981,118867,847.0,novel,,3.8,325795,needs_review_connections
+31,,The Running Man (Bachman),1982,65812,462.0,novel,The Bachman Books,4.15,75959,needs_review_connections
+32,,The Dark Tower: The Gunslinger,1982,62546,440.0,novel,,4.27,15,needs_review_connections
+38,,Christine,1983,189905,1175.0,novel,,3.86,266288,needs_review_connections
 40,,Big Wheels,1985,5124,,short_story,Skeleton Crew,2.7,280,missing_description
 41,,Cain Rose Up,1985,2114,,short_story,Skeleton Crew,3.39,753,missing_description
 42,,For Owen,1985,250,,collection_piece,Skeleton Crew,2.92,311,missing_description
@@ -12,7 +24,15 @@ id,author,title,year,word_count,audible_minutes,story_type,collection,goodreads_
 52,,The Man Who Would Not Shake Hands,1985,7556,,short_story,Skeleton Crew,3.28,344,missing_description
 58,,The Wedding Gig,1985,5982,,short_story,Skeleton Crew,3.16,506,missing_description
 60,,Word Processor of the Gods,1985,7085,,short_story,Skeleton Crew,3.5,2,missing_description
-69,,The Tommyknockers,1987,256253,1663.0,novel,,3.61,166684,missing_description
+61,,Pet Sematary,1983,143094,941.0,novel,,4.33,21,needs_review_connections
+63,,The Talisman,1984,261841,1680.0,novel,,4.1,143552,needs_review_connections
+64,,Thinner (Bachman),1984,95716,607.0,novel,,3.78,229293,needs_review_connections
+65,,IT,1986,441156,2686.0,novel,,4.24,1289313,needs_review_connections
+66,,The Eyes of the Dragon,1987,103523,623.0,novel,,3.94,146513,needs_review_connections
+67,,The Dark Tower: The Drawing of the Three,1987,125544,767.0,novel,,4.5,2093,needs_review_connections
+68,,Misery,1987,112409,732.0,novel,,4.22,833304,needs_review_connections
+69,,The Tommyknockers,1987,256253,1663.0,novel,,3.61,166684,missing_description; needs_review_connections
+70,,The Dark Half,1989,153897,914.0,novel,,3.81,153908,needs_review_connections
 72,,Brooklyn August,1993,308,,collection_piece,Nightmares & Dreamscapes,,,missing_description
 73,,Chattery Teeth,1993,12647,,short_story,Nightmares & Dreamscapes,3.95,22,missing_description
 82,,Rainy Season,1993,8129,,short_story,Nightmares & Dreamscapes,4.0,2,missing_description
@@ -20,16 +40,44 @@ id,author,title,year,word_count,audible_minutes,story_type,collection,goodreads_
 92,,The Night Flier,1993,13307,,short_story,Nightmares & Dreamscapes,3.5,339,missing_description
 93,,The Ten O'Clock People,1993,19262,,short_story,Nightmares & Dreamscapes,,,missing_description
 95,,You Know They Got a Hell of a Band,1993,16180,,short_story,Nightmares & Dreamscapes,3.74,213,missing_description
+100,,The Dark Tower: The Waste Lands,1991,171879,1094.0,novel,,4.25,250838,needs_review_connections
+101,,Needful Things,1991,251219,1511.0,novel,,3.98,282358,needs_review_connections
+102,,Gerald's Game,1992,124349,814.0,novel,,3.59,180849,needs_review_connections
+103,,Dolores Claiborne,1992,94342,555.0,novel,,3.95,172835,needs_review_connections
+104,,Insomnia,1994,238334,1539.0,novel,,3.83,169904,needs_review_connections
+105,,Rose Madder,1995,173477,1042.0,novel,,3.76,125210,needs_review_connections
 106,,The Green Mile,1996,130364,833.0,novel,,5.0,1,missing_description
+107,,Desperation,1996,191846,1275.0,novel,,3.86,154772,needs_review_connections
+108,,The Regulators (Bachman),1996,116012,731.0,novel,,4.22,8846,needs_review_connections
+109,,The Dark Tower: Wizard and Glass,1997,254432,1655.0,novel,,4.27,223097,needs_review_connections
+113,,Hearts in Atlantis,1999,55568,,novella,Hearts in Atlantis,3.87,103774,needs_review_connections
+117,,Dreamcatcher,2001,216342,1367.0,novel,,3.66,187642,needs_review_connections
+118,,Black House,2001,244182,,novel,,4.04,69960,needs_review_connections
+119,,From A Buick 8,2002,123912,801.0,novel,,3.49,75627,needs_review_connections
 120,,1408,2002,14742,,short_story,Everything's Eventual,3.82,9425,missing_description
+123,,Everything's Eventual,2002,19552,,novella,Everything's Eventual,3.97,109814,needs_review_connections
 124,,In the Deathroom,2002,9925,,short_story,Everything's Eventual,3.33,2282,missing_description
 127,,Lunch at the Gotham Café,2002,13115,,short_story,Everything's Eventual,3.33,2282,missing_description
 129,,"That Feeling, You Can Only Say What It Is in French",2002,6457,,short_story,Everything's Eventual,2.93,14,missing_description
 130,,The Death of Jack Hamilton,2002,11773,,short_story,Everything's Eventual,3.41,278,missing_description
-139,,Lisey's Story,2006,183659,1132.0,novel,,4.4,586,missing_description
+131,,The Little Sisters of Eluria,2002,23571,,novella,Everything's Eventual,4.25,4009,needs_review_connections
+134,,The Dark Tower: Wolves of the Calla,2003,241435,1580.0,novel,,4.2,204374,needs_review_connections
+135,,The Dark Tower: Song of Susannah,2004,126253,849.0,novel,,4.0,177850,needs_review_connections
+136,,The Dark Tower,2004,272350,1730.0,novel,,4.29,38,needs_review_connections
+139,,Lisey's Story,2006,183659,1132.0,novel,,4.4,586,missing_description; needs_review_connections
+140,,Blaze (Bachman),2007,72264,493.0,novel,,3.77,56456,needs_review_connections
+141,,Duma Key,2008,204382,1260.0,novel,,3.99,138444,needs_review_connections
 142,,A Very Tight Place,2008,20358,,novella,Just After Sunset,,,missing_description
 145,,Harvey's Dream,2008,3936,,short_story,Just After Sunset,,,missing_description
 150,,The Cat from Hell,2008,5717,,short_story,Just After Sunset,3.7,477,missing_description
+159,,Under the Dome,2009,331018,2064.0,novel,,3.93,326957,needs_review_connections
+160,,11-22-63,2011,269543,1840.0,novel,,4.81,37,needs_review_connections
+161,,The Dark Tower: The Wind Through the Keyhole,2012,91598,626.0,novel,,4.13,94803,needs_review_connections
+162,,Joyland,2013,80001,453.0,novel,,3.93,181633,needs_review_connections
+163,,Doctor Sleep,2013,161622,950.0,novel,,4.13,301469,needs_review_connections
+164,,Mr. Mercedes,2014,136387,862.0,novel,,4.35,1473,needs_review_connections
+165,,Revival,2014,120417,805.0,novel,,3.39,28,needs_review_connections
+166,,Finders Keepers,2015,123477,785.0,novel,,4.07,192152,needs_review_connections
 167,,A Death,2015,4781,32.8,short_story,The Bazaar of Bad Dreams,3.33,2282,audible_format_inferred_mmss; missing_description
 168,,Afterlife,2015,4336,37.9,short_story,The Bazaar of Bad Dreams,3.58,187,audible_format_inferred_mmss
 170,,Batman and Robin Have an Altercation,2015,4784,32.9,short_story,The Bazaar of Bad Dreams,3.6,569,audible_format_inferred_mmss
@@ -43,15 +91,21 @@ id,author,title,year,word_count,audible_minutes,story_type,collection,goodreads_
 183,,The Little Green God of Agony,2015,,58.5,short_story,The Bazaar of Bad Dreams,3.57,447,missing_word_count; audible_format_inferred_mmss
 184,,Cookie Jar,2015,,58.5,short_story,The Bazaar of Bad Dreams,3.83,1044,missing_word_count; audible_format_inferred_mmss
 186,,Under the Weather,2015,6077,36.8,short_story,The Bazaar of Bad Dreams,3.55,900,audible_format_inferred_mmss
+188,,End of Watch,2016,118741,773.0,novel,,3.4,5,needs_review_connections
+189,,Gwendy's Button Box,2017,22713,162.0,novella,,3.92,81576,needs_review_connections
+190,,Sleeping Beauties,2017,234642,1523.0,novel,,3.73,96402,needs_review_connections
+191,,The Outsider,2018,165444,1121.0,novel,,4.02,388670,needs_review_connections
+192,,Elevation,2018,27143,227.0,novella,,3.63,162049,needs_review_connections
 193,,Laurie,2018,,,short_story,,3.64,13889,missing_word_count
+194,,The Institute,2019,177976,1139.0,novel,,4.19,349150,needs_review_connections
 195,,In the Tall Grass,2019,,105.0,novella,,3.62,31550,missing_word_count
-196,,Gwendy's Magic Feather,2019,,277.0,novel,,3.76,27087,missing_word_count
+196,,Gwendy's Magic Feather,2019,,277.0,novel,,3.76,27087,missing_word_count; needs_review_connections
 200,,Rat,2020,28668,,novella,If It Bleeds,3.68,613,missing_description
-201,,Later,2021,,392.0,novel,,3.95,153585,missing_word_count
-202,,Billy Summers,2021,,1017.0,novel,,4.18,28,missing_word_count
-203,,Gwendy's Final Task,2022,,444.0,novel,,4.04,22958,missing_word_count
-204,,Fairy Tale,2022,,1446.0,novel,,3.2,5,missing_word_count; missing_description
-205,,Holly,2023,,,novel,,4.07,194029,missing_word_count
+201,,Later,2021,,392.0,novel,,3.95,153585,missing_word_count; needs_review_connections
+202,,Billy Summers,2021,,1017.0,novel,,4.18,28,missing_word_count; needs_review_connections
+203,,Gwendy's Final Task,2022,,444.0,novel,,4.04,22958,missing_word_count; needs_review_connections
+204,,Fairy Tale,2022,,1446.0,novel,,3.2,5,missing_word_count; missing_description; needs_review_connections
+205,,Holly,2023,,,novel,,4.07,194029,missing_word_count; needs_review_connections
 206,,Two Talented Bastids,2024,,,short_story,You Like It Darker,,,missing_word_count; missing_description
 207,,The Fifth Step,2024,,,short_story,You Like It Darker,3.93,413,missing_word_count
 208,,Willie the Weirdo,2024,,,short_story,You Like It Darker,3.67,220,missing_word_count
@@ -66,6 +120,8 @@ id,author,title,year,word_count,audible_minutes,story_type,collection,goodreads_
 217,,The Answer Man,2024,,,short_story,You Like It Darker,3.0,4,missing_word_count
 218,,The Bachman Books,1985,248050,,collection,,4.15,75959,estimated_from_page_count
 222,,Nightmares & Dreamscapes,1993,,,collection,,4.26,220,missing_description
+224,,Hearts in Atlantis,1999,,,collection,,3.0,1,needs_review_connections
+225,,Everything's Eventual,2002,,,collection,,3.97,109815,needs_review_connections
 231,Stephen King,Never Flinch,2025,132000,885,novel,,5.0,2,word_count_estimated; goodreads_count_approximate; missing_description
 3001,Grady Hendrix,Horrorstör,2014,66275,,novel,,3.65,128431,estimated_from_page_count
 3002,Grady Hendrix,My Best Friend's Exorcism,2016,92400,,novel,,3.92,154615,estimated_from_page_count

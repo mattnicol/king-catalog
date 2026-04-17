@@ -22,7 +22,8 @@ abstract class KingCatalogDatabase : RoomDatabase() {
     companion object {
         const val DB_VERSION = 5
         // Bump this whenever king_catalog.json catalog data changes (preserves user fields).
-        const val CATALOG_VERSION = 8
+        // Bumped to 9: seed replaced with all_catalog.json (merged, includes non-King authors).
+        const val CATALOG_VERSION = 9
 
         @Volatile private var INSTANCE: KingCatalogDatabase? = null
 
@@ -32,7 +33,10 @@ abstract class KingCatalogDatabase : RoomDatabase() {
                     context.applicationContext,
                     KingCatalogDatabase::class.java,
                     "king_catalog.db",
-                ).fallbackToDestructiveMigration().build().also { INSTANCE = it }
+                    // IMPORTANT: Do NOT use fallbackToDestructiveMigration() — it wipes user state
+                    // (owned/read/reading-list flags) on any schema version bump.
+                    // Add explicit migrations for each DB_VERSION increment instead.
+                ).build().also { INSTANCE = it }
             }
     }
 }

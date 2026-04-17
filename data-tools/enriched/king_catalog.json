@@ -76,13 +76,26 @@
     "cover_local_path": "data-tools/enriched/covers/Carrie.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "description": "A modern classic, Carrie introduced a distinctive new voice in American fiction -- Stephen King. The story of misunderstood high school girl Carrie White, her extraordinary telekinetic powers, and her violent rampage of revenge, remains one of the most barrier-breaking and shocking novels of all time. Make a date with terror and live the nightmare that is...Carrie --back cover",
     "description_source": "goodreads",
     "keywords_source": "goodreads",
     "goodreads_rating": 3.99,
-    "goodreads_ratings_count": 860060
+    "goodreads_ratings_count": 860060,
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 2,
@@ -151,13 +164,35 @@
     "cover_local_path": "data-tools/enriched/covers/_Salem_s_Lot.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "description": "Librarian's Note: Alternate-cover edition for ISBN 0450031063 Thousands of miles away from the small township of 'Salem's Lot, two terrified people, a man and a boy, still share the secrets of those clapboard houses and tree-lined streets. They must return to 'Salem's Lot for a final confrontation with the unspeakable evil that lives on in the town.",
     "description_source": "goodreads",
     "keywords_source": "goodreads",
     "goodreads_rating": 4.1,
-    "goodreads_ratings_count": 669703
+    "goodreads_ratings_count": 669703,
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 3,
@@ -210,13 +245,35 @@
     "cover_local_path": "data-tools/enriched/covers/The_Shining.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.28,
     "goodreads_ratings_count": 1731123,
     "description": "Danny is only five years old but in the words of Old Mr Hallorann he is a ‘shiner,’ aglow with psychic voltage. When his father becomes caretaker of the Overlook hotel, Danny’s visions grow out of control. As winter closes in and blizzards cut them off, the hotel seems to develop a life of its own. It is meant to be empty. So who is the lady in Room 217 and who are the masked guests going up and down the elevator? And why do the hedges shaped like animals seem so alive? Somewhere, somehow, there is an evil force in the hotel – and that too is beginning to shine.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Torrence Duology",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 4,
@@ -244,13 +301,26 @@
     "cover_local_path": "data-tools/enriched/covers/Rage__Bachman_.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "description": "A disturbed high-school student with authority problems kills one of his teachers and takes the rest of his class hostage. Over the course of one long, tense and unbearable hot afternoon, Charlie Decker explains what led him to this drastic sequence of events, while at the same time deconstructing the personalities of his classmates, forcing each one to justify his or her existence.",
     "description_source": "goodreads",
     "keywords_source": "goodreads",
     "goodreads_rating": 3.7,
-    "goodreads_ratings_count": 58978
+    "goodreads_ratings_count": 58978,
+    "connections": [
+      {
+        "group": "The Bachman Books",
+        "kind": "connection",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 5,
@@ -300,13 +370,34 @@
     "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
-      "missing_word_count"
+      "missing_word_count",
+      "needs_review_connections"
     ],
     "goodreads_rating": 4.35,
     "goodreads_ratings_count": 845457,
     "description": "First came the days of the plague. Then came the dreams. Dark dreams that warned of the coming of the dark man. The apostate of death, his worn-down boot heels tramping the night roads. The warlord of the charnel house and Prince of Evil. His time is at hand. His empire grows in the west and the Apocalypse looms. For hundreds of thousands of fans who read The Stand in its original version and wanted more, this new edition is Stephen King's gift. And those who are listening to The Stand for the first time will discover a triumphant and eerily plausible work of the imagination that takes on the issues that will determine our survival.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 6,
@@ -1430,13 +1521,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Long_Walk__Bachman_.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.0,
     "goodreads_ratings_count": 290842,
     "description": "Against the wishes of his mother, sixteen-year-old Ray Garraty is about to compete in the annual grueling match of stamina and wits known as The Long Walk. One hundred boys must keep a steady pace of four miles per hour without ever stopping... with the winner being awarded \"The Prize\"—anything he wants for the rest of his life. But, as part of this national tournament that sweeps through a dystopian America year after year, there are some harsh rules that Garraty and ninety-nine others must adhere to in order to beat out the rest. There is no finish line—the winner is the last man standing. Contestants cannot receive any outside aid whatsoever. Slow down under the speed limit and you're given a warning. Three warnings and you're out of the game—permanently...",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Bachman Books",
+        "kind": "connection",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 27,
@@ -1496,13 +1600,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Dead_Zone.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.97,
     "goodreads_ratings_count": 249244,
     "description": "THE DEAD STEPHEN KING, Easton Press Collector's Edition 1993 w/ Leather Boards &amp; Gold Tipped Pages. The first limited edition of this book from Easton's \"Masterpieces of Science Fiction\" series. Later reprinted in 2004. This 1993 limited edition is distinguished by a complete golden square border around the title &amp; author's name on the spine (pic 2). Just the slightest signs of wear on the lower corners of the front &amp; back cover (pic 6). Minor binding glue residue at the lower corner of the back book board (pic 7). 6.5\" x 9.5\" x 1.5\".",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 28,
@@ -1564,13 +1681,26 @@
     "cover_local_path": "data-tools/enriched/covers/Firestarter.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.92,
     "goodreads_ratings_count": 249288,
     "description": "This a previously-published edition of ISBN 0451167805. The Department of Scientific Intelligence (aka \"The Shop\") never anticipated that two participants in their research program would marry and have a child. Charlie McGee inherited pyrokinetic powers from her parents, who had been given a low-grade hallucinogen called \"Lot Six\" while at college. Now the government is trying to capture young Charlie and harness her powerful firestarting skills as a weapon. --stephenking.com",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 29,
@@ -1608,13 +1738,26 @@
     "cover_local_path": "data-tools/enriched/covers/Roadwork__Bachman_.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.58,
     "goodreads_ratings_count": 45911,
     "description": "Barton Dawes’ unremarkable but comfortable existence suddenly takes a turn for the worst. Highway construction puts him out of work and simultaneously forces him out of his home. Dawes isn’t the sort of man who will take an insult of this magnitude lying down. His single-minded determination to fight the inevitable course of progress drives his wife and friends away while he tries to face down the uncaring bureaucracy that has destroyed his once comfortable life. --stephenking.com",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Bachman Books",
+        "kind": "connection",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 30,
@@ -1653,13 +1796,26 @@
     "cover_local_path": "data-tools/enriched/covers/Cujo.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.8,
     "goodreads_ratings_count": 325795,
     "description": "Cujo is a 1981 psychological horror novel by Stephen King about a rabid dog. The novel won the British Fantasy Award in 1982, and was made into a film in 1983.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 31,
@@ -1707,13 +1863,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Running_Man__Bachman_.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.15,
     "goodreads_ratings_count": 75959,
     "description": "Four novels from the inimitable - and unmistakable - master of terror and suspense... RAGE A high school show-and-tell session explodes into a nightmare of evil. A story of stunning psychological horror about a group of nice, ordinary kids who learn savage secrets of lust and violence... THE LONG WALK Only death can keep you from the finish line--in the ultimate competition of the all-too-near future. A chilling glimpse into a future America where a macabre marathon is a contest with death... ROADWORK What happens when one good-and-angry man fights back is murder--and then some. An eerie variation on the theme of \"Home Sweet Home\"... THE RUNNING MAN In the year 2025, the best men don't run for president, they run for their lives. A nightmare version of a ghoulish game show where you bet your life - literally",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Bachman Books",
+        "kind": "connection",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 32,
@@ -1755,13 +1924,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__The_Gunslinger.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.27,
     "goodreads_ratings_count": 15,
     "description": "\"The man in black fled across the desert and the gunslinger followed.\" This line starts the story of the gunslinger and it cleanly sums up the motivation of the main character and plot of the story. This story follows the hero, the gunslinger, Roland Deschain, as he pursues the man in black across a desert wasteland and into the mountains. He has followed the man for twelve years and his pursuit never wavers for any reason. He is willing to sacrifice all, even his own life, to find the man in black.This study guide includes the following Plot Summary, Chapter Summaries &amp; Analysis, Characters, Objects/Places, Themes, Style, Quotes, and Topics for Discussion.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 34,
@@ -1988,13 +2170,26 @@
     "cover_local_path": "data-tools/enriched/covers/Christine.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.86,
     "goodreads_ratings_count": 266288,
     "description": "Christine est belle, racée, séduisante. Elle aime les sensations fortes, les virées nocturnes et le rock n'roll des années héroïques. Depuis qu'elle connaît Arnie, elle est amoureuse. Signe particulier : Christine est une Plymouth « Fury », sortie en 1958 des ateliers automobiles de Detroit. Une seule rivale en travers de sa route : Leigh, la petite amie d'Arnie… Ce roman légendaire de Stephen King, rythmé par la musique de Chuck Berry et de Janis Joplin, a déjà pris place parmi les classiques de l'épouvante.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 39,
@@ -3105,13 +3300,26 @@
     "cover_local_path": "data-tools/enriched/covers/Pet_Sematary.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.33,
     "goodreads_ratings_count": 21,
     "description": "Pet Sematary Study Guide consists of approx. 55 pages of summaries and analysis on Pet Sematary. This study guide includes the following Plot Summary, Chapter Summaries &amp; Analysis, Characters, Objects/Places, Themes, Style, Quotes, and Topics for Discussion.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 62,
@@ -3208,13 +3416,44 @@
     "cover_local_path": "data-tools/enriched/covers/The_Talisman.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.1,
     "goodreads_ratings_count": 143552,
     "description": "Jack Sawyer, twelve years old, is about to begin a most fantastic journey, an exalting, terrifying quest for the mystical Talisman—the only thing that can save Jack’s dying mother. But to reach his goal, Jack must make his way not only across the breadth of the United States but also through the wondrous and menacing parallel world of the Territories. In the Territories, Jack finds another realm, where the air is so sweet and clear a man can smell a radish being pulled from the ground a mile away—and a life can be snuffed out instantly in the continuing struggle between good and evil. Here Jack discovers “Twinners,” reflections of the people he knows on earth—most notably Queen Laura DeLoessian, the Twinner of Jack’s own imperiled mother. As Jack “flips” between worlds, making his way westward toward the redemptive Talisman, a sequence of heart-stopping encounters challenges him at every step.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "The Jack Sawyer Duology",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "Supernatural/fantasy",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 64,
@@ -3253,13 +3492,26 @@
     "cover_local_path": "data-tools/enriched/covers/Thinner__Bachman_.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.78,
     "goodreads_ratings_count": 229293,
     "description": "After an old gypsy woman is killed by his car, lawyer Billy Halleck is stricken with a flesh-wasting malady and must undertake a nightmarish journey to confront the forces of death. Movie tie-in. Book available.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Bachman Books",
+        "kind": "connection",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 65,
@@ -3331,13 +3583,35 @@
     "cover_local_path": "data-tools/enriched/covers/IT.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.24,
     "goodreads_ratings_count": 1289313,
     "description": "Welcome to Derry, Maine ... It’s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real ... They were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But none of them can withstand the force that has drawn them back to Derry to face the nightmare without an end, and the evil without a name.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 66,
@@ -3376,13 +3650,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Eyes_of_the_Dragon.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.94,
     "goodreads_ratings_count": 146513,
     "description": "The Eyes of the Dragon, written by Stephen King and illustrated by David Palladini, is a 326 page, 6 1/2 X 9 1/2 inch hardcover book published by Viking Penguin Inc., New York. The copyright date is 1987 and this is a first (trade) edition (preceded only by the Philtrum Press signed, limited edition); the copyright page states \"First published in 1987 by Viking Penguin, Inc.\" Synopsis - In this novel, King ventures into an un-King like tale of dragons and princes and evil wizards. In the kingdom of Delain, Peter and Thomas, two princely brothers, attempt to destroy the 400-year-old Flagg, the evil magician who threatens to control the kingdom of Delain after the death of their father, King Rolanda. Nicely illustrated with black and white drawings.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 67,
@@ -3413,13 +3700,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__The_Drawing_of_the_Three.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.5,
     "goodreads_ratings_count": 2093,
     "description": "Summaries, notes, essays, guides, lessons, and more - everything you need to understand or teach The Drawing of the Three.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 68,
@@ -3458,13 +3758,26 @@
     "cover_local_path": "data-tools/enriched/covers/Misery.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.22,
     "goodreads_ratings_count": 833304,
     "description": "Alternate Cover Editions #1 , #2 , #3 Paul Sheldon. He's a bestselling novelist who has finally met his biggest fan. Her name is Annie Wilkes and she is more than a rabid reader - she is Paul's nurse, tending his shattered body after an automobile accident. But she is also his captor, keeping him prisoner in her isolated house.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 69,
@@ -3514,11 +3827,23 @@
     "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
-      "missing_description"
+      "missing_description",
+      "needs_review_connections"
     ],
     "goodreads_rating": 3.61,
     "goodreads_ratings_count": 166684,
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 70,
@@ -3557,13 +3882,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Half.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.81,
     "goodreads_ratings_count": 153908,
     "description": "Alternate Cover Editions #1 , #2 , #3 , #4 Thad Beaumont would like to say he is innocent. He'd like to say he has nothing to do with the series of monstrous murders that keep coming closer to his home. But how can Thad disown the ultimate embodiment of evil that goes by the name he gave it-and signs its crimes with Thad's bloody fingerprints?",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 71,
@@ -4819,13 +5157,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__The_Waste_Lands.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.25,
     "goodreads_ratings_count": 250838,
     "description": "Several months have passed, and Roland’s two new tet-mates have become proficient gunslingers. Eddie Dean has given up heroin, and Odetta’s two selves have joined, becoming the stronger and more balanced personality of Susannah Dean. But while battling The Pusher in 1977 New York, Roland altered ka by saving the life of Jake Chambers, a boy who—in Roland’s where and when—has already died. Now Roland and Jake exist in different worlds, but they are joined by the same madness: the paradox of double memories. Roland, Susannah, and Eddie must draw Jake into Mid-World then follow the Path of the Beam all the way to the Dark Tower. But nothing is easy in Mid-World. Along the way our tet stumbles into the ruined city of Lud, and are caught between the warring gangs of the Pubes and the Grays. The only way out of Lud is to wake Blaine the Mono, an insane train that has a passion for riddling, and for suicidal journeys.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 101,
@@ -4865,13 +5216,26 @@
     "cover_local_path": "data-tools/enriched/covers/Needful_Things.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.98,
     "goodreads_ratings_count": 282358,
     "description": "Analyzing literature can be hard — we make it easy! This in-depth study guide offers summaries &amp; analyses for all 23 chapters of Needful Things by Stephen King. Get more out of your reading experience and build confidence with study guides proven raise students’ grades, save teachers time, and spark dynamic book discussions. SuperSummary Study Guides are written by experienced educators and literary scholars with advanced degrees in relevant fields. Here's what's Chapter-by-chapter summaries — Refresh your memory of key events and big ideas Comprehensive literary analysis — Unlock underlying meaning Examination of key figures in the text — Follow character arcs from tragedy to triumph Discussion of themes, symbols &amp; motifs — Connect the dots among recurring ideas Important quotes with explanations — Appreciate the meaning behind the words Essay &amp; discussion topics — Discover writing prompts and conversation starters Who uses SuperSummary Study Boost critical thinking skills — and grade averages — while decreasing stress Save hours of prep time and create engaging lessons and assignments Book club Gain confidence in discussing literary analysis and lead more thoughtful b",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 102,
@@ -4911,13 +5275,35 @@
     "cover_local_path": "data-tools/enriched/covers/Gerald_s_Game.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.59,
     "goodreads_ratings_count": 180849,
     "description": "On a warm weekday in October, Jessie and Gerald Burlingame are alone in the bedroom of their Maine summer house, playing a game that isn't listed in Hoyle's. But suddenly, as Jessie hears the click of the second handcuff locking her to the bedposts and sees her husband looming over her, a nerve-snap of recognition tells her that this time Gerald is playing for keeps. Her next move is furious, violent, and, she is shocked to discover, deadly. Giving up control is scary enough; it is terrifying when there is no one left to give it to. Except that Jessie is not alone. Over the next twenty-eight hours, trapped in a lake-side house that has become a prison, Jessie will come face-to-face with all the things she has ever feared, and the unlatched back door banging fretfully in the breeze is an open invitation to horrors she has never imagined. Inside the darkening bedroom, shadows gather in mute menace, while inside Jessie's head a taunting chorus of voices whispers and \"Women alone in the dark are like open doors . . . and if they cry out for help, who knows what dread things may answer?\" Stephen King knows. Nothing he has written before will prepare readers for the challenges of Gerald'",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Eclipse Duology",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 103,
@@ -4955,13 +5341,35 @@
     "cover_local_path": "data-tools/enriched/covers/Dolores_Claiborne.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.95,
     "goodreads_ratings_count": 172835,
     "description": "\"Everything I did, I did for love...\" For thirty years, folks on Little Tall Island have been waiting to find out just what happened on the eerie dark day Dolores Claiborne's husband died --- the day of the total eclipse. Now, the police want to know what happened yesterday when her rich, bedridden employer died suddenly in her care. With no choice but to talk, Dolores gives her compelling confession ... of the strange and terrible links forged by hidden intimacies ... of the fierceness of a mother's love and its dreadful consequences ... of the silent rage that can turn a woman's heart to hate. When Dolores Claiborne is accused of murder, it's only the beginning of the bad news. For what comes after that is something only Stephen King could imagine ... as he rips open the darkest secrets and the most damning sins of men and women in an ingrown. Maine town and takes you on a trip below its straitlaced surface.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Eclipse Duology",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 104,
@@ -4990,13 +5398,35 @@
     "cover_local_path": "data-tools/enriched/covers/Insomnia.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.83,
     "goodreads_ratings_count": 169904,
     "description": "Ralph Roberts, a sus setenta años y tras la muerte de su mujer, siente que su vida se acaba. ¿Es acaso posible que su reciente viudez, unida a un persistente insomnio, sea la causa de esa nueva sensibilidad visual que, poco a poco, le permite ver el más allá de las personas? A Ralph le preocupa este hecho, pero no menos que el súbito e inexplicable comportamiento, irracional y violento, de algunos de sus vecinos...",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 105,
@@ -5035,13 +5465,26 @@
     "cover_local_path": "data-tools/enriched/covers/Rose_Madder.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.76,
     "goodreads_ratings_count": 125210,
     "description": "Roused by a single drop of blood, Rosie Daniels wakes up to the chilling realisation that her husband is going to kill her. And she takes flight – with his credit card.Alone in a strange city, Rosie begins to build a new she meets Bill Steiner and she finds an old junk shop painting, \"Rose Madder,\" which strangely seems to want her as much as she wants it.But it’s hard for Rosie not to keep looking over her shoulder. Rose-maddened and on the rampage, Norman is a corrupt cop with a dog’s instinct for tracking people. And he’s getting close. Rosie can feel just how close he is getting…A brilliant dark-hued fable of gender wars, a haunting love story, and a hold-your-breath triumph of suspense, \"Rose Madder\" is Stephen King at his electrifying best.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 106,
@@ -5125,13 +5568,35 @@
     "cover_local_path": "data-tools/enriched/covers/Desperation.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.86,
     "goodreads_ratings_count": 154772,
     "description": "Alternate Cover Edition ISBN 0451188462 (ISBN13: 9780451188465) There's a place along Interstate 50 that some call the loneliest place on Earth. It's known as Desperation, Nevada. It's not a very nice place to live. It's an even worse place to die. Let the battle against evil begin. Welcome to ... Desperation",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Tak Duology",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 108,
@@ -5171,13 +5636,35 @@
     "cover_local_path": "data-tools/enriched/covers/The_Regulators__Bachman_.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.22,
     "goodreads_ratings_count": 8846,
     "description": "The Regulators is a novel by Stephen King under the pseudonym Richard Bachman. It was published in 1996 at the same time as its \"mirror\" novel, Desperation. The two novels represent parallel universes relative to one another, and most of the characters present in one novel's world also exist in the other novel's reality, albeit in different circumstances. Additionally, the hardcover editions of each novel, if set side by side, make a complete painting, and on the back of each cover is also a peek at the opposite's cover.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Tak Duology",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "The Bachman Books",
+        "kind": "connection",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 109,
@@ -5219,13 +5706,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__Wizard_and_Glass.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.27,
     "goodreads_ratings_count": 223097,
     "description": "Roland, Eddie, Susannah, Jake, and Jake’s pet bumbler survive Blaine the Mono’s final crash, only to find themselves stranded in an alternate version of Topeka, Kansas, one that has been ravaged by the superflu virus. While following the deserted I-70 toward a distant glass palace, they hear the atonal squalling of a thinny, a place where the fabric of existence has almost entirely worn away. While camping near the edge of the thinny, Roland tells his ka-tet a story about another thinny, one that he encountered when he was little more than a boy. Over the course of one long magical night, Roland transports us to the Mid-World of long-ago and a seaside town called Hambry, where Roland fell in love with a girl named Susan Delgado, and where he and his old tet-mates Alain and Cuthbert battled the forces of John Farson, the harrier who—with a little help from a seeing sphere called Maerlyn’s Grapefruit—ignited Mid-World’s final war.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 110,
@@ -5378,13 +5878,26 @@
     "cover_local_path": "data-tools/enriched/covers/Hearts_in_Atlantis.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.87,
     "goodreads_ratings_count": 103774,
     "description": "Five interconnected, sequential narratives, set in the years from 1960 to 1999. Each story is deeply rooted in the sixties, and each is haunted by the Vietnam War. Stephen King, whose first novel, Carrie, was published in 1974, the year before the last U.S. troops withdrew from Vietnam, is the first hugely popular writer of the TV generation. Images from that war -- and the protests against it -- had flooded America's living rooms for a decade. Hearts in Atlantis, King's newest fiction, is composed of five interconnected, sequential narratives, set in the years from 1960 to 1999. Each story is deeply rooted in the sixties, and each is haunted by the Vietnam War. In Part One, \"Low Men in Yellow Coats,\" eleven-year-old Bobby Garfield discovers a world of predatory malice in his own neighborhood. He also discovers that adults are sometimes not rescuers but at the heart of the terror. In the title story, a bunch of college kids get hooked on a card game, discover the possibility of protest...and confront their own collective heart of darkness, where laughter may be no more than the thinly disguised cry of the beast. In \"Blind Willie\" and \"Why We're in Vietnam,\" two men who grew up with",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 114,
@@ -5536,13 +6049,26 @@
     "cover_local_path": "data-tools/enriched/covers/Dreamcatcher.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.66,
     "goodreads_ratings_count": 187642,
     "description": "In Derry, Maine, four young boys once stood together and did a brave thing. Something that changed them in ways they hardly understand. A quarter of a century later, the boys are men who have gone their separate ways. Though they still get together once a year, to go hunting in the north woods of Maine. But this time is different. This time a man comes stumbling into their camp, lost, disoriented and muttering about lights in the sky. Before long, these old friends will be plunged into the most remarkable events of their lives as they struggle with a terrible creature from another world. Their only chance of survival is locked in their shared past - and in the Dreamcatcher.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 118,
@@ -5571,13 +6097,35 @@
     "cover_local_path": "data-tools/enriched/covers/Black_House.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.04,
     "goodreads_ratings_count": 69960,
     "description": "From the #1 New York Times bestselling authors of The Talisman , “an intelligent…suspenseful page-turner” ( The Wall Street Journal ) from “two master craftsmen, each at the top of his game” ( The Washington Post ). Twenty years ago, a boy named Jack Sawyer traveled to a parallel universe called the Territories to save his mother and her Territories “Twinner” from an agonizing death that would have brought cataclysm to the other world. Now Jack is a retired Los Angeles homicide detective living in the nearly nonexistent hamlet of Tamarack, Wisconsin. He has no recollection of his adventures in the Territories, and was compelled to leave the police force when an odd, happenstance event threatened to awaken those memories. When a series of gruesome murders occur in western Wisconsin that are reminiscent of those committed several decades ago by a madman named Albert Fish, the killer is dubbed “the Fishman,” and Jack’s buddy, the local chief of police, begs Jack to help the inexperienced force find him. But are these new killings merely the work of a disturbed individual, or has a mysterious and malignant force been unleashed in this quiet town? What causes Jack’s inexplicable waking ",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Jack Sawyer Duology",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "Supernatural/fantasy",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 119,
@@ -5616,13 +6164,26 @@
     "cover_local_path": "data-tools/enriched/covers/From_A_Buick_8.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.49,
     "goodreads_ratings_count": 75627,
     "description": "The state police of Troop D in rural Pennsylvania have kept a secret in Shed B out back of the barracks ever since 1979, when Troopers Ennis Rafferty and Curtis Wilcox answered a call from a gas station just down the road and came back with an abandoned Buick Roadmaster. Curt Wilcox knew old cars, and he knew immediately that this one was . . . wrong, just wrong. A few hours later, when Rafferty vanished, Wilcox and his fellow troopers knew the car was worse than dangerous – and that it would be better if John Q. Public never found out about it. Curt’s avid curiosity took the lead, and they investigated as best they could, as much as they dared. Over the years, the troop absorbed the mystery as part of the background to their work, the Buick 8 sitting out there like a still-life painting that breathes – inhaling a little bit of this world, exhaling a little bit of whatever world it came from. In the fall of 2001, a few months after Curt Wilcox is killed in a gruesome auto accident, his eighteen-year-old boy, Ned, starts coming by the barracks, mowing the lawn, washing windows, shoveling snow. Sandy Dearborn, Sergeant Commanding, knows it’s the boy’s way of holding onto his father, ",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 120,
@@ -5789,13 +6350,26 @@
     "cover_local_path": "data-tools/enriched/covers/Everything_s_Eventual.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.97,
     "goodreads_ratings_count": 109814,
     "description": "Includes the story “The Man in the Black Suit”—set in the fictional town of Castle Rock, Maine A collection of 14 dark tales, Everything’s Eventual includes one O. Henry Prize winner, two other award winners, four stories published by The New Yorker, and “Riding the Bullet,” King’s original ebook, which attracted over half a million online readers and became the most famous short story of the decade. Two of the stories, “The Little Sisters of Eluria” and “Everything’s Eventual” are closely related to the Dark Tower series. \"Riding the Bullet,\" published here on paper for the first time, is the story of Alan Parker, who's hitchhiking to see his dying mother but takes the wrong ride, farther than he ever intended. In \"Lunch at the Gotham Café,\" a sparring couple's contentious lunch turns very, very bloody when the maître d' gets out of sorts. \"1408,\" the audio story in print for the first time, is about a successful writer whose specialty is \"Ten Nights in Ten Haunted Graveyards\" or \"Ten Nights in Ten Haunted Houses,\" and though Room 1408 at the Dolphin Hotel doesn't kill him, he won't be writing about ghosts anymore. Stories include: -Autopsy Room Four -The Man in the Black Suit -Al",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 124,
@@ -6130,13 +6704,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Little_Sisters_of_Eluria.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.25,
     "goodreads_ratings_count": 4009,
     "description": "Near death from an attack by Slow Mutants, Roland Deschain is taken in by a group of Sisters who specialize in anything but the healing arts. These hideous, corpse-like creatures known as the Little Sisters of Eluria have murder on their twisted minds. In his current, wounded condition, there's almost nothing the last gunslinger can do to prevent their tender mercies from taking hold. It's the beginning of a new Dark Tower story arc featuring the fine pencils of Luke Ross, whose work on this story will astound you!",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 132,
@@ -6275,13 +6862,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__Wolves_of_the_Calla.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.2,
     "goodreads_ratings_count": 204374,
     "description": "Roland and his tet have just returned to the path of the Beam when they discover that they are being followed by a group of inexperienced trackers. The trackers are from the town of Calla Bryn Sturgis, and they desperately need the help of gunslingers. Once every generation, a band of masked riders known as the Wolves gallop out of the dark land of Thunderclap to steal one half of all the twins born in the Callas. When the children are returned, they are roont, or mentally and physically ruined. In less than a month, the Wolves will raid again. In exchange for Roland’s aid, Father Callahan—a priest originally from our world—offers to give Roland a powerful but evil seeing sphere, a sinister globe called Black Thirteen which he has hidden below the floorboards of his church. Not only must Roland and his tet discover a way to defeat the invincible Wolves, but they must also return to New York so that they can save our world’s incarnation of the Dark Tower from the machinations of the evil Sombra Corporation.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 135,
@@ -6310,13 +6910,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__Song_of_Susannah.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.0,
     "goodreads_ratings_count": 177850,
     "description": "The Wolves have been defeated, but our tet faces yet another catastrophe. Susannah Dean’s body has been usurped by a demon named Mia who wants to use Susannah’s mortal form to bear a demon child. Stealing Black Thirteen, Mia has traveled through the Unfound Door to 1999 New York where she plans to give birth to her chap, a child born of two mothers and two fathers who will grow up to be Roland’s nemesis. With the help of the time-traveling Manni, Roland and Eddie plan to follow Susannah while Father Callahan and Jake will find Calvin Tower, owner of the vacant lot where a magical rose grows: a rose that must be saved at all costs. But despite our ka-tet’s intentions, ka has its own plans. Jake, Callahan, and Jake’s bumbler companion are transported to New York to follow Susannah, while Eddie and Roland are tumbled into East Stoneham, Maine, where they are greeted by Eddie’s old enemy, the gangster Balazar. But it isn’t just bullets that Roland and Eddie must brave. Soon they will meet their maker, in the form of a young author named Stephen King.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 136,
@@ -6345,13 +6958,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.29,
     "goodreads_ratings_count": 38,
     "description": "The Dark Tower The Dark Tower Study Guide consists of approx. 53 pages of summaries and analysis on The Dark Tower The Dark Tower by Stephen King. This study guide includes the following Plot Summary, Chapter Summaries &amp; Analysis, Characters, Objects/Places, Themes, Style, Quotes, and Topics for Discussion.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 137,
@@ -6485,11 +7111,23 @@
     "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
-      "missing_description"
+      "missing_description",
+      "needs_review_connections"
     ],
     "goodreads_rating": 4.4,
     "goodreads_ratings_count": 586,
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 140,
@@ -6517,13 +7155,26 @@
     "cover_local_path": "data-tools/enriched/covers/Blaze__Bachman_.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.77,
     "goodreads_ratings_count": 56456,
     "description": "From the Flap: The last of the Richard Bachman novels, recently recovered and published for the first time. Stephen King's \"dark half\" may have saved the best for last. A fellow named Richard Bachman wrote Blaze in 1973 on an Olivetti typewriter, then turned the machine over to Stephen King, who used it to write Carrie. Bachman died in 1985 (\"cancer of the pseudonym\"), but in late 2006 King found the original typescript of Blaze among his papers at the University of Maine's Fogler Library (\"How did this get here?!\"), and decided that with a little revision it ought to be published. Blaze is the story of Clayton Blaisdell, Jr. --of the crimes committed against him and the crimes he commits, including his last, the kidnapping of a baby heir worth millions. Blaze has been a slow thinker since childhood, when his father threw him down the stairs--and then threw him down again. After escaping an abusive institution for boys when he was a teenager, Blaze hooks up with George, a seasoned criminal who thinks he has all the answers. But then George is killed, and Blaze, though haunted by his partner, is on his own. He becomes one of the most sympathetic criminals of all of literature. This ",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Bachman Books",
+        "kind": "connection",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 141,
@@ -6562,13 +7213,26 @@
     "cover_local_path": "data-tools/enriched/covers/Duma_Key.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.99,
     "goodreads_ratings_count": 138444,
     "description": "NO MORE THAN A DARK PENCIL LINE ON A BLANK PAGE. A HORIZON LINE, MAYBE, BUT ALSO A SLOT FOR BLACKNESS TO POUR THROUGH . . . A terrible construction site accident takes Edgar Freemantle's right arm and scrambles his memory and his mind, leaving him with little but rage as he begins the ordeal of rehabilitation. A marriage that produced two lovely daughters suddenly ends, and Edgar begins to wish he hadn't survived the injuries that could have killed him. He wants out. His psychologist, Dr. Kamen, suggests a \"geographic cure,\" a new life distant from the Twin Cities and the building business Edgar grew from scratch. And Kamen suggests something else. \"Edgar does anything make you happy?\" \"I used to sketch.\" \"Take it up again. You need hedges . . . hedges against the night.\" Edgar leaves Minnesota for a rented house on Duma Key, a stunningly beautiful, eerily undeveloped splinter of the Florida coast. The sun setting into the Gulf of Mexico and the tidal rattling of shells on the beach call out to him, and Edgar draws. A visit from Ilse, the daughter he dotes on, starts his movement out of solitude. He meets a kindred spirit in Wireman, a man reluctant to reveal his own wounds, and th",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 142,
@@ -7412,13 +8076,26 @@
     "cover_local_path": "data-tools/enriched/covers/Under_the_Dome.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.93,
     "goodreads_ratings_count": 326957,
     "description": "This scarce antiquarian book is a facsimile reprint of the original. Due to its age, it may contain imperfections such as marks, notations, marginalia and flawed pages. Because we believe this work is culturally important, we have made it available as part of our commitment for protecting, preserving, and promoting the world's literature in affordable, high quality, modern editions that are true to the original work.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 160,
@@ -7458,13 +8135,26 @@
     "cover_local_path": "data-tools/enriched/covers/11-22-63.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.81,
     "goodreads_ratings_count": 37,
     "description": "Jake Epping's otherwise ordinary life is taken for a wild ride as a friend convinces him to travel back to 1958. Their goal is nothing short of to stop the assassination of John F. Kennedy. The reader is engulfed into a thrilling world where Jake not only seeks to save the life of the world's most powerful man, but also falls in love with a beautiful librarian and experiences a simpler time. In typical Stephen King fashion, the story keeps readers on the edge of their seats while bringing up important philosophical and ethical dilemmas. This discussion Character analysis with plot summary included Analysis of prominent themes and symbols Best quotes",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Supernatural/fantasy",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 161,
@@ -7495,13 +8185,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Dark_Tower__The_Wind_Through_the_Keyhole.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.13,
     "goodreads_ratings_count": 94803,
     "description": "In his New York Times bestselling The Wind Through the Keyhole , Stephen King returns to the spectacular territory of the Dark Tower fantasy saga to tell a story about gunslinger Roland Deschain in his early days. The Wind Through the Keyhole is a sparkling contribution to the series that can be placed between Dark Tower IV and Dark Tower V. This Russian doll of a novel, a story within a story within a story, visits Roland and his ka-tet as a ferocious, frigid storm halts their progress along the Path of the Beam. Roland tells a tale from his early days as a gunslinger, in the guilt-ridden year following his mother’s death. Sent by his father to investigate evidence of a murderous shape-shifter, Roland takes charge of Bill Streeter, a brave but terrified boy who is the sole surviving witness to the beast’s most recent slaughter. Roland, himself only a teenager, calms the boy by reciting a story from the Book of Eld that his mother used to read to him at bedtime, “The Wind through the Keyhole.” “A person’s never too old for stories,” he says to Bill. “Man and boy, girl and woman, we live for them.” And stories like The Wind Through the Keyhole live for us with Stephen King’s fantast",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 162,
@@ -7541,13 +8244,26 @@
     "cover_local_path": "data-tools/enriched/covers/Joyland.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.93,
     "goodreads_ratings_count": 181633,
     "description": "This study guide includes the following Plot Summary, Chapter Summaries &amp; Analysis, Characters, Objects/Places, Themes, Style, Quotes, and Topics for Discussion.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Mystery/thriller/crime",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 163,
@@ -7587,13 +8303,35 @@
     "cover_local_path": "data-tools/enriched/covers/Doctor_Sleep.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.13,
     "goodreads_ratings_count": 301469,
     "description": "Stephen King returns to the characters and territory of one of his most popular novels ever, The Shining, in this instantly riveting novel about the now middle-aged Dan Torrance (the boy protagonist of The Shining ) and the very special 12-year-old girl he must save from a tribe of murderous paranormals. On highways across America, a tribe of people called The True Knot travel in search of sustenance. They look harmless – mostly old, lots of polyester, and married to their RVs. But as Dan Torrance knows, and spunky 12-year-old Abra Stone learns, The True Knot are quasi-immortal, living off the \"steam\" that children with the \"shining\" produce when they are slowly tortured to death. Haunted by the inhabitants of the Overlook Hotel where he spent one horrific childhood year, Dan has been drifting for decades, desperate to shed his father's legacy of despair, alcoholism, and violence. Finally, he settles in a New Hampshire town, an AA community that sustains him, and a job at a nursing home where his remnant \"shining\" power provides the crucial final comfort to the dying. Aided by a prescient cat, he becomes \"Doctor Sleep.\" Then Dan meets the evanescent Abra Stone, and it is her specta",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Torrence Duology",
+        "kind": "series",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "Supernatural/fantasy",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 164,
@@ -7635,13 +8373,35 @@
     "cover_local_path": "data-tools/enriched/covers/Mr__Mercedes.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.35,
     "goodreads_ratings_count": 1473,
     "description": "PLEASE NOTE: This is a summary of the book and NOT the original book. Mr. Mercedes by Stephen King - A 30-minute Summary of the Novel Inside this Instaread Summary: Overview of the entire bookIntroduction to the Important people in the bookSummary and analysis of all the chapters in the bookKey Takeaways of the bookA Reader's Perspective Preview of this summary: Part1 Chapter 1 Down-on-his-luck, Augie Odenkirk helps homeless Janice Cray care for her baby as they wait in the early morning fog for a job fair. A gray Mercedes plows into the crowd. Augie, Janice and the baby are among the victims.Part 2 Chapters 1-3 About a year after the Mercedes crash, Retired Detective K. William Hodges watches more grubby reality shows, fails to enjoy his beer, and thinks, again, of shooting himself. The arrival of the mail distracts him. A letter, allegedly from the driver of the killer Mercedes, stuns him. The writer brags about killing eight and wounding many. He says that he got off sexually at he drove into the crowd. He wore a condom and used bleach to get rid of any DNA. He wore a hair net under a clown mask for the same reason. He knows Hodges is miserable and hopes the letter cheers him up",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Bill Hodges Trilogy",
+        "kind": "trilogy",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "Mystery/thriller/crime",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 165,
@@ -7681,13 +8441,26 @@
     "cover_local_path": "data-tools/enriched/covers/Revival.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.39,
     "goodreads_ratings_count": 28,
     "description": "by Stephen King | Summary &amp; Analysis by Book*Sense This is a Summary &amp; Analysis of Revival . It follows Jacobs from his early calling as a rural Methodist minister in Maine through his eventual end as an elderly, enfeebled, mad scientist. Stephen King’s Revival is an excellent book, one that bears out the high status King enjoys among writers of popular fiction and which substantiates the works of scholars who attend to his writing. There is much to enjoy in the novel, and it serves as an easy entrance into his corpus for those new to it. Much of the novel is set in rural Maine. Jaime does travel a fair bit, so there are substantial scenes across the US, including Tulsa, Oklahoma; Colorado; upstate New York and Hawaii. Each contributes to a sense of the American heartland, pointing to perceived United States essentialism and thus reinforcing the horror of the novel. This companion of Revival offers the • Book Review • Story Setting of Revival • Details of Characters &amp; Key Character Analysis • Summary of the text, with some analytical comments interspersed • Discussion &amp; Analysis of Themes, Symbols… • And Much More for YOU to Discover! This Analysis of Revival fills ",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 166,
@@ -7732,13 +8505,35 @@
     "cover_local_path": "data-tools/enriched/covers/Finders_Keepers.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "description": "Preview : Private investigator, Bill Hodges, races to find another deranged killer in Finders Keepers , the second book in a projected trilogy by Stephen King. The first, Mr. Mercedes, won the 2015 Edgar Award for best mystery novel. Finder Keepers, while a strong, stand alone book, continues the themes of the first book by examining of the nature of obsession while also offering a close look at the relationship between literature and the real world. In 1978, three masked men invade the remote New Hampshire home of John Rothstein, a reclusive novelist. He hopes that three masked men just want money. The 79-year-old gives them the code to his safe. One of the men, Morrie Bellamy, is obsessed with the Jimmy Gold trilogy, Rothstein’s masterwork, a favorite of alienated adolescents for decades. Bellamy hates Rothstein for having Gold sell out to Madison Avenue and move to suburbia in the final book… • Summary of book • Introduction to the Important People in the book • Analysis of the Themes and Author’s Style With Instaread, you can get the summary and analysis of a book in 15 minutes. We read every chapter, summarize and analyze it for your convenience.",
     "description_source": "goodreads",
     "keywords_source": "goodreads",
     "goodreads_rating": 4.07,
-    "goodreads_ratings_count": 192152
+    "goodreads_ratings_count": 192152,
+    "connections": [
+      {
+        "group": "The Bill Hodges Trilogy",
+        "kind": "trilogy",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "Mystery/thriller/crime",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 167,
@@ -8554,13 +9349,35 @@
     "cover_local_path": "data-tools/enriched/covers/End_of_Watch.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.4,
     "goodreads_ratings_count": 5,
     "description": "In End of Watch, Stephen King brings the Hodges trilogy to a sublimely terrifying conclusion, combining the detective fiction of Mr. Mercedes and Finders Keepers with the supernatural suspense that has been his trademark. The result is an unnerving look at human vulnerability and up-all-night entertainment.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Bill Hodges Trilogy",
+        "kind": "trilogy",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      },
+      {
+        "group": "Mystery/thriller/crime",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 189,
@@ -8587,13 +9404,26 @@
     "cover_local_path": "data-tools/enriched/covers/Gwendy_s_Button_Box.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.92,
     "goodreads_ratings_count": 81576,
     "description": "The little town of Castle Rock, Maine has witnessed some strange events and unusual visitors over the years, but there is one story that has never been told... until now. There are three ways up to Castle View from the town of Castle Rock: Route 117, Pleasant Road, and the Suicide Stairs. Every day in the summer of 1974 twelve-year-old Gwendy Peterson has taken the stairs, which are held by strong (if time-rusted) iron bolts and zig-zag up the cliffside. At the top of the stairs, Gwendy catches her breath and listens to the shouts of the kids on the playground. From a bit farther away comes the chink of an aluminum bat hitting a baseball as the Senior League kids practice for the Labor Day charity game. One day, a stranger calls to Gwendy: \"Hey, girl. Come on over here for a bit. We ought to palaver, you and me.\" On a bench in the shade sits a man in black jeans, a black coat like for a suit, and a white shirt unbuttoned at the top. On his head is a small neat black hat. The time will come when Gwendy has nightmares about that hat... Journey back to Castle Rock again in this chilling new novella by Stephen King, bestselling author of The Bazaar of Bad Dreams , and Richard Chizmar, ",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Gwendy's Button Box Trilogy",
+        "kind": "trilogy",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 190,
@@ -8634,13 +9464,26 @@
     "cover_local_path": "data-tools/enriched/covers/Sleeping_Beauties.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.73,
     "goodreads_ratings_count": 96402,
     "description": "In a future so real and near it might be now, something happens when women go to sleep; they become shrouded in a cocoon-like gauze. If they are awakened, and the gauze wrapping their bodies is disturbed or violated, the women become feral and spectacularly violent; and while they sleep they go to another place. The men of our world are abandoned, left to their increasingly primal devices. One woman, however, the mysterious Evie, is immune to the blessing or curse of the sleeping disease. Is Evie a medical anomaly to be studied, or is she a demon who must be slain?",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Horror",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 191,
@@ -8679,13 +9522,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Outsider.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.02,
     "goodreads_ratings_count": 388670,
     "description": "No one ever said life was easy. But Ponyboy is pretty sure that he's got things figured out. He knows that he can count on his brothers, Darry and Sodapop. And he knows that he can count on his friends - true friends who would do anything for him, like Johnny and Two-Bit. And when it comes to the beating up on \"greasers\" like him and his friends - he knows that he can count on them for trouble. But one night someone takes things too far, and Ponyboy's world is turned upside down...",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Mystery/thriller/crime",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 192,
@@ -8712,13 +9568,26 @@
     "cover_local_path": "data-tools/enriched/covers/Elevation.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.63,
     "goodreads_ratings_count": 162049,
     "description": "Castle Rock is a small town, where word gets around quickly. That's why Scott Carey wants to confide only in his friend Doctor Bob Ellis about his strange condition: he's losing weight, without getting thinner, and the scales register the same when he is in his clothes or out of them, however heavy they are. Scott also has new neighbours, who have opened a 'fine dining experience' in town, although it's an experience being shunned by the locals; Deirdre McComb and her wife Missy Donaldson don't exactly fit in with the community's expectations. And now Scott seems trapped in a feud with the couple over their dogs dropping their business on his lawn. Missy may be friendly, but Deirdre is cold as ice. As the town prepares for its annual Thanksgiving 12k run, Scott starts to understand the prejudices his neighbours face and he tries to help. Unlikely alliances form and the mystery of Scott's affliction brings out the best in people who have indulged the worst in themselves and others. From master storyteller Stephen King, our 'most precious renewable resource, like Shakespeare in the malleability of his work' ( Guardian ), comes this compelling tale about finding common ground despite ",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Mystery/thriller/crime",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 193,
@@ -8792,13 +9661,26 @@
     "cover_local_path": "data-tools/enriched/covers/The_Institute.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 4.19,
     "goodreads_ratings_count": 349150,
     "description": "In the middle of the night, in a house on a quiet street in suburban Minneapolis, intruders silently murder Luke Ellis’s parents and load him into a black SUV. The operation takes less than two minutes. Luke will wake up at The Institute, in a room that looks just like his own, except there’s no window. And outside his door are other doors, behind which are other kids with special talents—telekinesis and telepathy—who got to this place the same way Luke did: Kalisha, Nick, George, Iris, and ten-year-old Avery Dixon. They are all in Front Half. Others, Luke learns, graduated to Back Half, “like the roach motel,” Kalisha says. “You check in, but you don’t check out.” In this most sinister of institutions, the director, Mrs. Sigsby, and her staff are ruthlessly dedicated to extracting from these children the force of their extranormal gifts. There are no scruples here. If you go along, you get tokens for the vending machines. If you don’t, punishment is brutal. As each new victim disappears to Back Half, Luke becomes more and more desperate to get out and get help. But no one has ever escaped from the Institute.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Supernatural/fantasy",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 195,
@@ -8874,13 +9756,25 @@
     "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
-      "missing_word_count"
+      "missing_word_count",
+      "needs_review_connections"
     ],
     "goodreads_rating": 3.76,
     "goodreads_ratings_count": 27087,
     "description": "Something evil has swept into the small western Maine town of Castle Rock on the heels of the latest winter storm. Sheriff Norris Ridgewick and his team are desperately searching for two missing girls, but time is running out to bring them home alive. In Washington D.C., thirty-seven-year-old Gwendy Peterson couldn't be more different from the self-conscious teenaged girl who once spent a summer running up Castle Rock's Suicide Stairs. That same summer, she was entrusted or some might say cursed with the extraordinary button box by Richard Farris, the mysterious stranger in the black suit. The seductive and powerful box offered Gwendy small gifts in exchange for its care and feeding until Farris eventually returned, promising Gwendy she'd never see the box again. One day, though, the button box shows up without warning and without Richard Farris to explain why, or what she's supposed to do with it. The mysterious reappearance of the box, along with the troubling disappearances in Castle Rock, leads Gwendy home again...where she just might be able to help rescue the missing girls and stop a madman before he does something ghastly. From New York Times bestseller Richard Chizmar comes",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Gwendy's Button Box Trilogy",
+        "kind": "trilogy",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 197,
@@ -9074,13 +9968,25 @@
     "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
-      "missing_word_count"
+      "missing_word_count",
+      "needs_review_connections"
     ],
     "goodreads_rating": 3.95,
     "goodreads_ratings_count": 153585,
     "description": "The son of a struggling single mother, Jamie Conklin just wants an ordinary childhood. But Jamie is no ordinary child. Born with an unnatural ability his mom urges him to keep secret, Jamie can see what no one else can see and learn what no one else can learn. But the cost of using this ability is higher than Jamie can imagine - as he discovers when an NYPD detective draws him into the pursuit of a killer who has threatened to strike from beyond the grave. Later is Stephen King at his finest, a terrifying and touching story of innocence lost and the trials that test our sense of right and wrong. With echoes of King's classic novel It, Later is a powerful, haunting, unforgettable exploration of what it takes to stand up to evil in all the faces it wears.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Mystery/thriller/crime",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 202,
@@ -9120,13 +10026,25 @@
     "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
-      "missing_word_count"
+      "missing_word_count",
+      "needs_review_connections"
     ],
     "goodreads_rating": 4.18,
     "goodreads_ratings_count": 28,
     "description": "This summary was not created by the book's original author(s). VINTAGE SUMMARY wrote and published it. This book is not intended to replace the original book, but rather to act as a thorough and succinct guide for you. Billy Summers is a man with a pistol in a room. He's a hired assassin and the finest in the industry. But he'll only perform the job if the target is a true bad man. And now Billy wants to go. But first, there's one more hit. Billy is one of the world's greatest snipers, a distinguished Iraq war warrior, and a Houdini when it comes to disappearing once the job is done. So, what can possible go wrong? What about everything else? This breathtaking, nonstop novel is half war narrative, part love letter to small-town America and its people, and it includes one of King's most fascinating and surprising duos, who go out to punish the atrocities of an extremely terrible man. It's a story about love, chance, fate, and a complicated hero with one final chance at atonement. You will not be able to put this novel down, and you will never forget Billy. GET YOUR OWN COPY NOW",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Mystery/thriller/crime",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 203,
@@ -9155,13 +10073,25 @@
     "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
-      "missing_word_count"
+      "missing_word_count",
+      "needs_review_connections"
     ],
     "goodreads_rating": 4.04,
     "goodreads_ratings_count": 22958,
     "description": "The final book in the New York Times bestselling Gwendy’s Button Box trilogy from Stephen King and Richard Chizmar. When Gwendy Peterson was twelve, a mysterious stranger named Richard Farris gave her a mysterious box for safekeeping. It offered treats and vintage coins, but it was dangerous. Pushing any of its seven colored buttons promised death and destruction. Years later, the button box entered Gwendy’s life again. A successful novelist and a rising political star, she was once again forced to deal with the temptation that box represented. Now, evil forces seek to possess the button box and it is up to Senator Gwendy Peterson to keep it from them at all costs. But where can you hide something from such powerful entities? In Gwendy’s Final Task , “horror giants” (Publishers Weekly) Stephen King and Richard Chizmar take us on a journey from Castle Rock to another famous cursed Maine city to the MF-1 space station, where Gwendy must execute a secret mission to save the world. And, maybe, all worlds.",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Gwendy's Button Box Trilogy",
+        "kind": "trilogy",
+        "role": "core",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 204,
@@ -9192,11 +10122,23 @@
     "review_status": "needs_review",
     "review_flags": [
       "missing_word_count",
-      "missing_description"
+      "missing_description",
+      "needs_review_connections"
     ],
     "goodreads_rating": 3.2,
     "goodreads_ratings_count": 5,
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Supernatural/fantasy",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 205,
@@ -9225,13 +10167,25 @@
     "cover_source": "local_file",
     "review_status": "needs_review",
     "review_flags": [
-      "missing_word_count"
+      "missing_word_count",
+      "needs_review_connections"
     ],
     "goodreads_rating": 4.07,
     "goodreads_ratings_count": 194029,
     "description": "#1 New York Times Bestseller * A New York Times Notable Book * An NPR Best Book of the Year Holly Gibney, one of Stephen King’s most compelling and resourceful characters, returns in this chilling “exploration of grief and delusion, just pure undistilled evil” (New York magazine) as she uncovers the truth behind multiple disappearances in a midwestern town. When Penny Dahl calls the Finders Keepers detective agency, hoping for help locating her missing daughter, Holly Gibney is reluctant to accept the case. Her partner, Pete, has Covid. Her (very complicated) mother has just passed away. And Holly is meant to be on leave. But something in Penny’s desperate voice makes it impossible to turn her down. Meanwhile, mere blocks from where Bonnie Dahl disappeared live Professors Rodney and Emily Harris. They are the picture of bourgeois respectability: married octogenarians, devoted to each other, and semi-retired lifelong academics. But they are also harboring a shocking, unholy secret in the basement of their well-kept, book-lined home, one that may be related to Bonnie’s disappearance. And it will prove nearly impossible to discover what they are up to…for they are savvy, they are pati",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "Mystery/thriller/crime",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 206,
@@ -9956,13 +10910,26 @@
     "cover_local_path": "data-tools/enriched/covers/Hearts_in_Atlantis.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.0,
     "goodreads_ratings_count": 1,
     "description": "Five interconnected, sequential narratives, set in the years from 1960 to 1999. Each story is deeply rooted in the sixties, and each is haunted by the Vietnam War. Stephen King, whose first novel, Carrie, was published in 1974, the year before the last U.S. troops withdrew from Vietnam, is the first hugely popular writer of the TV generation. Images from that war -- and the protests against it -- had flooded America's living rooms for a decade. Hearts in Atlantis, King's newest fiction, is composed of five interconnected, sequential narratives, set in the years from 1960 to 1999. Each story is deeply rooted in the sixties, and each is haunted by the Vietnam War. In Part One, \"Low Men in Yellow Coats,\" eleven-year-old Bobby Garfield discovers a world of predatory malice in his own neighborhood. He also discovers that adults are sometimes not rescuers but at the heart of the terror. In the title story, a bunch of college kids get hooked on a card game, discover the possibility of protest...and confront their own collective heart of darkness, where laughter may be no more than the thinly disguised cry of the beast. In \"Blind Willie\" and \"Why We're in Vietnam,\" two men who grew up with",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 225,
@@ -10004,13 +10971,26 @@
     "cover_local_path": "data-tools/enriched/covers/Everything_s_Eventual.jpg",
     "cover_verified": false,
     "cover_source": "local_file",
-    "review_status": "ok",
-    "review_flags": [],
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_review_connections"
+    ],
     "goodreads_rating": 3.97,
     "goodreads_ratings_count": 109815,
     "description": "Includes the story “The Man in the Black Suit”—set in the fictional town of Castle Rock, Maine A collection of 14 dark tales, Everything’s Eventual includes one O. Henry Prize winner, two other award winners, four stories published by The New Yorker, and “Riding the Bullet,” King’s original ebook, which attracted over half a million online readers and became the most famous short story of the decade. Two of the stories, “The Little Sisters of Eluria” and “Everything’s Eventual” are closely related to the Dark Tower series. \"Riding the Bullet,\" published here on paper for the first time, is the story of Alan Parker, who's hitchhiking to see his dying mother but takes the wrong ride, farther than he ever intended. In \"Lunch at the Gotham Café,\" a sparring couple's contentious lunch turns very, very bloody when the maître d' gets out of sorts. \"1408,\" the audio story in print for the first time, is about a successful writer whose specialty is \"Ten Nights in Ten Haunted Graveyards\" or \"Ten Nights in Ten Haunted Houses,\" and though Room 1408 at the Dolphin Hotel doesn't kill him, he won't be writing about ghosts anymore. Stories include: -Autopsy Room Four -The Man in the Black Suit -Al",
     "description_source": "goodreads",
-    "keywords_source": "goodreads"
+    "keywords_source": "goodreads",
+    "connections": [
+      {
+        "group": "The Dark Tower",
+        "kind": "connection",
+        "role": "supplemental",
+        "order": null,
+        "spoiler": false,
+        "note": "Candidate from local seed: king_connections_seed.txt",
+        "review_flag": "needs_verification_connections"
+      }
+    ]
   },
   {
     "id": 226,

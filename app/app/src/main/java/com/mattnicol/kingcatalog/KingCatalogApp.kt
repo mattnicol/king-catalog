@@ -37,12 +37,25 @@ class KingCatalogApp : Application() {
         if (storedVersion < targetVersion) {
             Log.d(TAG, "Catalog out of date — upserting...")
             runCatching {
+                val seedPath = "assets/king_catalog.json"
+                Log.i(TAG, "SEED SOURCE: $seedPath")
+
                 val books = SeedImporter.load(this@KingCatalogApp)
-                Log.d(TAG, "Seed loaded ${books.size} titles from assets")
-                bookRepository.upsertCatalogData(books)
-                Log.d(TAG, "Catalog upsert complete")
+                Log.i(TAG, "SEED TOTAL ROWS: ${books.size}")
+
+                val authorCounts = books.groupingBy { it.author }.eachCount()
+                authorCounts.entries.sortedByDescending { it.value }.forEach { (author, count) ->
+                    Log.i(TAG, "  SEED AUTHOR: $author -> $count titles")
+                }
+                val otherAuthors = authorCounts.keys.filter { it != "Stephen King" && it != "Richard Bachman" }
+                Log.i(TAG, "OTHER AUTHORS PRESENT: ${otherAuthors.isNotEmpty()} — $otherAuthors")
+
+                val result = bookRepository.upsertCatalogData(books)
+                Log.i(TAG, "UPSERT RESULT: totalProcessed=${result.totalProcessed} inserted=${result.inserted} updated=${result.updated}")
+                Log.i(TAG, "USER STATE PRESERVED: ${result.userStatePreserved} rows had user state (owned/read/list/notes/binding)")
+
                 userPreferencesRepository.markCatalogVersion(targetVersion)
-                Log.d(TAG, "Catalog version marked as $targetVersion")
+                Log.i(TAG, "Catalog version marked as $targetVersion — import complete")
             }.onFailure { e ->
                 Log.e(TAG, "Catalog upsert failed — will retry next launch", e)
                 // Do NOT mark version so we retry next launch
