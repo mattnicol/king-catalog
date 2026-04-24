@@ -5,11 +5,17 @@
     "author": "Paul Tremblay",
     "year": 2004,
     "decade": 2000,
-    "word_count": null,
+    "word_count": 63250,
     "audible_minutes": null,
     "story_type": "collection",
-    "genres": ["Horror"],
-    "keywords": ["short-stories", "early-work"],
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "short-stories",
+      "early-work",
+      "genres"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
@@ -18,16 +24,22 @@
     "is_collection_parent": true,
     "child_ids": [],
     "notes": null,
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/2119942-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Compositions_for_the_Young_and_Old.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "needs_review",
-    "review_flags": ["needs_cover", "needs_description"],
+    "review_flags": [
+      "needs_cover",
+      "needs_description",
+      "estimated_from_page_count"
+    ],
     "goodreads_rating": null,
     "goodreads_ratings_count": null,
-    "description": null,
-    "connections": []
+    "description": "A jar that holds your deepest secrets and fears. A fireman confronts his past while trying to save a group of children who have fallen through thin ice. A preacher's daughter goes to fantastic and desperate lengths to write a book like Mark Twain. A man who cures people's pain and sadness through laughter finds his greatest challenge in a little boy. In this debut collection by Paul G. Tremblay, there are twenty stories following the chronological arc of a human life. Twenty stories about the young and old, and everyone in-between.",
+    "connections": [],
+    "description_source": "goodreads",
+    "keywords_source": "goodreads"
   },
   {
     "id": 4002,
@@ -35,11 +47,20 @@
     "author": "Paul Tremblay",
     "year": 2009,
     "decade": 2000,
-    "word_count": null,
+    "word_count": 74525,
     "audible_minutes": null,
     "story_type": "novel",
-    "genres": ["Mystery", "Crime"],
-    "keywords": ["narcolepsy", "detective", "noir", "private-investigator"],
+    "genres": [
+      "Mystery",
+      "Crime"
+    ],
+    "keywords": [
+      "narcolepsy",
+      "detective",
+      "noir",
+      "private-investigator",
+      "genres"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
@@ -48,16 +69,22 @@
     "is_collection_parent": false,
     "child_ids": [],
     "notes": "PI Mark Genevich solves cases between narcoleptic episodes.",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/6532028-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/The_Little_Sleep.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "needs_review",
-    "review_flags": ["needs_cover", "needs_goodreads"],
-    "goodreads_rating": null,
-    "goodreads_ratings_count": null,
+    "review_flags": [
+      "needs_cover",
+      "needs_goodreads",
+      "estimated_from_page_count",
+      "missing_description"
+    ],
+    "goodreads_rating": 3.5,
+    "goodreads_ratings_count": 2522,
     "description": null,
-    "connections": []
+    "connections": [],
+    "keywords_source": "goodreads"
   },
   {
     "id": 4003,
@@ -65,11 +92,16 @@
     "author": "Paul Tremblay",
     "year": 2010,
     "decade": 2010,
-    "word_count": null,
+    "word_count": 58850,
     "audible_minutes": null,
     "story_type": "collection",
-    "genres": ["Horror"],
-    "keywords": ["short-stories"],
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "short-stories",
+      "genres"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
@@ -83,11 +115,17 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "needs_review",
-    "review_flags": ["needs_cover", "needs_description"],
+    "review_flags": [
+      "needs_cover",
+      "needs_description",
+      "estimated_from_page_count"
+    ],
     "goodreads_rating": null,
     "goodreads_ratings_count": null,
-    "description": null,
-    "connections": []
+    "description": "A history teacher begins his unorthodox senior course with clips from an ominous surveillance video, causing a student's home life to deteriorate along with the lessons. A girl with a second head that changes into different historical and fictional identities tries to find her father while figuring out how to handle Mom and the book club. A blog documents society's slow, unexplained, but inexorable end, or is it only a collection of pixel-sized paranoia? A once-awkward teen holes up in a kiddie-themed amusement park after the end of the world, and schemes to take Cinderella's Castle by force. This collection by Paul G. Tremblay (author of The Little Sleep and No Sleep Till Wonderland) features fifteen stories of fear and paranoia, stories of apocalypses both societal and personal, and stories of longing and coping.",
+    "connections": [],
+    "description_source": "goodreads",
+    "keywords_source": "goodreads"
   },
   {
     "id": 4004,
@@ -95,11 +133,20 @@
     "author": "Paul Tremblay",
     "year": 2010,
     "decade": 2010,
-    "word_count": null,
+    "word_count": 73975,
     "audible_minutes": null,
     "story_type": "novel",
-    "genres": ["Mystery", "Crime"],
-    "keywords": ["narcolepsy", "detective", "noir", "private-investigator"],
+    "genres": [
+      "Mystery",
+      "Crime"
+    ],
+    "keywords": [
+      "narcolepsy",
+      "detective",
+      "noir",
+      "private-investigator",
+      "genres"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
@@ -108,16 +155,22 @@
     "is_collection_parent": false,
     "child_ids": [],
     "notes": "Sequel to The Little Sleep.",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/6720157-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/No_Sleep_Till_Wonderland.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "needs_review",
-    "review_flags": ["needs_cover", "needs_goodreads"],
+    "review_flags": [
+      "needs_cover",
+      "needs_goodreads",
+      "estimated_from_page_count"
+    ],
     "goodreads_rating": null,
     "goodreads_ratings_count": null,
-    "description": null,
-    "connections": []
+    "description": "Mark Genevich is stuck in a rut: his narcolepsy isn't improving, his private-detective business is barely scraping by, and his landlord mother is forcing him to attend group therapy sessions. Desperate for companionship, Mark goes on a two-day bender with a new acquaintance, Gus, who is slick and charismatic--and someone Mark knows very little about. When Gus asks Mark to protect a friend who is being stalked, Mark inexplicably finds himself in the middle of a murder investigation and soon becomes the target of the police, a sue-happy lawyer, and a violent local bouncer. Will Mark learn to trust himself in time to solve the crime--and in time to escape with his life?",
+    "connections": [],
+    "description_source": "goodreads",
+    "keywords_source": "goodreads"
   },
   {
     "id": 4005,
@@ -128,8 +181,14 @@
     "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
-    "genres": ["Horror"],
-    "keywords": ["short-stories", "chapbook"],
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "short-stories",
+      "chapbook",
+      "genres"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
@@ -143,11 +202,16 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "needs_review",
-    "review_flags": ["needs_cover", "needs_description"],
+    "review_flags": [
+      "needs_cover",
+      "needs_description"
+    ],
     "goodreads_rating": null,
     "goodreads_ratings_count": null,
-    "description": null,
-    "connections": []
+    "description": "Above: City is sprawling, technocratic, corrupt, and built hundreds of feet above a bay, resting upon the giant wooden shoulders of Pier. Below: Pier is a seemingly endless maze of stripped sequoia trees with trunks as thick as buildings, branches molded into a complex lattice of support beams and struts. Above and Below: The people. Weapons dealers and hired heavies with major Daddy-issues; a Pier-deported homeless man and a pistol packing priest trying to survive with each other and their terrible secrets; a librarian haunted by City's violent history, his family, and by Balloons; a flawed and shattered woman who wants to escape City no matter the cost. Their lives are a part of each other. Their lives are a part of City Pier.",
+    "connections": [],
+    "description_source": "goodreads",
+    "keywords_source": "goodreads"
   },
   {
     "id": 4006,
@@ -155,11 +219,19 @@
     "author": "Paul Tremblay",
     "year": 2012,
     "decade": 2010,
-    "word_count": null,
+    "word_count": 92675,
     "audible_minutes": null,
     "story_type": "novel",
-    "genres": ["Horror", "Science Fiction"],
-    "keywords": ["dystopian", "satire", "dark-comedy"],
+    "genres": [
+      "Horror",
+      "Science Fiction"
+    ],
+    "keywords": [
+      "dystopian",
+      "satire",
+      "dark-comedy",
+      "genres"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
@@ -168,16 +240,23 @@
     "is_collection_parent": false,
     "child_ids": [],
     "notes": null,
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/13115198-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Swallowing_a_Donkey_s_Eye.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "needs_review",
-    "review_flags": ["needs_cover", "needs_goodreads", "needs_description"],
+    "review_flags": [
+      "needs_cover",
+      "needs_goodreads",
+      "needs_description",
+      "estimated_from_page_count"
+    ],
     "goodreads_rating": null,
     "goodreads_ratings_count": null,
-    "description": null,
-    "connections": []
+    "description": "Join Farm today! It's only six years of your life! Farm is the mega-conglomerate food supplier for City, populated with rabidly bureaucratic superiors, antagonistic and sexually deviant tour guides dressed in chicken and duck suits, and farm animals illegally engineered for silence. City is sprawling, technocratic, and rests hundreds of feet above the coastline on the creaking shoulders of a giant wooden pier. When the narrator's single mother, whom he left behind in City, falls out of contact, he fears the his mother is homeless and subsequently to be deported under City to the Pier. On his desperate search to find his mother, he encounters ecoterrorists wearing plush animal suits, an election that hangs in the balance as the City's all-powerful Mayor is infatuated with magic refrigerators and outlaw campaigns, and a wise-cracking, over-sexed priest who may or may not have ESP, but who is most certainly his deadbeat dad. Whether rebelling against the regimented and ridiculous nature of Farm life, exploring the all-too-familiar and consumer-obsessed world of City, experiencing the all-too-real suffering of the homeless in Pier, or confronting the secrets of his own childhood, Swall",
+    "connections": [],
+    "description_source": "goodreads",
+    "keywords_source": "goodreads"
   },
   {
     "id": 4007,
@@ -185,11 +264,20 @@
     "author": "Paul Tremblay",
     "year": 2015,
     "decade": 2010,
-    "word_count": null,
+    "word_count": 78650,
     "audible_minutes": null,
     "story_type": "novel",
-    "genres": ["Horror"],
-    "keywords": ["possession", "reality-tv", "unreliable-narrator", "exorcism", "family"],
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "possession",
+      "reality-tv",
+      "unreliable-narrator",
+      "exorcism",
+      "family",
+      "genres"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
@@ -198,16 +286,20 @@
     "is_collection_parent": false,
     "child_ids": [],
     "notes": "A family's demonic possession becomes the subject of a reality TV show.",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/12170125-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/A_Head_Full_of_Ghosts.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": ["needs_cover"],
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_cover",
+      "estimated_from_page_count"
+    ],
     "goodreads_rating": 3.87,
     "goodreads_ratings_count": 92000,
     "description": "A family is torn apart after their teenage daughter appears to be possessed by a demonic entity. Their desperate situation attracts a reality TV crew, and the resulting show becomes a cultural phenomenon.",
-    "connections": []
+    "connections": [],
+    "keywords_source": "goodreads"
   },
   {
     "id": 4008,
@@ -215,11 +307,20 @@
     "author": "Paul Tremblay",
     "year": 2016,
     "decade": 2010,
-    "word_count": null,
+    "word_count": 91300,
     "audible_minutes": null,
     "story_type": "novel",
-    "genres": ["Horror", "Mystery"],
-    "keywords": ["missing-persons", "small-town", "teenagers", "supernatural"],
+    "genres": [
+      "Horror",
+      "Mystery"
+    ],
+    "keywords": [
+      "missing-persons",
+      "small-town",
+      "teenagers",
+      "supernatural",
+      "genres"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
@@ -228,16 +329,22 @@
     "is_collection_parent": false,
     "child_ids": [],
     "notes": null,
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/8844965-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Disappearance_at_Devil_s_Rock.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "needs_review",
-    "review_flags": ["needs_cover", "needs_goodreads"],
-    "goodreads_rating": null,
-    "goodreads_ratings_count": null,
-    "description": null,
-    "connections": []
+    "review_flags": [
+      "needs_cover",
+      "needs_goodreads",
+      "estimated_from_page_count"
+    ],
+    "goodreads_rating": 3.59,
+    "goodreads_ratings_count": 17565,
+    "description": "A family is shaken to its core after the mysterious disappearance of a teenage boy in this eerie tale, a blend of literary fiction, psychological suspense, and supernatural horror from the author of A Head Full of Ghosts . Late one summer night, Elizabeth Sanderson receives the devastating news that every mother fears: her fourteen-year-old son, Tommy, has vanished without a trace in the woods of a local park. The search isn’t yielding any answers, and Elizabeth and her young daughter, Kate, struggle to comprehend his disappearance. Feeling helpless and alone, their sorrow is compounded by anger and frustration. The local and state police haven’t uncovered any leads. Josh and Luis, the friends who were with Tommy last, may not be telling the whole truth about that night in Borderland State Park, when they were supposedly hanging out at a landmark the local teens have renamed Devil’s Rock— rumored to be cursed. Living in an all-too-real nightmare, riddled with worry, pain, and guilt, Elizabeth is wholly unprepared for the strange series of events that follow. She believes a ghostly shadow of Tommy materializes in her bedroom, while Kate and other local residents claim to see a shado",
+    "connections": [],
+    "description_source": "goodreads",
+    "keywords_source": "goodreads"
   },
   {
     "id": 4009,
@@ -245,11 +352,21 @@
     "author": "Paul Tremblay",
     "year": 2018,
     "decade": 2010,
-    "word_count": null,
+    "word_count": 37675,
     "audible_minutes": null,
     "story_type": "novel",
-    "genres": ["Horror", "Thriller"],
-    "keywords": ["home-invasion", "apocalypse", "cult", "family", "doomsday"],
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "keywords": [
+      "home-invasion",
+      "apocalypse",
+      "cult",
+      "family",
+      "doomsday",
+      "genres"
+    ],
     "as_bachman": false,
     "has_adaptation": true,
     "adaptations": [
@@ -269,16 +386,20 @@
     "is_collection_parent": false,
     "child_ids": [],
     "notes": "Adapted as Knock at the Cabin (2023) directed by M. Night Shyamalan.",
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14641923-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/The_Cabin_at_the_End_of_the_World.jpg",
     "cover_verified": false,
-    "cover_source": null,
-    "review_status": "ok",
-    "review_flags": ["needs_cover"],
+    "cover_source": "open_library",
+    "review_status": "needs_review",
+    "review_flags": [
+      "needs_cover",
+      "estimated_from_page_count"
+    ],
     "goodreads_rating": 3.74,
     "goodreads_ratings_count": 58000,
     "description": "A family vacationing at a remote cabin is taken hostage by four strangers who claim they must make an unthinkable choice to prevent the apocalypse.",
-    "connections": []
+    "connections": [],
+    "keywords_source": "goodreads"
   },
   {
     "id": 4010,
@@ -286,11 +407,21 @@
     "author": "Paul Tremblay",
     "year": 2020,
     "decade": 2020,
-    "word_count": null,
+    "word_count": 88000,
     "audible_minutes": null,
     "story_type": "novel",
-    "genres": ["Horror", "Thriller"],
-    "keywords": ["pandemic", "rabies", "medical-thriller", "outbreak", "survival"],
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "keywords": [
+      "pandemic",
+      "rabies",
+      "medical-thriller",
+      "outbreak",
+      "survival",
+      "genres"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
@@ -299,16 +430,22 @@
     "is_collection_parent": false,
     "child_ids": [],
     "notes": null,
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/10217878-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Survivor_Song.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "needs_review",
-    "review_flags": ["needs_cover", "needs_goodreads"],
-    "goodreads_rating": null,
-    "goodreads_ratings_count": null,
-    "description": null,
-    "connections": []
+    "review_flags": [
+      "needs_cover",
+      "needs_goodreads",
+      "estimated_from_page_count"
+    ],
+    "goodreads_rating": 3.61,
+    "goodreads_ratings_count": 21020,
+    "description": "In a matter of weeks, Massachusetts has been overrun by an insidious rabies-like virus that is spread by saliva. But unlike rabies, the disease has a terrifyingly short incubation period of an hour or less. Those infected quickly lose their minds and are driven to bite and infect as many others as they can before they inevitably succumb. Hospitals are inundated with the sick and dying, and hysteria has taken hold. To try to limit its spread, the commonwealth is under quarantine and curfew. But society is breaking down and the government's emergency protocols are faltering. Dr. Ramola \"Rams\" Sherman, a soft-spoken pediatrician in her mid-thirties, receives a frantic phone call from Natalie, a friend who is eight months pregnant. Natalie's husband has been killed—viciously attacked by an infected neighbor—and in a failed attempt to save him, Natalie, too, was bitten. Natalie's only chance of survival is to get to a hospital as quickly as possible to receive a rabies vaccine. The clock is ticking for her and for her unborn child. Natalie’s fight for life becomes a desperate odyssey as she and Rams make their way through a hostile landscape filled with dangers beyond their worst nightm",
+    "connections": [],
+    "description_source": "goodreads",
+    "keywords_source": "goodreads"
   },
   {
     "id": 4011,
@@ -316,11 +453,16 @@
     "author": "Paul Tremblay",
     "year": 2019,
     "decade": 2010,
-    "word_count": null,
+    "word_count": 101200,
     "audible_minutes": null,
     "story_type": "collection",
-    "genres": ["Horror"],
-    "keywords": ["short-stories"],
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "short-stories",
+      "genres"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
@@ -329,16 +471,22 @@
     "is_collection_parent": true,
     "child_ids": [],
     "notes": null,
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/10161501-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Growing_Things_and_Other_Stories.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "needs_review",
-    "review_flags": ["needs_cover", "needs_goodreads"],
-    "goodreads_rating": null,
-    "goodreads_ratings_count": null,
-    "description": null,
-    "connections": []
+    "review_flags": [
+      "needs_cover",
+      "needs_goodreads",
+      "estimated_from_page_count"
+    ],
+    "goodreads_rating": 3.49,
+    "goodreads_ratings_count": 7141,
+    "description": "A chilling anthology featuring nineteen pieces of short fiction from the multiple award-winning author of the national bestseller The Cabin at the End of the World and A Head Full of Ghosts. . In The Teacher , a Bram Stoker Award nominee for best short story, a student is forced to watch a disturbing video that will haunt and torment her and her classmates’ lives. Four men rob a pawn shop at gunpoint only to vanish, one-by-one, as they speed away from the crime scene in The Getaway . In Swim Wants to Know If It’s as Bad as Swim Thinks , a meth addict kidnaps her daughter from her estranged mother as their town is terrorized by a giant monster . . . or not. Joining these haunting works are stories linked to Tremblay’s previous novels. The tour de force metafictional novella Notes from the Dog Walkers deconstructs horror and publishing, possibly bringing in a character from A Head Full of Ghosts , all while serving as a prequel to Disappearance at Devil’s Rock . “The Thirteenth Temple” follows another character from A Head Full of Ghosts —Merry, who has published a tell-all memoir written years after the events of the novel. And the title story, Growing Things , a shivery tale loosel",
+    "connections": [],
+    "description_source": "goodreads",
+    "keywords_source": "goodreads"
   },
   {
     "id": 1011,
@@ -356,7 +504,8 @@
       "friendship",
       "vampire",
       "memoir",
-      "unreliable narrator"
+      "unreliable narrator",
+      "genres"
     ],
     "as_bachman": false,
     "has_adaptation": false,
@@ -374,8 +523,10 @@
     "review_flags": [],
     "goodreads_rating": 3.09,
     "goodreads_ratings_count": 14777,
-    "description": null,
-    "connections": []
+    "description": "10 hours 46 minutes A cleverly voiced psychological thriller about an unforgettable - and unsettling - friendship, with blood-chilling twists, crackling wit, and a thrumming pulse in its veins - from the nationally best-selling author of 'The Cabin at the End of the World' and 'Survivor Song'. What if the coolest girl you’ve ever met decided to be your friend? Art Barbara was so not cool. He was a seventeen-year-old high school loner in the late 1980s who listened to hair metal, had to wear a monstrous back-brace at night for his scoliosis, and started an extracurricular club for volunteer pallbearers at poorly attended funerals. But his new friend thought the Pallbearers’ Club was cool. And she brought along her Polaroid camera to take pictures of the corpses. Okay, that part was a little weird. So was her obsessive knowledge of a notorious bit of New England folklore that involved digging up the dead. And there were other strange things – terrifying things – that happened when she was around, usually at night. But she was his friend, so it was okay, right? Decades later, Art tries to make sense of it all by writing 'The Pallbearers’ Club: A Memoir'. But somehow this friend got he",
+    "connections": [],
+    "description_source": "goodreads",
+    "keywords_source": "goodreads"
   },
   {
     "id": 4012,
@@ -386,8 +537,13 @@
     "word_count": null,
     "audible_minutes": null,
     "story_type": "collection",
-    "genres": ["Horror"],
-    "keywords": ["short-stories"],
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "short-stories",
+      "genres"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
@@ -401,11 +557,16 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "needs_review",
-    "review_flags": ["needs_cover", "needs_goodreads"],
-    "goodreads_rating": null,
-    "goodreads_ratings_count": null,
-    "description": null,
-    "connections": []
+    "review_flags": [
+      "needs_cover",
+      "needs_goodreads"
+    ],
+    "goodreads_rating": 3.33,
+    "goodreads_ratings_count": 3485,
+    "description": "A haunting collection of short fiction from the bestselling author of The Pallbearers Club , A Head Full of Ghosts , and The Cabin at the End of the World. Paul Tremblay has won widespread acclaim for illuminating the dark horrors of the mind in novels and stories that push the boundaries of storytelling itself. The fifteen pieces in this brilliant collection, The Beast You Are , are all monsters of a kind, ready to loudly (and lovingly) smash through your head and into your heart. In “The Dead Thing,” a middle-schooler struggles to deal with the aftermath of her parents’ substance addictions and split. One day, her little brother claims he found a shoebox with “the dead thing” inside. He won’t show it to her and he won’t let the box out of his sight. In “The Last Conversation,” a person wakes in a sterile, white room and begins to receive instructions via intercom from a woman named Anne. When they are finally allowed to leave the room to complete a task, what they find is as shocking as it is heartbreaking. The title novella, “The Beast You Are,” is a mini epic in which the destinies and secrets of a village, a dog, and a cat are intertwined with a giant monster that returns to w",
+    "connections": [],
+    "description_source": "goodreads",
+    "keywords_source": "goodreads"
   },
   {
     "id": 4013,
@@ -413,11 +574,19 @@
     "author": "Paul Tremblay",
     "year": 2024,
     "decade": 2020,
-    "word_count": null,
+    "word_count": 100100,
     "audible_minutes": null,
     "story_type": "novel",
-    "genres": ["Horror"],
-    "keywords": ["meta-horror", "film", "slasher", "hollywood"],
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "meta-horror",
+      "film",
+      "slasher",
+      "hollywood",
+      "genres"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
@@ -426,16 +595,22 @@
     "is_collection_parent": false,
     "child_ids": [],
     "notes": null,
-    "cover_candidate_url": null,
-    "cover_local_path": null,
+    "cover_candidate_url": "https://covers.openlibrary.org/b/id/14642169-L.jpg",
+    "cover_local_path": "data-tools/enriched/covers/Horror_Movie.jpg",
     "cover_verified": false,
-    "cover_source": null,
+    "cover_source": "open_library",
     "review_status": "needs_review",
-    "review_flags": ["needs_cover", "needs_goodreads"],
-    "goodreads_rating": null,
-    "goodreads_ratings_count": null,
-    "description": null,
-    "connections": []
+    "review_flags": [
+      "needs_cover",
+      "needs_goodreads",
+      "estimated_from_page_count"
+    ],
+    "goodreads_rating": 3.25,
+    "goodreads_ratings_count": 50041,
+    "description": "The central creature from a 90s cult horror film, cursed and feared, reveals its chilling and gory past. A slow-burning horror experience culminates in intense confrontations, penned by the bestselling author of 'A Head Full of Ghosts' and 'The Cabin at the End of the World'.",
+    "connections": [],
+    "description_source": "goodreads",
+    "keywords_source": "goodreads"
   },
   {
     "id": 4014,
@@ -443,11 +618,15 @@
     "author": "Paul Tremblay",
     "year": null,
     "decade": null,
-    "word_count": null,
+    "word_count": 70400,
     "audible_minutes": null,
     "story_type": "novel",
-    "genres": ["Horror"],
-    "keywords": [],
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "genres"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
@@ -461,11 +640,19 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "needs_review",
-    "review_flags": ["needs_year", "needs_cover", "needs_description", "needs_goodreads"],
-    "goodreads_rating": null,
-    "goodreads_ratings_count": null,
-    "description": null,
-    "connections": []
+    "review_flags": [
+      "needs_year",
+      "needs_cover",
+      "needs_description",
+      "needs_goodreads",
+      "estimated_from_page_count"
+    ],
+    "goodreads_rating": 3.73,
+    "goodreads_ratings_count": 2113,
+    "description": "New York Times bestselling, acclaimed horror author Paul Tremblay delivers an unforgettable middle grade debut in this bone-chilling tale of an unsettling, unbreakable friendship. When Casey Wilson’s parents tell him that his friend is coming for a sleepover, he has no idea who that might be. Ever since the Zoom Incident, everyone treats him like a pariah, and his tics are worse than ever. When Morel appears, he’s not like any friend Casey has ever met. His skin is like clay, and he doesn’t speak. But Casey’s parents are charmed by the strange kid, and it’s nice to have someone to talk to besides his sister, Ally, who is away at college. As his normally loving parents grow distant from Casey, they gush and fawn over Morel. Casey knows something is wrong—but with no end in sight to the sleepover, he’s exhausted. And in the dark, out of the corner of his eye, Morel doesn’t look like a kid at all. . . .",
+    "connections": [],
+    "description_source": "goodreads",
+    "keywords_source": "goodreads"
   },
   {
     "id": 4015,
@@ -476,8 +663,12 @@
     "word_count": null,
     "audible_minutes": null,
     "story_type": "novel",
-    "genres": ["Horror"],
-    "keywords": [],
+    "genres": [
+      "Horror"
+    ],
+    "keywords": [
+      "genres"
+    ],
     "as_bachman": false,
     "has_adaptation": false,
     "adaptations": [],
@@ -491,10 +682,17 @@
     "cover_verified": false,
     "cover_source": null,
     "review_status": "needs_review",
-    "review_flags": ["needs_year", "needs_cover", "needs_description", "needs_goodreads"],
+    "review_flags": [
+      "needs_year",
+      "needs_cover",
+      "needs_description",
+      "needs_goodreads"
+    ],
     "goodreads_rating": null,
     "goodreads_ratings_count": null,
-    "description": null,
-    "connections": []
+    "description": "Philip K. Dick meets the Coen Brothers in this genre-bending near-future tech nightmare that is as bitingly funny as it is horrifically believable from the New York Times bestselling author of Horror Movie. Meet Julia Flang, a twenty-something former semi-professional gamer, living with her retired uncle, and working two jobs she doesn’t like. Out of the blue, her estranged mother, a CFO for one of the world’s largest tech companies, offers her a temp job with a payday Julia can’t refuse. One sham interview later, she’s offered the job: to chaperone a man in a vegetative state—one with proprietary AI implanted in his head—from California to the East Coast. To sum up in Julia’s own words: “You want me to remote control this dead dude across the country.” In a word, yes. But he’s not dead dead. Meet a middle-aged man who wakes within a disorienting hellscape filled with monstrous grotesqueries. Worse than the fluid, morphing reality in which he’s trapped, he has no memory of who he is. He certainly doesn’t remember getting the rabbit tattoo on his arm. He only knows that he must find a certain person. Who? He can’t remember. Using a cell phone modeled after a video game controller, J",
+    "connections": [],
+    "description_source": "goodreads",
+    "keywords_source": "goodreads"
   }
 ]

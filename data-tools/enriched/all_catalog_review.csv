@@ -146,3 +146,18 @@ id,author,title,year,word_count,audible_minutes,story_type,collection,goodreads_
 1008,Josh Malerman,Pearl,2021,88000,,novel,,3.37,6629,plot_summary_uncertain; estimated_from_page_count
 1009,Josh Malerman,"On This, the Day of the Pig",2021,,,novella,,,,year_uncertain; story_type_uncertain
 1012,Josh Malerman,Incidents Around the House,2024,105600,,novel,,3.56,95391,estimated_from_page_count
+4001,Paul Tremblay,Compositions for the Young and Old,2004,63250,,collection,,,,needs_cover; needs_description; estimated_from_page_count
+4002,Paul Tremblay,The Little Sleep,2009,74525,,novel,,3.5,2522,needs_cover; needs_goodreads; estimated_from_page_count; missing_description
+4003,Paul Tremblay,In the Mean Time,2010,58850,,collection,,,,needs_cover; needs_description; estimated_from_page_count
+4004,Paul Tremblay,No Sleep Till Wonderland,2010,73975,,novel,,,,needs_cover; needs_goodreads; estimated_from_page_count
+4005,Paul Tremblay,City Pier: Above and Below,2012,,,collection,,,,needs_cover; needs_description
+4006,Paul Tremblay,Swallowing a Donkey's Eye,2012,92675,,novel,,,,needs_cover; needs_goodreads; needs_description; estimated_from_page_count
+4007,Paul Tremblay,A Head Full of Ghosts,2015,78650,,novel,,3.87,92000,needs_cover; estimated_from_page_count
+4008,Paul Tremblay,Disappearance at Devil's Rock,2016,91300,,novel,,3.59,17565,needs_cover; needs_goodreads; estimated_from_page_count
+4009,Paul Tremblay,The Cabin at the End of the World,2018,37675,,novel,,3.74,58000,needs_cover; estimated_from_page_count
+4010,Paul Tremblay,Survivor Song,2020,88000,,novel,,3.61,21020,needs_cover; needs_goodreads; estimated_from_page_count
+4011,Paul Tremblay,Growing Things and Other Stories,2019,101200,,collection,,3.49,7141,needs_cover; needs_goodreads; estimated_from_page_count
+4012,Paul Tremblay,The Beast You Are: Stories,2023,,,collection,,3.33,3485,needs_cover; needs_goodreads
+4013,Paul Tremblay,Horror Movie,2024,100100,,novel,,3.25,50041,needs_cover; needs_goodreads; estimated_from_page_count
+4014,Paul Tremblay,Another,,70400,,novel,,3.73,2113,needs_year; needs_cover; needs_description; needs_goodreads; estimated_from_page_count
+4015,Paul Tremblay,Dead but Dreaming of Electric Sheep,,,,novel,,,,needs_year; needs_cover; needs_description; needs_goodreads
