@@ -68,6 +68,7 @@ class BooksViewModel(application: Application) : AndroidViewModel(application) {
                     bachamanFilter = filter.bachman,
                     readFilter = filter.isRead,
                     inLibraryFilter = filter.inLibrary,
+                    bindingFilter = filter.bindingFilter,
                 )
             }
             .let { list ->

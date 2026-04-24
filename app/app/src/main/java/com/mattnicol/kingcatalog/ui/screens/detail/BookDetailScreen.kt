@@ -394,7 +394,7 @@ private fun ConnectionsSection(connections: List<Connection>) {
                     color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
                     modifier = Modifier.padding(start = 8.dp),
                 )
-                conn.note?.let { note ->
+                conn.note?.takeIf { !it.startsWith("Candidate from local seed") }?.let { note ->
                     if (showSpoilers || !conn.spoiler) {
                         Text(
                             text = note,

@@ -1,12 +1,15 @@
 package com.mattnicol.kingcatalog.ui.screens.books
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
@@ -16,11 +19,11 @@ import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material3.Badge
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedTextField
@@ -66,7 +69,8 @@ fun BooksScreen(
 
     val activeFilterCount = filter.storyTypes.size + filter.genres.size + filter.keywords.size +
         filter.decades.size + (if (filter.bachman != null) 1 else 0) +
-        (if (filter.isRead != null) 1 else 0) + (if (filter.inLibrary != null) 1 else 0)
+        (if (filter.isRead != null) 1 else 0) + (if (filter.inLibrary != null) 1 else 0) +
+        (if (filter.bindingFilter != null) 1 else 0)
 
     Surface(modifier = Modifier.fillMaxSize()) {
         Column {
@@ -92,8 +96,19 @@ fun BooksScreen(
                     singleLine = true,
                     modifier = Modifier.weight(1f),
                 )
-                IconButton(onClick = onSeriesClick) {
-                    Icon(Icons.Filled.Bookmarks, contentDescription = "Series & Connections")
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    modifier = Modifier
+                        .clickable(onClick = onSeriesClick)
+                        .padding(horizontal = 4.dp, vertical = 4.dp),
+                ) {
+                    Icon(Icons.Filled.Bookmarks, contentDescription = null)
+                    Spacer(Modifier.width(0.dp))
+                    Text(
+                        text = "Series",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.75f),
+                    )
                 }
             }
 
@@ -139,7 +154,7 @@ fun BooksScreen(
             ) {
                 FilterChip(
                     selected = filter.inLibrary == null,
-                    onClick = { vm.onFilterChange(filter.copy(inLibrary = null)) },
+                    onClick = { vm.onFilterChange(filter.copy(inLibrary = null, bindingFilter = null)) },
                     label = { Text("All") },
                 )
                 FilterChip(
@@ -149,9 +164,49 @@ fun BooksScreen(
                 )
                 FilterChip(
                     selected = filter.inLibrary == false,
-                    onClick = { vm.onFilterChange(filter.copy(inLibrary = if (filter.inLibrary == false) null else false)) },
+                    onClick = { vm.onFilterChange(filter.copy(inLibrary = if (filter.inLibrary == false) null else false, bindingFilter = null)) },
                     label = { Text("Not In Library") },
                 )
+            }
+
+            if (filter.inLibrary == true) {
+                Row(
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 2.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    FilterChip(
+                        selected = filter.bindingFilter == null,
+                        onClick = { vm.onFilterChange(filter.copy(bindingFilter = null)) },
+                        label = { Text("All bindings") },
+                    )
+                    FilterChip(
+                        selected = filter.bindingFilter == "hardcover",
+                        onClick = {
+                            vm.onFilterChange(filter.copy(
+                                bindingFilter = if (filter.bindingFilter == "hardcover") null else "hardcover"
+                            ))
+                        },
+                        label = { Text("Hardcover") },
+                    )
+                    FilterChip(
+                        selected = filter.bindingFilter == "paperback",
+                        onClick = {
+                            vm.onFilterChange(filter.copy(
+                                bindingFilter = if (filter.bindingFilter == "paperback") null else "paperback"
+                            ))
+                        },
+                        label = { Text("Paperback") },
+                    )
+                    FilterChip(
+                        selected = filter.bindingFilter == "unknown",
+                        onClick = {
+                            vm.onFilterChange(filter.copy(
+                                bindingFilter = if (filter.bindingFilter == "unknown") null else "unknown"
+                            ))
+                        },
+                        label = { Text("Unknown") },
+                    )
+                }
             }
 
             LazyColumn(

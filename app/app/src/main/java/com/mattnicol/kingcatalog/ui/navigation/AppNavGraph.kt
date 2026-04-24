@@ -98,6 +98,7 @@ fun AppNavGraph() {
             }
             composable(NavRoute.Series.route) {
                 SeriesScreen(
+                    onBack = { navController.popBackStack() },
                     onGroupClick = { groupName ->
                         navController.navigate("series_detail/${encodeNavArg(groupName)}")
                     },

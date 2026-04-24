@@ -27,7 +27,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -123,7 +122,7 @@ class SeriesViewModel(application: Application) : AndroidViewModel(application) 
             n.contains("gwendy")              -> "2"
             n.contains("bachman")             -> "3"
             n.contains("duology")             -> "4_$name"
-            n.contains("castle rock")         -> "5"
+            n.contains("castle rock")         -> "9"
             else                              -> "6_$name"
         }
     }
@@ -133,16 +132,34 @@ class SeriesViewModel(application: Application) : AndroidViewModel(application) 
 // Groups list screen
 // ─────────────────────────────────────────────────────────────────────────────
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SeriesScreen(
     vm: SeriesViewModel = viewModel(),
+    onBack: () -> Unit = {},
     onGroupClick: (String) -> Unit = {},
 ) {
     val groups by vm.groups.collectAsState()
 
-    Surface(modifier = Modifier.fillMaxSize()) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Series & Connections") },
+                navigationIcon = {
+                    IconButton(onClick = onBack) {
+                        Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
+                    }
+                },
+            )
+        },
+    ) { padding ->
         if (groups.isEmpty()) {
-            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(padding),
+                contentAlignment = Alignment.Center,
+            ) {
                 Text(
                     text = "No series or connections data yet.\n\n" +
                            "Run enrich.py with --fields connections to populate this.",
@@ -154,15 +171,15 @@ fun SeriesScreen(
             }
         } else {
             LazyColumn(
-                contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+                contentPadding = PaddingValues(
+                    start = 16.dp,
+                    end = 16.dp,
+                    top = padding.calculateTopPadding() + 8.dp,
+                    bottom = padding.calculateBottomPadding() + 8.dp,
+                ),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 item {
-                    Text(
-                        text = "Series & Connections",
-                        style = MaterialTheme.typography.headlineSmall,
-                        modifier = Modifier.padding(vertical = 8.dp),
-                    )
                     Text(
                         text = "${groups.size} groups",
                         style = MaterialTheme.typography.bodySmall,
