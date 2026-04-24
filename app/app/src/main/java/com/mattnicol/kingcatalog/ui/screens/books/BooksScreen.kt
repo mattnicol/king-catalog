@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Bookmarks
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Search
@@ -32,6 +33,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -43,7 +45,11 @@ import com.mattnicol.kingcatalog.ui.components.BookCard
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun BooksScreen(vm: BooksViewModel = viewModel(), onBookClick: (Int) -> Unit = {}) {
+fun BooksScreen(
+    vm: BooksViewModel = viewModel(),
+    onBookClick: (Int) -> Unit = {},
+    onSeriesClick: () -> Unit = {},
+) {
     val books by vm.books.collectAsState()
     val storyTypes by vm.storyTypes.collectAsState()
     val decades by vm.decades.collectAsState()
@@ -64,23 +70,32 @@ fun BooksScreen(vm: BooksViewModel = viewModel(), onBookClick: (Int) -> Unit = {
 
     Surface(modifier = Modifier.fillMaxSize()) {
         Column {
-            OutlinedTextField(
-                value = query,
-                onValueChange = vm::onQueryChange,
-                placeholder = { Text("Search books…") },
-                leadingIcon = { Icon(Icons.Filled.Search, null) },
-                trailingIcon = {
-                    if (query.isNotEmpty()) {
-                        IconButton(onClick = { vm.onQueryChange("") }) {
-                            Icon(Icons.Filled.Clear, contentDescription = "Clear search")
-                        }
-                    }
-                },
-                singleLine = true,
+            Row(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp, vertical = 8.dp),
-            )
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(4.dp),
+            ) {
+                OutlinedTextField(
+                    value = query,
+                    onValueChange = vm::onQueryChange,
+                    placeholder = { Text("Search books…") },
+                    leadingIcon = { Icon(Icons.Filled.Search, null) },
+                    trailingIcon = {
+                        if (query.isNotEmpty()) {
+                            IconButton(onClick = { vm.onQueryChange("") }) {
+                                Icon(Icons.Filled.Clear, contentDescription = "Clear search")
+                            }
+                        }
+                    },
+                    singleLine = true,
+                    modifier = Modifier.weight(1f),
+                )
+                IconButton(onClick = onSeriesClick) {
+                    Icon(Icons.Filled.Bookmarks, contentDescription = "Series & Connections")
+                }
+            }
 
             Row(
                 modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),

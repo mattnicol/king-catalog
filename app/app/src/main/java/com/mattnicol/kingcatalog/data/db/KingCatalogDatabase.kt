@@ -22,8 +22,8 @@ abstract class KingCatalogDatabase : RoomDatabase() {
     companion object {
         const val DB_VERSION = 5
         // Bump this whenever king_catalog.json catalog data changes (preserves user fields).
-        // Bumped to 9: seed replaced with all_catalog.json (merged, includes non-King authors).
-        const val CATALOG_VERSION = 9
+        // Bumped to 10: added Paul Tremblay catalog (16 entries).
+        const val CATALOG_VERSION = 10
 
         @Volatile private var INSTANCE: KingCatalogDatabase? = null
 

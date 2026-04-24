@@ -13,8 +13,8 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
-// Authors displayed as collapsible sections in Other Authors tab (ordered for display)
-val OTHER_AUTHORS = listOf("Josh Malerman", "Joe Hill", "Grady Hendrix")
+// Known other authors (informational; display order is alphabetical)
+val OTHER_AUTHORS = listOf("Grady Hendrix", "Joe Hill", "Josh Malerman", "Paul Tremblay")
 
 class OtherAuthorsViewModel(application: Application) : AndroidViewModel(application) {
     private val repo = (application as KingCatalogApp).bookRepository
@@ -40,14 +40,8 @@ class OtherAuthorsViewModel(application: Application) : AndroidViewModel(applica
                 inLibraryFilter = inLibrary,
             )
         }
-        // Group preserving OTHER_AUTHORS display order; unknown authors appended alphabetically
-        val known = OTHER_AUTHORS.associateWith { author ->
-            filtered.filter { it.author == author }
-        }.filterValues { it.isNotEmpty() }
-        val unknown = filtered.filter { it.author !in OTHER_AUTHORS }
-            .groupBy { it.author }
-            .toSortedMap()
-        known + unknown
+        // Group by author, sorted alphabetically
+        filtered.groupBy { it.author }.toSortedMap()
     }.stateIn(viewModelScope, SharingStarted.Lazily, emptyMap())
 
     fun onQueryChange(q: String) { searchQuery.value = q }

@@ -84,10 +84,12 @@ class SeriesViewModel(application: Application) : AndroidViewModel(application) 
         .stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
 
     private fun buildGroups(books: List<Book>): List<ConnectionGroup> {
-        // Build group-name → list of (book, connection) pairs
+        // Build group-name → list of (book, connection) pairs, excluding pure genre groups
+        val genreGroups = setOf("Horror", "Mystery/thriller/crime", "Supernatural/fantasy")
         val raw = mutableMapOf<String, MutableList<GroupEntry>>()
         for (book in books) {
             for (conn in book.connections) {
+                if (conn.group in genreGroups) continue
                 raw.getOrPut(conn.group) { mutableListOf() }
                     .add(GroupEntry(book, conn))
             }
@@ -110,7 +112,20 @@ class SeriesViewModel(application: Application) : AndroidViewModel(application) 
                     hasSpoilers = entries.any { it.connection.spoiler },
                 )
             }
-            .sortedBy { it.name }
+            .sortedWith(compareBy { groupSortPriority(it.name) })
+    }
+
+    private fun groupSortPriority(name: String): String {
+        val n = name.lowercase()
+        return when {
+            n.contains("dark tower")          -> "0"
+            n.contains("bill hodges")         -> "1"
+            n.contains("gwendy")              -> "2"
+            n.contains("bachman")             -> "3"
+            n.contains("duology")             -> "4_$name"
+            n.contains("castle rock")         -> "5"
+            else                              -> "6_$name"
+        }
     }
 }
 
@@ -374,16 +389,18 @@ private fun GroupEntryRow(
             book = entry.book,
             onClick = { onBookClick(entry.book.id) },
         )
-        entry.connection.note?.let { note ->
-            if (showSpoilers || !entry.connection.spoiler) {
-                Text(
-                    text = note,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
-                    fontStyle = FontStyle.Italic,
-                    modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp),
-                )
+        entry.connection.note
+            ?.takeIf { !it.startsWith("Candidate from local seed") }
+            ?.let { note ->
+                if (showSpoilers || !entry.connection.spoiler) {
+                    Text(
+                        text = note,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
+                        fontStyle = FontStyle.Italic,
+                        modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp),
+                    )
+                }
             }
-        }
     }
 }

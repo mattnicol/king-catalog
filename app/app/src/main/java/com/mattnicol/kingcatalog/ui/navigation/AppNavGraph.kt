@@ -45,7 +45,6 @@ private val bottomNavItems = listOf(
     NavRoute.Home,
     NavRoute.Books,
     NavRoute.Library,
-    NavRoute.Series,
     NavRoute.OtherAuthors,
 )
 
@@ -89,7 +88,10 @@ fun AppNavGraph() {
                 HomeScreen(onBookClick = { id -> navController.navigate("book_detail/$id") })
             }
             composable(NavRoute.Books.route) {
-                BooksScreen(onBookClick = { id -> navController.navigate("book_detail/$id") })
+                BooksScreen(
+                    onBookClick = { id -> navController.navigate("book_detail/$id") },
+                    onSeriesClick = { navController.navigate(NavRoute.Series.route) },
+                )
             }
             composable(NavRoute.Library.route) {
                 LibraryScreen(onBookClick = { id -> navController.navigate("book_detail/$id") })

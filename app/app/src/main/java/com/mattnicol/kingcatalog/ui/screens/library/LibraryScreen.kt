@@ -219,7 +219,7 @@ fun LibraryScreen(vm: LibraryViewModel = viewModel(), onBookClick: (Int) -> Unit
                     onFilterChange = vm::onFilterChange,
                     onClearAll = { vm.onFilterChange(FilterState()); showFilterSheet = false },
                     onDone = { showFilterSheet = false },
-                    showBindingFilter = true,
+                    showBindingFilter = filter.inLibrary != false,
                 )
             }
         }

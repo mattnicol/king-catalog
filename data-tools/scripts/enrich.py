@@ -84,6 +84,13 @@ EXAMPLES
   # Full enrichment run for Stephen King titles
   python enrich.py --author "Stephen King" --fields covers,goodreads,descriptions,keywords
 
+  # Enrich a single other-author catalog (does not touch Stephen King or other authors)
+  python enrich.py --author "Paul Tremblay" --fields covers,goodreads,descriptions,keywords
+  python enrich.py --author "Paul Tremblay" --fields descriptions --blanks-only
+
+  # Update covers for all other-author catalogs without touching Stephen King
+  python enrich.py --author "Paul Tremblay" --author "Grady Hendrix" --author "Joe Hill"
+
   # Seed connections from a Reddit thread (adds candidates marked for review)
   python enrich.py --all-authors --fields connections \\
     --reddit-thread-url "https://www.reddit.com/r/stephenking/comments/abc123/"
@@ -93,6 +100,19 @@ EXAMPLES
 
   # Show all review flags (no changes made)
   python enrich.py --review-only
+
+─────────────────────────────────────────────────────────────────────────────
+AUTHOR-SPECIFIC CATALOG UPDATES
+─────────────────────────────────────────────────────────────────────────────
+  Use --author to target a single author's catalog file without re-enriching
+  unrelated authors. Author source files live in data-tools/raw/*-source.json.
+  After enrichment the combined seed (all_catalog.json) is rebuilt automatically.
+
+  Updated files are printed during the run:
+    ── Paul Tremblay (paul-tremblay-source.json) ──
+      [  1/ 16] The Little Sleep  → cover ok, description filled
+      ...
+  The final summary shows totals per field across all processed entries.
 """
 
 import argparse
